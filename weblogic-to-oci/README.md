@@ -2,7 +2,7 @@
 This workshop lets you practice migrating a WebLogic domain from on-premises to Oracle Cloud Infrastructure.
 
 ## Access the Labs Using Our Web Interface
-**[Click here](https://oracle.github.io/learning-library/developer-library/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier)** to use our easy to navigate HTML format.
+**[Click here](https://oracle-livelabs.github.io/weblogic/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier)** to use our easy to navigate HTML format.
 
 ## Access the Labs on the Repo
 Alternatively, you can follow the labs on this repo:
