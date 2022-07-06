@@ -18,7 +18,7 @@ Estimated Completion Time: 30 minutes.
 
 ### Prerequisites
 
-- Docker installed locally to run the on-premises environment.
+- Docker **20.10.17+** installed locally to run the on-premises environment.
 
   Get Docker here: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
@@ -121,35 +121,28 @@ You can also download the code here: [https://objectstorage.us-ashburn-1.oraclec
 
 ## Task 2: Agree to the Terms of the Private Docker Images
 
-This repository makes use of Oracle docker images which are licensed and need to be pulled from DockerHub after acknowledging the terms of the license.
+This repository makes use of Oracle docker images which are licensed and need to be pulled from Oracle Container Registry after acknowledging the terms of the license.
 
-1. Sign in to Docker Hub and go to the Weblogic image area at: <a href="https://hub.docker.com/_/oracle-weblogic-server-12c" target="_blank">https://hub.docker.com/_/oracle-weblogic-server-12c</a>.
+1. Sign in to Oracle Container Registry and go to the Weblogic image area at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ</a>.
 
-    - Click **Proceed to Checkout**.
-    - Fill in your information.
-    - Accept the terms of license.
-    - click **Get Content**.
+    - Select a Language.
+    - Scroll down to Accept the terms of license.
 
+2. Go to the **Oracle Database** page and accept the license terms at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ</a>.
 
-2. Go to the **Oracle Database** page and accept the license terms at: <a href="https://hub.docker.com/_/oracle-database-enterprise-edition" target="_blank">https://hub.docker.com/_/oracle-database-enterprise-edition</a>.
+    - Select a Language.
+    - Scroll down to Accept the terms of license.
 
-    - Click **Proceed to Checkout**.
-    - Fill in your information.
-    - Accept the terms of license.
-    - click **Get Content**.
+3. Go to the **Instant Client** page and accept the license terms for the SQL Plus client at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ</a>.
 
-3. Go to the **Instant Client** page and accept the license terms for the SQL Plus client at: <a href="https://hub.docker.com/_/oracle-instant-client" target="_blank">https://hub.docker.com/_/oracle-instant-client</a>.
+    - Select a Language.
+    - Scroll down to Accept the terms of license.
 
-    - Click **Proceed to Checkout**.
-    - Fill in your information.
-    - Accept the terms of license.
-    - click **Get Content**.
-
-4. Login to docker, providing your docker-hub username and password:
+4. Login to docker, providing your oracle container registry username and password:
 
     ```bash
     <copy>
-    docker login
+    docker login container-registry.oracle.com
     </copy>
     ```
 
@@ -173,7 +166,7 @@ Start up the local environment stack that will simulate our on-premises environm
 
     ```bash
     <copy>
-    docker exec -it --user=root weblogic-to-oci_oracledb_1 /bin/chown 54321:54321 ~/.ssh
+    docker exec -it --user=root weblogic-to-oci-oracledb-1 /bin/chown 54321:54321 /home/oracle/.ssh
     </copy>
     ```
 
@@ -182,7 +175,7 @@ Start up the local environment stack that will simulate our on-premises environm
 If you get an error message like the following even though you are logged in, it usually means you have not accepted the *Terms and Condition* for the specific image.
 
 ```
-pull access denied for store/oracle/database-instantclient, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+pull access denied for container-registry.oracle.com/database/instantclient, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
 ```
 
 Go to the appropriate registry and image page, and go through the acknowledgement steps.
@@ -195,7 +188,7 @@ The weblogic container waits for the database to be ready, and the schemas to be
 
 1. Check that the WebLogic console is available at [http://localhost:7001/console](http://localhost:7001/console) and the WebLogic admin user is `weblogic` with password `welcome1`.
 
-2. To check status of the initialization, you can check if the `weblogic-to-oci_oracledbinit_1` container has finished running by running:
+2. To check status of the initialization, you can check if the `weblogic-to-oci-oracledbinit-1` container has finished running by running:
 
     ```
     <copy>
@@ -215,13 +208,13 @@ The weblogic container waits for the database to be ready, and the schemas to be
 
     ```bash
     <copy>
-    docker logs -t weblogic-to-oci_wls_admin_1
+    docker logs -f weblogic-to-oci-wls_admin-1
     </copy>
     ```
     or
     ```bash
     <copy>
-    docker logs -t weblogic-to-oci_oracledb_1
+    docker logs -f weblogic-to-oci-oracledb-1
     </copy>
     ```
 
@@ -247,7 +240,7 @@ We'll create an SSH key pair in this folder.
 
     ```bash
     <copy>
-    docker exec -it weblogic-to-oci_oracledb_1 /bin/bash
+    docker exec -it weblogic-to-oci-oracledb-1 /bin/bash
     </copy>
     ```
 
@@ -273,4 +266,4 @@ We'll create an SSH key pair in this folder.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, July 2022
