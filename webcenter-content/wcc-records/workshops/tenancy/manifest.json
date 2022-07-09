@@ -1,32 +1,45 @@
 {
-  "workshoptitle": "Quickstart your records disposition program with WebCenter Content : Records",
+  "workshoptitle": "Quick start your records disposition program with WebCenter Content : Records",
   "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
+
     {
-      "title": "Introduction to Records and Configuring Records on Content Server",
+      "title": "Introduction",
       "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
-      "filename": "./../../introduction-to-records/introduction-to-records.md"
+      "filename": "./../../introduction/introduction.md"
     },
+
     {
-      "title": "Lab 1: Set Up Disposition Rule Based on an Event",
+      "title": "Get Started with noVNC Remote Desktop",
+      "description": "Using noVNC Remote Desktop",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+
+    {
+      "title": "Lab 1: Initialize Environment",
+      "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
+      "filename": "./../../configure-records/configure-records.md"
+    },
+
+    {
+      "title": "Lab 2: Set Up Disposition Rule Based on an Event",
       "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
       "filename": "./../../configure-event-disposition/configure-event-disposition.md"
     },
     {
-      "title": "Lab 2: Time Based Disposition Example using Custom Trigger",
+      "title": "Lab 3: Time Based Disposition Example using Custom Trigger",
       "description": "This lab shows you how to configure disposition rules for records that gets triggered by a custom trigger based on the time defined.",
       "filename": "./../../configure-time-disposition/configure-time-disposition.md"
     },
     {
-      "title": "Lab 3: Event-time Based Disposition Rule and its processing on Records",
+      "title": "Lab 4: Event-time Based Disposition Rule and its processing on Records",
       "description": "This lab shows you how to configure disposition rules for records that get triggered by the occurrence of the event and waits for certain retention period before acting on the records.",
       "filename": "./../../configure-event-time-disposition/configure-event-time-disposition.md"
     },
     {
-      "title": "Lab 4: Legal Holds on Records",
+      "title": "Lab 5: Legal Holds on Records",
       "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
       "filename": "./../../set-legal-hold-on records/set-legal-hold-on-records.md"
     }
-    
   ]
 }

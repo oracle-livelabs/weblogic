@@ -1,10 +1,10 @@
 # Legal Hold on Records
 
 ## Introduction
+
 This lab walks you through the freeze functionality of WebCenter Records Management that inhibits the record to undergo disposition processing.
 
-
-Estimated Time: 15 minutes
+*Estimated Time:* 15 minutes
 
 ### Objectives
 
@@ -14,13 +14,14 @@ Estimated Time: 15 minutes
 ### Prerequisites
 
 This lab assumes you have:
+
 * Completed Introduction
 * Completed the Initial Record Set up shown in the Introduction
 * Completed Lab 1 (Creation of retention category and record folders)
 * Completed Check in Content Item Task (Task2) of Lab 3
 
-
 ## Task 1: Create Freeze
+
 1. Under the **Records** menu, select **Configure** option. Now select **Retention** and click on **Freeze** option.
    ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
 
@@ -43,19 +44,17 @@ In the content information page,delete option is removed for the content item th
 
   Freeze functionality is generally used for legal documents that needs to be retained and any critical document which should not be accidentally purged from the system.
 
-
 This concludes this lab.
 
 ## Want to Learn More?
 
-* [Defining and Processing Dispositions ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
-
+* [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
 ## Acknowledgements
 
 * **Author:**
-    * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+  * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors:**
-    * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
+  * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
 
-* **Last Updated By/Date:** Shriraksha S Nataraj ,June 2022
+* **Last Updated By/Date:** Shriraksha S Nataraj ,July 2022

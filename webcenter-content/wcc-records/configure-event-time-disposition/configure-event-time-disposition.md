@@ -1,10 +1,10 @@
 # Event and Time based disposition rule on Software Agreement Record Folder
 
 ## Introduction
+
 This lab will show you how to check-in a content item into the Software Agreement Record Folder and how the item is archived to a specific file location once the content has expired.
 
 Estimated Time: 30 minutes
-
 
 ### Objectives
 
@@ -16,6 +16,7 @@ Estimated Time: 30 minutes
 ### Prerequisites
 
 This lab assumes you have:
+
 * Gone through the Introduction
 * Completed the Initial Record Set up shown in the Introduction
 * Completed Lab 1 (Creation of retention category and record folders)
@@ -28,7 +29,6 @@ This lab assumes you have:
 
 3. In the advanced section, select the record folder and enter the location where you want to archive the record as shown in the image below.Click **Ok**.
      ![Fill in the details as shown in this image to add the disposition rule for the Software Agreement Record Folder](./images/add-disposition-rule.png "Edit Disposition Rule")
-
 
 ## Task 2: Check-In Content Item to Software Agreement Record Folder
 
@@ -84,26 +84,23 @@ Select the user you created in Lab 2 in the **Notify Author** section in the dis
 
     ![Record is archived in the file location specified as shown in the image below.](./images/archived-in-desktop-folder.png "Archived Record Item")
 
-## Task 4:Overview of Disposition Rules on Legal Document Category.
+## Task 4:Overview of Disposition Rules on Legal Document Category
 
 1. The image below shows the disposition rules applied on different record folders which we created in previous labs.It also shows the steps that is completed and the reveiwer's name along with the Record Folder name. Three different types of disposition rules i.e event based, time based and Event-time based disposition rules are applied on 3 different record folders which is MOU's, Non-disclouse Agreement and Software Document Agreement record folders respectively.
 
 ![Three different type of disposition rules acted on three different record folders under the same Retention Category. The image shows the overview of the disposition rules.](./images/overview-of-entire-disposition-rule.png "Disposition Rules")
 
-
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Want to Learn More?
 
-* [Defining and Processing Dispositions ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
-
-
+* [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
 ## Acknowledgements
 
 * **Author:**
-    * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+  * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors:**
-    * Shriraksha S Nataraj
+  * Shriraksha S Nataraj
 
-* **Last Updated By/Date:** Shriraksha S Nataraj ,June 2022
+* **Last Updated By/Date:** Shriraksha S Nataraj ,July 2022
