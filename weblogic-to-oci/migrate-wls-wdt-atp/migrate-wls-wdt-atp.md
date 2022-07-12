@@ -107,7 +107,7 @@ Applications found under `ORACLE_HOME` will have a path that includes `@@ORACLE_
     </copy>
     ```
 
-    [output of the discover_domain.sh script](https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/discover_domain.output.txt)
+    [output of the discover_domain.sh script](https://oracle-livelabs.github.io/weblogic/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/discover_domain.output.txt)
 
 ## Task 3: Edit the `source.yaml` File
 
@@ -458,7 +458,7 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
 
   You will be prompted to provide the `weblogic admin password` which is `welcome1`.
 
-  [View the output of the update_domain.sh script](https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/update_domain.output.txt)
+  [View the output of the update_domain.sh script](https://oracle-livelabs.github.io/weblogic/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/update_domain.output.txt)
 
 ## Task 6: Check the Application Deployed Properly
 
