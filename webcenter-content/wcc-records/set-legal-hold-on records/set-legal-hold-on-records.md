@@ -2,28 +2,30 @@
 
 ## Introduction
 
-This lab walks you through the freeze functionality of WebCenter Records Management that inhibits the record to undergo disposition processing.
+This lab walks you through the freeze functionality of WebCenter Records Management that inhibits the record to undergo disposition processing. Applying legal hold on the records is very important to prevent accidental deletion of critical documents.
 
 *Estimated Time:* 15 minutes
 
 ### Objectives
+
+In this lab, you will
 
 * Create Freeze
 * Apply the Freeze on the Record
 
 ### Prerequisites
 
-This lab assumes you have:
-
-* Completed Introduction
-* Completed the Initial Record Set up shown in the Introduction
-* Completed Lab 1 (Creation of retention category and record folders)
-* Completed Check in Content Item Task (Task2) of Lab 3
+* A Free Tier, Paid or LiveLabs Oracle Cloud account
+* You have completed:
+      - Lab: Get Started with noVNC Remote Desktop
+      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
+      - Lab: Event and Time based disposition rule on Software Agreement Records
 
 ## Task 1: Create Freeze
 
 1. Under the **Records** menu, select **Configure** option. Now select **Retention** and click on **Freeze** option.
-   ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
+
+    ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
 
 2. Click on **Create** and give a valid name for the freeze and click on **Ok**.
 
@@ -31,7 +33,7 @@ This lab assumes you have:
 
 4. Click on **Actions** menu on the content item shown in the image below and select **Edit** click on **Freeze**.
 
-   ![Edit the freeze as shown in this image below from the record folder page.](./images/edit-freeze.png "Edit Freeze from the Record Folder Page")
+   ![Edit the freeze as shown in this image below from the record folder page](./images/edit-freeze.png "Edit Freeze from the Record Folder Page")
 
 5. Select the **Show Freeze** and select the freeze you created.Now you can see the freeze you selected in **Freeze Name** field. Provide a valid freeze reason.
 
@@ -40,11 +42,9 @@ This lab assumes you have:
 6. You can now see the pause symbol next to the Title of the Record item that shows that the record is freezed or is on a legal hold. This particular record will not go through any disposition processing until the freeze is revoked.
 In the content information page,delete option is removed for the content item that is frozen.
 
-  ![Freeze applied on the Record under Software Agreement Record Folder](./images/freeze-applied.png "Freeze Applied")
+   ![Freeze applied on the Record under Software Agreement Record Folder](./images/freeze-applied.png "Freeze Applied")
 
   Freeze functionality is generally used for legal documents that needs to be retained and any critical document which should not be accidentally purged from the system.
-
-This concludes this lab.
 
 ## Want to Learn More?
 
@@ -52,9 +52,6 @@ This concludes this lab.
 
 ## Acknowledgements
 
-* **Author:**
-  * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors:**
-  * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
-
-* **Last Updated By/Date:** Shriraksha S Nataraj ,July 2022
+* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
+* **Last Updated By/Date-** Shriraksha S Nataraj ,July 2022

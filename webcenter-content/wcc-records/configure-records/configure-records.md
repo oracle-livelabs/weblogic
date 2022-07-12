@@ -8,6 +8,8 @@ In this lab we will review and startup all components required to successfully r
 
 ### Objectives
 
+In this lab, you will
+
 - Initialize the workshop environment
 - Selecting the Installation option for Records
 - Configure Setup Checklist
@@ -16,9 +18,9 @@ In this lab we will review and startup all components required to successfully r
 
 This lab assumes you have:
 
-- An Oracle Cloud account
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-  - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+      - Lab: Get Started with noVNC Remote Desktop
 
 ## Task 1: Start WebLogic and WebCenter Content Server
 
@@ -73,9 +75,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Authors:**
-  - Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
-- **Contributors:**
-  - Shriraksha S Nataraj
-
-- **Last Updated By/Date:** Shriraksha S Nataraj , July 2022
+- **Authors-** Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
+- **Contributors-** Shriraksha S Nataraj
+- **Last Updated By/Date-** Shriraksha S Nataraj , July 2022

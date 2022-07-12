@@ -1,12 +1,14 @@
-# Event and Time based disposition rule on Software Agreement Record Folder
+# Event and Time based disposition rule on Software Agreement Records
 
 ## Introduction
 
-This lab will show you how to check-in a content item into the Software Agreement Record Folder and how the item is archived to a specific file location once the content has expired.
+This lab showcases how to use both event and time as the criteria for the disposition rule to act upon the records. It shows you how to set up the disposition rule based on the event and time.It shows you how to check-in a content item into the Software Agreement Record Folder and how the item is archived to a specific file location once the content has expired.The record goes through the workflow process and gets approved by the authorized user before getting expired.
 
-Estimated Time: 30 minutes
+*Estimated Time*: 30 minutes
 
 ### Objectives
+
+In this lab, you will:
 
 * Add Disposition Rule
 * Check-In Content Item
@@ -17,9 +19,11 @@ Estimated Time: 30 minutes
 
 This lab assumes you have:
 
-* Gone through the Introduction
-* Completed the Initial Record Set up shown in the Introduction
-* Completed Lab 1 (Creation of retention category and record folders)
+* A Free Tier, Paid or LiveLabs Oracle Cloud account
+* You have completed:
+      - Lab: Get Started with noVNC Remote Desktop
+      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
+      - Lab: Time based disposition Rule on Non-disclosure Agreement Records (Task 3 is mandatory)
 
 ## Task 1: Add Disposition Rule
 
@@ -98,9 +102,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author:**
-  * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors:**
-  * Shriraksha S Nataraj
-
-* **Last Updated By/Date:** Shriraksha S Nataraj ,July 2022
+* **Author-**  Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj
+* **Last Updated By/Date-** Shriraksha S Nataraj ,July 2022

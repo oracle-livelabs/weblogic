@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will learn about the steps needed to configure the series,retention category and respective record folders shown in the architecture diagram below.This lab also sets the disposition rule on the **Legal Documents** category for the **MOU** record folder.
+In this lab you will learn about the steps needed to configure the series,retention category and respective record folders shown in the architecture diagram below.This lab demonstrates how to set up a disposition rule based on a event. the occurrence of the event triggers the disposition rule to act upon the records. In this lab, let us see how to set the disposition rule on the **Legal Documents** category for the **MOU** record folder.
 
   ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
@@ -19,8 +19,10 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Gone through the Introduction.
-* Completed the Initial Record Set up shown in the Introduction
+* A Free Tier, Paid or LiveLabs Oracle Cloud account
+* You have completed:
+      - Lab: Get Started with noVNC Remote Desktop
+      - Lab: Initialize Environment(only if Records is not installed)
 
 ## Task 1: Create Retention Category and Records Folders
 
@@ -76,9 +78,6 @@ This lab assumes you have:
 
 ## Acknowledgements
 
-* **Authors:**
-  * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
-* **Contributors:**
-  * Shriraksha S Nataraj
-
-* **Last Updated By/Date:** Shriraksha S Nataraj , July 2022
+* **Authors-** Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj
+* **Last Updated By/Date-** Shriraksha S Nataraj , July 2022

@@ -1,11 +1,12 @@
 # Introduction
 
 ## About this Workshop
+
  This workshop will help organizations kickstart their records management journey and help them to focus on the preservation of content for historical, legal, or archival purposes.It will also guide organizations to define, manage, and execute records and retention policies for all enterprise content from a single application.This workshop demonstrates how to dispose of obsolete content items, content items that are no longer needed by applying different types of disposition rules on the content using Oracle WebCenter Content Records Management.
 
 *Estimated Time:* 3 hours
 
-## About WebCenter Content Records Management
+### About WebCenter Content Records Management
 
 Oracle WebCenter Content provides unified records management capability across all the high­value information stored within it, including website content, electronic documents, digital assets, and images. This enables Oracle WebCenter Content to uniquely deliver a complete end-to-end system for document lifecycle management – from creation or capture to revision to archive and disposition. Oracle WebCenter Content Records Management system lets you retain and dispose Organization's content by applying disposition or retention policies on the record. Not only must content be maintained, but it must also be defensibly disposed once its usefulness has expired. Oracle WebCenter Content enables both the retention and disposition of information, allowing organizations to define, manage, and execute records and retention policies for all enterprise content from a single application.
 
@@ -16,7 +17,7 @@ The Retention Category named **Legal Documents** contains 3 record folders: **MO
 
 ### Objectives
 
-In this workshop, you will:
+In this lab, you will:
 
 * Understand WebCenter Content Records Management
 * Understand Retention Category and Disposition Rules
@@ -36,9 +37,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Authors:**
-  * Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
-* **Contributors:**
-  * Shriraksha S Nataraj
-
-* **Last Updated By/Date:** Shriraksha S Nataraj , July 2022
+* **Authors-** Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj
+* **Last Updated By/Date-** Shriraksha S Nataraj , July 2022

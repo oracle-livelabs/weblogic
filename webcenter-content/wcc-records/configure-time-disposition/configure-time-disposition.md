@@ -1,8 +1,9 @@
-# Time based disposition Rule on Non-disclosure Agreement Record Folder
+# Time based disposition Rule on Non-disclosure Agreement Records
 
 ## Introduction
 
-This lab will show you how to create a custom trigger for the disposition rule on the Legal Documents Category. Additionally, you will learn how to set up a time based disposition rule on the Non-disclosure Agreement Record Folder.
+This lab will show you how to create a custom trigger for the disposition rule on the Legal Documents Category. Additionally, you will learn how to set up a time based disposition rule on the Non-disclosure Agreement Record Folder.This lab also showcases how to set up a user for reviewing the records before getting disposed.
+
    ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
 *Estimated Time:* 30 minutes
@@ -19,9 +20,10 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Gone through the Introduction.
-* Completed the Initial Record Set up shown in the Introduction
-* Completed Lab 1 (Creation of retention category and record folders)
+* A Free Tier, Paid or LiveLabs Oracle Cloud account
+* You have completed:
+      - Lab: Get Started with noVNC Remote Desktop
+      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
 
 ## Task 1: Create Custom Trigger
 
@@ -74,9 +76,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author:**
-  * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors:**
-  * Shriraksha S Nataraj
-
-* **Last Updated By/Date:** Shriraksha S Nataraj ,July 2022
+* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj
+* **Last Updated By/Date-** Shriraksha S Nataraj ,July 2022
