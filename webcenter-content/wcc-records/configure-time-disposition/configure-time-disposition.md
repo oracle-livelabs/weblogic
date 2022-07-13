@@ -1,15 +1,17 @@
-# Time based disposition Rule on Non-disclosure Agreement Record Folder
+# Time based disposition Rule on Non-disclosure Agreement Records
 
 ## Introduction
 
-This lab will show you how to create a custom trigger for the disposition rule on the Legal Documents Category. Additionally, you will learn how to set up a time based disposition rule on the Non-disclosure Agreement Record Folder.
+This lab will show you how to create a custom trigger for the disposition rule on the Legal Documents Category. Additionally, you will learn how to set up a time based disposition rule on the Non-disclosure Agreement Record Folder.This lab also showcases how to set up a user for reviewing the records before getting disposed.
+
    ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
-Estimated Time: 20 minutes
+*Estimated Time:* 30 minutes
 
 ### Objectives
 
 In this lab, you will:
+
 * Create a Custom Trigger
 * Add disposition Rule on Non-Disclosure Agreement Record Folder
 * Create User and add record reviewer roles
@@ -17,10 +19,11 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-* Gone through the Introduction.
-* Completed the Initial Record Set up shown in the Introduction
-* Completed Lab 1 (Creation of retention category and record folders)
 
+* A Free Tier, Paid or LiveLabs Oracle Cloud account
+* You have completed:
+      - Lab: Get Started with noVNC Remote Desktop
+      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
 
 ## Task 1: Create Custom Trigger
 
@@ -37,7 +40,6 @@ A user can create a trigger that activates immediately, activate a trigger on a 
    ![This image shows the Global Trigger Create Page. Fill in the details as shown here.](./images/globaltrigger-creation-form.png "Global Trigger Create Page")
 
 3. As shown in the image above,enter the trigger name as **Year End** and the activation date. Once done click on Create.
-
 
 ## Task 2: Add disposition Rule on Non-Disclosure Agreement Record Folder
 
@@ -66,19 +68,14 @@ A user can create a trigger that activates immediately, activate a trigger on a 
   3. In the main menu , Click on Aliases and select RmaReviewers. Add the user Mark by clicking on the **Add** option.
       ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Want to Learn More?
 
-
-* [Defining and Processing Dispositions ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
-
+* [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
 ## Acknowledgements
 
-* **Author:**
-    * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors:**
-    * Shriraksha S Nataraj
-
-* **Last Updated By/Date:** Shriraksha S Nataraj ,June 2022
+* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj
+* **Last Updated By/Date-** Shriraksha S Nataraj ,July 2022
