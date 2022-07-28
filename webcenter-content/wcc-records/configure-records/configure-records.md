@@ -22,50 +22,31 @@ This lab assumes you have:
 - You have completed:
       - Lab: Get Started with noVNC Remote Desktop
 
-## Task 1: Validate That Required Processes are Up and Running
+## Task 1: Start WebLogic and WebCenter Content Server
 
-1. Now with access to your remote desktop session, proceed as indicated below to validate your environment before you start executing the subsequent labs.
+Before getting started, you should start the WebLogic server and content server.
 
-2. On the *Web Browser* window on the right preloaded with *WebCenter Content Console*, click on the *Username* field and select the saved credentials to login. These credentials have been saved within Web Browser and are provided below for reference
-    - Username
-
-        ```
-
-    <copy>weblogic</copy>
-
-    ```
-
-    - Password
-
-        ```
-
-    <copy>welcome1</copy>
-    ```
-
-     ![This image shows the preloaded WebCenter Content Console.](./images/webcenter-content-login-screen.png "WebCenter Content Console Login Screen")
-
-3. If you are still unable to login or the login page is not functioning after reloading the application URL, open a terminal session and proceed as indicated below to validate the services.
-
-   - Check the status of WebLogic Server.
+1. Login to the demo environment and run the following command to check the status of WebLogic Server and WebCenter Content Server.
 
        ```
-
-    <copy>sudo systemctl status weblogic</copy>
-
+    <copy>systemctl status weblogic.service</copy>
     ```
 
-![This image shows the status of the WebLogic Server.](./images/weblogic-startup.png "WebLogic Server Status")
+2. After running the above command in the terminal you must see the status **active(running)** as shown in the image below.
 
-   - Check the status of WebCenter Content server.
+     > **Note:** Make sure to check the status of the servers before starting the lab.
 
-      ```
+![This image shows the status of the WebLogic Server.](./images/weblogic-status.png "WebLogic Server Status")
 
-    <copy>sudo systemctl status ucm</copy>
-
+3. Similarly run the following command to check the status of WebCenter Content server.
+        ```
+    <copy>systemctl status weblogic.service</copy>
     ```
 
-![This image shows the status of the WebCenter Content server](./images/webcenter-content-startup.png "WebCenter Content Server Status")
+![This image shows the status of the WebCenter Content server](./images/webcenter-status.png "WebCenter Content Server Status")
 
+4. Open any browser and type the following URL to access the WebCenter Content Server.
+   <http://localhost:16200/cs/>
 
 ## Task 2: Install Records on UCM and configure the Setup Checklist
 
