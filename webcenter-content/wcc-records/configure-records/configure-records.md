@@ -22,7 +22,7 @@ This lab assumes you have:
 - You have completed:
       - Lab: Get Started with noVNC Remote Desktop
 
-## Task 1: Start WebLogic and WebCenter Content Server
+## Task 1: Validate That Required Processes are Up and Running
 
 1. Now with access to your remote desktop session, proceed as indicated below to validate your environment before you start executing the subsequent labs.
 
