@@ -22,11 +22,19 @@ In this workshop, you will:
 
 ## Task 1: Start WebLogic and WebCenter Content Server
 
-Before getting started, you should start the WebLogic server and content server.
+1. Now with access to your remote desktop session, proceed as indicated below to validate your environment before you start executing the subsequent labs.
+
+2. On the Web Browser window on the right preloaded with WebCenter Content Console, click on the Username field and select the saved credentials to login. These credentials have been saved within Web Browser and are provided below for reference
+    * Username 
+    
+        ```
+    <copy>systemctl status weblogic</copy>
+    ```
+
 
 1.  Login to the demo environment and run the following command to check the status of Weblogic Server and WebCenter Content Server.
        ```
-    <copy>systemctl status weblogic.service</copy>
+    <copy>systemctl status weblogic</copy>
     ```
 
 2.  After running the above command in the terminal you must see the status **active(running)** as shown in the image below.
@@ -36,13 +44,11 @@ Before getting started, you should start the WebLogic server and content server.
 
 3. Similarly run the following command to check the status of WebCenter Content server.
         ```
-    <copy>systemctl status weblogic.service</copy>
+    <copy>systemctl status ucm</copy>
     ```
 
 ![This image shows the status of the WebCenter Content server](./images/webcenter-status.png "WebCenter Content Server Status")
 
-3. Open any browser and type the following URL to access the WebCenter Content Server.
-   http://localhost:16200/cs/
 
 
 ## Task 2: Install Records on UCM and configure the Setup Checklist.
