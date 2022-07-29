@@ -1,26 +1,22 @@
 {
   "workshoptitle": "Quick start your records disposition program with WebCenter Content : Records",
   "help": "livelabs-help-db_us@oracle.com",
-	"tutorials": [
-
+  "tutorials": [
     {
       "title": "Introduction",
       "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
       "filename": "./../../introduction/introduction.md"
     },
-
     {
       "title": "Get Started with noVNC Remote Desktop",
       "description": "Using noVNC Remote Desktop",
-      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
-
     {
       "title": "Lab 1: Initialize Environment",
-      "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
-      "filename": "./../../configure-records/configure-records.md"
+      "description": "This lab provides detailed guide to initialize the workshop environment",
+      "filename": "./../../initialize-environment/initialize-environment.md"
     },
-
     {
       "title": "Lab 2: Event based Disposition Rule on MOU Records",
       "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
@@ -40,6 +36,11 @@
       "title": "Lab 5: Legal Holds on Records",
       "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
       "filename": "./../../set-freeze-on-records/set-freeze-on-records.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }
