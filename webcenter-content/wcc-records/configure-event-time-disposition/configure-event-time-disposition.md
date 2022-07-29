@@ -16,14 +16,14 @@ In this lab, you will:
 * Overview of Disposition Rules
 
 ### Prerequisites
-
 This lab assumes you have:
-
-* A Free Tier, Paid or LiveLabs Oracle Cloud account
-* You have completed:
-      - Lab: Get Started with noVNC Remote Desktop
-      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
-      - Lab: Time based disposition Rule on Non-disclosure Agreement Records (Task 3 is mandatory)
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
+    - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
+    - Lab: Time based disposition Rule on Non-disclosure Agreement Records (Task 3 is mandatory)
 
 ## Task 1: Add Disposition Rule
 

@@ -14,12 +14,14 @@ In this lab, you will
 * Apply the Freeze on the Record
 
 ### Prerequisites
-
-* A Free Tier, Paid or LiveLabs Oracle Cloud account
-* You have completed:
-      - Lab: Get Started with noVNC Remote Desktop
-      - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
-      - Lab: Event and Time based disposition rule on Software Agreement Records
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
+    - Lab: Event based Disposition Rule on MOU Records (Task 1 is mandatory)
+    - Lab: Event and Time based disposition rule on Software Agreement Records
 
 ## Task 1: Create Freeze
 
@@ -42,7 +44,7 @@ In this lab, you will
 In the content information page,delete option is removed for the content item that is frozen.
 
    ![Freeze applied on the Record under Software Agreement Record Folder](/images/freeze-applied.png "Freeze Applied")
-   
+
   Freeze functionality is generally used for legal documents that needs to be retained and any critical document which should not be accidentally purged from the system.
 
 ## Want to Learn More?
