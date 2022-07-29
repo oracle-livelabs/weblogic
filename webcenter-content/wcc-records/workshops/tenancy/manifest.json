@@ -24,8 +24,8 @@
     },
     {
       "title": "Lab 3: Initialize Environment",
-      "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
-      "filename": "./../../configure-records/configure-records.md"
+      "description": "This lab provides detailed guide to initialize the workshop environment",
+      "filename": "./../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Lab 4: Event based Disposition Rule on MOU Records",
