@@ -16,13 +16,12 @@ In this lab, you will:
 * Add Disposition Rule on the Category for the MOU Record Folder
 
 ### Prerequisites
-
 This lab assumes you have:
-
-* A Free Tier, Paid or LiveLabs Oracle Cloud account
-* You have completed:
-      - Lab: Get Started with noVNC Remote Desktop
-      - Lab: Initialize Environment(only if Records is not installed)
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
 
 ## Task 1: Create Retention Category and Records Folders
 
