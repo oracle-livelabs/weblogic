@@ -4,7 +4,7 @@
 
 This lab showcases how to use both event and time as the criteria for the disposition rule to act upon the records. It shows you how to set up the disposition rule based on the event and time.It shows you how to check-in a content item into the Software Agreement Record Folder and how the item is archived to a specific file location once the content has expired.The record goes through the workflow process and gets approved by the authorized user before getting expired.
 
-*Estimated Time*: 30 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -96,7 +96,7 @@ Select the user you created in Lab 2 in the **Notify Author** section in the dis
 
 You may now **proceed to the next lab**.
 
-## Want to Learn More?
+## Learn More
 
 * [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
