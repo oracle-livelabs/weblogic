@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab we will review and startup all components required to successfully run this workshop.
+In this lab, we will review and startup all components required to successfully run this workshop.
 
 *Estimated Time:* 30 Minutes.
 
@@ -59,9 +59,9 @@ This lab assumes you have:
 
     ![This image shows the status of the WebCenter Content UI Landing page post successful login](./images/webcenter-post-login.png "WebCenter Content UI Landing page post successful login")
 
-    If successful, the page above is displayed and as a result your environment is now ready.  
+    If successful, the page above is displayed and as a result, your environment is now ready.  
 
-4. If you are still unable to login or the login page is not functioning after reloading by double-clicking on the desktop icon *Get Started with your Workshop*, open a terminal session and proceed as indicated below to validate the services.
+4. If you are still unable to log in or the login page is not functioning after reloading by double-clicking on the desktop icon *Get Started with your Workshop*, open a terminal session and proceed as indicated below to validate the services.
 
     - Database and Listener
 
@@ -93,7 +93,7 @@ This lab assumes you have:
 
     ![This image shows the status of the WebCenter Content server](./images/webcenter-status.png "WebCenter Content Server Status")
 
-5. If you see questionable output(s), failure or down component(s), restart the corresponding service(s) accordingly
+5. If you see the questionable output(s), failure or down component(s), restart the corresponding service(s) accordingly
 
     - Database and Listener
 
@@ -121,9 +121,9 @@ This lab assumes you have:
 
 ## Task 2: Install Records on UCM and configure the Setup Checklist
 
-> **Note:** *Records* option in the menu bar indicates that there is already Records installed and configured. In that case you can skip this task and proceed to next lab if Records Initial setup is completed.
+> **Note:** *Records* option in the menu bar indicates that there are already Records installed and configured. In that case, you can skip this task and proceed to the next lab if the Records Initial setup is completed.
 
-1. Login to Content server as an administrator and click on **Configure Records Settings** under Administration tab as shown in the image below.
+1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
 
     ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
 
@@ -134,7 +134,7 @@ This lab assumes you have:
 
     > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
 
-3. After the installation is successfully completed ,configure the setup checklist by clicking on **Records** tab,select **Configure** option and then select **Setup Checklist**.
+3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
 
     ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
 
@@ -229,6 +229,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Authors-** Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
+- **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 - **Contributors-** Shriraksha S Nataraj, Rene Fontcha
-- **Last Updated By/Date-** Rene Fontcha , July 2022
+- **Last Updated By/Date-** Rene Fontcha, July 2022
