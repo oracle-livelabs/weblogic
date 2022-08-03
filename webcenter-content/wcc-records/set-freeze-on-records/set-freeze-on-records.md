@@ -14,16 +14,15 @@ In this lab, you will
 * Apply the Freeze on the Record
 
 ### Prerequisites
-
 This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
+    - Lab: Event-based Disposition Rule on MOU Records (Task 1 is mandatory)
+    - Lab: Event and Time-based disposition rule on Software Agreement Records
 
-* A Free Tier, Paid or LiveLabs Oracle Cloud account
-* You have completed:
-  * Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-  * Lab: Environment Setup
-  * Lab: Initialize Environment
-  * Lab: Event-based Disposition Rule on MOU Records (Task 1 is mandatory)
-  * Lab: Event and Time-based disposition rule on Software Agreement Records
 
 ## Task 1: Create Freeze
 
