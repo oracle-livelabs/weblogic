@@ -119,29 +119,6 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 2: Install Records on UCM and configure the Setup Checklist
-
-> **Note:** *Records* option in the menu bar indicates that there are already Records installed and configured. In that case, you can skip this task and proceed to the next lab if the Records Initial setup is completed.
-
-1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
-
-    ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
-
-2. Select the software configuration as shown in the image.
-
-    ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
-    ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
-
-    > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
-
-3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
-
-    ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
-
-4. On the Setup Checklist page install the defaults and configure security settings.
-
-    ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
-
 You may now **proceed to the next lab**.
 
 ## Appendix 1: Managing Startup Services
@@ -223,7 +200,28 @@ You may now **proceed to the next lab**.
     <copy>sudo systemctl restart ucm</copy>
     ```
 
-## Want to Learn More?
+## Appendix 2: Records Installation on WebCenter Content
+
+1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
+
+    ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
+
+2. Select the software configuration as shown in the image.
+
+    ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
+    ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
+
+    > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
+
+3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
+
+    ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
+
+4. On the Setup Checklist page install the defaults and configure security settings.
+
+    ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
+
+## Learn More
 
 - [Introduction To WebCenter Records](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 
@@ -231,4 +229,4 @@ You may now **proceed to the next lab**.
 
 - **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 - **Contributors-** Shriraksha S Nataraj, Rene Fontcha
-- **Last Updated By/Date-** Rene Fontcha, July 2022
+- **Last Updated By/Date-** Shriraksha S Nataraj, July 2022

@@ -65,7 +65,7 @@ This lab assumes you have:
 1. Now that the disposition rule is processed, it goes through a workflow process before the disposition action acts on the Record. Follow the Create User Task shown in Lab 2 and assign roles and alias to the user from the same lab.
 Select the user you created in Lab 2 in the **Notify Author** section in the disposition rule page shown above.
 
-> **Note:**Pending events and review cycles are processed by the system every night on a 24-hour cycle. Notifications are sent daily at midnight. Use the **Batch Services** options on the Records menu to process certain actions immediately rather than wait for the scheduled processing time. Options on the Batch menu include as shown in the image below. Select **Run All** or you can run individual options too such as **Process Dispositions** and **Process Reviews**. By performing this step, the user gets notified of the Pending Approvals.
+> **Note:** Pending events and review cycles are processed by the system every night on a 24-hour cycle. Notifications are sent daily at midnight. Use the **Batch Services** options on the Records menu to process certain actions immediately rather than wait for the scheduled processing time. Options on the Batch menu include as shown in the image below. Select **Run All** or you can run individual options too such as **Process Dispositions** and **Process Reviews**. By performing this step, the user gets notified of the Pending Approvals.
    ![Run batch services to get notified of the Pending Approval Notification](./images/run-batch-services.png "Run Batch Services Option")
 
 2. To check the Pending Approvals for Disposition, Click on **My Content Server** and select **My Records Assignments**
@@ -88,7 +88,7 @@ Select the user you created in Lab 2 in the **Notify Author** section in the dis
 
     ![Record is archived in the file location specified as shown in the image below.](./images/archived-in-desktop-folder.png "Archived Record Item")
 
-## Task 4:Overview of Disposition Rules on Legal Document Category
+## Task 4: Overview of Disposition Rules on Legal Document Category
 
 1. The image below shows the disposition rules applied on different record folders which we created in previous labs. It also shows the steps that are completed and the reviewer's name along with the Record Folder name. Three different types of disposition rule i.e event-based, time-based and Event-time based disposition rules are applied on 3 different record folders which are MOUs, Non-disclosure Agreement and Software Document Agreement record folders respectively.
 
