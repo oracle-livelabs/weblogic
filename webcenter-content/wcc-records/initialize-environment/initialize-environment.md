@@ -119,6 +119,8 @@ This lab assumes you have:
     </copy>
     ```
 
+5. After you log in to the WebCenter Content server, you can see that records is already pre-configured. Refer the Appendix 2 to know how to install Records in WebCenter Content Server.
+
 You may now **proceed to the next lab**.
 
 ## Appendix 1: Managing Startup Services
