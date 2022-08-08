@@ -48,7 +48,7 @@ On the content information page, the delete option is removed for the content it
 
   Freeze functionality is generally used for legal documents that need to be retained and any critical document which should not be accidentally purged from the system.
 
-## Want to Learn More?
+## Learn More
 
 * [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
@@ -56,4 +56,4 @@ On the content information page, the delete option is removed for the content it
 
 * **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Last Updated By/Date-** Shriraksha S Nataraj,July 2022
+* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
