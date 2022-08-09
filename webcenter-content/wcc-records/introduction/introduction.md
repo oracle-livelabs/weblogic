@@ -31,7 +31,7 @@ This lab assumes you have:
 
 You may now **proceed to the next lab**.
 
-## Want to Learn More?
+## Learn More
 
 * [Introduction To WebCenter Records](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 
@@ -39,4 +39,4 @@ You may now **proceed to the next lab**.
 
 * **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Shriraksha S Nataraj
-* **Last Updated By/Date-** Shriraksha S Nataraj, July 2022
+* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022

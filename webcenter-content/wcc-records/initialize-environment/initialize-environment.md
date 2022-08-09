@@ -21,7 +21,7 @@ This lab assumes you have:
     - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
     - Lab: Environment Setup
 
-## Task 1: Validate That Required Processes are Up and Running.
+## Task 1: Validate That Required Processes are Up and Running
 1. Now with access to your remote desktop session, proceed as indicated below to validate your environment before you start executing the subsequent labs. The following Processes should be up and running:
 
     - Database Listener
@@ -119,28 +119,7 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 2: Install Records on UCM and configure the Setup Checklist
-
-> **Note:** *Records* option in the menu bar indicates that there are already Records installed and configured. In that case, you can skip this task and proceed to the next lab if the Records Initial setup is completed.
-
-1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
-
-    ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
-
-2. Select the software configuration as shown in the image.
-
-    ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
-    ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
-
-    > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
-
-3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
-
-    ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
-
-4. On the Setup Checklist page install the defaults and configure security settings.
-
-    ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
+6. After you log in to the WebCenter Content server, you can see that records are already pre-configured. Refer the Appendix 2 to know how to install Records on the WebCenter Content Server.
 
 You may now **proceed to the next lab**.
 
@@ -223,7 +202,28 @@ You may now **proceed to the next lab**.
     <copy>sudo systemctl restart ucm</copy>
     ```
 
-## Want to Learn More?
+## Appendix 2: Installation of Records on WebCenter Content
+
+1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
+
+    ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
+
+2. Select the software configuration as shown in the image.
+
+    ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
+    ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
+
+    > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
+
+3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
+
+    ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
+
+4. On the Setup Checklist page install the defaults and configure security settings.
+
+    ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
+
+## Learn More
 
 - [Introduction To WebCenter Records](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 
@@ -231,4 +231,4 @@ You may now **proceed to the next lab**.
 
 - **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 - **Contributors-** Shriraksha S Nataraj, Rene Fontcha
-- **Last Updated By/Date-** Rene Fontcha, July 2022
+- **Last Updated By/Date-** Shriraksha S Nataraj, August 2022

@@ -18,17 +18,17 @@
       "filename": "./../../initialize-environment/initialize-environment.md"
     },
     {
-      "title": "Lab 2: Event based Disposition Rule on MOU Records",
+      "title": "Lab 2: Event-based Disposition Rule on MOU Records",
       "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
       "filename": "./../../configure-event-disposition/configure-event-disposition.md"
     },
     {
-      "title": "Lab 3: Time based disposition rule on Non-disclosure Agreement Records",
+      "title": "Lab 3: Time-based disposition rule on Non-disclosure Agreement Records",
       "description": "This lab shows you how to configure disposition rules for records that gets triggered by a custom trigger based on the time defined.",
       "filename": "./../../configure-time-disposition/configure-time-disposition.md"
     },
     {
-      "title": "Lab 4: Event and Time based disposition rule on Software Agreement Records",
+      "title": "Lab 4: Event and Time-based disposition rule on Software Agreement Records",
       "description": "This lab shows you how to configure disposition rules for records that get triggered by the occurrence of the event and waits for certain retention period before acting on the records.",
       "filename": "./../../configure-event-time-disposition/configure-event-time-disposition.md"
     },
