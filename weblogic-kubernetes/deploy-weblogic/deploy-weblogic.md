@@ -49,13 +49,13 @@ After you have your domain namespace (the WebLogic domain is not deployed yet), 
     ```bash
     Release "traefik-operator" has been upgraded. Happy Helming!
     NAME: traefik-operator
-    LAST DEPLOYED: Mon Nov 21 06:42:55 2022
+    LAST DEPLOYED: Tue Nov 22 07:39:45 2022
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 2
     TEST SUITE: None
     NOTES:
-    Traefik Proxy v2.9.4 has been deployed successfully 
+    Traefik Proxy v2.9.4 has been deployed successfully
     on traefik namespace !
     ```
     
@@ -68,10 +68,10 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
 
 1. We provided for you a domain.yaml file that contains a YAML representation of the custom resource object. Please copy it locally:
     ```bash
-    <copy>curl -LSs https://raw.githubusercontent.com/oracle/learning-library/master/solutions-library/weblogic-kubernetes/domain.v9.yaml  >~/domain.yaml >~/domain.yaml</copy>
+    <copy>curl -LSs https://raw.githubusercontent.com/pandey-ankit/weblogic/main/weblogic-kubernetes/domain.v9.yaml  >~/domain.yaml</copy>
     ```
 
-    > Review it in your favorite editor or a [browser](https://raw.githubusercontent.com/oracle/learning-library/master/solutions-library/weblogic-kubernetes/domain.v9.yaml).
+    > Review it in your favorite editor or a [browser](https://raw.githubusercontent.com/pandey-ankit/weblogic/main/weblogic-kubernetes/domain.v9.yaml).
 
 2. Create the domain custom resource object with the following command:
     ```bash
@@ -89,8 +89,8 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     ```
     The output should be similar to the following:
     ```bash
-    NAME                                         READY     STATUS              RESTARTS   AGE
-    sample-domain1-introspect-domain-job-kcn4n   0/1       ContainerCreating   0          7s
+    NAME                                READY   STATUS              RESTARTS   AGE
+    sample-domain1-introspector-f7rfn   0/1     ContainerCreating   0          15s
     ```
 4. Periodically check the pods in the domain namespace and soon you will see the servers starting:
     ```bash
@@ -98,10 +98,10 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     ```
     The output should be similar to the following:
     ```bash
-    NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE   READINESS GATES
-    sample-domain1-admin-server      1/1     Running   0          8m32s   10.244.0.8     10.0.10.35   <none>           <none>
-    sample-domain1-managed-server1   1/1     Running   0          7m57s   10.244.1.4     10.0.10.86   <none>           <none>
-    sample-domain1-managed-server2   1/1     Running   0          7m57s   10.244.0.132   10.0.10.46   <none>           <none>
+    NAME                             READY   STATUS    RESTARTS   AGE    IP             NODE          NOMINATED NODE   READINESS GATES
+    sample-domain1-admin-server      1/1     Running   0          2m7s   10.244.0.5     10.0.10.134   <none>           <none>
+    sample-domain1-managed-server1   1/1     Running   0          55s    10.244.1.133   10.0.10.254   <none>           <none>
+    sample-domain1-managed-server2   0/1     Running   0          55s    10.244.0.132   10.0.10.203   <none>           <none>
     ```
     > You should see three running pods similar to the results shown above. If you don't see all the running pods, wait and then check periodically. The entire domain deployment may take up to 2-3 minutes depending on the compute shapes.
 
@@ -165,7 +165,7 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     ```
     The output should be similar to the following:
     ```bash
-    143.47.248.209
+    132.145.10.86
     ```
 
 7. Construct the Administration Console URL and open it in a browser; enter the *weblogic/welcome1* as Username and Password and then click **Login**.
