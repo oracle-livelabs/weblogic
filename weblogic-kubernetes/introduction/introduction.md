@@ -2,14 +2,14 @@
 
 ## About this Workshop
 
-This lab shows you how to deploy and run a WebLogic domain container-packaged web application on a Kubernetes cluster using [Oracle WebLogic Server Kubernetes Operator 3.0.0](https://github.com/oracle/weblogic-kubernetes-operator) (the "operator").
+This lab shows you how to deploy and run a WebLogic domain container-packaged web application on a Kubernetes cluster using [Oracle WebLogic Server Kubernetes Operator 4.0.1](https://github.com/oracle/weblogic-kubernetes-operator) (the "operator").
 
 The sample web application is a simple JSP page which shows WebLogic Server domain MBean attributes to demonstrate operator features.
 
 ### About Product/Technology
 
 A WebLogic domain can be located either in a persistent volume (PV) or in a Docker image. There are advantages to both approaches, and sometimes there are technical limitations of various cloud providers that may make one approach better suited to your needs. See
-[Choose a model](https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-domains/choosing-a-model/).
+[Choose a model](https://oracle.github.io/weblogic-kubernetes-operator/managing-domains/choosing-a-model/).
 
 This tutorial uses the Docker image with the WebLogic domain inside the image deployment. This means that all the artifacts and domain-related files are stored within the image. There is no central, shared domain folder from the pods. This is similar to the standard installation topology where you distribute your domain to different hosts to scale out Managed Servers. The main difference is that by using a container-packaged WebLogic domain, you don't need to use the pack/unpack mechanism to distribute domain binaries and configuration files between multiple hosts.
 
@@ -30,8 +30,6 @@ This tutorial has been tested on the Oracle Cloud Infrastructure Container Engin
 * Install a Traefik software load balancer
 * Deploy a WebLogic domain
 * Scale a WebLogic cluster
-* Update a deployed application by a rolling restart of the new image
-* Assign WebLogic pods to nodes (a scenario simulating a cluster spanning 2 data centers)](node.selector.ocishell.md)
 
 ### Prerequisites
 
@@ -43,5 +41,5 @@ An Oracle Paid or LiveLabs Cloud account.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022

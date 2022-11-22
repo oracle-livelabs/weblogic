@@ -43,7 +43,7 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
     ![Select Compartment](images/selectcompartment.png)
 
-3. In the Create Cluster Solution dialog, select *Quick Create* and click *Launch Workflow*.
+3. In the Create Cluster Solution dialog, select *Quick create* and click *Submit*.
 
     ![Launch Workflow](images/launchworkflow.png)
 
@@ -53,10 +53,10 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
     * **Name**: The name of the cluster. Leave the default value.
     * **Compartment**: The name of the compartment. Leave the default value.
-    * **Kubernetes version**: The version of Kubernetes. Leave the default value which should be *v1.21.5* or select the latest version available.
+    * **Kubernetes version**: The version of Kubernetes. Leave the default value which should be *v1.24.1* or select the latest version available.
     * **Kubernetes API Endpoint**: Are the cluster master nodes going to be routable or not. Select the *Public Endpoint* value.
     * **Kubernetes Worker Nodes**: Are the cluster worker nodes going to be routable or not. Leave the default *Private Workers* value.
-    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select *VM.Standard2.1* (which is typically available in Oracle Free Tier Account).
+    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select *VM.Standard.E4.Flex* (which is typically available in Oracle Free Tier Account). Select the default number of OCPUs *1* and amount of memory *16* as shown below.
     * **Number of nodes**: The number of worker nodes to create. Leave the default value, *3*.
 
     ![Quick Cluster](images/quickcluster.png)
@@ -65,7 +65,7 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
     ![Enter Data](images/enterdata.png)
 
-5. On the *Review* page, click *Create Cluster* to create the new network resources and the new cluster.
+5. On the *Review* page, click *Create cluster* to create the new network resources and the new cluster.
 
     ![Review Cluster](images/reviewcluster.png)
 
@@ -121,9 +121,9 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
     ```bash
     $ kubectl get node
     NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.193   Ready    node    10m   v1.21.5
-    10.0.10.194   Ready    node    10m   v1.21.5
-    10.0.10.28    Ready    node    10m   v1.21.5
+    10.0.10.134   Ready    node    33m   v1.24.1
+    10.0.10.203   Ready    node    33m   v1.24.1
+    10.0.10.254   Ready    node    33m   v1.24.1
     ```
 
     > If you see the node's information, then the configuration was successful.
@@ -136,5 +136,5 @@ Leave this *Cloud Shell* open; we will use it for further labs.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022
