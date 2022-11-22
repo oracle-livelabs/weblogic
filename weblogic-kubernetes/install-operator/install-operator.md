@@ -97,7 +97,7 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     The output will be similar to the following:
     ```bash
     NAME: sample-weblogic-operator
-    LAST DEPLOYED: Mon Nov 21 05:33:57 2022
+    LAST DEPLOYED: Tue Nov 22 07:32:31 2022
     NAMESPACE: sample-weblogic-operator-ns
     STATUS: deployed
     REVISION: 1
@@ -111,8 +111,8 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     The output will be similar to the following:
     ```bash
     NAME                                         READY   STATUS    RESTARTS   AGE
-    weblogic-operator-7cd4cc88bf-55n98           1/1     Running   0          106s
-    weblogic-operator-webhook-857cbdf974-7fjnt   1/1     Running   0          106s
+    weblogic-operator-7cd4cc88bf-2f74n           1/1     Running   0          2m19s
+    weblogic-operator-webhook-857cbdf974-nqnkk   1/1     Running   0          2m19s 
     ```
 
     > Make sure to wait until the pod is in **Running** state.
@@ -123,8 +123,8 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     ```
     The output will be similar to the following:
     ```bash
-    NAME                            NAMESPACE                       REVISION        UPDATED                                 STATUS          CHART                      APP VERSION
-    sample-weblogic-operator        sample-weblogic-operator-ns     1               2022-11-21 05:33:57.496585081 +0000 UTC deployed        weblogic-operator-4.0.1    4.0.1 
+    NAME                            NAMESPACE                       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+    sample-weblogic-operator        sample-weblogic-operator-ns     1               2022-11-22 07:32:31.433280563 +0000 UTC deployed        weblogic-operator-4.0.1 4.0.1 
     ```
 
     The WebLogic Server Kubernetes Operator has been installed. You may now **proceed to the next lab**.
