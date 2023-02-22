@@ -19,7 +19,7 @@ Estimated Lab Time: 15 minutes
 
 2. Apply the domain resource changes:
     ```bash
-    <copy>kubectl apply -f ~/domain.yaml</copy>
+    <copy>kubectl apply -f ~/domain.yaml -n sample-domain1-ns</copy>
     ```
 
 3. You can immediately check the status of your servers/pods. (You should observe the restart of the WLS domain):
@@ -45,5 +45,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022

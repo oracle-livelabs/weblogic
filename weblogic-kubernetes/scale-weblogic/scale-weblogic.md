@@ -20,9 +20,8 @@ The easiest way to scale a WebLogic cluster in Kubernetes is to simply edit the 
 Find the following part:
 ```yaml
 clusters:
-- clusterName: cluster-1
-  serverStartState: "RUNNING"
-  replicas: 2
+- replicas: 2
+  clusterName: cluster-1
 ```
 1. Modify `replicas` to 3 and save the changes. You can use the `vi` editor for example:
     ```bash
@@ -31,7 +30,7 @@ clusters:
 
 2. Apply the changes using `kubectl`:
     ```bash
-    <copy>kubectl apply -f ~/domain.yaml</copy>
+    <copy>kubectl apply -f ~/domain.yaml -n sample-domain1-ns</copy>
     ```
 
 3. Check the changes in the number of pods using `kubectl`:
@@ -67,5 +66,5 @@ It will use a `vi`-like editor.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022

@@ -2,37 +2,36 @@
 
 ## Introduction
 
-The Oracle WebLogic Server Kubernetes Operator supports three load balancers: Traefik, Voyager, and Apache. Samples are provided in the [documentation](https://github.com/oracle/weblogic-kubernetes-operator/blob/v3.0.0/kubernetes/samples/charts/README.md).
+The WebLogic Kubernetes Operator supports three load balancers or ingress controllers: Traefik, NGINX, and Apache. Samples are provided in the [documentation](https://github.com/oracle/weblogic-kubernetes-operator/blob/v2.5.0/kubernetes/samples/charts/README.md).
 
-This tutorial demonstrates how to install the [Traefik](https://traefik.io/) Ingress controller to provide load balancing for WebLogic clusters.
+This lab demonstrates how to install the [Traefik](https://traefik.io/)  ingress controller to provide load balancing for WebLogic Server clusters.
 
 Estimated Lab Time: 10 minutes
 
 ## **STEP 1**: Install the Traefik operator with a Helm chart
 
+1. Change to your operator local Git repository folder.
+    ```bash
+    <copy>cd ~/weblogic-kubernetes-operator/</copy>
+    ```
 
-1. Create a namespace for Traefik:
+2. Create a namespace for Traefik:
     ```bash
     <copy>kubectl create namespace traefik</copy>
     ```
-    Install the Traefik operator in the `traefik` namespace with the provided sample values:
 
+3. Set up Helm with the location of the Traefik Helm chart:
     ```bash
-    <copy>helm repo add traefik https://helm.traefik.io/traefik</copy>
+    <copy>helm repo add traefik https://helm.traefik.io/traefik --force-update</copy>
     ```
 
-2. Get the value overrides from the github repository:
-    ```bash
-    <copy>
-    curl -L -o traefik-values.yaml https://raw.githubusercontent.com/oracle/weblogic-kubernetes-operator/v3.0.0/kubernetes/samples/charts/traefik/values.yaml
-    </copy>
-    ```
+4. Install the Traefik operator in the `traefik` namespace with the provided sample values:
 
     ```bash
     <copy>helm install traefik-operator \
     traefik/traefik \
     --namespace traefik \
-    --values traefik-values.yaml \
+    --values kubernetes/samples/charts/traefik/values.yaml  \
     --set "kubernetes.namespaces={traefik}" \
     --set "serviceType=LoadBalancer"</copy>
     ```
@@ -40,12 +39,14 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME: traefik-operator
-    LAST DEPLOYED: Sun Dec 19 07:30:22 2021
+    LAST DEPLOYED: Tue Nov 22 07:36:56 2022
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 1
     TEST SUITE: None
     NOTES:
+    Traefik Proxy v2.9.4 has been deployed successfully
+    on traefik namespace !
     ```
 
 3. The Traefik installation is basically done. Verify the Traefik (load balancer) services:
@@ -54,10 +55,11 @@ Estimated Lab Time: 10 minutes
     ```
     The output should be similar to the following:
     ```bash
-    NAME               TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)                      AGE
-    traefik-operator   LoadBalancer   10.96.25.22   132.226.153.42   80:30655/TCP,443:32269/TCP   96s
+    NAME               TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
+    traefik-operator   LoadBalancer   10.96.95.162   132.145.10.86   80:30305/TCP,443:30443/TCP   44s
     ```
-    >Please note the EXTERNAL-IP of the *traefik-operator* service. This is the public IP address of the load balancer that you will use to access the WebLogic Server Administration Console and the sample application.
+
+    > Please note the EXTERNAL-IP of the traefik-operator service. This is the public IP address of the load balancer that you will use to access the WebLogic Server Administration Console and the sample application.
 
 4. To print only the public IP address, execute this command:
     ```bash
@@ -65,7 +67,7 @@ Estimated Lab Time: 10 minutes
     ```
     The output should be similar to the following:
     ```bash
-    132.226.153.42
+    132.145.10.86
     ```
 
 5. Verify the `helm` charts:
@@ -75,12 +77,12 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME                    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
-    traefik-operator        traefik         1               2021-12-19 07:30:22.594021816 +0000 UTC deployed        traefik-10.7.1  2.5.4      
+    traefik-operator        traefik         1               2022-11-22 07:36:56.014140398 +0000 UTC deployed        traefik-20.4.1  v2.9.4      
     ```
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022

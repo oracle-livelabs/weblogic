@@ -26,9 +26,9 @@ Create affinity by assigning particular servers to specific nodes. To assign pod
     The output should be similar to the following:
     ```bash
     NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.193   Ready    node    66m   v1.21.5
-    10.0.10.194   Ready    node    66m   v1.21.5
-    10.0.10.28    Ready    node    66m   v1.21.5
+    10.0.10.134   Ready    node    69m   v1.24.1
+    10.0.10.203   Ready    node    69m   v1.24.1
+    10.0.10.254   Ready    node    69m   v1.24.1
     ```
 
     > In the case of OKE, the node name can be the public IP address of the node or the subnet's CIDR block's first IP address. But obviously, a unique string which identifies the node.
@@ -39,18 +39,19 @@ Create affinity by assigning particular servers to specific nodes. To assign pod
     ```
     The output should be similar to the following:
     ```bash
-    NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE          NOMINATED NODE   READINESS GATES
-    sample-domain1-admin-server      1/1     Running   0          9m25s   10.244.1.4   10.0.10.193   <none>           <none>
-    sample-domain1-managed-server1   1/1     Running   0          6m17s   10.244.1.5   10.0.10.193   <none>           <none>
-    sample-domain1-managed-server2   1/1     Running   0          4m12s   10.244.1.6   10.0.10.193   <none>           <none>
-    sample-domain1-managed-server3   1/1     Running   0          2m7s    10.244.1.7   10.0.10.193   <none>           <none>
+    NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE   READINESS GATES
+    NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE          NOMINATED NODE   READINESS GATES
+    sample-domain1-admin-server      1/1     Running   0          5m40s   10.244.1.134   10.0.10.254   <none>           <none>
+    sample-domain1-managed-server1   1/1     Running   0          4m33s   10.244.1.135   10.0.10.254   <none>           <none>
+    sample-domain1-managed-server2   1/1     Running   0          3m25s   10.244.0.133   10.0.10.203   <none>           <none>
+    sample-domain1-managed-server3   1/1     Running   0          2m18s   10.244.0.7     10.0.10.134   <none>           <none>
     ```
 
-    > As you can see from the result, Kubernetes deployed the 3 Managed Servers to only one worker nodes. As we have 3 nodes, we will label two nodes and then assign 2 servers to one node and will make one node empty. We just adopt the labelling and domain resource definition modification accordingly.
+    > As you can see from the result, Kubernetes deployed the 3 Managed Servers to different worker nodes. As we have 3 nodes, we will label two nodes and then assign 2 servers to one node and will make one node empty. We just adopt the labelling and domain resource definition modification accordingly.
 
 ## **STEP 2**: Labelling
 
-Knowing the node names, select one which you want to be empty. In this example, this node will be: `10.0.10.194`
+Knowing the node names, select one which you want to be empty. In this example, this node will be: `10.0.10.134`
 
 1. Label the other nodes. The label can be any string, but let's use `wlservers1` and `wlservers2`. Execute the
     ```bash
@@ -58,10 +59,10 @@ Knowing the node names, select one which you want to be empty. In this example, 
     ```
     command but replace your node name and label properly e.g.:
     ```bash
-    $ kubectl label nodes 10.0.10.193  wlservers1=true
-    node/10.0.10.193 labeled
-    $ kubectl label nodes 10.0.10.28 wlservers2=true
-    node/10.0.10.28 labeled
+    $ kubectl label nodes 10.0.10.254  wlservers1=true
+    node/10.0.10.254 labeled
+    $ kubectl label nodes 10.0.10.203 wlservers2=true
+    node/10.0.10.203 labeled
     ```
 ## **STEP 3**: Modify the domain resource definition
 
@@ -75,7 +76,7 @@ Knowing the node names, select one which you want to be empty. In this example, 
     ```
 
 2. Assign 2-2 servers (including the Administration Server) to 1-1 labelled node.
-You can double check the syntax in the sample [domain.yaml](../domain.short.v8.yaml) where this part is in a comment.
+You can double check the syntax in the sample [domain.yaml](../domain.short.v9.yaml) where this part is in a comment.
 
 3. For the Managed Servers, you have to insert `managedServers:`, which has to be at the same level (indentation) with `adminServer:`. In this property, you need to use the WebLogic Server name to identify the pod. The server name is defined during WebLogic image creation and if you followed this tutorial, it is `managed-serverX`.
     ```yaml
@@ -99,8 +100,7 @@ You can double check the syntax in the sample [domain.yaml](../domain.short.v8.y
 
 4. Keep the proper indentation. Save the changes. To make them effective, you need to stop the pods first and then start them again. 
     ```bash
-    <copy>kubectl delete -f ~/domain.yaml</copy>
-    <copy>kubectl apply -f ~/domain.yaml</copy>
+    <copy>kubectl apply -f ~/domain.yaml -n sample-domain1-ns</copy>
     ```
 
 5. The operator according to the changes will start to relocate servers. Poll the pod information and wait until the expected result:
@@ -111,25 +111,25 @@ You can double check the syntax in the sample [domain.yaml](../domain.short.v8.y
     The output should be similar to the following:
     ```bash
     NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE          NOMINATED NODE   READINESS GATES
-    sample-domain1-admin-server      1/1     Running   0          5m3s    10.244.0.139   10.0.10.28    <none>           <none>
-    sample-domain1-managed-server1   1/1     Running   0          4m14s   10.244.1.9     10.0.10.193   <none>           <none>
-    sample-domain1-managed-server2   1/1     Running   0          4m15s   10.244.1.8     10.0.10.193   <none>           <none>
-    sample-domain1-managed-server3   1/1     Running   0          4m14s   10.244.0.140   10.0.10.28    <none>           <none>
+    sample-domain1-admin-server      1/1     Running   0          6m50s   10.244.0.134   10.0.10.203   <none>           <none>
+    sample-domain1-managed-server1   1/1     Running   0          5m45s   10.244.1.136   10.0.10.254   <none>           <none>
+    sample-domain1-managed-server2   1/1     Running   0          4m36s   10.244.1.137   10.0.10.254   <none>           <none>
+    sample-domain1-managed-server3   1/1     Running   0          3m43s   10.244.0.135   10.0.10.203   <none>           <none>
     ```
 
 ## **STEP 4**: Delete the node assignment
 
 1. To delete the node assignment, delete the node's label using the `kubectl label nodes <nodename> <labelname>-` command but replace the node name properly:
     ```bash
-    $ kubectl label nodes 10.0.10.28 wlservers2-
-    node/10.0.10.28 labeled
-    $ kubectl label nodes 10.0.10.193 wlservers1-
-    node/10.0.10.193 labeled
+    $ kubectl label nodes 10.0.10.203 wlservers2-
+    node/10.0.10.203 unlabeled
+    $ kubectl label nodes 10.0.10.86 wlservers1-
+    node/10.0.10.203 unlabeled
     ```
 
 2. Delete or comment out the (`nodeSelector`) entries you added for the node assignment in your `domain.yaml` and apply:
     ```bash
-    <copy>kubectl apply -f ~/domain.yaml</copy>
+    <copy>kubectl apply -f ~/domain.yaml -n sample-domain1-ns</copy>
     ```
 
     The output should be similar to the following:
@@ -142,5 +142,5 @@ You can double check the syntax in the sample [domain.yaml](../domain.short.v8.y
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, November 2022
