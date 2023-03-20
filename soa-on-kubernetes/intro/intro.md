@@ -5,7 +5,7 @@
 This lab will walk you through the process of deploying Oracle SOA Suite on Kubernetes. The lab uses Oracle Kubernetes Engine (OKE) to first deploy the required infrastructure on Oracle Cloud Infrastructure (OCI), and then provision Oracle SOA Suite on the Kubernetes cluster in an automated fashion.
 
 Attached below is a sample architecture of the solution:
-![](https://docs.oracle.com/en/solutions/soa-kubernetes-deploy-arch/img/soa-oke.png)
+![architecture](./images/soa-oke.png)
 
 Estimated Lab Time: 60 minutes.
 
@@ -60,4 +60,4 @@ You may now [proceed to the next lab](#next).
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, Senior Technical Product Manager
- - **Last Updated By/Date** - Emmanuel Leroy, May 2021
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023
