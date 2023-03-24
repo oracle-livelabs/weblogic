@@ -18,19 +18,30 @@ Estimated Completion Time: 30 minutes.
 
 ### Prerequisites
 
-- Docker **20.10.17+** installed locally to run the on-premises environment.
+To run this tutorial, you will need:
 
-  Get Docker here: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+- docker engine installed locally to run the on-premises environment.
 
-  > **Note: You need at least 3 CPUs and 6 GB of memory assigned to Docker to run this template.**
+  Get the docker engine with Docker Desktop at [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/).
 
-- Docker-compose installed (on Linux it needs to be installed separately, but it is installed automatically on Mac OS and Windows).
+  You can also use alternative Docker distribution if you are not able to use Docker Desktop. Alternatives include:     
+    - [colima](https://github.com/abiosoft/colima) for Max OS 
+        ```bash
+        brew install colima
+        ```
+    - Rancher Desktop for Max OS or Windows at [https://rancherdesktop.io/](https://rancherdesktop.io/)
+
+  > **Note:** You need at least three CPUs and 6 GB of memory assigned to Docker to run this template.
+
+- Docker-compose installed (on Linux, or using 3rd party docker, it needs to be installed separately, but it is installed automatically on Mac OS and Windows with Docker Desktop).
 
   [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
-- Docker Hub account, to download necessary Docker images.
+- Oracle Container Registry Account, to download necessary Docker images.
 
-  [https://hub.docker.com/signup](https://hub.docker.com/signup)
+  [https://container-registry.oracle.com/ords/f?p=113:10::::::](https://container-registry.oracle.com/ords/f?p=113:10::::::)
+
+    Click Sign-in and Sign up for an account if you do not have one.
 
 
 ## Task 1: Get the Code
@@ -89,7 +100,6 @@ You can also download the code here: [https://objectstorage.us-ashburn-1.oraclec
 
     ```bash
     <copy>
-    cd ~/
     wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/5OJx9Uw1KIXVDKxCSvg5TjXdRiyxBoP5sJTk06ItQ87T4TY8WUzINwRt8U5EDQ3V/n/orasenatdpltintegration01/b/images/o/weblogic-to-oci.zip
     </copy>
     ```
@@ -198,11 +208,11 @@ The weblogic container waits for the database to be ready, and the schemas to be
     The following output shows the init container has terminated and the system should be ready:
     ```
     CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                PORTS                                                                          NAMES
-    bf43e3bd5a78        weblogic-to-oci_oracledb    "/bin/sh -c '/bin/ba…"   7 days ago          Up 7 days (healthy)   127.0.0.1:1521->1521/tcp, 127.0.0.1:5000->5000/tcp, 5500/tcp                   weblogic-to-oci_oracledb_1
-    38bcbb1555b8        weblogic-to-oci_wls_admin   "/u01/oracle/startNM…"   7 days ago          Up 7 days             127.0.0.1:7001->7001/tcp, 127.0.0.1:7003->7003/tcp, 127.0.0.1:7005->7005/tcp   weblogic-to-oci_wls_admin_1
+    bf43e3bd5a78        weblogic-to-oci-oracledb    "/bin/sh -c '/bin/ba…"   7 days ago          Up 7 days (healthy)   127.0.0.1:1521->1521/tcp, 127.0.0.1:5000->5000/tcp, 5500/tcp                   weblogic-to-oci-oracledb-1
+    38bcbb1555b8        weblogic-to-oci-wls-admin   "/u01/oracle/startNM…"   7 days ago          Up 7 days             127.0.0.1:7001->7001/tcp, 127.0.0.1:7003->7003/tcp, 127.0.0.1:7005->7005/tcp   weblogic-to-oci-wls-admin-1
     ```
 
-    If you see a container called `weblogic-to-oci_oracledbinit`, this means the initialization is still ongoing.
+    If you see a container called `weblogic-to-oci-oracledbinit`, this means the initialization is still ongoing.
 
 3. To troubleshoot problems in the set up, check the logs in the docker containers with:
 
@@ -266,4 +276,4 @@ We'll create an SSH key pair in this folder.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, July 2022
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

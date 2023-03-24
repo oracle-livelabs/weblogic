@@ -21,7 +21,7 @@ Before we can provision the application database, we need to provision a **priva
 
 In this section we will create a security list for the WebLogic subnet to be able to reach the database subnet on port 1521 (the Oracle database default port) and SSH port 22.
 
-1. Go to **Networking -> Virtual Cloud Network** in the compartment where WebLogic was provisioned.
+1. On the **Networking** menu, click **Virtual Cloud Network** in the compartment where WebLogic was provisioned.
 
   ![](./images/provision-db-1.png " ")
 
@@ -71,7 +71,7 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
   ![](./images/provision-db-9-subnet2.png " ")
 
-5. **Select** the `Default Routing Table for nonjrf-wls` for the **Routing Table**.
+5. **Select** the `nonjrf-sg-routetable` for the **Routing Table**.
 
   ![](./images/provision-db-9-subnet3.png " ")
 
@@ -86,6 +86,10 @@ In this section we will create a security list for the WebLogic subnet to be abl
 8. **Select** the `nonjrf-db-security-list` created earlier for the **Security List**.
 
   ![](./images/provision-db-9-subnet6.png " ")
+
+8. Click **Another Security List** and select the **Default Security list for nonjrf-wls**.
+
+  ![](./images/provision-db-9-subnet6b.png " ")
 
 9. Click **Create Subnet**.
 
@@ -109,9 +113,9 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
   ![](./images/provision-db-13-ad-shape.png " ")
 
-5. Keep the defaults for **Total node count** and **Database Edition**.
+6. Select **Configure Storage**.
 
-  ![](./images/provision-db-14.png " ")
+  ![](./images/provision-db-change-storage.png " ")
 
 6. Select **Logical Volume Manager**.
 
@@ -121,11 +125,15 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
   ![](./images/provision-db-16-storage.png " ")
 
+5. Keep the defaults for **Total node count** and **Database Edition**.
+
+  ![](./images/provision-db-14.png " ")
+
 8. **Upload** the **SSH public key** created earlier.
 
     The key created in the Docker container can be found in the `./weblogic-to-oci/ssh` folder.
 
-    If using the marketplace image, just use the **Paste SSH Keys** and get the key  inside the on-premises environment with:
+    If using the marketplace image, just use the **Paste SSH Keys** and get the key inside the on-premises environment with:
 
     ```
     <copy>
@@ -167,7 +175,7 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
   ![](./images/provision-db-23-creds.png " ")
 
-16. Keep the default of **Transaction Processing**, select **Workload type** and **Backup**, and click **Create DB System**.
+16. Uncheck **Backup**, and click **Create DB System**.
 
   ![](./images/provision-db-24.png " ")
 
@@ -180,4 +188,4 @@ To save some time, you can proceed to Migrating the Application Database while t
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

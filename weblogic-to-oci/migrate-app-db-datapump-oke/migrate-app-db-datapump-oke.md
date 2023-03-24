@@ -35,7 +35,7 @@ We will be using wrapper scripts to export, move the data to the destination, an
 
     ```
     <copy>
-    docker exec -it weblogic-to-oci_oracledb_1 /bin/bash
+    docker exec -it weblogic-to-oci-oracledb-1 /bin/bash
     </copy>
     ```
 
@@ -53,13 +53,17 @@ We will be using wrapper scripts to export, move the data to the destination, an
 1. You should already be logged into the instance and switched to the `oracle` user. If not use:
 
     ```bash
+    <copy>
     ssh opc@<public-ip>
+    </copy>
     ```
 
     Then:
 
     ```bash
+    <copy>
     sudo su - oracle
+    <copy>
     ```
 
 2. Get into the `/datapump` folder:
@@ -125,6 +129,10 @@ First, we'll need to edit the `datapump_import.sh` script to target the OCI data
 2. Enter the `BASTION_IP`.
 
    The `BASTION_IP` is the **public IP** of the Bastion Instance.
+   
+    Find it in **Resource Manager** under **Stack**, **stack details** then select the job and look at **Outputs**.
+
+        ![](./images/migrate-db-2.png " ")
 
 3. Enter the `TARGET_DB_HOST` **private IP address**.
 
@@ -169,4 +177,4 @@ The database is now migrated to OCI.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

@@ -25,39 +25,39 @@ Estimated Completion Time: 15 minutes.
 
 2. Click **Get App**.
 
-   ![](./images/get-app.png " ")
+   ![get the app](./images/get-app.png " ")
 
 3. Sign in to your Oracle Cloud Infrastructure account.
 
-   ![](./images/sign-in.png " ")
+   ![sign in](./images/sign-in.png " ")
 
 4. Choose a compartment.
 
-   ![](./images/wls-workshop-mp1.png " ")
+   ![select compartment](./images/wls-workshop-mp1.png " ")
 
 5. Accept the Terms and Conditions and click **Launch**.
 
-   ![](./images/wls-workshop-mp2.png " ")
+   ![terms and launch](./images/wls-workshop-mp2.png " ")
 
 6. Click **Next**.
 
-   ![](./images/next.png " ")
+   ![click next](./images/next.png " ")
 
 7. Paste your **SSH public key**.
 
    To connect to the WebLogic servers via SSH, you need to provide a public key the server will use to identify your computer.
 
-   ![](./images/ssh-key.png " ")
+   ![enter ssh key](./images/ssh-key.png " ")
 
 8. Click **Next** and then **Create**.
 
-   ![](./images/job-running.png " ")
+   ![job running](./images/job-running.png " ")
 
    It will take about 1 to 2 minutes to create the stack.
 
 9. When the job finishes, you can find the Public IP address of the instance at the bottom of the logs, or in the **Output** area. Make a note of this information.
 
-   ![](./images/job-output.png " ")
+   ![job outputs](./images/job-output.png " ")
 
 ## Task 2:  Check the Local Environment
 
@@ -65,13 +65,13 @@ It will take another 4 to 5 minutes for all the services to come online.
 
 1. The console will be available at `http://PUBLIC-IP:7001/console` (replace `PUBLIC_IP` with the Compute instance public IP) and the WebLogic admin user is `weblogic` with password `welcome1`.
 
-   ![](./images/localhost-admin-console.png " ")
+   ![weblogic admin console](./images/localhost-admin-console.png " ")
 
 2. The **SimpleDB** application will be running at `http://PUBLIC-IP:7003/SimpleDB/` (substitute `PUBLIC-IP` with the public IP of the instance). It may take a minute or 2 after the admin console is up for the SimpleDB app to be running.
 
 3. It shows statistics of riders of the Tour de France stored in the database, and looks like this:
 
-   ![](./images/localhost-simpledb-app.png " ")
+   ![demo app output](./images/localhost-simpledb-app.png " ")
 
 ## Task 3: Log in to the On-Premises Environment
 
@@ -80,7 +80,9 @@ Most of the work will be done from the simulated on-premises environment deploye
 1. To log into the instance, use:
 
     ```bash
+    <copy>
     ssh opc@<public-ip>
+    </copy>
     ```
 
     Replace the `<public-ip>` with the IP provided in the output of the provisioning job.
@@ -122,4 +124,4 @@ We'll create a SSH key pair in the default folder.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, October 2021
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

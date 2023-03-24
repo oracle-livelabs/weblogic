@@ -43,7 +43,7 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
 6. For **Source CIDR**, use `10.0.0.0/16` and for **Destination Port Range** enter **1521**.
 
-   ![](./images/provision-db-5-ingress1521boke.png " ")
+   ![](./images/provision-db-5-ingress1521b.png " ")
 
 7. Click **Additional Ingress Rule** and enter `0.0.0.0/0` for the **Source CIDR** and enter `22` for the **Destination Port Range** to authorize SSH from outside (through the bastion host).
 
@@ -59,8 +59,6 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
 2. Click **Create Subnet**.
 
-   ![](./images/provision-db-8-subnet.png " ")
-
 3. **Name** the subnet `nonjrf-db-subnet`.
 
    ![](./images/provision-db-9-subnet1.png " ")
@@ -69,7 +67,7 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
    ![](./images/provision-db-9-subnet2.png " ")
 
-5. **Select** the `Default Routing Table for nonjrf-vcn` for the **Routing Table**.
+5. **Select** the `nonjrf-nat-route` for the **Routing Table**.
 
    ![](./images/provision-db-9-subnet3.png " ")
 
@@ -91,7 +89,7 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
 ## Task 3: Provision the Database System
 
-1. On the **Database** menu, click **Bare Metal, VM and Exadata**.
+1. On the **Oracle Database** menu, click **Base Database (VM, BM)**.
 
    ![](./images/provision-db-10.png " ")
 

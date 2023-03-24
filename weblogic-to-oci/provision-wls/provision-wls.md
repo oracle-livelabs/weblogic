@@ -25,7 +25,9 @@ Prepared OCI tenancy with:
 
   ![](./images/provision-1.png " ")
 
-2. In the search input, type `weblogic`. Here, we'll use the **Oracle WebLogic Server Enterprise Edition UCM**.
+2. In the search input, type `weblogic entreprise edition ucm`. Here, we'll use the **Oracle WebLogic Server Enterprise Edition UCM**.
+
+  *Note:* Make sure you select the tile that is **Oracle WebLogic Server Enterprise Edition UCM**, and NOT the **Oracle WebLogic Server Enterprise Edition UCM Image**, which is just the base image to use for your own cluster deployment.
 
    ![](./images/provision-2.png " ")
 
@@ -45,15 +47,7 @@ Prepared OCI tenancy with:
 
   ![](./images/provision-6-prefix.png " ")
 
-6. Select a **Shape**.
-
-   In a real world situation, choose a shape appropriate to handle the load of a single managed server. Since we're using a trial account, choose the **VM.Standard.E2.1** shape, the **VM.Standard.E2.2** shape or a suitable shape that is available in your tenancy.
-
-  ![](./images/provision-7-shape.png " ")
-
-   To check shape availability, you can go to **Governance -> Limits and Quotas** in another tab, and verify you have a specific shape available.
-
-7. Provision an **SSH key**
+6. Provision an **SSH key**
 
    To connect to the WebLogic servers via SSH, you need to provide a public key the server will use to identify your computer.
 
@@ -77,83 +71,54 @@ Prepared OCI tenancy with:
 
     **Note:** Do not use the example above as the key: it is a different public key which is useless without the corresponding private key, and you will not be able to access your resources on OCI).
 
-8. Select a **Node count**. Here, we'll provision 2 nodes.
-
-  ![](./images/provision-10-nodes.png " ")
-
-9. We'll keep the **WebLogic Server Admin User Name** as the default of `weblogic`.
-
-  ![](./images/provision-11-admin-name.png " ")
-
-10. Paste the **OCID** of the **Secret** generated previously for the **Secret OCID for WebLogic Admin Password**.
-
-  ![](./images/provision-12-secret.png " ")
-
-11. Check the checkbox for **WebLogic Server Advanced Server Configuration**
-   Here you can see all the default ports, which we will keep as-is.
-
-  ![](./images/provision-13-advanced.png " ")
-
-12. In this same **Advanced** section, **uncheck** the checkbox to **Provision the Sample Application**: since we will migrate our domain, we want a clean domain to start from.
-
-  ![](./images/provision-14-no-app.png " ")
-
-13. In the **WebLogic Network** section, make sure you are in the proper compartment.
-
-  ![](./images/provision-15-net.png " ")
-
-14. Select **Create New VCN**.
+7. Select **Create New VCN** and leave the other options in this section as defaults.
 
   ![](./images/provision-16-create-vcn.png " ")
 
-15. Name the VCN `wls`.
+8. Name the VCN `wls`.
 
   ![](./images/provision-17-vcn-name.png " ")
 
-16. **Keep the default** VCN CIDR block as-is.
-
-  ![](./images/provision-18-vcn-cidr.png " ")
+9. **Keep the default** VCN CIDR block as-is.
 
   If you were to migrate from an on-premises domain connected via VPN or FastConnect, you would want to make sure the CIDR block does not conflict with the local network.
 
-17. We'll provision WebLogic in a Private Subnet: admin and managed servers will not be accessible directly from the internet. The admin server will be accessible through a bastion host, and the managed servers will only be accessible through a Public Load Balancer (this is the most likely production scenario, but involves extra complexity in setting up tunnels and resources. + 15 minutes).
+10. We'll keep the **WebLogic Server Admin User Name** as the default of `weblogic`.
 
-    - Select a **Bastion Host Shape**.
+11. Select the **Secret** generated previously for the **Secret for WebLogic Admin Password**.
 
-    ![](./images/private-subnet.png " ")
+  ![](./images/provision-12-secret.png " ")
+
+12. **uncheck** the checkbox to **Provision the Sample Application**: since we will migrate our domain, we want a clean domain to start from.
+
+  ![](./images/provision-14-no-app.png " ")
+
+13. Select a **Shape**.
+
+   In a real world situation, choose a shape appropriate to handle the load of a single managed server. Since we're using a trial account, choose the **VM.Standard.E3.Flex** shape, the **VM.Standard.E2.2** shape or a suitable shape that is available in your tenancy.
+
+  ![](./images/provision-7-shape.png " ")
+
+   To check shape availability, you can go to **Governance -> Limits and Quotas** in another tab, and verify you have a specific shape available.
+
+8. Select a **Node count**. Here, we'll provision 2 nodes.
+
+11. Select an Availability Domain for the Weblogic Admin server****
+
+  ![](./images/provision-13-advanced.png " ")
 
 
-19. Check the **Provision Load Balancer** checkbox and keep the defaults.
+12. WebLogic is provisioned in a private Subnet: admin and managed servers will not be accessible directly from the internet. The admin server will be accessible through a bastion host, and the managed servers will only be accessible through a Public Load Balancer
 
-  ![](./images/provision-20-lb2.png " ")
-
-  Keep the option for **Private Load Balancer** **Unchecked**.
-
-20. Keep IDCS **unchecked**.
-
-  ![](./images/provision-21-idcs.png " ")
-
-21. Keep Policies **checked** unless you are not an admin. In that case you must have created the Dynamic Group and associated the proper rules in the 'Prepare' section.
-
-  ![](./images/provision-22-policies.png " ")
-
-22. Make sure **Provision with JRF** is **not** selected.
-
-  ![](./images/provision-22-nojrf.png " ")
-
-23. Optionally add Tags.
-
-  ![](./images/provision-23-tags.png " ")
-
-24. Click **Next**.
+13. Keep the rest of the options as default and click **Next**.
 
   ![](./images/provision-24.png " ")
 
-25. Click **Create**.
+14. Click **Create**.
 
   ![](./images/provision-25.png " ")
 
-26. The stack will get provisioned using the **Resource Manager**. This may take 7 to 15minutes.
+15. The stack will get provisioned using the **Resource Manager**. This may take 7 to 15minutes.
 
   ![](./images/provision-26.png " ")
 
@@ -163,9 +128,11 @@ Once the stack is provisioned, you can find the information regarding the URL an
 
 1. Go to **Outputs** (or you can find the same information at the bottom of the logs).
 
-- *As you provisioned in a **Private Subnet***, you should see something like the following:
+- You should see something like the following:
 
   ![](./images/provision-28.png " ")
+
+  ![](./images/provision-29.png " ")
 
     - Make a note of the **WebLogic Admin Server Private IP address** from the **WebLogic Admin Server Console URL** for later use.
 
@@ -180,7 +147,17 @@ Once the stack is provisioned, you can find the information regarding the URL an
     ```bash
     <copy>
     export BASTION_IP=<BASTION PUBLIC IP>
+    </copy>
+    ```
+
+    ```bash
+    <copy>
     export RHOST=<ADMIN SERVER PRIVATE IP, usually 10.0.3.2>
+    </copy>
+    ```
+
+    ```bash
+    <copy>
     export PORT=7002
     </copy>
     ```
@@ -196,7 +173,7 @@ Once the stack is provisioned, you can find the information regarding the URL an
 
     You can explore the provisioned WebLogic domain. You should find that there are no applications in **Deployments** and no data sources in the **Service -> Datasources** menu.
 
-- *If you used the marketplace demo image*, export the local variables:
+- *If you used the marketplace demo image*, in the host deployed as the on-premises environment, export the following variables:
 
     ```bash
     <copy>
@@ -215,7 +192,7 @@ Once the stack is provisioned, you can find the information regarding the URL an
     ```
     Then
 
-    We'll need to open up the firewall port 7002 on our demo enviroment with:
+    We'll need to open up the firewall port 7002 on our demo enviroment VM with:
 
     ```bash
     <copy>
@@ -241,4 +218,4 @@ While the WebLogic instances are provisioning, it's possible to move forward wit
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, October 2021
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

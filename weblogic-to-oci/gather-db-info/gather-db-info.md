@@ -18,17 +18,21 @@ Estimated Completion Time: 5 minutes.
 
 2. Go to the **Nodes** left-side menu and note the **private IP address** of the node provisioned for later use:
 
-   ![](./images/provision-db-26-nodeip.png " ")
+   ![node ip](./images/provision-db-26-nodeip.png " ")
+
+3. Click **Database** on the left and then the **RIDERS** database.
+
+   ![database](./images/provision-db-27-connection-a.png " ")
 
 3. Click **DB Connection**.
 
-   ![](./images/provision-db-27-connection.png " ")
+   ![db connection](./images/provision-db-27-connection.png " ")
 
 4. Copy the **DB connection string** for later use.
 
-   ![](./images/provision-db-27-connection2.png " ")
+   ![connection string](./images/provision-db-27-connection2.png " ")
 
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

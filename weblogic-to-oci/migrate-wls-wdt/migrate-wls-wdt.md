@@ -51,7 +51,7 @@ Migration with WebLogic Deploy Tooling (WDT) consists of 3 steps:
 
     ```bash
     <copy>
-    docker exec -it weblogic-to-oci_wls_admin_1 /bin/bash
+    docker exec -it weblogic-to-oci-wls-admin-1 /bin/bash
     </copy>
     ```
 
@@ -452,7 +452,7 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
     - Click **Create NAT Gateway**.
     - Go to **Subnets**.
     - Select the `nonjrf-wl-subnet`.
-    - In the Subnet Information, click the **Route Table** (`nonjrf-routetable`).
+    - In the Subnet Information, click the **Route Table** (`nonjrf-sg-routetable`).
     - Click **Add Route Rules**.
     - Select **NAT Gateway**.
     - Enter **0.0.0.0/0** for the CIDR range.

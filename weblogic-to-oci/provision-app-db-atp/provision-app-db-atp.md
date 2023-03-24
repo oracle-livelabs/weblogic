@@ -49,9 +49,6 @@ In this section we will create a Network Security Group for the WebLogic subnet 
 
 7. Click **Create**.
 
-  ![](./images/vcn-nsg3.png " ")
-
-
 ## Task 2: Create the Database Subnet
 
 1. Click **Subnets** on the left-side menu.
@@ -70,7 +67,7 @@ In this section we will create a Network Security Group for the WebLogic subnet 
 
   ![](./images/provision-db-9-subnet2b.png " ")
 
-5. **Select** the `Default Routing Table for nonjrf-wls` for the **Routing Table**.
+5. **Select** the `nonjrf-sg-routetable` for the **Routing Table**.
 
   ![](./images/provision-db-9-subnet3.png " ")
 
@@ -137,6 +134,8 @@ In this section we will create a Network Security Group for the WebLogic subnet 
 9. Select the **Subnet** as **nonjrf-db-subnet**.
 
   ![](./images/provision-db-atp9.png " ")
+
+10. Click **Show Advanced Settings**
 
 10. Select the **db hostname** as **db**.
 
