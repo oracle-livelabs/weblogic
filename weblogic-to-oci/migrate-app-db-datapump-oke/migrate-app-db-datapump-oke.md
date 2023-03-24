@@ -110,7 +110,7 @@ Run the `datapump_export.sh` script:
 
 The output will look like:
 
-![](./images/migrate-db-1.png " ")
+![script output](./images/migrate-db-1.png " ")
 
 ## Task 3: Edit the `datapump_import.sh` script
 
@@ -132,19 +132,19 @@ First, we'll need to edit the `datapump_import.sh` script to target the OCI data
    
     Find it in **Resource Manager** under **Stack**, **stack details** then select the job and look at **Outputs**.
 
-        ![](./images/migrate-db-2.png " ")
+    ![bastion IP](./images/migrate-db-2.png " ")
 
 3. Enter the `TARGET_DB_HOST` **private IP address**.
 
    This IP address was gathered from the Database System details, under the following settings: **Database System**, **details**, followed by **Nodes**.
 
-   ![](./images/provision-db-26-nodeip.png " ")
+   ![database host IP](./images/provision-db-26-nodeip.png " ")
 
 4. Enter the `TARGET_DB_DOMAIN` name from the database connection string.
 
    If you followed the default naming conventions, it should be `nonjrfdbsubnet.nonjrfvcn.oraclevcn.com`.
 
-   ![](./images/provision-db-27-connection2.png " ")
+   ![database domain](./images/provision-db-27-connection2.png " ")
 
 5. Enter your DB SYS password for `TARGET_DB_PWD`.
 

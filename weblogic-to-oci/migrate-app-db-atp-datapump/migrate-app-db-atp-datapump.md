@@ -108,7 +108,7 @@ In this workshop we will be using wrapper scripts to export, move the data to th
 
       The output will look like:
 
-    ![](./images/migrate-db-1.png " ")
+    ![script output](./images/migrate-db-1.png " ")
 
 
 ## Task 3: Install the OCI CLI on the Source Database
@@ -236,9 +236,9 @@ This will be needed to get the wallet from the ATP database and put the database
 
 ## Task 4: Create an Object Storage Bucket
 
-1. Go to **Core Infrastructure -> Object Storage**.
+1. Go to **Core Infrastructure** then select **Object Storage**.
 
-    ![](./images/migrate-db-oss-1.png " ")
+    ![object storage menu](./images/migrate-db-oss-1.png " ")
 
 2. Make sure you are in the compartment where you deployed the resources.
 
@@ -295,7 +295,7 @@ First, we'll need to edit the `datapump_import_atp.sh` script to target the OCI 
 
 7. **Copy** the **Private Endpoint IP address** and enter as the `TARGET_DB_HOST` in the script.
 
-    ![](./images/db-info.png " ")
+    ![private endpoint](./images/db-info.png " ")
 
 8. **Enter** the name of the Object Storage bucket created earlier as `BUCKET` (`atp-upload`).
 
@@ -307,7 +307,7 @@ First, we'll need to edit the `datapump_import_atp.sh` script to target the OCI 
 
 12. In **User -> Settings** click **Auth Tokens**.
 
-    ![](./images/auth-token.png " ")
+    ![auth token](./images/auth-token.png " ")
 
 13. Click **Generate Token**.
 

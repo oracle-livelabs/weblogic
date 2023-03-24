@@ -220,7 +220,7 @@ It pulls the WebLogic information from the metadata endpoint v1 with calls to `c
 
 2. In Firefox you will see the self-certificate warning as below:
 
-    ![](./images/self-cert-warning.png)
+    ![self certificate warning](./images/self-cert-warning.png)
 
     Click **Advanced...** and then **Accept the Risk and Continue**
 
@@ -228,14 +228,14 @@ It pulls the WebLogic information from the metadata endpoint v1 with calls to `c
 
 4. Go to `deployments`: you should see the 2 applications deployed, and in the **active** state.
 
-  ![](./images/oci-deployments.png)
+  ![deployments](./images/oci-deployments.png)
 
 5. Go to the SimpleDB application URL, which is the Load Balancer IP gathered previously in the **Outputs** of the WebLogic provisioning, with the route `/SimpleDB/` like:
 https://*LOAD_BALANCER_IP*/SimpleDB/
 
     Making sure you use `https` as scheme and the proper case for `/SimpleDB`.
 
-  ![](./images/oci-simpledb-app.png)
+  ![app output](./images/oci-simpledb-app.png)
 
 You may proceed to the next lab.
 

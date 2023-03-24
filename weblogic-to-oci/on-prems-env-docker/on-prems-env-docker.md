@@ -27,7 +27,9 @@ To run this tutorial, you will need:
   You can also use alternative Docker distribution if you are not able to use Docker Desktop. Alternatives include:     
     - [colima](https://github.com/abiosoft/colima) for Max OS 
         ```bash
+        <copy>
         brew install colima
+        </copy>
         ```
     - Rancher Desktop for Max OS or Windows at [https://rancherdesktop.io/](https://rancherdesktop.io/)
 
@@ -133,17 +135,17 @@ You can also download the code here: [https://objectstorage.us-ashburn-1.oraclec
 
 This repository makes use of Oracle docker images which are licensed and need to be pulled from Oracle Container Registry after acknowledging the terms of the license.
 
-1. Sign in to Oracle Container Registry and go to the Weblogic image area at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ</a>.
+1. Sign in to Oracle Container Registry and go to the Weblogic image area at: [https://container-registry.oracle.com](https://container-registry.oracle.com)</a>.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
 
-2. Go to the **Oracle Database** page and accept the license terms at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ</a>.
+2. Search for the **Oracle Database** page, select **Enterprise** and accept the license terms.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
 
-3. Go to the **Instant Client** page and accept the license terms for the SQL Plus client at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ</a>.
+3. Search for the **Instant Client** page and accept the license terms for the SQL Plus client.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
@@ -230,7 +232,7 @@ The weblogic container waits for the database to be ready, and the schemas to be
 
     Before proceeding, make sure the local environment has been deployed properly and is running.
 
-    ![](./images/localhost-admin-console.png " ")
+    ![admin console](./images/localhost-admin-console.png " ")
 
     The **SimpleDB** application should be running at [http://localhost:7003/SimpleDB/](http://localhost:7003/SimpleDB/) or [http://localhost:7005/SimpleDB/](http://localhost:7005/SimpleDB/).
 
