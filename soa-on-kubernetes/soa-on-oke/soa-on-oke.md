@@ -75,23 +75,23 @@ You'll find the code on Github.com at [https://github.com/oracle-quickstart/oke-
 
     - In the Oracle Cloud Console, **click** your **User** icon (top right corner), then **Tenancy**.
 
-        ![](./images/setup-tf-tenancy.png)
+        ![tenancy](./images/setup-tf-tenancy.png)
 
     - **Copy** the OCID of the tenancy and paste it in your environment file.
 
-        ![](./images/setup-tf-tenancy-ocid.png)
+        ![tenancy ocid](./images/setup-tf-tenancy-ocid.png)
 
 2. Get your `compartment OCID`:
 
     - In the Oracle Cloud Console, go to **Identity -> Compartments**.
 
-        ![](./images/setup-tf-compartment.png)
+        ![compartment](./images/setup-tf-compartment.png)
 
     - Navigate to the compartment where you want to deploy the infrastructure.
 
     - **Copy** the OCID of the compartment.
 
-        ![](./images/setup-tf-compartment-ocid.png)
+        ![compartment ocid](./images/setup-tf-compartment-ocid.png)
 
 ## Task 4: Create a `terraform.tfvars` Config File
 

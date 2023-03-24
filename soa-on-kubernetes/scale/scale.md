@@ -78,6 +78,8 @@ Let's scale the number of managed servers for the OSB cluster this time, and we'
 
 2. Check the effect of the change:
 
+    Note: this may take a little while, so re-run the command until you see the change.
+
     ```bash
     <copy>
     kubectl get pods -n soans

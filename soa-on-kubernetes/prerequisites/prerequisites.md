@@ -13,8 +13,8 @@ Estimated Lab Time: 10 minutes.
 In this lab you will:
 
 - Install the OCI Command Line Interface (CLI).
-- Install kubectl >= 1.18 if not already present.
-- install Helm 3.x.
+- Install kubectl >= 1.22 if not already present.
+- IOnstall Helm >=3.9.0+
 
 ## Task 1: Install the OCI CLI
 
@@ -42,11 +42,11 @@ In this lab you will:
 
     - In the Oracle Cloud Console, **click** your **User** icon (top right corner), then **Tenancy**.
 
-        ![](./images/setup-tf-tenancy.png)
+        ![tenancy menu](./images/setup-tf-tenancy.png)
 
     - **Copy** the OCID of the tenancy and paste it in your environment file.
 
-        ![](./images/setup-tf-tenancy-ocid.png)
+        ![tenancy ocid](./images/setup-tf-tenancy-ocid.png)
 
     `User OCID`:
 
