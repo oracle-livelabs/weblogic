@@ -5,7 +5,7 @@
 We will walk you through the process of migrating an existing on-premises WebLogic domain to WebLogic for Oracle Cloud Infrastructure (OCI). The WebLogic domain we'll migrate contains two Java applications, `SimpleDB` and `SimpleHTML`, and a datasource connecting to a database that will be migrated along with the WebLogic domain.
 
 Attached below is a sample architecture of the final solution:
-![](./images/Architecture.png " ")
+![architecture](./images/Architecture.png " ")
 
 Estimated Completion Time: 80 to 120 minutes depending on the path chosen.
 

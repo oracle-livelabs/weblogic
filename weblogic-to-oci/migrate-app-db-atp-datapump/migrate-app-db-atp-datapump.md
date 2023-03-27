@@ -35,7 +35,7 @@ In this workshop we will be using wrapper scripts to export, move the data to th
 
       ```
       <copy>
-      docker exec -it weblogic-to-oci_oracledb_1 /bin/bash
+      docker exec -it weblogic-to-oci-oracledb-1 /bin/bash
       </copy>
       ```
 
@@ -108,7 +108,7 @@ In this workshop we will be using wrapper scripts to export, move the data to th
 
       The output will look like:
 
-        ![](./images/migrate-db-1.png " ")
+    ![script output](./images/migrate-db-1.png " ")
 
 
 ## Task 3: Install the OCI CLI on the Source Database
@@ -125,6 +125,10 @@ This will be needed to get the wallet from the ATP database and put the database
     </copy>
     ```
 
+    At first try, you may be prompted to upgrade Python: hit *`Y`*, 
+
+    then run the command again
+    
     Hit **enter** to use the defaults for all options.
 
 2. Restart your shell:
@@ -134,33 +138,56 @@ This will be needed to get the wallet from the ATP database and put the database
     </copy>
     ```
 
-3. Configure the OCI CLI:
+3. Configure UTF8
 
+    you will need to set LOCALE to UTF8 using
+    
+    ```bash
+    <copy>
+    export LC_ALL=en_US.utf8 
+    export LANG=en_US.utf8
+    </copy>
     ```
+    
+
+4. Configure the CLI
+
+    ```bash
     <copy>
     oci setup config
     </copy>
     ```
 
-    You will be prompted for:
-    - Location of the config. Press **Enter**.
-    - `user_ocid`: enter your user OCID (found under **User -> User Settings**).
-    - `tenancy_ocid`: enter your tenancy OCID (found under **User -> Tenancy**).
-    - `region`: enter your region from the list provided.
-    - Generate a RSA key pair: press **Enter** for Yes (default).
-    - Directory for keys: press **Enter** for the default.
-    - Name for the key: press **Enter** for the default.
-    - Passphrase: press **Enter** for no passphrase.
+    Enter the following information:
+    
+    1. Location of the configuration: press **Enter**.
+    2. `user_ocid`: enter your user OCID.
+        1. In the Oracle Cloud Console, click your **User** icon (top right corner), then click your user name.
+            !["user"](images/setup-tf-user.png " ")
 
+       2. Copy the OCID of your user.
+            !["user ocid"](images/setup-tf-user-ocid.png " ")
+
+    3. `tenancy_ocid`: enter your tenancy OCID.
+        1. In the Oracle Cloud Console, **click** your **User** icon (top right corner), then **Tenancy**.
+            !["tenancy"](images/setup-tf-tenancy.png " ")
+
+        2. **Copy** the OCID of the tenancy.
+            !["tenancy ocid"](images/setup-tf-tenancy-ocid.png " ")
+
+    4. `region`: enter your region from the list provided.
+    5. Generate a RSA key pair: press **Enter** for Yes (default).
+    6. Directory for keys: press **Enter** for the default.
+    7. Name for the key: press **Enter** for the default.
+    8. Passphrase: press **Enter** for no passphrase.
 
     You should see an output like:
 
     ```bash
     Private key written to: /home/oracle/.oci/oci_api_key.pem
-    Fingerprint: 21:d4:f1:a0:55:a5:c2:ce:...
+    Fingerprint: 21:d4:f1:a0:55:a5:c2:ce:e2:...
     Config written to /home/oracle/.oci/config
     ```
-
 
 4. Upload the public key to your OCI account.
 
@@ -174,9 +201,9 @@ This will be needed to get the wallet from the ATP database and put the database
     </copy>
     ```
 
-    Copy the full printed output to clipboard.
+5. Copy the full printed output to clipboard.
 
-    In the OCI web console:
+6. In the Oracle Cloud Console:
 
     - Under **User -> User Settings**.
     - Click **API Keys**.
@@ -187,7 +214,7 @@ This will be needed to get the wallet from the ATP database and put the database
 
     You can verify that the Fingerprint generated matches the fingerprint output of the config.
 
-5. Test your CLI: in the demo environment shell run:
+7. Test your CLI:
 
     ```
     <copy>
@@ -195,7 +222,7 @@ This will be needed to get the wallet from the ATP database and put the database
     </copy>
     ```
 
-    This command should output the namespace of your tenancy (usually the name of the tenancy):
+    This command should output the namespace of your tenancy (usually the name of the tenancy)
 
     ```
     {
@@ -203,13 +230,15 @@ This will be needed to get the wallet from the ATP database and put the database
     }
     ```
 
-    Make a note of your **namespace** which will be needed later.
+    It may take a few dozen seconds for the API key to be validated, so if at first you see an Unauthorized answer, try again in a minute.
+
+    Note the name of the **namespace** that will be needed later.
 
 ## Task 4: Create an Object Storage Bucket
 
-1. Go to **Core Infrastructure -> Object Storage**.
+1. Go to **Core Infrastructure** then select **Object Storage**.
 
-    ![](./images/migrate-db-oss-1.png " ")
+    ![object storage menu](./images/migrate-db-oss-1.png " ")
 
 2. Make sure you are in the compartment where you deployed the resources.
 
@@ -266,7 +295,7 @@ First, we'll need to edit the `datapump_import_atp.sh` script to target the OCI 
 
 7. **Copy** the **Private Endpoint IP address** and enter as the `TARGET_DB_HOST` in the script.
 
-    ![](./images/db-info.png " ")
+    ![private endpoint](./images/db-info.png " ")
 
 8. **Enter** the name of the Object Storage bucket created earlier as `BUCKET` (`atp-upload`).
 
@@ -278,7 +307,7 @@ First, we'll need to edit the `datapump_import_atp.sh` script to target the OCI 
 
 12. In **User -> Settings** click **Auth Tokens**.
 
-    ![](./images/auth-token.png " ")
+    ![auth token](./images/auth-token.png " ")
 
 13. Click **Generate Token**.
 
@@ -291,6 +320,8 @@ First, we'll need to edit the `datapump_import_atp.sh` script to target the OCI 
     *Make sure to use single quotes to delimitate the OCI_TOKEN as it may contain characters that would cause script errors.*
 
 17. Enter your DB SYS password for `TARGET_DB_PWD`.
+
+18. scroll down to *`SSL_SERVER_DN_MATCH=yes`* and switch to *`SSL_SERVER_DN_MATCH=no`*.
 
 18. Save the file (with `CTRL+x` then `y`).
 

@@ -23,37 +23,37 @@ Estimated Completion Time: 5 minutes.
 
 1. On the **Security** menu, click **Vault**.
 
-   ![](./images/prereq-vault1.png " ")
+   ![vault](./images/prereq-vault1.png " ")
 
 2. Make sure you are in the compartment where you want to deploy WebLogic.
 
 3. Click **Create Vault**.
 
-   ![](./images/prereq-vault2.png " ")
+   ![create vault](./images/prereq-vault2.png " ")
 
 4. Name the vault `WebLogic Vault` or a name of your choosing. Make sure the `private` option is **not checked** and click **Create Vault**.
 
-   ![](./images/prereq-vault3.png " ")
+   ![not a private vault](./images/prereq-vault3.png " ")
 
 ## Task 2: Create a Key in the Vault
 
 1. Once the vault is provisioned, select the vault.
 
-   ![](./images/prereq-vault4.png " ")
+   ![select vault](./images/prereq-vault4.png " ")
 
 2. Click **Create Key**.
 
-   ![](./images/prereq-key1.png " ")
+   ![create key](./images/prereq-key1.png " ")
 
 3. Name the key `WebLogicKey` or a name of your choosing and click **Create Key**.
 
-   ![](./images/prereq-key2.png " ")
+   ![name key](./images/prereq-key2.png " ")
 
 ## Task 3: Create an Auth Token to Access OCI Registry
 
 1. On the **User** menu, click **User Settings** then click **Auth Tokens** on the left menu.
 
-   ![](./images/auth-token.png " ")
+   ![user auth tokens](./images/auth-token.png " ")
 
 2. Click **Generate Token**.
 

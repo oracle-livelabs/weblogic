@@ -51,7 +51,7 @@ Migration with WebLogic Deploy Tooling (WDT) consists of 3 steps:
 
     ```bash
     <copy>
-    docker exec -it weblogic-to-oci_wls_admin_1 /bin/bash
+    docker exec -it weblogic-to-oci-wls-admin-1 /bin/bash
     </copy>
     ```
 
@@ -247,6 +247,7 @@ appDeployments:
     The content now looks like:
 
     ```yaml
+    <copy>
     resources:
         JDBCSystemResource:
             JDBCConnection:
@@ -277,7 +278,7 @@ appDeployments:
                 ModuleType: ear
                 StagingMode: stage
                 Target: cluster
-
+    </copy>
     ```
 
 3. Edit each of the 3 `Target` names for `resources` and `appDeployments` from `cluster` (the name of the cluster on-premises) to `nonjrf_cluster` (the name of the cluster on the OCI domain):
@@ -289,6 +290,7 @@ appDeployments:
     The content should look like:
 
     ```yaml
+    <copy>
     resources:
         JDBCSystemResource:
             JDBCConnection:
@@ -319,6 +321,7 @@ appDeployments:
                 ModuleType: ear
                 StagingMode: stage
                 Target: nonjrf_cluster # <---
+    </copy>
     ```
 
   4. Finally, edit the `resources->JDBCSystemResource->JDBCConnection->JdbcResource->JDBCDriverParams->URL` to match the JDBC connection string of the database on OCI.
@@ -407,8 +410,10 @@ appDeployments:
 
    The resulting file should look like:
 
-    ```yaml
+    ```bash
+    <copy>
     JDBC.JDBCConnection.PasswordEncrypted=<PDB_PASSWORD>
+    </copy>
     ```
 
 3. Save the file with `CTRL+x` and `y`.
@@ -452,7 +457,7 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
     - Click **Create NAT Gateway**.
     - Go to **Subnets**.
     - Select the `nonjrf-wl-subnet`.
-    - In the Subnet Information, click the **Route Table** (`nonjrf-routetable`).
+    - In the Subnet Information, click the **Route Table** (`nonjrf-sg-routetable`).
     - Click **Add Route Rules**.
     - Select **NAT Gateway**.
     - Enter **0.0.0.0/0** for the CIDR range.
@@ -482,7 +487,7 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
 
 2. In Firefox you will see the self-certificate warning as below:
 
-    ![](./images/self-cert-warning.png " ")
+    ![self-certitifcate warning](./images/self-cert-warning.png " ")
 
     Click **Advanced...** and then **Accept the Risk and Continue**
 
@@ -490,14 +495,14 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
 
 4. Go to `deployments`: you should see the 2 applications deployed, and in the **active** state.
 
-  ![](./images/oci-deployments.png " ")
+  ![deployments](./images/oci-deployments.png " ")
 
 5. Go to the SimpleDB application URL, which is the Load Balancer IP gathered previously in the **Outputs** of the WebLogic provisioning, with the route `/SimpleDB/` like:
 https://`LOAD_BALANCER_IP`/SimpleDB/
 
     Making sure you use `https` as scheme and the proper case for `/SimpleDB`.
 
-  ![](./images/oci-simpledb-app.png " ")
+  ![app output](./images/oci-simpledb-app.png " ")
 
 ## Acknowledgements
 

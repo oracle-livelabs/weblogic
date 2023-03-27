@@ -519,7 +519,7 @@ appDeployments:
 
 	> **Note:** this is NOT the private load balancer IP, this is the **Private IP of the admin node**, found in the **Outputs** of the deployment stack.
 
-    ![](./images/admin-ip.png " ")
+    ![admin node IP](./images/admin-ip.png " ")
 
 1. Run the following command to copy the files:
 
@@ -539,11 +539,11 @@ appDeployments:
 
 3. Click the *update-domain* pipeline.
 
-    ![](./images/jenkins1.png " ")
+    ![update domain pipeline](./images/jenkins1.png " ")
 
 4. Click the Build with Parameters menu on the left.
 
-    ![](./images/jenkins2.png " ")
+    ![build with params](./images/jenkins2.png " ")
 
 5. Select the WebLogic Domain to update (`nonjrf`).
 
@@ -573,11 +573,11 @@ appDeployments:
        </copy>
        ```
 
-    ![](./images/jenkins3.png " ")
+    ![file inputs](./images/jenkins3.png " ")
 
 7. Run the job with the **Build** button.
 
-    ![](./images/jenkins4.png " ")
+    ![build](./images/jenkins4.png " ")
 
 8. Click the link to the job, then click Console Output for details on the job.
 
@@ -585,23 +585,23 @@ appDeployments:
 
 10. Wait until the job completes without failure in Jenkins.
 
-    ![](./images/jenkins5.png " ")
+    ![success](./images/jenkins5.png " ")
 
 ## Task 7: Check the Application Deployed Properly
 
 1. Go to the WebLogic Admin console (at `http://PRIVATE_LOAD_BALANCER_IP/nonjrf/console` under **Deployment** you should see the two applications listed.
 
-   ![](./images/oci-deployments.png " ")
+   ![deployments](./images/oci-deployments.png " ")
 
 2. In the OCI Console, click **Networking** then click **Load Balancers**.
 
 3. Find the IP of the Public Load Balancer.
 
-   ![](./images/public-lb.png " ")
+   ![public load balancer IP](./images/public-lb.png " ")
 
 4. Go to `https://PUBLIC_LOAD_BALANCER_IP/SimpleDB` to see the SimpleDB application.
 
-   ![](./images/oci-simpledb-app.png " ")
+   ![app output](./images/oci-simpledb-app.png " ")
 
    You will be prompted once again with the self-sign certificate warning in Firefox.
 

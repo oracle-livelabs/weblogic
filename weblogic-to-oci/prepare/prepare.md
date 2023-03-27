@@ -21,53 +21,45 @@ Estimated Completion Time: 5 minutes.
 
 1. Go to **Security -> Vault**.
 
-   ![](./images/prereq-vault1.png " ")
+   ![vault menu](./images/prereq-vault1.png " ")
 
 2. Make sure you are in the compartment where you want to deploy WebLogic.
 
 3. Click **Create Vault**.
 
-   ![](./images/prereq-vault2.png " ")
+   ![create vault](./images/prereq-vault2.png " ")
 
 4. Name the vault `WebLogic Vault` or a name of your choosing. Make sure the `private` option is **not checked** and click **Create Vault**.
 
-   ![](./images/prereq-vault3.png " ")
+   ![create](./images/prereq-vault3.png " ")
 
 ## Task 2: Create a Key in the Vault
 
 1. Once the vault is provisioned, select the vault.
 
-   ![](./images/prereq-vault4.png " ")
+   ![select vault](./images/prereq-vault4.png " ")
 
 2. Click **Create Key**.
 
-   ![](./images/prereq-key1.png " ")
+   ![create key](./images/prereq-key1.png " ")
 
 3. Name the key `WebLogicKey` or a name of your choosing and click **Create Key**.
 
-   ![](./images/prereq-key2.png " ")
+   ![settings for key](./images/prereq-key2.png " ")
 
 ## Task 3: Create a Secret for the WebLogic Admin Password
 
-1. Once the key is provisioned, click **Secrets**.
+1. Once the key is provisioned, click **Secrets** then **Create Secret**.
 
-   ![](./images/prereq-secret1.png " ")
-
-2. Click **Create Secret**.
-
-  ![](./images/prereq-secret2.png " ")
+   ![create secret](./images/prereq-secret1.png " ")
 
 3. Name the **Secret** as `WebLogicAdminPassword`, select the `WebLogicKey` created at the previous step as the **Encryption Key**, keep the default `plaintext` option and type `welcome1` or any WebLogic compliant password (at least 8 chars and 1 uppercase or number) in the **Secret Content** text field, and click **Create Secret**.
 
-  ![](./images/prereq-secret3.png " ")
-
-4. Click the `WebLogicAdminPassword` **Secret** you just created and **make a note** of its **OCID**.
-
-   ![](./images/prereq-secret4.png " ")
+  ![create secret](./images/prereq-secret3.png " ")
 
 ## Task 4: Check Policies Needed to Deploy and Create Dynamic Group if needed.
 
-If you don't have the following policy for your group:
+If you don't have the following policy for your group and you are not an admin in your tenancy:
 
 ```
 <copy>
@@ -126,4 +118,4 @@ You will need to create a Dynamic Group and associated Policies:
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, October 2021
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

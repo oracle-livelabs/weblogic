@@ -39,17 +39,17 @@ To destroy the demo VM:
 
 3. Click the stack name for the **Workshop on-premises environment**.
 
-   ![](./images/stack.png " ")
+   ![select stack](./images/stack.png " ")
 
 4. In **Terraform Actions**, click **Destroy**.
 
-   ![](./images/tf-destroy.png " ")
+   ![destroy](./images/tf-destroy.png " ")
 
 5. Once the job completed, click **stack details** in the bread-crumbs menu to get back to the stack details.
 
 6. Click **Delete Stack**.
 
-   ![](./images/delete-stack.png " ")
+   ![delete stack](./images/delete-stack.png " ")
 
 ## Task 2: Tear down the Application Database on OCI
 
@@ -91,15 +91,15 @@ You need to terminate the DB subnet before you can tear down the WebLogic deploy
 
 3. In **Terraform Actions**, click **Destroy**.
 
-   ![](./images/tf-destroy.png " ")
+   ![destroy](./images/tf-destroy.png " ")
 
 4. Once the job completed, click **stack details** in the bread-crumbs menu to get back to the stack details.
 
 5. Click **Delete Stack**.
 
-   ![](./images/delete-stack.png " ")
+   ![delete stack](./images/delete-stack.png " ")
 
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023
