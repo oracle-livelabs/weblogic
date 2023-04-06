@@ -2,7 +2,7 @@
 
 Click the *?* in the top right corner to send us an email.
 
-![](images/help-button.png)
+![help](images/help-button.png)
 
 
 ## **How to Format Your Support Email Request**

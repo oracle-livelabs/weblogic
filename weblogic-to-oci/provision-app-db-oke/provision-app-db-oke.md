@@ -1,4 +1,4 @@
-# Provision the application database on OCI with Database as a Service (DBaaS)
+# Provision the Application Database on Oracle Cloud Infrastructure with Database as a Service
 
 ## Introduction
 
@@ -12,7 +12,7 @@ Estimated Completion Time: 30 to 35 minutes including 25 to 30 minutes for provi
 - Create a private subnet for the application database.
 - Provision the application database as a database VM.
 
-## Task 1: Create a security List for the database subnet
+## Task 1: Create a Security List for the Database Subnet
 
 Before we can provision the application database, we need to provision a **private subnet** for the **Database System** with appropriate **Security Lists** to open up the required ports:
 
@@ -23,31 +23,31 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
 1. On the **Networking** menu, click **Virtual Cloud Network** in the compartment where WebLogic was provisioned.
 
-   ![](./images/provision-db-1.png " ")
+   ![vcn menu](./images/provision-db-1.png " ")
 
 2. Click the VCN that was created by the stack, which would be called `nonjrf-vcn` if you used the same naming conventions.
 
-   ![](./images/provision-db-2oke.png " ")
+   ![vcn name](./images/provision-db-2oke.png " ")
 
 3. Click **Create Security List**.
 
-   ![](./images/provision-db-4.png " ")
+   ![create security list](./images/provision-db-4.png " ")
 
 4. **Name** the security list `nonjrf-db-security-list`.
 
-   ![](./images/provision-db-5-dbseclist.png " ")
+   ![name](./images/provision-db-5-dbseclist.png " ")
 
 5. Click **Additional Ingress Rule**.
 
-   ![](./images/provision-db-5-ingress1521.png " ")
+   ![add ingress rule](./images/provision-db-5-ingress1521.png " ")
 
 6. For **Source CIDR**, use `10.0.0.0/16` and for **Destination Port Range** enter **1521**.
 
-   ![](./images/provision-db-5-ingress1521boke.png " ")
+   ![rule config](./images/provision-db-5-ingress1521b.png " ")
 
 7. Click **Additional Ingress Rule** and enter `0.0.0.0/0` for the **Source CIDR** and enter `22` for the **Destination Port Range** to authorize SSH from outside (through the bastion host).
 
-   ![](./images/provision-db-6-ingress22.png " ")
+   ![rule config](./images/provision-db-6-ingress22.png " ")
 
 8. Click **Create Security List**.
 
@@ -55,75 +55,81 @@ In this section we will create a security list for the WebLogic subnet to be abl
 
 1. Click **Subnets** on the left-side menu.
 
-   ![](./images/provision-db-7-subnet.png " ")
+   ![subnets](./images/provision-db-7-subnet.png " ")
 
 2. Click **Create Subnet**.
 
-   ![](./images/provision-db-8-subnet.png " ")
-
 3. **Name** the subnet `nonjrf-db-subnet`.
 
-   ![](./images/provision-db-9-subnet1.png " ")
+   ![name subnet](./images/provision-db-9-subnet1.png " ")
 
 4. Keep the defaults for the **Subnet Type** and enter a CIDR block of `10.0.7.0/24`.
 
-   ![](./images/provision-db-9-subnet2.png " ")
+   ![cidr](./images/provision-db-9-subnet2.png " ")
 
-5. **Select** the `Default Routing Table for nonjrf-vcn` for the **Routing Table**.
+5. **Select** the `nonjrf-nat-route` for the **Routing Table**.
 
-   ![](./images/provision-db-9-subnet3.png " ")
+   ![routing table](./images/provision-db-9-subnet3.png " ")
 
 6. Select **Private Subnet**.
 
-   ![](./images/provision-db-9-subnet4.png " ")
+   ![private subnet](./images/provision-db-9-subnet4.png " ")
 
 7. Keep the defaults for the DNS resolution and label and select `Default DHCP Options for nonjrf-vcn` for **DHCP Options**.
 
-   ![](./images/provision-db-9-subnet5.png " ")
+   ![dhcp](./images/provision-db-9-subnet5.png " ")
 
 8. **Select** the `nonjrf-db-security-list` created earlier for the **Security List**.
 
-   ![](./images/provision-db-9-subnet6.png " ")
+   ![security list](./images/provision-db-9-subnet6.png " ")
+
+8. Click **Another Security List** and select the **Default Security list for nonjrf-wls**.
+
+  ![other securirty list](./images/provision-db-9-subnet6b.png " ")
 
 9. Click **Create Subnet**.
 
-   ![](./images/provision-db-9-subnet7.png " ")
+   ![create](./images/provision-db-9-subnet7.png " ")
 
 ## Task 3: Provision the Database System
 
-1. On the **Database** menu, click **Bare Metal, VM and Exadata**.
+1. On the **Oracle Database** menu, click **Base Database (VM, BM)**.
 
-   ![](./images/provision-db-10.png " ")
+   ![db menu](./images/provision-db-10.png " ")
 
 2. Click **Create DB System**.
 
-   ![](./images/provision-db-11.png " ")
+   ![db system](./images/provision-db-11.png " ")
 
 3. Make sure you are in the **Compartment** where you created the database subnet, and name your **Database System**.
 
-   ![](./images/provision-db-12.png " ")
+   ![name](./images/provision-db-12.png " ")
 
 4. Select an availability domain or keep the default, keep the default **Virtual Machine** and select a **Shape** that is available.
 
-   ![](./images/provision-db-13-ad-shape.png " ")
+   ![node](./images/provision-db-13-ad-shape.png " ")
 
-5. Keep the defaults for **Total node count** and **Database Edition**.
+6. Select **Configure Storage**.
 
-   ![](./images/provision-db-14.png " ")
+  ![config storage](./images/provision-db-change-storage.png " ")
 
 6. Select **Logical Volume Manager**.
 
-   ![](./images/provision-db-15-lvm.png " ")
+   ![lvm](./images/provision-db-15-lvm.png " ")
 
 7. Keep defaults for **Storage**.
 
-   ![](./images/provision-db-16-storage.png " ")
+  ![storage config](./images/provision-db-16-storage.png " ")
+
+5. Keep the defaults for **Total node count** and **Database Edition**.
+
+  ![nodes](./images/provision-db-14.png " ")
 
 8. **Upload** the **SSH public key** created earlier.
 
-    The key created in the Docker container can be found in the folder `./weblogic-to-oci/ssh`.
+    The key created in the Docker container can be found in the `./weblogic-to-oci/ssh` folder.
 
-    If using the marketplace image, just use the **Paste SSH Keys** and get the key  inside the on-premises environment with:
+    If using the marketplace image, just use the **Paste SSH Keys** and get the key inside the on-premises environment with:
 
     ```
     <copy>
@@ -131,31 +137,31 @@ In this section we will create a security list for the WebLogic subnet to be abl
     </copy>
     ```
 
-   ![](./images/provision-db-17-ssh.png " ")
+   ![ssh key](./images/provision-db-17-ssh.png " ")
 
 9. Keep the default **License Included**.
 
-   ![](./images/provision-db-18-license.png " ")
+   ![license](./images/provision-db-18-license.png " ")
 
 10. Select the **Virtual cloud network** `nonjrf-vcn`, the **Client subnet** `nonjrf-db-subnet` and set a **Hostname prefix** of `db`.
 
-    ![](./images/provision-db-19-net.png " ")
+    ![vcn](./images/provision-db-19-net.png " ")
 
 11. Click **Next**.
 
 12. Name the database `RIDERS` like the database on-premises (required for proper migration).
 
-    ![](./images/provision-db-20-dbname.png " ")
+    ![db name](./images/provision-db-20-dbname.png " ")
 
 13. Keep the default **Database version** 19c.
 
-    ![](./images/provision-db-21-version.png " ")
+    ![version](./images/provision-db-21-version.png " ")
 
 14. Name the **PDB** `pdb` as it is on-premises.
 
-    ![](./images/provision-db-22-pdb.png " ")
+    ![pdb](./images/provision-db-22-pdb.png " ")
 
-15. Enter and confirm the **SYS Database password** as it is on-premises: 
+15. Enter and confirm the **SYS Database password** as it is on-premises:
 
     ```
     <copy>
@@ -163,15 +169,15 @@ In this section we will create a security list for the WebLogic subnet to be abl
     </copy>
     ```
 
-    ![](./images/provision-db-23-creds.png " ")
+    ![password](./images/provision-db-23-creds.png " ")
 
-16. Keep the default of **Transaction Processing** for **Workload type** and **Backup**, and click **Create DB System**.
+16. Uncheck **Backup**, and click **Create DB System**.
 
-    ![](./images/provision-db-24.png " ")
+    ![backup](./images/provision-db-24.png " ")
 
     This will usually take up to 40 minutes to provision.
 
-    ![](./images/provision-db-25.png " ")
+    ![provisioning](./images/provision-db-25.png " ")
 
 To save some time, you can start the database migration while the database is provisioning if you wish, however, you will need the database to be fully provisioned and you will need to gather the database information before you can finish the migration.
 
@@ -179,4 +185,4 @@ To save some time, you can start the database migration while the database is pr
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

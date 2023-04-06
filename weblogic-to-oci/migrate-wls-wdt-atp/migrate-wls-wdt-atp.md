@@ -1,26 +1,24 @@
-# Migrate the WebLogic Domain
+# Migrating the WebLogic Domain
 
 ## Introduction
 
 Migrating a WebLogic domain is equivalent to re-deploying the applications and resources to a new domain and infrastructure.
 
-We'll use WebLogic Deploy Tooling (WDT) to migrate the domain from an on-premises environment and re-deploy it on OCI.
+We'll use WebLogic Deploy Tooling to migrate the domain from on-premises and re-deploy it on OCI.
 
-Estimated Lab Time: 15 minutes
+Estimated Completion Time: 15 minutes.
 
 ### About Product/Technologies
 
-**WebLogic Deploy Tooling** is an open source tool found on Github at [https://github.com/oracle/weblogic-deploy-tooling](https://github.com/oracle/weblogic-deploy-tooling)
+**WebLogic Deploy Tooling** is an open source tool found on Github at [https://github.com/oracle/weblogic-deploy-tooling](https://github.com/oracle/weblogic-deploy-tooling).
 
-Migration with WDT consists of three steps:
+Migration with WebLogic Deploy Tooling (WDT) consists of 3 steps:
 
-- Discover the source domain, and generate a *model* file of the topology, resources and applications, a *variable* file with required credentials, and an *archive* file with the application binaries.
-- Edit the the *model* file and *variable* file to target the new infrastructure on OCI.
-- Copy the files to the target Admin Server, and *update* the clean domain on OCI with the applications and resources discovered on-premises.
+- Discover the source domain, and generate a **model** file of the topology, resources and applications, a **variable** file with required credentials, and an **archive** file with the application binaries.
+- Edit the **model** file and **variable** file to target the new infrastructure on OCI.
+- Copy the files to the target Admin Server, and **update** the clean domain on OCI with the applications and resources discovered on-premises.
 
 ### Objectives
-
-In this lab, you will:
 
 - Install WebLogic Deploy Tooling on the source WebLogic domain.
 - Discover the source domain.
@@ -30,8 +28,6 @@ In this lab, you will:
 - Check migration was successful.
 
 ### Prerequisites
-
-To run this lab, you need to:
 
 - Have set up the demo on-premises environment to use as the source domain to migrate.
 - Have deployed a WebLogic on OCI domain using the marketplace.
@@ -55,7 +51,7 @@ To run this lab, you need to:
 
     ```bash
     <copy>
-    docker exec -it weblogic-to-oci_wls_admin_1 /bin/bash
+    docker exec -it weblogic-to-oci-wls-admin-1 /bin/bash
     </copy>
     ```
 
@@ -75,7 +71,7 @@ To run this lab, you need to:
 
 You should already be in the on-premises environment logged in as the `oracle` user.
 
-1. Run the `install_wdt.sh` script
+1. Run the `install_wdt.sh` script:
 
     ```bash
     <copy>
@@ -325,7 +321,7 @@ appDeployments:
                 Target: nonjrf_cluster # <---
     ```
 
-4. Edit the `resources->JDBCSystemResource->JDBCConnection->JdbcResource->JDBCDriverParams->URL` to the new database connection string.
+  4. Finally, edit the `resources->JDBCSystemResource->JDBCConnection->JdbcResource->JDBCDriverParams->URL` to match the JDBC connection string of the database on OCI.
 
     The new JDBC connection string should be:
 
@@ -335,7 +331,7 @@ appDeployments:
     </copy>
     ```
 
-    Note that in a real case scenario, you should use the service name best suited for your needs (Oracle Autonomous Transaction Processing database supports `low`, `medium`, `high`, `tp` or `tpurgent`)
+    This is the connection string gathered earlier but making sure the **service** name is changed to `pdb` (this is the name of the pdb where the `RIDERS.RIDERS` table resides, as needed by the **SimpleDB** application).
 
     The resulting `source.yaml` file should be like:
 
@@ -400,7 +396,7 @@ appDeployments:
 
 2. Enter the JDBC Connection password for the `RIDERS` user pdb.
 
-    The password for the RIDERS user from the source DB can be found with
+    This can be found with
     ```bash
     <copy>
     cat /u01/app/oracle/gen_env.sh | grep DS_
@@ -415,8 +411,7 @@ appDeployments:
     JDBC.JDBCConnection.PasswordEncrypted=<PDB_PASSWORD>
     ```
 
-4. Save the file with `CTRL+x` and `y`.
-
+3. Save the file with `CTRL+x` and `y`.
 
 ## Task 5: Update the WebLogic Domain on OCI
 
@@ -426,13 +421,13 @@ The `update_domain.sh` script updates the target domain.
 
 - It makes sure the files are owned by the `oracle` user and moved to the `oracle` user home.
 
-- It runs the `install_wdt.sh` script through SSH
+- It runs the `install_wdt.sh` script through SSH.
 
-- Finally it runs the `update_domain_as_oracle_user.sh` through SSH to update the WebLogic domain on OCI with the edited source files.
+- And finally runs the `update_domain_as_oracle_user.sh` through SSH to update the WebLogic domain on OCI with the edited source files.
 
 The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling** script `updateDomain.sh` online, by providing the `-admin_url` flag.
 
-**Note:** the url uses the `t3` protocol which is only accessible through the internal admin server port, which is `9071` on the latest WebLogic marketplace stack, for older provisioning of the stack, the port may be `7001`.
+**Note:** The url uses the `t3` protocol which is only accessible through the internal admin server port, which is `9071` on the latest WebLogic marketplace stack, for older provisioning of the stack, the port may be `7001`.
 
 1. Edit the `update_domain.sh` script:
 
@@ -441,14 +436,33 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
     nano update_domain.sh
     </copy>
     ```
-
 2. Provide the `TARGET_WLS_ADMIN`.
 
-    This is the **WebLogic Admin Server public IP** gather previously.
+    This is the **Admin Server Private IP**
 
-3. Save the file with `CTRL+x` and `y`.
+3. You also need to provide a `BASTION_IP` which is the **public IP** of the Bastion Instance.
 
-4. Run the `update_domain.sh` script:
+    Furthermore, you'll need to add a **NAT gateway** to the admin server subnet so it is possible to download the required software.
+
+    - Go to **Core Infrastructure -> Networking -> Virtual Cloud Networks**.
+    - Select the VCN for the WLS on OCI stack.
+    - Click **NAT Gateways** on the left menu.
+    - Click **Create NAT Gateway**.
+    - Name it **NAT gw**.
+    - Click **Create NAT Gateway**.
+    - Go to **Subnets**.
+    - Select the `nonjrf-wl-subnet`.
+    - In the Subnet Information, click the **Route Table** (`nonjrf-sg-routetable`).
+    - Click **Add Route Rules**.
+    - Select **NAT Gateway**.
+    - Enter **0.0.0.0/0** for the CIDR range.
+    - Select the **NAT gw** NAT Gateway created earlier.
+    - Click **Add Route Rules**.
+
+
+4. Save the file with `CTRL+x` and `y`.
+
+5. Run the `update_domain.sh` script:
 
     ```bash
     <copy>
@@ -460,30 +474,30 @@ The `update_domain_as_oracle_user.sh` script runs the **WebLogic Deploy Tooling*
 
   [View the output of the update_domain.sh script](https://oracle-livelabs.github.io/weblogic/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/update_domain.output.txt)
 
-## Task 6: Check the Application Deployed Properly
+## Task 6: Check that the app deployed properly
 
-1. Go to the WebLogic Admin console at https://*ADMIN_SERVER_PUBLIC_IP*:7002/console.
+1. Go to the WebLogic Admin console (at https://`ADMIN_SERVER_PUBLIC_IP`:7002/console if you deployed in a *Public Subnet*), or through the tunnel (at https://localhost:7002/console) as you did earlier.
 
     Note: If you're using Chrome, you might encounter Self-signed certificate issues. We recommend using Firefox to test.
 
 2. In Firefox you will see the self-certificate warning as below:
 
-    ![](./images/self-cert-warning.png)
+    ![self-cert warning](./images/self-cert-warning.png " ")
 
-    Click **Advanced...** and then **Accept the Risk and Continue**.
+    Click **Advanced...** and then **Accept the Risk and Continue**
 
-3. Log in with the Admin user `weblogic` and password: `welcome1`.
+3. Login with the Admin user `weblogic` and password: `welcome1`.
 
 4. Go to `deployments`: you should see the 2 applications deployed, and in the **active** state.
 
-  ![](./images/oci-deployments.png)
+  ![deployments](./images/oci-deployments.png " ")
 
-5. Go to the SimpleDB application URL, which is the Load Balancer IP gathered previously in the **Outputs** of the WebLogic provisioing, with the route `/SimpleDB/` like:
-https://*LOAD_BALANCER_IP*/SimpleDB/
+5. Go to the SimpleDB application URL, which is the Load Balancer IP gathered previously in the **Outputs** of the WebLogic provisioning, with the route `/SimpleDB/` like:
+https://`LOAD_BALANCER_IP`/SimpleDB/
 
     Making sure you use `https` as scheme and the proper case for `/SimpleDB`.
 
-  ![](./images/oci-simpledb-app.png)
+  ![app output](./images/oci-simpledb-app.png " ")
 
 ## Acknowledgements
 

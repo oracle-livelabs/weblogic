@@ -3,13 +3,14 @@
     "help": "livelabs-help-weblogic_us@oracle.com",
     "tutorials": [
         {
-            "title": "Getting Started",
-            "description": "Login to Oracle Cloud",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
-        },{
             "title": "Introduction",
             "publisheddate": "07/30/2020",
             "filename": "../../../intro-oke/intro-oke.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "Login to Oracle Cloud",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title": "Lab 1: Set up the Demo On-Premises Environment",
@@ -64,7 +65,7 @@
         {
             "title": "Need Help?",
             "publisheddate": "10/06/2020",
-            "filename": "../../../need-help/need-help.md"
+            "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/RI_zL2IrzLgbazRovDkhVe2X35RRSH2zcF3XdvTeOOfN85oorMHhE09Icp6W8er-/n/c4u02/b/weblogic/o/weblogic-to-oci/need-help/need-help.md"
         }
      ]
 }

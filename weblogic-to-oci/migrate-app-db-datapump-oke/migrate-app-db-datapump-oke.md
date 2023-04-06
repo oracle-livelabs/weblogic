@@ -35,7 +35,7 @@ We will be using wrapper scripts to export, move the data to the destination, an
 
     ```
     <copy>
-    docker exec -it weblogic-to-oci_oracledb_1 /bin/bash
+    docker exec -it weblogic-to-oci-oracledb-1 /bin/bash
     </copy>
     ```
 
@@ -53,13 +53,17 @@ We will be using wrapper scripts to export, move the data to the destination, an
 1. You should already be logged into the instance and switched to the `oracle` user. If not use:
 
     ```bash
+    <copy>
     ssh opc@<public-ip>
+    </copy>
     ```
 
     Then:
 
     ```bash
+    <copy>
     sudo su - oracle
+    <copy>
     ```
 
 2. Get into the `/datapump` folder:
@@ -106,7 +110,7 @@ Run the `datapump_export.sh` script:
 
 The output will look like:
 
-![](./images/migrate-db-1.png " ")
+![script output](./images/migrate-db-1.png " ")
 
 ## Task 3: Edit the `datapump_import.sh` script
 
@@ -125,18 +129,22 @@ First, we'll need to edit the `datapump_import.sh` script to target the OCI data
 2. Enter the `BASTION_IP`.
 
    The `BASTION_IP` is the **public IP** of the Bastion Instance.
+   
+    Find it in **Resource Manager** under **Stack**, **stack details** then select the job and look at **Outputs**.
+
+    ![bastion IP](./images/migrate-db-2.png " ")
 
 3. Enter the `TARGET_DB_HOST` **private IP address**.
 
    This IP address was gathered from the Database System details, under the following settings: **Database System**, **details**, followed by **Nodes**.
 
-   ![](./images/provision-db-26-nodeip.png " ")
+   ![database host IP](./images/provision-db-26-nodeip.png " ")
 
 4. Enter the `TARGET_DB_DOMAIN` name from the database connection string.
 
    If you followed the default naming conventions, it should be `nonjrfdbsubnet.nonjrfvcn.oraclevcn.com`.
 
-   ![](./images/provision-db-27-connection2.png " ")
+   ![database domain](./images/provision-db-27-connection2.png " ")
 
 5. Enter your DB SYS password for `TARGET_DB_PWD`.
 
@@ -169,4 +177,4 @@ The database is now migrated to OCI.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, August 2020
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

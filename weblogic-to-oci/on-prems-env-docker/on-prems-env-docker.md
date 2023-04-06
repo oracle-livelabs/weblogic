@@ -18,19 +18,32 @@ Estimated Completion Time: 30 minutes.
 
 ### Prerequisites
 
-- Docker **20.10.17+** installed locally to run the on-premises environment.
+To run this tutorial, you will need:
 
-  Get Docker here: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+- docker engine installed locally to run the on-premises environment.
 
-  > **Note: You need at least 3 CPUs and 6 GB of memory assigned to Docker to run this template.**
+  Get the docker engine with Docker Desktop at [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/).
 
-- Docker-compose installed (on Linux it needs to be installed separately, but it is installed automatically on Mac OS and Windows).
+  You can also use alternative Docker distribution if you are not able to use Docker Desktop. Alternatives include:     
+    - [colima](https://github.com/abiosoft/colima) for Max OS 
+        ```bash
+        <copy>
+        brew install colima
+        </copy>
+        ```
+    - Rancher Desktop for Max OS or Windows at [https://rancherdesktop.io/](https://rancherdesktop.io/)
+
+  > **Note:** You need at least three CPUs and 6 GB of memory assigned to Docker to run this template.
+
+- Docker-compose installed (on Linux, or using 3rd party docker, it needs to be installed separately, but it is installed automatically on Mac OS and Windows with Docker Desktop).
 
   [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
-- Docker Hub account, to download necessary Docker images.
+- Oracle Container Registry Account, to download necessary Docker images.
 
-  [https://hub.docker.com/signup](https://hub.docker.com/signup)
+  [https://container-registry.oracle.com/ords/f?p=113:10::::::](https://container-registry.oracle.com/ords/f?p=113:10::::::)
+
+    Click Sign-in and Sign up for an account if you do not have one.
 
 
 ## Task 1: Get the Code
@@ -89,7 +102,6 @@ You can also download the code here: [https://objectstorage.us-ashburn-1.oraclec
 
     ```bash
     <copy>
-    cd ~/
     wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/5OJx9Uw1KIXVDKxCSvg5TjXdRiyxBoP5sJTk06ItQ87T4TY8WUzINwRt8U5EDQ3V/n/orasenatdpltintegration01/b/images/o/weblogic-to-oci.zip
     </copy>
     ```
@@ -123,17 +135,17 @@ You can also download the code here: [https://objectstorage.us-ashburn-1.oraclec
 
 This repository makes use of Oracle docker images which are licensed and need to be pulled from Oracle Container Registry after acknowledging the terms of the license.
 
-1. Sign in to Oracle Container Registry and go to the Weblogic image area at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:3049583459579:::RP,4:P4_REPOSITORY,AI_REPOSITORY,P4_REPOSITORY_NAME,AI_REPOSITORY_NAME:5,5,Oracle%20WebLogic%20Server,Oracle%20WebLogic%20Server&cs=37H14rtfqCv6lOK_QEU3DmGS1VoHr_wzhRiuXmoG_yhKeAvpZNY-7gug4LGp6Its9OovPep5ihHXq_kE7PXMEaQ</a>.
+1. Sign in to Oracle Container Registry and go to the Weblogic image area at: [https://container-registry.oracle.com](https://container-registry.oracle.com)</a>.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
 
-2. Go to the **Oracle Database** page and accept the license terms at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:9,9,Oracle%20Database%20Enterprise%20Edition,Oracle%20Database%20Enterprise%20Edition,1,0&cs=3_KZ3oTCFKHrh66x_DXKb_ikJMFYU1YEz3sQz7EJEoGbykIsa_7HLwiqBhEf4lyiNmUJOu0whMIjSnmndIktSyQ</a>.
+2. Search for the **Oracle Database** page, select **Enterprise** and accept the license terms.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
 
-3. Go to the **Instant Client** page and accept the license terms for the SQL Plus client at: <a href="https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ" target="_blank">https://container-registry.oracle.com/ords/f?p=113:4:20271533562375:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:61,61,Oracle%20Instant%20Client,Oracle%20Instant%20Client,1,0&cs=3Dz-h2rq9wkzW3J4h6NBoCdF2dGS4ov8c2DCi6Hzso8W1TReGBYc96qjTuOCmGPmiv6jvCAFJd51-KlMueho4zQ</a>.
+3. Search for the **Instant Client** page and accept the license terms for the SQL Plus client.
 
     - Select a Language.
     - Scroll down to Accept the terms of license.
@@ -198,11 +210,11 @@ The weblogic container waits for the database to be ready, and the schemas to be
     The following output shows the init container has terminated and the system should be ready:
     ```
     CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                PORTS                                                                          NAMES
-    bf43e3bd5a78        weblogic-to-oci_oracledb    "/bin/sh -c '/bin/ba…"   7 days ago          Up 7 days (healthy)   127.0.0.1:1521->1521/tcp, 127.0.0.1:5000->5000/tcp, 5500/tcp                   weblogic-to-oci_oracledb_1
-    38bcbb1555b8        weblogic-to-oci_wls_admin   "/u01/oracle/startNM…"   7 days ago          Up 7 days             127.0.0.1:7001->7001/tcp, 127.0.0.1:7003->7003/tcp, 127.0.0.1:7005->7005/tcp   weblogic-to-oci_wls_admin_1
+    bf43e3bd5a78        weblogic-to-oci-oracledb    "/bin/sh -c '/bin/ba…"   7 days ago          Up 7 days (healthy)   127.0.0.1:1521->1521/tcp, 127.0.0.1:5000->5000/tcp, 5500/tcp                   weblogic-to-oci-oracledb-1
+    38bcbb1555b8        weblogic-to-oci-wls-admin   "/u01/oracle/startNM…"   7 days ago          Up 7 days             127.0.0.1:7001->7001/tcp, 127.0.0.1:7003->7003/tcp, 127.0.0.1:7005->7005/tcp   weblogic-to-oci-wls-admin-1
     ```
 
-    If you see a container called `weblogic-to-oci_oracledbinit`, this means the initialization is still ongoing.
+    If you see a container called `weblogic-to-oci-oracledbinit`, this means the initialization is still ongoing.
 
 3. To troubleshoot problems in the set up, check the logs in the docker containers with:
 
@@ -220,7 +232,7 @@ The weblogic container waits for the database to be ready, and the schemas to be
 
     Before proceeding, make sure the local environment has been deployed properly and is running.
 
-    ![](./images/localhost-admin-console.png " ")
+    ![admin console](./images/localhost-admin-console.png " ")
 
     The **SimpleDB** application should be running at [http://localhost:7003/SimpleDB/](http://localhost:7003/SimpleDB/) or [http://localhost:7005/SimpleDB/](http://localhost:7005/SimpleDB/).
 
@@ -266,4 +278,4 @@ We'll create an SSH key pair in this folder.
 ## Acknowledgements
 
  - **Author** - Emmanuel Leroy, May 2020
- - **Last Updated By/Date** - Emmanuel Leroy, July 2022
+ - **Last Updated By/Date** - Emmanuel Leroy, March 2023

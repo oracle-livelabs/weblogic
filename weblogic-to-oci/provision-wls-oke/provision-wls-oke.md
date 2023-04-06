@@ -26,7 +26,7 @@ You need to have prepared the Oracle Cloud Infrastructure (OCI) tenancy with:
 
    ![](./images/provision-1.png " ")
 
-2. In the search input, type `weblogic` and click **WebLogic Enterprise Edition on OKE UCM**.
+2. In the search input, type `weblogic oke` and click **WebLogic Enterprise Edition on OKE UCM**.
 
    ![](./images/provision-2.png " ")
 
@@ -77,6 +77,8 @@ You need to have prepared the Oracle Cloud Infrastructure (OCI) tenancy with:
 
 9. Under **Container Cluster (OKE) Configuration** select the **Non-Weblogic Node Pool Shape** from a shape available in your tenancy.
 
+9. Similarly select the **Weblogic Node Pool Shape** from a shape available in your tenancy.
+
 10. Under **Container Cluster (OKE) Administration Instances**, select an **Availability Domain** and shapes for the **Administration Instance Compute Shape** and **Bastion Instance Shape**.
 
     ![](./images/admin-bastion-shape.png " ")
@@ -87,9 +89,7 @@ You need to have prepared the Oracle Cloud Infrastructure (OCI) tenancy with:
 
 12. Under Registry (OCIR) enter your full **Username**, which you find under your **User icon**.
 
-    ![](./images/username.png " ")
-
-13. Enter the **OCID** of the secret for the **OCI Registry Auth Token**.
+13. Select the secret for the **OCI Registry Auth Token**.
 
     ![](./images/ocir-secret.png " ")
 
@@ -156,7 +156,7 @@ We'll need to set up a tunnel through the Bastion Instance, with a dynamic port 
 
 2. Create a dynamic port tunnel through the Bastion Instance.
 
-   Use the following command to create a tunnel from the WLS admin server to your local machine.
+   On Linux or Mac OS, use the following command to create a tunnel from the WLS admin server to your local machine.
 
     ```bash
     <copy>
@@ -164,7 +164,7 @@ We'll need to set up a tunnel through the Bastion Instance, with a dynamic port 
     </copy>
     ```
 
-   Using Putty:
+   On Windows, use Putty:
     1. Create a new Session to `opc@<BASTION_IP>` with port 22.
     2. In **Host Keys**, locate the `id_rsa` private key obtained earlier.
     3. On the **Connections** menu, click **SSH**, **Tunnels**, then click **Dynamic**.
