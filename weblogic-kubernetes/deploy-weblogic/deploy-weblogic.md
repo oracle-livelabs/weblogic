@@ -49,13 +49,13 @@ After you have your domain namespace (the WebLogic domain is not deployed yet), 
     ```bash
     Release "traefik-operator" has been upgraded. Happy Helming!
     NAME: traefik-operator
-    LAST DEPLOYED: Tue Nov 22 07:39:45 2022
+    LAST DEPLOYED: Thu Apr  6 10:49:56 2023
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 2
     TEST SUITE: None
     NOTES:
-    Traefik Proxy v2.9.4 has been deployed successfully
+    Traefik Proxy v2.9.9 has been deployed successfully
     on traefik namespace !
     ```
     
@@ -99,9 +99,9 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     The output should be similar to the following:
     ```bash
     NAME                             READY   STATUS    RESTARTS   AGE    IP             NODE          NOMINATED NODE   READINESS GATES
-    sample-domain1-admin-server      1/1     Running   0          2m7s   10.244.0.5     10.0.10.134   <none>           <none>
-    sample-domain1-managed-server1   1/1     Running   0          55s    10.244.1.133   10.0.10.254   <none>           <none>
-    sample-domain1-managed-server2   0/1     Running   0          55s    10.244.0.132   10.0.10.203   <none>           <none>
+    sample-domain1-admin-server      1/1     Running   0          2m7s   10.244.0.134 10.0.10.81    <none>           <none>
+    sample-domain1-managed-server1   1/1     Running   0          55s    10.244.0.4   10.0.10.155   <none>           <none>
+    sample-domain1-managed-server2   0/1     Running   0          55s    10.244.1.4   10.0.10.24    <none>           <none>
     ```
     > You should see three running pods similar to the results shown above. If you don't see all the running pods, wait and then check periodically. The entire domain deployment may take up to 2-3 minutes depending on the compute shapes.
 
@@ -165,7 +165,7 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     ```
     The output should be similar to the following:
     ```bash
-    132.145.10.86
+    141.147.71.220
     ```
 
 7. Construct the Administration Console URL and open it in a browser; enter the *weblogic/welcome1* as Username and Password and then click **Login**.
@@ -185,4 +185,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, November 2022
+* **Last Updated By/Date** - Ankit Pandey, April 2023

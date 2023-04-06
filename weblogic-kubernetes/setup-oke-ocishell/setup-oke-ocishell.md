@@ -1,10 +1,10 @@
-# Create Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)
+# Set up an Oracle Kubernetes Engine instance on the Oracle Cloud Infrastructure
 
 ## Introduction
 
 This lab walks you through the steps to create a managed Kubernetes environment on the Oracle Cloud Infrastructure.
 
-Estimated Lab Time: 20 minutes
+Estimated time: 15 minutes
 
 ### About Product/Technology
 
@@ -19,7 +19,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
+* You must have an [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
 
 To create the Container Engine for Kubernetes (OKE), complete the following steps:
 
@@ -27,7 +27,7 @@ To create the Container Engine for Kubernetes (OKE), complete the following step
 * Create a cluster.
 * Create a `NodePool`.
 
-This tutorial shows you how the *Quick Start* feature creates and configures all the necessary resources for a 3-node Kubernetes cluster. All the nodes will be deployed in different availability domains to ensure high availability.
+This lab shows you how the *Quick Start* feature creates and configures all the necessary resources for a 3-node Kubernetes cluster. All the nodes will be deployed in different availability domains to ensure high availability.
 
 For more information about OKE and custom cluster deployment, see the [Oracle Container Engine](https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengoverview.htm) documentation.
 
@@ -37,52 +37,56 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
 1. In the Console, select the *Hamburger Menu -> Developer Services -> Kubernetes Clusters (OKE)* as shown.
 
-    ![Hamburger Menu](images/hamburgermenu.png)
+    ![Hamburger Menu](images/hamburger-menu.png " ")
 
 2. In the Cluster List page, select the Compartment of your choice, where you are allowed to create a cluster, and then click *Create Cluster*.
 
-    ![Select Compartment](images/selectcompartment.png)
+    > You need to select a compartment in which you are allowed to create a cluster and also, a repository inside the Oracle Container Registry.
 
-3. In the Create Cluster Solution dialog, select *Quick create* and click *Submit*.
+    ![Select Compartment](images/select-compartment.png " ")
 
-    ![Launch Workflow](images/launchworkflow.png)
+3. In the Create Cluster Solution dialog, select *Quick Create* and click *Submit*.
+
+    ![Launch Workflow](images/launch-workflow.png " ")
 
     *Quick Create* will create a new cluster with the default settings, along with new network resources for the new cluster.
 
     Specify the following configuration details on the Cluster Creation page (please pay attention to the value you place in the *Shape* field):
 
     * **Name**: The name of the cluster. Leave the default value.
-    * **Compartment**: The name of the compartment. Leave the default value.
-    * **Kubernetes version**: The version of Kubernetes. Leave the default value which should be *v1.24.1* or select the latest version available.
+    * **Compartment**: The name of the compartment. Select the compartment in which you are allowed to create resources.
+    * **Kubernetes version**: The version of Kubernetes. Select *1.24.1* as Kubernetes version.
     * **Kubernetes API Endpoint**: Are the cluster master nodes going to be routable or not. Select the *Public Endpoint* value.
     * **Kubernetes Worker Nodes**: Are the cluster worker nodes going to be routable or not. Leave the default *Private Workers* value.
-    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select *VM.Standard.E4.Flex* (which is typically available in Oracle Free Tier Account). Select the default number of OCPUs *1* and amount of memory *16* as shown below.
+    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select *VM.Standard.E4.Flex* (which is typically available in Oracle Free Tier Account). Select the 2 OCPUs and 32 GB as Amount of Memory.
+    * **Image**: Select the default image with Kubernetes version *1.24.1*.
     * **Number of nodes**: The number of worker nodes to create. Leave the default value, *3*.
 
-    ![Quick Cluster](images/quickcluster.png)
+    ![Quick Cluster](images/quick-cluster.png " ")
 
 4. Click *Next* to review the details you entered for the new cluster.
 
-    ![Enter Data](images/enterdata.png)
+    ![Enter Data](images/enter-data.png " ")
 
-5. On the *Review* page, click *Create cluster* to create the new network resources and the new cluster.
+5. On the *Review* page, select the check box for *Create a Basic cluster* and then click *Create Cluster* to create the new network resources and the new cluster.
 
-    ![Review Cluster](images/reviewcluster.png)
+    ![Review Cluster](images/review-cluster.png " ")
 
     > You see the network resources being created for you. Wait until the request to create the node pool is initiated and then click *Close*.
 
-    ![Network Resource](images/networkresource.png)
+    ![Network Resource](images/network-resource.png " ")
 
     > Then, the new cluster is shown on the *Cluster Details* page. When the master nodes are created, the new cluster gains a status of *Active* (it takes about 7 minutes).Then, you may continue your labs.
 
-    ![cluster provision](images/clusterprovision.png)
+    ![cluster provision](images/cluster-provision.png " ")
 
-    ![cluster created](images/clustercreated.png)
+    ![cluster access](images/cluster-access.png " ")
 
 ## Task 2: Configure `kubectl` (Kubernetes Cluster CLI)
 
-Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal, accessible from the Oracle Cloud Console. The Cloud Shell provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI and other useful tools (*Git, kubectl, helm, OCI CLI*) to complete this lab. The Cloud Shell is accessible from the Console. Your Cloud Shell will appear in the Oracle Cloud Console as a persistent frame of the Console, and will stay active as you navigate to different pages of the Console.
+Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal, accessible from the Oracle Cloud Console. The Cloud Shell provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI and other useful tools (*Git, kubectl, helm, OCI CLI*) to complete the Verrazzano tutorials. The Cloud Shell is accessible from the Console. Your Cloud Shell will appear in the Oracle Cloud Console as a persistent frame of the Console, and will stay active as you navigate to different pages of the Console.
 
+You will use the *Cloud Shell* to complete this workshop.
 
 We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It needs a `kubeconfig` file. This will be generated using the OCI CLI which is pre-authenticated, so there’s no setup to do before you can start using it.
 
@@ -90,17 +94,17 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
 
     > If you moved away from that page, then open the navigation menu and under *Developer Services*, select *Kubernetes Clusters (OKE)*. Select your cluster and go the detail page.
 
-    ![Access Cluster](images/accesscluster.png)
+    ![Access Cluster](images/access-cluster.png " ")
 
     > A dialog is displayed from which you can open the Cloud Shell and contains the customized OCI command that you need to run, to create a Kubernetes configuration file.
 
 2. Leave the default *Cloud Shell Access* and first select the *Copy* link to copy the `oci ce...` command to the Cloud Shell.
 
-    ![Copy kubectl Config](images/copyconfig.png)
+    ![Copy kubectl Config](images/copy-config.png " ")
 
 3. Now, click *Launch Cloud Shell* to open the built in console. Then close the configuration dialog before you paste the command into the *Cloud Shell*.
 
-    ![Launch Cloud Shell](images/launchcloudshell.png)
+    ![Launch Cloud Shell](images/launch-cloudshell.png " ")
 
 4. Copy the command from the clipboard (Ctrl+V or right click and copy) into the Cloud Shell and run the command.
 
@@ -110,7 +114,7 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
     oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.phx.aaaaaaaaaezwen..................zjwgm2tqnjvgc2dey3emnsd --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0
     ```
 
-    ![kubectl config](images/kubectlconfig.png)
+    ![kubectl config](images/kube-config.png " ")
 
 5. Now check that `kubectl` is working, for example, using the `get node` command. you may need to run this command several times until you see the output similar to following.
 
@@ -121,20 +125,21 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
     ```bash
     $ kubectl get node
     NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.134   Ready    node    33m   v1.24.1
-    10.0.10.203   Ready    node    33m   v1.24.1
-    10.0.10.254   Ready    node    33m   v1.24.1
+    10.0.10.155   Ready    node    11m   v1.24.1
+    10.0.10.24    Ready    node    11m   v1.24.1
+    10.0.10.81    Ready    node    11m   v1.24.1
     ```
 
     > If you see the node's information, then the configuration was successful.
 
 6. You can minimize and restore the terminal size at any time using the controls at the top right corner of the Cloud Shell.
 
-    ![cloud shell](images/cloudshell.png)
+    ![cloud shell](images/cloudshell.png " ")
 
 Leave this *Cloud Shell* open; we will use it for further labs.
 
 ## Acknowledgements
+
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, November 2022
+* **Last Updated By/Date** - Ankit Pandey,  April 2023
