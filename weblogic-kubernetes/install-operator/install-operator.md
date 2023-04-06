@@ -97,14 +97,14 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     The output will be similar to the following:
     ```bash
     NAME: sample-weblogic-operator
-    LAST DEPLOYED: Tue Nov 22 07:32:31 2022
+    LAST DEPLOYED: Thu Apr  6 10:41:57 2023
     NAMESPACE: sample-weblogic-operator-ns
     STATUS: deployed
     REVISION: 1
     TEST SUITE: None
     ```
    
-2. Check the operator pod:
+4. Check the operator pod:
     ```bash
     <copy>kubectl get po -n sample-weblogic-operator-ns</copy>
     ```
@@ -117,14 +117,14 @@ Kubernetes distinguishes between the concept of a user account and a service acc
 
     > Make sure to wait until the pod is in **Running** state.
 
-3. Check the operator Helm chart:
+5. Check the operator Helm chart:
     ```bash
     <copy>helm list -n sample-weblogic-operator-ns</copy>
     ```
     The output will be similar to the following:
     ```bash
     NAME                            NAMESPACE                       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
-    sample-weblogic-operator        sample-weblogic-operator-ns     1               2022-11-22 07:32:31.433280563 +0000 UTC deployed        weblogic-operator-4.0.1 4.0.1 
+    sample-weblogic-operator        sample-weblogic-operator-ns     1               2023-04-06 10:41:57.793349849 +0000 UTC        weblogic-operator-4.0.5 4.0.5 
     ```
 
     The WebLogic Server Kubernetes Operator has been installed. You may now **proceed to the next lab**.
@@ -132,4 +132,4 @@ Kubernetes distinguishes between the concept of a user account and a service acc
 ## Acknowledgements
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, November 2022
+* **Last Updated By/Date** - Ankit Pandey, April 2023

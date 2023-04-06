@@ -39,13 +39,13 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME: traefik-operator
-    LAST DEPLOYED: Tue Nov 22 07:36:56 2022
+    LAST DEPLOYED: Thu Apr  6 10:46:02 2023
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 1
     TEST SUITE: None
     NOTES:
-    Traefik Proxy v2.9.4 has been deployed successfully
+    Traefik Proxy v2.9.9 has been deployed successfully
     on traefik namespace !
     ```
 
@@ -56,7 +56,7 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME               TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
-    traefik-operator   LoadBalancer   10.96.95.162   132.145.10.86   80:30305/TCP,443:30443/TCP   44s
+    traefik-operator   LoadBalancer   10.96.137.252   141.147.71.220   80:30305/TCP,443:30443/TCP   44s
     ```
 
     > Please note the EXTERNAL-IP of the traefik-operator service. This is the public IP address of the load balancer that you will use to access the WebLogic Server Administration Console and the sample application.
@@ -67,7 +67,7 @@ Estimated Lab Time: 10 minutes
     ```
     The output should be similar to the following:
     ```bash
-    132.145.10.86
+    141.147.71.220
     ```
 
 5. Verify the `helm` charts:
@@ -77,7 +77,7 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME                    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
-    traefik-operator        traefik         1               2022-11-22 07:36:56.014140398 +0000 UTC deployed        traefik-20.4.1  v2.9.4      
+    traefik-operator        traefik         1               2023-04-06 10:46:02.631127866 +0000 UTC deployed        traefik-22.0.0  v2.9.9      
     ```
 
     You may now **proceed to the next lab**.
@@ -85,4 +85,4 @@ Estimated Lab Time: 10 minutes
 ## Acknowledgements
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, November 2022
+* **Last Updated By/Date** - Ankit Pandey, April 2023
