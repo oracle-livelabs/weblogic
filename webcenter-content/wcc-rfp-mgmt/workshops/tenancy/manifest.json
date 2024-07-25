@@ -1,0 +1,61 @@
+{
+  "workshoptitle": "Build Intelligent Content Applications at cloud speed with Oracle WebCenter & Oracle APEX",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
+      "filename": "./../../00-a-introduction/00-a-introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Get a Free Trial",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+    },
+    {
+      "title": "Lab 1: Prepare Setup",
+      "description": "How to download your ORM stack and update security rules for an existing VCN",
+      "filename": "../../01-prepare-setup/01-prepare-setup.md"
+    },
+    {
+      "title": "Lab 2: Setup WCC Environment",
+      "description": "How to provision the workshop environment and connect to it",
+      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+    },
+    {
+      "title": "Lab 3: Initialize WCC Environment",
+      "description": "This lab provides detailed guide to initialize the workshop environment",
+      "filename": "./../../03-initialize-environment/03-initialize-environment.md"
+    },
+    {
+      "title": "Lab 4: Setup APEX Application",
+      "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
+      "filename": "./../../04-setup-apex-application/04-setup-apex-application.md"
+    },
+    {
+      "title": "Lab 5: Create New RFP Document",
+      "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
+      "filename": "./../../05-create-new-rfp-doc/05-create-new-rfp-doc.md"
+    },
+    {
+      "title": "Lab 6: Update Documents for Section Types",
+      "description": "This lab shows you how to configure disposition rules for records that gets triggered by a custom trigger based on the time defined.",
+      "filename": "./../../06-update-sections/06-update-sections.md"
+    },
+    {
+      "title": "Lab 7: Review and Approve Section Type Documents for RFP",
+      "description": "This lab shows you how to configure disposition rules for records that get triggered by the occurrence of the event and waits for certain retention period before acting on the records.",
+      "filename": "./../../07-approve-sections/07-approve-sections.md"
+    },
+    {
+      "title": "Lab 8: Merge Section Documents to create RFP Response",
+      "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
+      "filename": "./../../08-merge-sections-to-rfp-response/08-merge-sections-to-rfp-response.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
