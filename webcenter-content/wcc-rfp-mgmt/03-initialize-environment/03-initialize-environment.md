@@ -155,7 +155,7 @@ This lab assumes you have:
 
 2. Confirm successful login.
 
-    ![This image shows the status of the WebCenter Content UI Landing page post successful login](./images/webcenter-post-login.png "WebCenter Content UI Landing page post successful login")
+    ![This image shows the status of the APEX/ORDS Landing page post successful login](./images/apex_login_internal_success.png "APEX/ORDS Landing page post successful login")
 
     If successful, the page above is displayed and as a result, your environment is now ready.  
 
