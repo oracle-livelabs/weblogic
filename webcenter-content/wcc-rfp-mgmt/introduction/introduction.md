@@ -1,30 +1,32 @@
 # Introduction
 
+## Introduction
+
+Learn how to build scalable solutions with cloud agility by architecting intelligent applications with Oracle WebCenter and Oracle Cloud Infrastructure using your preferred low-code platform of Oracle APEX
+
+
 ## About this Workshop
 
-Learn how to build scalable solutions with cloud agility by architecting intelligent applications with Oracle WebCenter and Oracle Cloud Infrastructure  using your preferred low-code platform of Oracle APEX
-
+Organizations are made up of processes and processes revolve around documents. This lab would help participants to build Content Apps quickly using Oracle WebCenter Content and low code platform like APEX.
 *Estimated Time:* 3 hours
 
-### About Request For Proposal Management System using WebCenter Content & APEX
-
-Organizations are made up of processes and processes revolve around documents. This lab would help participants to build Content Apps quickly using Oracle WebCenter Content and low code platform like  APEX.
+## About Request For Proposal Management System using WebCenter Content & APEX
 
 The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated with OCI AI services & Oracle Process Automation. This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by automating metadata extraction, creating structured workflows, and integrating with Oracle Fusion Application Sales Cloud.
 
-    ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
+    [Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
-### Application and User flow
+## The Application and User flow
 
 * **Trigger**: Salesperson receives an RFP document.
 
 * **Action**: Salesperson uploads the RFP document to the RFP Management App and initiates the process.
 
-    * *Metadata Input: Salesperson inputs related metadata for the document. (LEverage Metadata Automation using OCI AI service to automatically extract and populate metadata from the uploaded RFP document*
+    * *Metadata Input*: Salesperson inputs related metadata for the document.
 
-    * *Process: Salesperson selects the sections required for the RFP response from a predefined list. (eg Technical Architecture, Project costing, Compliance etc)*
+    * *Process*: Salesperson selects the sections required for the RFP response from a predefined list. (eg Technical Architecture, Project costing, Compliance etc)
 
 * **Process**: Each selected section triggers the creation of a workflow
 
@@ -36,16 +38,17 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
 
         * Allow for collaboration and review within the system.
 
-* Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
+* **Result**:
+    * Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
 
-* Sales Person will also associate the RFP response document to the Opportunity he/she created in Oracle Sales Cloud by selecting the document from the same WebCenter Content repository.
+    * Sales Person will also associate the RFP response document to the Opportunity he/she created in Oracle Sales Cloud by selecting the document from the same WebCenter Content repository.
 
-### Objectives
+## Objectives
 
 In this lab, you will:
 
 * Setup WCC Marketplace Environment
-* Setup Request-For-Proposal Management APEX Application
+* Setup Request-For-Proposal (RFP) Management APEX Application
 * Upload RFP Document to initiate the Process by selecting required Sections for the Response
 * Update the Section documents for the RFP Response
 * Review and Approve the updated Section documents

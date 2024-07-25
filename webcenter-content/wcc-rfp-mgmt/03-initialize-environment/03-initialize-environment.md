@@ -149,9 +149,8 @@ This lab assumes you have:
     <copy>welcome1</copy>
     ```
 
-    **For ATP DB** *, ADMIN password to the ADMIN DB schema user password ONLY*
-    ![This image shows the status of the WebCenter Content UI Landing Page](./images/webcenter-landing.png "WebCenter Content Server UI Landing Page")
-    ![This image shows the status of the WebCenter Content UI Login Page](./images/webcenter-login.png "WebCenter Content Server UI Login Page")
+    **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+    ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 
 2. Confirm successful login.
@@ -246,26 +245,27 @@ You may now **proceed to the next lab**.
 
 ## Appendix 2: Re-index collections and documents
 
-1. Log in to the Content server as an administrator and click on **Configure Records Settings** under the Administration tab as shown in the image below.
+1. Log in to the Content server as an administrator and click on **Admin Applets** under the Administration tab as shown in the image below.
 
     ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
 
-2. Select the software configuration as shown in the image.
+2. Click on **Repository Manager** Applet
 
     ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
-    ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
-
+    
     > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
 
-3. After the installation is completed, configure the setup checklist by clicking on the **Records** tab, selecting the **Configure** option and then selecting **Setup Checklist**.
+3. Download and Run the **Repository Manager** Java Applet
 
     ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
 
-4. On the Setup Checklist page install the defaults and configure security settings.
+4. On the **Repository Manager** Applet , Click on **Indexer** tab 
 
     ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
 
+5. Under **Collection Rebuild Cycle** section, Click on **Start** Button and wait for the indexing to finish
 
+![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
 
 
 ## Appendix 3: Reset ADMIN password for APEX/ORDS
@@ -284,10 +284,9 @@ You may now **proceed to the next lab**.
 eg:
     ```
     SQL> alter session set current_schema=apex_230200;
-    ```
-or
+    
+    (OR)
 
-    ```
     SQL> alter session set current_schema=apex_240100;
     ```
 
