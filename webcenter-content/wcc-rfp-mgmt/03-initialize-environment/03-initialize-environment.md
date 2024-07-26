@@ -157,7 +157,7 @@ This lab assumes you have:
 
     ![This image shows the status of the APEX/ORDS Landing page post successful login](./images/apex_login_internal_success.png "APEX/ORDS Landing page post successful login")
 
-    If successful, the page above is displayed and as a result, your environment is now ready.  
+    If successful, the page above is displayed and as a result, your WCC instance is now ready.
 
 
 You may now **proceed to the next lab**.
@@ -247,30 +247,36 @@ You may now **proceed to the next lab**.
 
 1. Log in to the Content server as an administrator and click on **Admin Applets** under the Administration tab as shown in the image below.
 
-    ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings")
+    ![This image shows how to navigate to Admin Applets](./images/appendix2_reindex_screenshot1.png "Navigate to Admin Applets")
 
 2. Click on **Repository Manager** Applet
 
-    ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
-    
-    > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
+    ![Click on the Repository Manager Applet as shown in the image.](./images/appendix2_reindex_screenshot2.png "Click on the Repository Manager Applet")
+
+
+
 
 3. Download and Run the **Repository Manager** Java Applet
 
-    ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList")
+    ![Click OK to run the Java Applet](./images/appendix2_reindex_screenshot3_0.png "Run Java Applet")
 
-4. On the **Repository Manager** Applet , Click on **Indexer** tab 
+    ![This image shows the Repository Manager Java Applet](./images/aappendix2_reindex_screenshot3_1.png "Repository Manager Applet")
 
-    ![Configure the Initial Set Up checklist as shown in this image.](./images/initial-setup-checklist.png "Initial SetUp CheckList")
 
-5. Under **Collection Rebuild Cycle** section, Click on **Start** Button and wait for the indexing to finish
+4. On the **Repository Manager** Applet , Click on **Indexer** tab
 
-![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
+    ![Click Indexer tab in Repository Manager Java Applet](./images/appendix2_reindex_screenshot4_1.png "Indexer Tab in Repository Manager Applet")
 
+
+5. Under **Collection Rebuild Cycle** section, Click on **Start** Button, Uncheck **Use Fast Rebuild** option , Click **OK** button and wait for the indexing to finish
+
+ ![Click Start button of Collection Rebuild  in Indexer tab of Repository Manager Java Applet](./images/appendix2_reindex_screenshot5_1.png "Start Collection Rebuild  Button in Indexer Tab of Repository Manager Applet")  ![This image shows Index Rebuild Options](./images/appendix2_reindex_screenshot5_2.png "Index Rebuild Options")
+
+ ![This image shows Collection Rebuild Finished in Indexer tab of Repository Manager Java Applet](./images/appendix2_reindex_screenshot5_3.png "Collection Rebuild Completed in Indexer Tab of Repository Manager Applet")
 
 ## Appendix 3: Reset ADMIN password for APEX/ORDS
 
-
+Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked
 
 
 1. Find the latest version schema name:
@@ -284,7 +290,7 @@ You may now **proceed to the next lab**.
 eg:
     ```
     SQL> alter session set current_schema=apex_230200;
-    
+
     (OR)
 
     SQL> alter session set current_schema=apex_240100;
@@ -306,12 +312,12 @@ eg:
     ORDER BY last_update_date DESC;
     </copy>
     ```
-    *Note the **required user id and security group id** from the above query ( fyi, **Security Group ID 10 is for "INTERNAL" workspace**)*
+    > *Note the **required user id and security group id** from the above query ( fyi, **Security Group ID 10 is for "INTERNAL" workspace**)*
 
 
 4. Update the Password
 
-    *FYI, for ATP DB, please reset the ADMIN password to the ADMIN DB schema user password ONLY*
+    > *FYI, for ATP DB, please reset the ADMIN password to the ADMIN DB schema user password ONLY*
 
     ```
     <copy>

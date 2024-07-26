@@ -8,13 +8,16 @@ Learn how to build scalable solutions with cloud agility by architecting intelli
 ## About this Workshop
 
 Organizations are made up of processes and processes revolve around documents. This lab would help participants to build Content Apps quickly using Oracle WebCenter Content and low code platform like APEX.
+
 *Estimated Time:* 3 hours
 
 ## About Request For Proposal Management System using WebCenter Content & APEX
 
 The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated with OCI AI services & Oracle Process Automation. This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by automating metadata extraction, creating structured workflows, and integrating with Oracle Fusion Application Sales Cloud.
 
-    [Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
+
+![Workshop Architecture](./images/rfp_mgmt_workshop_architecture.png "RFP Management Workshop Architecture")
+
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
@@ -38,10 +41,8 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
 
         * Allow for collaboration and review within the system.
 
-* **Result**:
-    * Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
+* **Result**: Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
 
-    * Sales Person will also associate the RFP response document to the Opportunity he/she created in Oracle Sales Cloud by selecting the document from the same WebCenter Content repository.
 
 ## Objectives
 
@@ -54,7 +55,7 @@ In this lab, you will:
 * Review and Approve the updated Section documents
 * Browse through and Merge several Section documents to create single RFP Response
 
-### Prerequisites
+## Prerequisites
 
 This lab assumes you have:
 
