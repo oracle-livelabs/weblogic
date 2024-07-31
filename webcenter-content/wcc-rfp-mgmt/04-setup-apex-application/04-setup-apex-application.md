@@ -7,7 +7,7 @@ In this lab, you learn to install and run Oracle APEX Application for RFP Manage
 
 This lab also covers updating the APEX Rest Datasource urls & credentials for connecting to WebCenter Content Instance
 
-Estimated Time: 10 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 In this lab, you will:
@@ -17,6 +17,8 @@ In this lab, you will:
 - Update Rest Datasources URL and credentials
 
 ## Task 1: Create New APEX Workspace for RFP Management Application
+
+To create new APEX workspace, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
 
 1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
 
@@ -41,10 +43,13 @@ In this lab, you will:
     - Password
 
     ```
-    <copy>welcome1</copy>
+    <copy>WelCwcm123##</copy>
     ```
 
-    **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+    > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+
+    > _If any issues with ADMIN credentials, Refer to **Appendix 3: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password_
+
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 
@@ -52,7 +57,11 @@ In this lab, you will:
 
     ![This image shows the APEX/ORDS Landing Page](./images/apex_create_workspace_homepage.png "APEX/ORDS Landing Page")
 
-3. Provide the value for **Workspace Name** ( eg: **WCCRFPMGMT** ) and click **Next** Button
+3. Provide the value for **Workspace Name**  and click **Next** Button
+
+    ```
+    <copy>WCCRFPMGMT</copy>
+    ```
 
  ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step1.png "APEX/ORDS Create Workspace Page")
 
@@ -60,26 +69,40 @@ In this lab, you will:
 
     * **Re-use existing schema?**: Select **No**
 
-    * **Schema Name**: Enter **WCCRFPMGMT_SCHEMA**
-
-    * **Schema Password**: Enter **Welcome1**
-
+    * **Schema Name**: Enter
+    ```
+    <copy>WCCRFPMGMT_SCHEMA</copy>
+    ```
+    * **Schema Password**: Enter
+    ```
+    <copy>WelCwcm123##</copy>
+    ```
     * **Space Quota (MB)**: Select **500**
 
  ![This image shows the APEX/ORDS Create Workspace Page 2 - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page 2 - DB Schema Details")
 
 5. Provide the values for Workspace **ADMIN** User details as mentioned below and click **Next** Button
 
-    * **Administrator Username**: Enter **ADMIN**
-
-    * **Administrator Password**: Enter **Welcome1**
-
-    * **First Name**: Enter **Admin**
-
-    * **Last Name**: Enter **User**
-
-    * **Email**: Enter your email id ( eg: **admin_user@email.com** )
-
+    * **Administrator Username**: Enter
+    ```
+    <copy>ADMIN</copy>
+    ```
+    * **Administrator Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **First Name**: Enter
+    ```
+    <copy>Admin</copy>
+    ```
+    * **Last Name**: Enter
+    ```
+    <copy>User</copy>
+    ```
+    * **Email**: Enter your email id
+    ```
+    <copy>admin_user@email.com</copy>
+    ```
  ![This image shows the APEX/ORDS Create Workspace Page 2 - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page 2 - ADMIN User Details")
 
 6. Review the details and click **Create Workspace** Button
@@ -101,68 +124,62 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.  
 
-  ![Workspace Login](images/login-to-workspace.png " ")
+    * **Workspace Name**: Enter
+    ```
+    <copy>WCCRFPMGMT</copy>
+    ```
+    * **Username**: Enter
+    ```
+    <copy>ADMIN</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
-2. The Workspace home page appears. Click **App Builder**.
 
-  ![Workspace Home Page](images/workspace-home-page.png " ")
+2. If its first time Login, Change password for the ADMIN user. You can provide the same Password value and click on **Change Password**.
+    > Skip this step if it does not prompt for Change Password
 
-3. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
+    * **New Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Confirm Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
 
-  ![App Builder](images/app-builder2.png " ")
+  ![Reset Password on First Login Page](images/apex_login_workspace_step2.png "Reset Password on First Login")
 
-4. Click **SQL Workshop**.  
+3. The Workspace home page appears.
 
-    The SQL Workshop home page appears. Review each of the **SQL Workshop** components.
+  ![Workspace Home Page](images/apex_login_workspace_step3.png "Workspace Home Page")
 
-    ![SQL Workshop](images/sql-workshop.png " ")  
 
-    ![SQL Workshop Screen](images/sql-workshop1.png " ")
 
-5. Click **Gallery**.
-
-    ![Gallery](images/gallery.png " ")
-
-6. The Gallery Page displays a collection of Starter Applications, Sample Applications and Custom Applications that you can install in your Workspace.
-
-   ![Sample Applications](images/gallery-page2.png " ")
-
-## Task 2: Install RFP Management Application
+## Task 3: Install RFP Management Application
 
 This lab covers installing and running a sample application.
 
-1. Navigate to **Gallery**, select **Sample Apps**.
 
-   ![Click Sample Apps](images/gallery-page3.png " ")
+1. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
 
-2. Now that you are in **Sample Apps**, navigate to **Sample Reporting**, and click the **Install** Button. You can also search for apps by typing "**Reporting**" in the 'Search Apps' box.
+  ![App Builder](images/app-builder2.png " ")
 
-  ![Install Sample Reporting](images/install-sample-app.png " ")
 
-3. On the Install Application page, observe that your app is currently being installed.
 
-   ![Install Application](images/installing-sample-app.png " ")
+## Task 4: Update REST DataSource URLs and Web Credentials
 
-4. You can now see that the application is installed. Click **Run Application**.
-   ![Run Application](images/click-run-application.png " ")
+This lab covers installing and running a sample application.
 
-5. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
 
-   ![Sign In Sample App](images/log-in-to-the-app.png " ")
+1. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
 
-6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom.
-   Click **Home** to return to the home page of the APEX application development environment.
+  ![App Builder](images/app-builder2.png " ")
 
-   ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
 
-7. Click **App Builder**.
-
-   ![Navigate App Builder](images/navigate-to-app-builder.png " ")
-
-8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are correspondingly displayed along with their icons and in the report format.
-   ![View Icons](images/display-as-icons1.png " ")
-
-   ![View Reports](images/display-as-report1.png " ")
 
 ## Summary
 You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
@@ -170,6 +187,6 @@ You have now learned how to navigate the significant components of Oracle APEX a
 
 ## Acknowledgements
 
-* **Author** - Rene Fontcha, Oracle LiveLabs Platform Lead, NA Technology
-* **Contributors** - Kay Malcolm, Senior Director, Database Product Management
-* **Last Updated By/Date** - Rene Fontcha, Oracle LiveLabs Platform Lead, NA Technology, July 2022
+* **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Senthilkumar Chinnappa, July 2024

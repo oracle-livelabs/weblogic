@@ -31,7 +31,7 @@ This lab assumes you have:
     - WebLogic Server
     - WebCenter Content Server
 
-2. On the *web browser* window on the right preloaded with *WebCenter Content* homepage, click on the *Login* and select the saved credentials to sign in. These credentials have been saved within *web browser* and are provided below, alongside the URL, for reference
+2. Open the *web browser* window with *WebCenter Content* homepage url, click on the *Login* and Login using the below credentials
 
     - URL
 
@@ -48,7 +48,7 @@ This lab assumes you have:
     - Password
 
     ```
-    <copy>welcome1</copy>
+    <copy>Welcome1</copy>
     ```
 
     ![This image shows the status of the WebCenter Content UI Landing Page](./images/webcenter-landing.png "WebCenter Content Server UI Landing Page")
@@ -59,7 +59,7 @@ This lab assumes you have:
 
     ![This image shows the status of the WebCenter Content UI Landing page post successful login](./images/webcenter-post-login.png "WebCenter Content UI Landing page post successful login")
 
-    If successful, the page above is displayed and as a result, your environment is now ready.  
+    If successful, the page above is displayed and as a result, your environment is now ready.
 
 4. If you are still unable to log in or the login page is not functioning after reloading by double-clicking on the desktop icon *Get Started with your Workshop*, open a terminal session and proceed as indicated below to validate the services.
 
@@ -119,10 +119,64 @@ This lab assumes you have:
     </copy>
     ```
 
-6. After you log in to the WebCenter Content server, you can see Re-. Refer the Appendix 2 to know how to install Records on the WebCenter Content Server.
+6. After you log in to the WebCenter Content server, you can proceed with the next Task.
+
+## Task 2: Validate if WCC is configured with Oracle Text Search as the Search/Index Engine
+
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
+
+   - URL
+
+    ```
+    <copy>http://localhost:16200/cs/</copy>
+    ```
+
+    - Username
+
+    ```
+    <copy>weblogic</copy>
+    ```
+
+    - Password
+
+    ```
+    <copy>Welcome1</copy>
+    ```
+
+2. Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
 
-## Task 2: Validate APEX is Up and Running
+    ![This image shows the WCC Instance Configuration Page](./images/task2_webcenter_configuration_page_ots.png "WCC Instance Configuration Page")
+
+
+3. If the value is showing as **DATABASE.METADATA**, follow the steps in **Appendix 2: Configure Search and Index Engine to use OracleTextSearch**
+
+ ![This image shows the WCC Instance Configuration Page - Database Metadata](./images/task2_webcenter_configuration_page_db_metadata.png "WCC Instance Configuration Page - Database Metadata")
+
+## Task 3: Import WebCenter Content Configuration bundle
+
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
+
+   - URL
+
+    ```
+    <copy>http://localhost:16200/cs/</copy>
+    ```
+
+    - Username
+
+    ```
+    <copy>weblogic</copy>
+    ```
+
+    - Password
+
+    ```
+    <copy>Welcome1</copy>
+
+2. Under **Administration** tab, click on **Config Migration Admin**
+
+## Task 4: Validate APEX is Up and Running
 1. On the new *web browser* window , Login to the APEX/ORDS URL . Details are provided below
 
     - URL
@@ -162,88 +216,44 @@ This lab assumes you have:
 
 You may now **proceed to the next lab**.
 
-## Appendix 1: Managing Startup Services
+## Appendix 1: Restart UCM Server Instance
 
-1. Database Service (Database and Listener).
+1. Login to the WebCenter Content Weblogic console as administrator user (eg : weblogic)
 
-    - Start
+2. Navigate to **Environment** > **Servers** > **Control** tab and select the checkbox for **UCM Server**(s)
+
+3. click on **Shutdown** > **Force Shutdown**
+
+4. After the Server changes to **SHUTDOWN** state, select the checkbox for **UCM Server**(s), click on **Start** button
+
+
+## Appendix 2: Configure Search and Index Engine to use OracleTextSearch
+
+To set up and use full-text searching and indexing with OracleTextSearch, follow the below steps;
+
+
+1.  Open a terminal session and add the following entry to the *DomainHomeName/ucm/cs/config/config.cfg* file and save the file:
+
 
     ```
-    <copy>sudo systemctl start oracle-database</copy>
+    <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
     ```
 
-    - Stop
+2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
-    ```
-    <copy>sudo systemctl stop oracle-database</copy>
-    ```
 
-    - Status
+3. Login to WebCenter Content server, Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
-    ```
-    <copy>sudo systemctl status oracle-database</copy>
-    ```
 
-    - Restart
+    ![This image shows the WCC Instance Configuration Page](./images/task2_webcenter_configuration_page_ots.png "WCC Instance Configuration Page")
 
-    ```
-    <copy>sudo systemctl restart oracle-database</copy>
-    ```
+4. If you see an *Alert* message for *Index Collection needs to be Synchronized*, perform the steps mentioned in the **Appendix 3: Re-index collections and document** below
 
-2. WebLogic Server
-
-    - Start
-
-    ```
-    <copy>sudo systemctl start weblogic</copy>
-    ```
-
-    - Stop
-
-    ```
-    <copy>sudo systemctl stop weblogic</copy>
-    ```
-
-    - Status
-
-    ```
-    <copy>sudo systemctl status weblogic</copy>
-    ```
-
-    - Restart
-
-    ```
-    <copy>sudo systemctl restart weblogic</copy>
-    ```
-3. WebCenter Content Server
-
-    - Start
-
-    ```
-    <copy>sudo systemctl start ucm</copy>
-    ```
-
-    - Stop
-
-    ```
-    <copy>sudo systemctl stop ucm</copy>
-    ```
-
-    - Status
-
-    ```
-    <copy>sudo systemctl status ucm</copy>
-    ```
-
-    - Restart
-
-    ```
-    <copy>sudo systemctl restart ucm</copy>
-    ```
+    ![This image shows the WCC Instance homepage with Alert Message for Index collection rebuild](./images/appendix3_webcenter_rebuild_index_message.png "WCC Instance  Homepage with Alert Message for Index collection rebuild")
 
 
 
-## Appendix 2: Re-index collections and documents
+## Appendix 3: Re-index collections and documents
 
 1. Log in to the Content server as an administrator and click on **Admin Applets** under the Administration tab as shown in the image below.
 
@@ -276,25 +286,26 @@ You may now **proceed to the next lab**.
 
 ## Appendix 3: Reset ADMIN password for APEX/ORDS
 
-Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked
+    _Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked_
 
 
 1. Find the latest version schema name:
 
- SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
-
+    ```
+    SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
+    ```
 
 
 2. Set the current schema to the schema name retrieved in the above step
 
-eg:
-    ```
-    SQL> alter session set current_schema=apex_230200;
+    eg:
+        ```
+        SQL> alter session set current_schema=apex_230200;
 
-    (OR)
+        (OR)
 
-    SQL> alter session set current_schema=apex_240100;
-    ```
+        SQL> alter session set current_schema=apex_240100;
+        ```
 
 
 3. Find the user id:
@@ -336,7 +347,7 @@ eg:
     ```
     <copy>
     BEGIN
-        WWV_FLOW_SECURITY.g_security_group_id := 1815829765305396;
+        WWV_FLOW_SECURITY.g_security_group_id := 10;
         WWV_FLOW_FND_USER_API.unlock_account('ADMIN');
         COMMIT;
     END;
@@ -347,7 +358,10 @@ eg:
 
 ## Learn More
 
-- [Introduction To WebCenter Records](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
+
+* [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
+* [Learn More about Apex ](https://apex.oracle.com/en/)
+* [WebCenter Content - Configuring the Search Index ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-admin/configuring-search-index.html#GUID-D8372225-70C9-4A3E-987A-279995879606)
 
 ## Acknowledgements
 
