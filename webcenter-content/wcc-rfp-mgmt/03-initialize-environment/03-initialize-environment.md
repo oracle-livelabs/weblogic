@@ -153,6 +153,7 @@ This lab assumes you have:
 
  ![This image shows the WCC Instance Configuration Page - Database Metadata](./images/task2_webcenter_configuration_page_db_metadata.png "WCC Instance Configuration Page - Database Metadata")
 
+
 ## Task 3: Import WebCenter Content Configuration bundle
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
@@ -173,10 +174,166 @@ This lab assumes you have:
 
     ```
     <copy>Welcome1</copy>
+    ```
 
-2. Under **Administration** tab, click on **Config Migration Admin**
+ ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
-## Task 4: Validate APEX is Up and Running
+2. In the left navigation pane, expand **Administration** section, then expand **Config Migration Admin** and click on **Upload Bundle** link
+
+    ![This image shows the WCC Instance Configuration Page - Config Migration Admin](./images/webcenter_config_task3_step2.png "WCC Instance Configuration Page - Config Migration Admin")
+
+3. In the **Upload configuration Bundle** Page, Select the Bundle which was downloaded in the **Lab 1 - Prepare Setup** , check the **Force Overwrite** checkbox and click on **Upload** Button
+
+    ![This image shows the WCC Instance Upload configuration Bundle Page ](./images/webcenter_config_task3_step3.png "WCC Instance Upload configuration Bundle Page")
+
+4. Click on **Actions** icon and click on **Edit** option
+
+    ![This image shows the WCC Instance  configuration Bundle Page Action ](./images/webcenter_config_task3_step4.png "WCC Instance Upload configuration Bundle Page Action")
+
+5. In the **Action Options**, check the checkboxes for the below Options:
+
+    * **Continue on Error** : checked
+    * **Add Dependencies** : checked
+    * **Overwrite Duplicates** : checked
+
+      ![This image shows the WCC Instance Configuration Bundle - Action Options ](./images/webcenter_config_task3_step5.png "WCC Instance Upload configuration Bundle - Action Options")
+
+6. Under the **Actions** dropdown list, select **Import**
+
+ > if you get **Create import without preview?** dialog box, click **OK** button
+
+![This image shows the WCC Instance Configuration Bundle - Action Options - Import ](./images/webcenter_config_task3_step6.png "WCC Instance Upload configuration Bundle - Action Options - Import")
+
+7. Wait for the import to get finished
+
+ > Ignore any error like *Error importing 'xIdcProfile' The 'xIdcProfile' field is protected and may not be modified.*
+
+![This image shows the WCC Instance Configuration Bundle - Import finished ](./images/webcenter_config_task3_step7.png "WCC Instance Upload configuration Bundle - Import finished")
+
+8. If you see an *Alert* message for *Index Collection needs to be Synchronized*, perform the steps mentioned in the **Appendix 3: Re-index collections and document** below
+
+    ![This image shows the WCC Instance homepage with Alert Message for Index collection rebuild](./images/appendix3_webcenter_rebuild_index_message.png "WCC Instance  Homepage with Alert Message for Index collection rebuild")
+
+## Task 4: Add RFP Profile Values in WCC
+
+This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
+
+
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
+
+   - URL
+
+    ```
+    <copy>http://localhost:16200/cs/</copy>
+    ```
+
+    - Username
+
+    ```
+    <copy>weblogic</copy>
+    ```
+
+    - Password
+
+    ```
+    <copy>Welcome1</copy>
+    ```
+
+ ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
+
+2.  In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Configuration Manager**
+
+    ![This image shows the WCC Instance Admin Applets Page](./images/webcenter_config_task4_step2.png "WCC Instance Admin Applets - Configuration Manager")
+
+
+3. Execute the Java Applet, and in the **Configuration Manager** Applet window, under **Information Fields**, select **IdcProfile** row and click on **Edit Values** Button
+
+    ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step3.png "WCC Configuration Manager Java Applet Window")
+
+4. Add the below values, by clicking on **Add** Button , Enter the below values and click **OK** button
+
+  ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_1.png "WCC Configuration Manager Java Applet Window")
+
+    * For **RFP**,
+        - *dProfileTriggerValue* - Enter
+            ```
+            <copy>RFP</copy>
+            ```
+        - *dProfileTriggerOrder* - Enter
+            ```
+            <copy>2</copy>
+            ```
+  ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_2.png "WCC Configuration Manager Java Applet Window")
+
+    * For **RFP_Section**,
+        - *dProfileTriggerValue* - Enter
+            ```
+            <copy>RFP_Section</copy>
+            ```
+        - *dProfileTriggerOrder* - Enter
+            ```
+            <copy>3</copy>
+            ```
+![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_3.png "WCC Configuration Manager Java Applet Window")
+
+    * For **RFP_Response**,
+        - *dProfileTriggerValue* - Enter
+            ```
+            <copy>RFP</copy>
+            ```
+        - *dProfileTriggerOrder* - Enter
+            ```
+            <copy>4</copy>
+            ```
+![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_4.png "WCC Configuration Manager Java Applet Window")
+
+5. Ensure all the three values are added in the list and click **Close** Button in the Edit Values Applet window
+
+![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step5.png "WCC Configuration Manager Java Applet Window")
+
+
+## Task 5: Enable WCC Workflows
+
+This task helps in enabling WCC Workflows for Section Documents
+
+
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
+
+   - URL
+
+    ```
+    <copy>http://localhost:16200/cs/</copy>
+    ```
+
+    - Username
+
+    ```
+    <copy>weblogic</copy>
+    ```
+
+    - Password
+
+    ```
+    <copy>Welcome1</copy>
+    ```
+
+ ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
+
+2.  In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
+
+    ![This image shows the WCC Instance Admin Applets Page](./images/webcenter_config_task5_step1.png "WCC Instance Admin Applets - Workflow Admin")
+
+3. Run the Java Applet Application, in the **Workflow Admin Applet**, click on **Criteria** tab, select **FinanceSectionWorkFlow** and click on **Enable** Button
+
+    > When prompted, Click **Yes* in the enable workflow confirmation dialog box
+
+    ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3.png "WCC Workflow Admin Java Applet Window")
+
+
+## Task 6: Validate APEX is Up and Running
+
+This task helps to validate if APEX has been installed properly and its up & accessible.
+
 1. On the new *web browser* window , Login to the APEX/ORDS URL . Details are provided below
 
     - URL

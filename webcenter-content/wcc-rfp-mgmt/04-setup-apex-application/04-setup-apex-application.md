@@ -158,28 +158,163 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
   ![Workspace Home Page](images/apex_login_workspace_step3.png "Workspace Home Page")
 
 
-
 ## Task 3: Install RFP Management Application
 
-This lab covers installing and running a sample application.
+This task covers installing and running a WCC RFP Management System APEX application.
 
 
-1. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
+1. In the Home Page, Under  **Apex Builder** , click on **Import**
 
-  ![App Builder](images/app-builder2.png " ")
-
-
-
-## Task 4: Update REST DataSource URLs and Web Credentials
-
-This lab covers installing and running a sample application.
+  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
 
 
-1. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
+2. Select the downloaded file **wcc-rfp-mgmt-system-apex-app.sql** , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
 
-  ![App Builder](images/app-builder2.png " ")
+  ![Application sql file import](images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
+
+3. In the **Install Application** Page, Verify the below values and click **Install Application** Button
+
+ * *Current Workspace* : **WCCRFPMGMT**
+ * *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
+ * *Build Status* : **Run and Build Application**
+ * *Install as Application* : **Auto Assign New Application ID**
+
+  ![Install Application Page](images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
+
+4. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
+
+  * **Client ID or Username**: Enter
+    ```
+    <copy>weblogic</copy>
+    ```
+    * **Client Secret or Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Verify Client Secret / Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+
+  ![Install Application - Credentials Page](images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
+
+5. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
+
+  ![Application Installed - Install Supporting Objects](images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
+
+6. After the Supporting Objects installed, click on **Install Summary** button , to view the status of the Supporting objects installation
+
+  ![Supporting Objects Installed](images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
 
+## Task 4: Update REST DataSource URLs
+
+This task covers importing and configuring Rest Datasoure Catalog.
+
+
+1. In the Home Page, Under  **Apex Builder** , click on **Import**
+
+  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
+
+
+2. Select the downloaded file **WCC RFP Rest Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
+
+  ![REST Datasource sql file import](images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
+
+3. Click **Next** in the **Import** Page
+
+  ![REST Datasource Import](images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
+
+4. In the **Rest Catalog Import** Page, Enter the value for **Catalog Group** and click on **Import REST Catalog** Button
+
+ * **Catalog Group**: Enter
+    ```
+    <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
+    ```
+  ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
+
+5. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
+
+  ![Rest Catalog Imported](images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
+
+6. In the **Catalog Services** list, click on the *Name* **quick_search_library**
+
+  ![Catalog Services](images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
+
+7. In the **Service Details** Section, Update the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
+
+  ![Service Details - Base URL Update](images/apex_task4_step6.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
+
+## Task 5: Update Web Credentials
+
+ This task covers updating Web Credentials.
+
+
+1. In the Home Page, Under  **Apex Builder** , Navigate to **Workspace Utilities** and click on **All Workspace Utilities**
+
+  ![App Builder](images/apex_task5_step1.png "App Builder > Workspace Utilities > All Workspace Utilities ")
+
+2. In the **Workspace Utilities** Page, click on **Web Credentials**
+
+  ![Workspace Utilities](images/apex_task5_step2.png "Workspace Utilities > Web Credentials ")
+
+3. Under the *Web Credentials* list, click on **Credentials for RFP Mgmt** link
+
+  ![Web Credentials](images/apex_task5_step3.png "Web Credentials - Credentials for RFP Mgmt")
+
+4. In the **Attributes** list, update the values as below and click **Apply Changes** Button
+
+* **Client ID or Username**: Enter
+    ```
+    <copy>weblogic</copy>
+    ```
+* **Client Secret or Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+* **Verify Client Secret or Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+* **Valid for URLs**: Replace the hostname with the hostname of the WCC Instance Provisioned in the **Lab 3 - Initialize Environment**
+
+  ![Web Credential Attributes](images/apex_task5_step4.png "Web Credentials -Attributes")
+
+## Task 6: Refresh Datasource from REST Catalog
+
+ This task covers Refreshing the REST Datasource from the REST Catalog.
+
+1. In the Home Page, Click on  **Apex Builder**
+
+  ![App Builder](images/apex_task6_step1.png "App Builder ")
+
+2. Hover over the **RFP Response Management System** , and click on the **Edit** *Pencil Icon*
+
+  ![Application Edit ](images/apex_task6_step2.png "Application Edit ")
+
+3. In the Application Edit Page, click on **Shared Components**
+
+  ![Application - Shared Components ](images/apex_task6_step3.png "Application - Shared Components ")
+
+4. Under **Data Sources** Section, click on **Rest Data Sources** link
+
+  ![Application - Shared Components ](images/apex_task6_step4.png "Application - Shared Components ")
+
+5. In the **Rest Source Name** list, click on **quick_search_library** Name
+
+  ![Rest Source - quick_search_library ](images/apex_task6_step5.png "Rest Source Name - quick_search_library ")
+
+6. In the **REST Data Source** Page, click on **REST Source Catalog** tab and click on **Refresh from Catalog** Button
+
+  ![Rest Catalog - Refresh from Catalog ](images/apex_task6_step6.png "Rest Catalog - Refresh from Catalog")
+
+7. In the dialog window, Click on **Refresh from Service Catalog** Button
+
+  ![Refresh from Service Catalog ](images/apex_task6_step7.png "Refresh from Service Catalog")
+
+8. After the *Rest Data Source has been refreshed*, click on **Apply Changes** button
+
+  ![Apply Changes ](images/apex_task6_step8.png "Apply Changes")
 
 ## Summary
 You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
