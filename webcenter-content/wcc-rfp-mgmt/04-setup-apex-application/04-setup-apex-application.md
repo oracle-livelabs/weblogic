@@ -183,7 +183,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
 4. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
 
-  * **Client ID or Username**: Enter
+    * **Client ID or Username**: Enter
     ```
     <copy>weblogic</copy>
     ```
