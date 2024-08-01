@@ -62,7 +62,7 @@ This lab assumes you have:
 
 5. After you log in to the WebCenter Content server, you can proceed with the next Task.
 
-## Task 2: Validate if WCC is configured with Oracle Text Search as the Search/Index Engine
+## Task 2: Validate WebCenter Content Search/Index Engine
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
 
@@ -121,7 +121,7 @@ This lab assumes you have:
 
     ![This image shows the WCC Instance Configuration Page - Config Migration Admin](./images/webcenter_config_task3_step2.png "WCC Instance Configuration Page - Config Migration Admin")
 
-3. In the **Upload configuration Bundle** Page, Select the Bundle which was downloaded in the **Lab 1 - Prepare Setup** , check the **Force Overwrite** checkbox and click on **Upload** Button
+3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt_wcc_profile_setup_bundle.zip** ) which was downloaded in the **Lab 1 - Prepare Setup** , check the **Force Overwrite** checkbox and click on **Upload** Button
 
     ![This image shows the WCC Instance Upload configuration Bundle Page ](./images/webcenter_config_task3_step3.png "WCC Instance Upload configuration Bundle Page")
 
@@ -139,17 +139,15 @@ This lab assumes you have:
 
 6. Under the **Actions** dropdown list, select **Import**
 
- > if you get **Create import without preview?** dialog box, click **OK** button
-
-![This image shows the WCC Instance Configuration Bundle - Action Options - Import ](./images/webcenter_config_task3_step6.png "WCC Instance Upload configuration Bundle - Action Options - Import")
+    ![This image shows the WCC Instance Configuration Bundle - Action Options - Import ](./images/webcenter_config_task3_step6.png "WCC Instance Upload configuration Bundle - Action Options - Import")
+> If you get **Create import without preview?** dialog box, click **OK** button
 
 7. Wait for the import to get finished
 
+    ![This image shows the WCC Instance Configuration Bundle - Import finished ](./images/webcenter_config_task3_step7.png "WCC Instance Upload configuration Bundle - Import finished")
  > Ignore any error like *Error importing 'xIdcProfile' The 'xIdcProfile' field is protected and may not be modified.*
 
-![This image shows the WCC Instance Configuration Bundle - Import finished ](./images/webcenter_config_task3_step7.png "WCC Instance Upload configuration Bundle - Import finished")
-
-8. If you see an *Alert* message for *Index Collection needs to be Synchronized*, perform the steps mentioned in the **Appendix 3: Re-index collections and document** below
+8. If you see an *Alert* message for *Index Collection needs to be Synchronized*, perform the steps mentioned in the **Appendix 3: Re-index collections and document** 
 
     ![This image shows the WCC Instance homepage with Alert Message for Index collection rebuild](./images/appendix3_webcenter_rebuild_index_message.png "WCC Instance  Homepage with Alert Message for Index collection rebuild")
 
@@ -228,7 +226,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
 5. Ensure all the three values are added in the list and click **Close** Button in the Edit Values Applet window
 
-![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step5.png "WCC Configuration Manager Java Applet Window")
+    ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step5.png "WCC Configuration Manager Java Applet Window")
 
 
 ## Task 5: Enable WCC Workflows
@@ -264,7 +262,7 @@ This task helps in enabling WCC Workflows for Section Documents
 
 3. Run the Java Applet Application, in the **Workflow Admin Applet**, click on **Criteria** tab, select **FinanceSectionWorkFlow** and click on **Enable** Button
 
-    > When prompted, Click **Yes* in the enable workflow confirmation dialog box
+    > When prompted, Click *Yes* in the enable workflow confirmation dialog box
 
     ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3.png "WCC Workflow Admin Java Applet Window")
 
@@ -311,6 +309,9 @@ This task helps to validate if APEX has been installed properly and its up & acc
 
 
 You may now **proceed to the next lab**.
+
+
+
 
 ## Appendix 1: Restart UCM Server Instance
 
