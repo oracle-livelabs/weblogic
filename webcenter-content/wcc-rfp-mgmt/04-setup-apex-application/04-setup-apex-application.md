@@ -174,24 +174,24 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
 3. In the **Install Application** Page, Verify the below values and click **Install Application** Button
 
- * *Current Workspace* : **WCCRFPMGMT**
- * *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
- * *Build Status* : **Run and Build Application**
- * *Install as Application* : **Auto Assign New Application ID**
+  * *Current Workspace* : **WCCRFPMGMT**
+  * *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
+  * *Build Status* : **Run and Build Application**
+  * *Install as Application* : **Auto Assign New Application ID**
 
   ![Install Application Page](images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
 4. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
 
-    * **Client ID or Username**: Enter
+    * **Client ID or Username** : Enter
     ```
     <copy>weblogic</copy>
     ```
-    * **Client Secret or Password**: Enter
+    * **Client Secret or Password** : Enter
     ```
     <copy>Welcome1</copy>
     ```
-    * **Verify Client Secret / Password**: Enter
+    * **Verify Client Secret / Password** : Enter
     ```
     <copy>Welcome1</copy>
     ```
@@ -207,9 +207,11 @@ This task covers installing and running a WCC RFP Management System APEX applica
   ![Supporting Objects Installed](images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
 
+
+
 ## Task 4: Update REST DataSource URLs
 
-This task covers importing and configuring Rest Datasoure Catalog.
+This task covers importing and configuring Rest Datasource Catalog.
 
 
 1. In the Home Page, Under  **Apex Builder** , click on **Import**
@@ -227,23 +229,25 @@ This task covers importing and configuring Rest Datasoure Catalog.
 
 4. In the **Rest Catalog Import** Page, Enter the value for **Catalog Group** and click on **Import REST Catalog** Button
 
- * **Catalog Group**: Enter
+ * **Catalog Group** : Enter
     ```
     <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
     ```
+
   ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
+
 
 5. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
 
   ![Rest Catalog Imported](images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
 
-6. In the **Catalog Services** list, click on the *Name* **quick_search_library**
+6. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
 
   ![Catalog Services](images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
 
 7. In the **Service Details** Section, Update the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
 
-  ![Service Details - Base URL Update](images/apex_task4_step6.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
+  ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 ## Task 5: Update Web Credentials
 
@@ -277,6 +281,7 @@ This task covers importing and configuring Rest Datasoure Catalog.
     <copy>Welcome1</copy>
     ```
 * **Valid for URLs**: Replace the hostname with the hostname of the WCC Instance Provisioned in the **Lab 3 - Initialize Environment**
+
 
   ![Web Credential Attributes](images/apex_task5_step4.png "Web Credentials -Attributes")
 
@@ -312,9 +317,17 @@ This task covers importing and configuring Rest Datasoure Catalog.
 
   ![Refresh from Service Catalog ](images/apex_task6_step7.png "Refresh from Service Catalog")
 
-8. After the *Rest Data Source has been refreshed*, click on **Apply Changes** button
+8. click on **Rest Data Source** tab, and click on *Edit Icon* of the **Remote Server** attribute
 
-  ![Apply Changes ](images/apex_task6_step8.png "Apply Changes")
+  ![Remote Server Edit ](images/apex_task6_step8.png "Edit Remote Server URL")
+
+9. Edit the **Endpoint URL** value,  replace the hostname with the hostname of the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click on **Apply Changes** Button
+
+  ![Remote Server Edit ](images/apex_task6_step9.png "Edit Endpoint URL")
+
+10. Ensure the **Base URL** value is properly referring to your WCC URL hostname and click **Apply Changes** Buttton
+
+  ![Rest Source - Base URL Check ](images/apex_task6_step10.png "Rest Source - Base URL Check")
 
 ## Summary
 You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
