@@ -50,10 +50,7 @@ This lab assumes you have:
     ```
     <copy>Welcome1</copy>
     ```
-
-    ![This image shows the status of the WebCenter Content UI Landing Page](./images/webcenter-landing.png "WebCenter Content Server UI Landing Page")
-    ![This image shows the status of the WebCenter Content UI Login Page](./images/webcenter-login.png "WebCenter Content Server UI Login Page")
-
+ ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 3. Confirm successful login.
 
@@ -61,87 +58,29 @@ This lab assumes you have:
 
     If successful, the page above is displayed and as a result, your environment is now ready.
 
-4. If you are still unable to log in or the login page is not functioning after reloading by double-clicking on the desktop icon *Get Started with your Workshop*, open a terminal session and proceed as indicated below to validate the services.
+4. If you are still unable to log in or the login page is not functioning after reloading ,  proceed as indicated in the **Appendix 1: Restart UCM Server Instance** to restart the services and try login again
 
-    - Database and Listener
-
-    ```
-    <copy>
-    sudo systemctl status oracle-database
-    </copy>
-    ```
-
-    ![This image shows the status of the Database Service](./images/db-service-status.png "Database Service Status")
-
-    - WebLogic Server
-
-    ```
-    <copy>
-    sudo systemctl status weblogic
-    </copy>
-    ```
-
-    ![This image shows the status of the WebLogic Server.](./images/weblogic-status.png "WebLogic Server Status")
-
-    - WebCenter Content Server
-
-    ```
-    <copy>
-    sudo systemctl status ucm
-    </copy>
-    ```
-
-    ![This image shows the status of the WebCenter Content server](./images/webcenter-status.png "WebCenter Content Server Status")
-
-5. If you see the questionable output(s), failure or down component(s), restart the corresponding service(s) accordingly
-
-    - Database and Listener
-
-    ```
-    <copy>
-    sudo sudo systemctl restart oracle-database
-    </copy>
-    ```
-
-    - WebLogic Server
-
-    ```
-    <copy>
-    sudo sudo systemctl restart weblogic
-    </copy>
-    ```
-
-    - WebCenter Content Server
-
-    ```
-    <copy>
-    sudo systemctl restart ucm
-    </copy>
-    ```
-
-6. After you log in to the WebCenter Content server, you can proceed with the next Task.
+5. After you log in to the WebCenter Content server, you can proceed with the next Task.
 
 ## Task 2: Validate if WCC is configured with Oracle Text Search as the Search/Index Engine
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
 
    - URL
-
     ```
     <copy>http://localhost:16200/cs/</copy>
     ```
 
     - Username
-
     ```
     <copy>weblogic</copy>
     ```
 
     - Password
-
     ```
     <copy>Welcome1</copy>
     ```
+ ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
