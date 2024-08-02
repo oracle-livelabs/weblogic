@@ -2,28 +2,32 @@
 
 ## Introduction
 
-In this lab, you will learn about the steps needed to configure the series, retention category and respective record folders shown in the architecture diagram below. This lab demonstrates how to set up a disposition rule based on an event. the occurrence of the event triggers the disposition rule to act upon the records. In this lab, let us see how to set the disposition rule on the **Legal Documents** category for the **MOU** record folder.
+In this lab, you will learn about the steps needed to Upload New RFP Document in the RFP Management System and also, select the relevant sections for the RFP Response. The System will automatically select the relevant section document template, and assigns/uploads against this newly uploaded RFP Document. For each of these Section Document, gets into the workflow, for further processing.
 
-  ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
+  ![Lab Flow](./images/create_new_rfp_doc_flow.png "Create New RFP Document - Lab Flow")
 
-*Estimated Time*: 30 minutes
+*Estimated Time*: 5 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Create Retention Category and Records Folders
-* Add Disposition Rule on the Category for the MOU Record Folder
+* Navigate through the RFP Management Application
+* Upload New RFP document
+* Provide property information values for the RFP Document
+* Select Sections
+* Verify the Section documents is present in the Workflow in WCC
 
 ### Prerequisites
 This lab assumes you have:
-- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- A  Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-    - Lab: Environment Setup
+    - Lab: Prepare Setup ( *Paid Tenants* only)
+    - Lab: WCC Environment Setup
     - Lab: Initialize Environment
+    - Lab: Setup Apex Application
 
-## Task 1: Create Retention Category and Records Folders
+## Task 1: Login to the RFP Management System Application
 
 1. Log in to WebCenter Content Server.
 
@@ -45,7 +49,7 @@ This lab assumes you have:
 7. After creating the 3 record folders, you must see the record folders in the **Legal Documents** category as shown below.
       ![Summary of the record folders after creation.](./images/record-folders-legal-doc-category.png "Record Folders in Legal Document Category")
 
-## Task 2: Add Disposition Rule on the Category for the MOU Record Folder
+## Task 2: Upload New RFP Document with properties and sections
 
 1. In the row for the Legal Documents retention category on the Exploring Retention Schedule page, choose **Edit** then **Edit Disposition** from the item's Actions menu.
     ![Select the option shown in the image to add the disposition rule for the Legal Document Retention Category](./images/edit-disposition.png "Edit Disposition Rule on the Retention Category **Legal Documents** ")
@@ -66,6 +70,9 @@ This lab assumes you have:
 
 6. Click on **Submit Update** to apply changes to the MOU Record Folder. Click Ok.
     ![Click on Submit Update to apply the disposition rule on the MOU Record Folder.](./images/submit-update.png "Submit Update page ")
+
+## Task 3: Verify the Section documents in WCC Workflow
+
 
  You may now **proceed to the next lab**.
 

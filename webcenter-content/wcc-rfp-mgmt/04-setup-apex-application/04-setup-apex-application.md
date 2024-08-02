@@ -162,7 +162,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance () eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file as file **wcc-rfp-mgmt-system-apex-app_<your_wcc_hostname>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app_**wccrfpmgmtdemo**.sql* )
+1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file as file **wcc-rfp-mgmt-system-apex-app\_\<your\_wcc\_hostname\>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app\_**wccrfpmgmtdemo**.sql* )
 
 ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
@@ -173,7 +173,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
   ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
 
 
-3. Select the updated file **wcc-rfp-mgmt-system-apex-app_<your_wcc_hostname>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app_wccrfpmgmtdemo.sql* ) , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
+3. Select the updated file **wcc-rfp-mgmt-system-apex-app\_\<your\_wcc\_hostname\>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app\_wccrfpmgmtdemo.sql* ) , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
 
   ![Application sql file import](images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
 
