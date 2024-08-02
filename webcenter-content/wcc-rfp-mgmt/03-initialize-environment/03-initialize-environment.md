@@ -258,7 +258,7 @@ This task helps in enabling WCC Workflows for Section Documents
 
 2.  In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
 
-    ![This image shows the WCC Instance Admin Applets Page](./images/webcenter_config_task5_step1.png "WCC Instance Admin Applets - Workflow Admin")
+    ![This image shows the WCC Instance Admin Applets Page](./images/webcenter_config_task5_step2.png "WCC Instance Admin Applets - Workflow Admin")
 
 3. Run the Java Applet Application, in the **Workflow Admin Applet**, click on **Criteria** tab, select **FinanceSectionWorkFlow** and click on **Enable** Button
 
@@ -294,7 +294,7 @@ This task helps to validate if APEX has been installed properly and its up & acc
     - Password
 
     ```
-    <copy>welcome1</copy>
+    <copy>WelCwcm123##</copy>
     ```
 
     **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*

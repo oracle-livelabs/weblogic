@@ -162,7 +162,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
   6. In the **Review and Create** Page, verify the details and click **Create**
     ![VCN Configuration - Review and Create](images/prepare_oci_task3_step1_6.png "VCN Configuration - Review and Create")
 
-  7. VCN Gets created . Click on **View VNC** to view VNC Info
+  7. VCN Gets created . Click on **View VCN** to view VCN Info
     ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
     ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
 
@@ -196,7 +196,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
       * **Select an availability domain**: Choose **AD1**. You can choose any AD but make sure that WebCenter Content and DB are in the same AD.
 
-      * **Configure shape**: **AMD VM Standard E4 Flex** or **AMD VM Standard E5 Flex**
+      * **Configure shape**: Choose **AMD VM Standard E4 Flex** or **AMD VM Standard E5 Flex**
 
       ![Create DB System Page - DB System Information](images/prepare_oci_task3_step2_3_1.png "DB System Information")
 
