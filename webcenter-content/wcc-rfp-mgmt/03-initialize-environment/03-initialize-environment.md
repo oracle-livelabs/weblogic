@@ -22,16 +22,8 @@ This lab assumes you have:
     - Lab: Environment Setup
 
 ## Task 1: Validate That Required Processes are Up and Running
-1. Now with access to your remote desktop session, proceed as indicated below to validate your environment before you start executing the subsequent labs. The following Processes should be up and running:
 
-    - Database Listener
-        - LISTENER
-    - Database Server instance
-        - ORCL
-    - WebLogic Server
-    - WebCenter Content Server
-
-2. Open the *web browser* window with *WebCenter Content* homepage url, click on the *Login* and Login using the below credentials
+1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - WCC Environment Setup** ), click on the *Login* and Login using the below credentials
 
     - URL
 
@@ -52,15 +44,15 @@ This lab assumes you have:
     ```
  ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
-3. Confirm successful login.
+2. Confirm successful login.
 
     ![This image shows the status of the WebCenter Content UI Landing page post successful login](./images/webcenter-post-login.png "WebCenter Content UI Landing page post successful login")
 
     If successful, the page above is displayed and as a result, your environment is now ready.
 
-4. If you are still unable to log in or the login page is not functioning after reloading ,  proceed as indicated in the **Appendix 1: Restart UCM Server Instance** to restart the services and try login again
+3. If you are still unable to log in or the login page is not functioning after reloading ,  proceed as indicated in the **Appendix 1: Restart UCM Server Instance** to restart the services and try login again
 
-5. After you log in to the WebCenter Content server, you can proceed with the next Task.
+4. After you log in to the WebCenter Content server, you can proceed with the next Task.
 
 ## Task 2: Validate WebCenter Content Search/Index Engine
 
