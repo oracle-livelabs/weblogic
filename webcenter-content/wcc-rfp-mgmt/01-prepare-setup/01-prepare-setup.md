@@ -21,13 +21,13 @@ This lab assumes you have:
   2.  Save in your downloads folder.
 
 
-## Task 2: Prepare Your OCI tenancy for provisioning WebCenter Content Marketplace Instance
+## Task 2: Prepare Your OCI Tenancy
 
   This task helps you to prepare your OCI tenancy for provisioning WebCenter Content Marketplace Stack
 
   Before you begin, you would need to complete the following tasks and prerequisites.
 
-  ### System Requirements
+### System Requirements
 
   You require access to the following services to use Oracle WebCenter Content on OCI.
 
