@@ -29,7 +29,7 @@ This lab assumes you have:
 
 ### System Requirements
 
-  You require access to the following services to use Oracle WebCenter Content on OCI.
+  You require access to the following services to use Oracle WebCenter Content on OCI:
 
     * Identity and Access Management (IAM)
 
@@ -47,15 +47,16 @@ This lab assumes you have:
 
   Make sure you have the following minimum limits for the services in your Oracle Cloud Infrastructure tenancy, and if necessary, request for an increase of a service limit.
 
-  | Service	                                                  | Minimum Limit           |
-  | Identity and Access Management (IAM) Policy               | 1                       |
-  | Compute Shape VM.Standard.E4.Flex or VM.Standard.E5.Flex  | 1                       |
-  | Virtual Cloud Network                                     | 1                       |
-  | Block Storage                                             | 1 TB                    |
-  | Block Volume                                              | 50 GB                   |
-  | Vault & Key                                               | 1                       |
-  | Secrets                                                   | 1                       |
-  | Load Balancer                                             | Flexible Load Balancer  |
+| Service                                                   | Minimum Limit           |
+| :------------------------------                           | :---------------------- |
+| Identity and Access Management (IAM) Policy               | 1                       |
+| Compute Shape VM.Standard.E4.Flex or VM.Standard.E5.Flex  | 1                       |
+| Virtual Cloud Network                                     | 1                       |
+| Block Storage                                             | 1 TB                    |
+| Block Volume                                              | 50 GB                   |
+| Vault & Key                                               | 1                       |
+| Secrets                                                   | 1                       |
+| Load Balancer                                             | Flexible Load Balancer  |
   {: title="Service Limits"}
 
   See [Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm) in the Oracle Cloud Infrastructure documentation.
