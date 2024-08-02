@@ -3,15 +3,16 @@
 ## Introduction
 This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
-*Estimated Lab Time:* 15 minutes
+*Estimated Lab Time:* 30 minutes
 
 ### Objectives
--   Download ORM stack
--   Configure an existing Virtual Cloud Network (VCN)
+-   Download WCC RFP Resources
+-   Prepare tenancy for setting up WCC Marketplace instance, including VCN and Database
 
 ### Prerequisites
+
 This lab assumes you have:
-- An Oracle Paid Cloud account to create DB System and WCC Marketplace instance
+- An Oracle Paid Cloud account - *to create DB System and WCC Marketplace instance*
 - SSH Keys (optional)
 
 ## Task 1: Download WCC RFP Resources zip file
@@ -27,7 +28,7 @@ This lab assumes you have:
 
   Before you begin, you would need to complete the following tasks and prerequisites.
 
-### System Requirements
+### **System Requirements**
 
   You require access to the following services to use Oracle WebCenter Content on OCI:
 
@@ -47,21 +48,11 @@ This lab assumes you have:
 
   Make sure you have the following minimum limits for the services in your Oracle Cloud Infrastructure tenancy, and if necessary, request for an increase of a service limit.
 
-| Service                                                   | Minimum Limit           |
-| :------------------------------                           | :---------------------- |
-| Identity and Access Management (IAM) Policy               | 1                       |
-| Compute Shape VM.Standard.E4.Flex or VM.Standard.E5.Flex  | 1                       |
-| Virtual Cloud Network                                     | 1                       |
-| Block Storage                                             | 1 TB                    |
-| Block Volume                                              | 50 GB                   |
-| Vault & Key                                               | 1                       |
-| Secrets                                                   | 1                       |
-| Load Balancer                                             | Flexible Load Balancer  |
-  {: title="Service Limits"}
+  ![Service Limits ](images/prepare_oci_task2_service_limits.png "Service Limits")
 
   See [Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm) in the Oracle Cloud Infrastructure documentation.
 
-### 2.1 Sign in to Oracle Cloud Infrastructure Console
+### **2.1 Sign in to Oracle Cloud Infrastructure Console**
 
 Complete the following steps to sign in to the Oracle Cloud Infrastructure console.
 
@@ -80,7 +71,8 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
   4. Enter the user name and password provided in the welcome email, and click Sign In. The Oracle Cloud Infrastructure console is shown.
 
 
-### 2.2 Generate SSH key pair
+### **2.2 Generate SSH key pair**
+
 
   See [generate_ssh_key](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/compute-iaas/generating_ssh_key/generate_ssh_key.html) for generating an SSH key pair.
 
@@ -89,7 +81,8 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
   > Note: This will be used to create DB and WebCenter Content nodes.
 
 
-### 2.3 Create a Compartment
+### **2.3 Create a Compartment**
+
 
   If your tenancy does not already include a compartment for your Oracle WebCenter Content on Marketplace instances, you can create a new one.
 
@@ -105,14 +98,14 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
   4. Enter the following:
 
-      * Name: Specify a name. For example,
+      * **Name**: Specify a name. For example,
         ```
         <copy>wcc</copy>
         ```
 
       *Restrictions for compartment names are: Maximum 100 characters, including letters, numbers, periods, hyphens, and underscores. The name must be unique across all the compartments in your tenancy.*
 
-      * Description: A friendly description.
+      * **Description**: A friendly description.
         ```
         <copy>Compartment used for WCC Marketplace stack</copy>
         ```
@@ -120,7 +113,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
 ## Task 3: Create Database
 
-  You’d need a new DB system only if you want to provision a new database.
+  *You’d need a new DB system only if you want to provision a new database.*
 
     > Note: Otherwise, you can use an existing database too.
 
@@ -132,15 +125,15 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
    *  **Create a New DB System**
 
-### 3.1 Create VCN
+
+### **3.1 Create VCN**
+
 
   1. Log in to **OCI Console**, navigate to **Networking**, then to **Virtual Cloud Networks**.
-
-        ![OCI Console](images/prepare_oci_task3_step1_1.png "OCI Console")
+    ![OCI Console](images/prepare_oci_task3_step1_1.png "OCI Console")
 
   2. Select the **wcc** compartment in the **List Scope**, **Compartment** list and Click **Create VCN via Wizard** button
-
-        ![Virtual Cloud Networks Page ](images/prepare_oci_task3_step1_2.png "Virtual Cloud Networks Page for wcc compartment")
+    ![Virtual Cloud Networks Page ](images/prepare_oci_task3_step1_2.png "Virtual Cloud Networks Page for wcc compartment")
 
   3. Click **Start VCN Wizard**.
         ![Start VCN Wizard](images/prepare_oci_task3_step1_3.png "Start VCN Wizard")
@@ -157,7 +150,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         ```
         <copy>10.0.0.0/16</copy>
         ```
-      * Select the **Use DNS hostnames in this VCN** check box.
+      * **Select** the **Use DNS hostnames in this VCN** check box.
 
         ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
 
@@ -167,16 +160,16 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         ![VCN Configuration - subnets ](images/prepare_oci_task3_step1_5.png "VCN Configuration - configure public subnet and  private subnet")
 
   6. In the **Review and Create** Page, verify the details and click **Create**
-
-        ![VCN Configuration - Review and Create](images/prepare_oci_task3_step1_6.png "VCN Configuration - Review and Create")
+    ![VCN Configuration - Review and Create](images/prepare_oci_task3_step1_6.png "VCN Configuration - Review and Create")
 
   7. VCN Gets created . Click on **View VNC** to view VNC Info
+    ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
+    ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
 
-        ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
 
-        ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
 
-### 3.2 Create a New DB System
+### **3.2 Create a New DB System**
+
 
   Create a new DB system in the VCN you created earlier.
 
