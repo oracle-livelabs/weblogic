@@ -13,7 +13,7 @@ Organizations are made up of processes and processes revolve around documents. T
 
 ## About Request For Proposal Management System using WebCenter Content & APEX
 
-The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated with OCI AI services & Oracle Process Automation. This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by automating metadata extraction, creating structured workflows, and integrating with Oracle Fusion Application Sales Cloud.
+The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated . This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by  creating structured workflows, automating different section documents merging, and automating the RFP Response creation.
 
 
 ![Workshop Architecture](./images/rfp_mgmt_workshop_architecture.png "RFP Management Workshop Architecture")
@@ -74,4 +74,4 @@ You may now **proceed to the next lab**.
 
 * **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-* **Last Updated By/Date-** Senthilkumar Chinnappa, July 2024
+* **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024

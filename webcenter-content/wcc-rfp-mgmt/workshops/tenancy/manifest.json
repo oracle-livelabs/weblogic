@@ -18,9 +18,9 @@
       "filename": "../../01-prepare-setup/01-prepare-setup.md"
     },
     {
-      "title": "Lab 2: Setup WCC Environment",
+      "title": "Lab 2: Setup WCC Marketplace Environment",
       "description": "How to provision the workshop environment and connect to it",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+      "filename": "../../02-wcc-environment-setup/02-wcc-environment-setup.md"
     },
     {
       "title": "Lab 3: Initialize WCC Environment",
@@ -29,12 +29,12 @@
     },
     {
       "title": "Lab 4: Setup APEX Application",
-      "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
+      "description": "This lab shows you how to create new workspace and import WCC RFP Management System APEX Application",
       "filename": "./../../04-setup-apex-application/04-setup-apex-application.md"
     },
     {
       "title": "Lab 5: Create New RFP Document",
-      "description": "This lab shows you how to configure disposition rules for records that gets triggered due to the occurrence of the event",
+      "description": "This lab shows you how to access the WCC RFP Management System APEX Application and go through the flow to create New RFP Document",
       "filename": "./../../05-create-new-rfp-doc/05-create-new-rfp-doc.md"
     },
     {

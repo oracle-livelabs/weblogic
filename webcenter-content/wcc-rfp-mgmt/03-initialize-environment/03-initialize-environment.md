@@ -430,7 +430,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
     ```
     <copy>
         UPDATE wwv_flow_fnd_user
-        SET    web_password = 'Welcome1'
+        SET    web_password = 'WelCwcm123##'
         WHERE  user_name = 'ADMIN'
         AND    user_id = 1816480255305450;
 
