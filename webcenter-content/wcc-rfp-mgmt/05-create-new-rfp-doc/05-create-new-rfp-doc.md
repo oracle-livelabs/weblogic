@@ -27,61 +27,157 @@ This lab assumes you have:
     - Lab: Initialize Environment
     - Lab: Setup Apex Application
 
-## Task 1: Login to the RFP Management System Application
+## Task 1: Login to the RFP Response Management Application
 
-1. Log in to WebCenter Content Server.
 
-2. Click **Browse Content** then **Retention Schedules**
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-3. On the Exploring Retention Schedule page, choose **Create** and then **Create Retention Category** on the page menu. On the Create or Edit Retention Category page, enter the details as shown in the image below.
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
 
-    ![This image shows how to create retention category](./images/create-retention-category.png "Create Retention Category")
-    ![Fill in the details on the Retention Category Create a page as shown in this image.](./images/category-create-form.png "Create Retention Category Page")
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
-4. Click **Create**. Click on **Legal Documents** that is created under **Browse Content**.
-
-5. In the Legal Documents Retention Category Page, click on **Create Records Folder** and create the *MOU* records folder as shown below
-     ![Select the options listed in this image to create a Record Folder](./images/create-record-folder.png " Create Record Folder")
-
-6. Fill in the details as shown in the below image and click on the **Create** button. Similarly, create the other two records folders i.e *Non-disclosure Agreement* records folder to store Non-disclosure agreement records and the *Software Agreement* Records Folder to store Software Agreement Records.
-      !["Fill in the details on the Record Folder Create Page as shown in this image](./images/record-folder-createform.png "Create Record Folder Form")
-
-7. After creating the 3 record folders, you must see the record folders in the **Legal Documents** category as shown below.
-      ![Summary of the record folders after creation.](./images/record-folders-legal-doc-category.png "Record Folders in Legal Document Category")
+    * **Username**: Enter
+    ```
+    <copy>ADMIN</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
 
 ## Task 2: Upload New RFP Document with properties and sections
 
-1. In the row for the Legal Documents retention category on the Exploring Retention Schedule page, choose **Edit** then **Edit Disposition** from the item's Actions menu.
-    ![Select the option shown in the image to add the disposition rule for the Legal Document Retention Category](./images/edit-disposition.png "Edit Disposition Rule on the Retention Category **Legal Documents** ")
+1. Navigate to the **New Response Request** Page by one of the below options
+    * On the left navigation menu, click on **New Response Request**
+        (OR)
+    * Click on the **New RFP Response** Button
 
-2. In the Disposition Instructions area, click **Add**.
+  ![New RFP Response](images/create_new_rfp_task1_step2.png "New RFP Response")
 
-    > **Note:** The Category.Create right is required to perform this action. This right is assigned by default to the Records Administrator role.
+2. Sample file for New RFP Request document has been included in the WCC RFP Resources file. Browse and select the file **Avitek_Requirements.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Next** button
 
-   ![This image shows how disposition rule creation form.](./images/add-dispostition.png "Add Disposition Page")
+  ![Select the Sample file for New RFP Request document](images/create_new_rfp_task1_step3.png "Select the Sample file for New RFP Request document")
 
-3. On the Disposition Rule page, choose the disposition rule's triggering event from the Triggering Event (After) list. If the disposition rule has a retention period, enter an integer value for Retention Period (Wait for) and select the corresponding period from the Retention Period list. Select an action for the rule from the Disposition Action (Do) list.
+3. In the **Attributes** Page, provide the values as below and click **Next** button
 
-4. Disposition rule for MOU records is 'When the MOUs are obsolete, delete all the revisions from the server'. In the **After** list select *Obsolete* event and choose *0 weeks* for the **Wait for** field. In the **Do** list select the *Delete All Revisions (Destroy Metadata)* action as shown in the image below.
+    * **Attributes**
 
-5. In the **Notification Reviewer**, select the user *weblogic* who will be notified. In the **Advanced options** select the Records Folder for the disposition rule to be applied.
+        * **RFP Title**: Specify
+        ```
+        <copy>Avitek ECM Requirements</copy>
+        ```
+        * **Client Name**: Specify
+        ```
+        <copy>Avitek</copy>
+        ```
+        * **Deadline**: In the date picker, select a date two weeks from the current date ( eg : **8/30/2024** )
+        * **RFP Type**: In the drop down list, select **Enterprise Content** _( Any value can be selected in this list)_
 
-    ![Fill in the details as shown in this image to edit the disposition rule for the Legal Document category.](./images/dispostion-rule-creation-form.png  "Create Disposition Rule Page")
+    * **Additional Attributes**
+        * **Industry**: Select any of the value from the drop-down list (eg: **Industrial Manufacturing**)
+        * **RFP Issuer Contact Information**: Specify
+        ```
+        <copy>Avitek, NA</copy>
+        ```
+        * **Internal Owner (Salesperson)**: Specify
+        ```
+        <copy>Sales Rep</copy>
+        ```
+        * **Estimated Value**: Specify
+        ```
+        <copy>100000</copy>
+        ```
+        * **Competitors Involved**: Specify
+        ```
+        <copy>CompetitorX</copy>
+        ```
+        * **Username**: Specify
+        ```
+        <copy>ADMIN</copy>
+        ```
+        * **Username**: Specify
+        ```
+        <copy>ADMIN</copy>
+        ```
+  ![Provide attribute values for New RFP Request document](images/create_new_rfp_task1_step4.png "Provide attribute values for New RFP Request document")
 
-6. Click on **Submit Update** to apply changes to the MOU Record Folder. Click Ok.
-    ![Click on Submit Update to apply the disposition rule on the MOU Record Folder.](./images/submit-update.png "Submit Update page ")
+4. From the list of cards, select the sections required for creating the RFP Response for this New RFP Request Document and click **Submit RFP** button.
+    Example: select **Title and Summary**, **Technical Design** and **Pricing and BOM**
 
-## Task 3: Verify the Section documents in WCC Workflow
+  ![Select sections for New RFP Request document](images/create_new_rfp_task1_step5.png "Select sections for New RFP Request document")
 
+5. Once successfully uploaded, you'll get the message **RFP & Section Documents Successfully Uploaded**. This in-turn uploads the sample template for all the sections selected, and that goes into the WCC Workflow, so that the Section Owner can do the necessary actions on it.
+
+  ![New RFP Request document Successfully uploaded](images/create_new_rfp_task1_step6.png "New RFP Request document Successfully uploaded")
+
+
+## Task 3: Verify the RFP documents and Section status in Application
+
+1. Login to the RFP Management Application and Navigate to the **RFP Details** Page from the left navigation menu
+    * On the left navigation menu, click on **New Response Request**
+        (OR)
+    * Click on the **New RFP Response** Button
+
+  ![RFP Details Page](images/create_new_rfp_task3_step1.png "RFP Details Page")
+
+2. In the **RFP Details** section, click on the **Select RFP** drop-down list and select **Avitek ECM Requirements**
+
+  ![Select RFP](images/create_new_rfp_task3_step2.png "Select the uploaded RFP")
+
+3. Now the **RFP Requests** Page displays the information for the selected RFP. This shows 
+    * The attribute values entered while uploading the New RFP Document
+    * The individual Section documents, which were uploaded for each of selected Sections. This is now in **REVIEW** State, which the Section owner can view and take the necessary actions (like **Download** the template, update it and **Upload Revision** for the same)
+
+  ![RFP Details and Section Details](images/create_new_rfp_task3_step3.png "RFP Details and Section Details")
+
+## Task 4: Verify the Section documents in WCC Workflow
+
+1. Login to the New Redwood UI for the WebCenter Content using the below details:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+
+    * **Username**: Enter
+    ```
+    <copy>weblogic</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+
+  ![Select RFP](images/create_new_rfp_task4_step1.png "Select the uploaded RFP")
+
+2. In the **Libraries** Page, click on the **Content In Workflow** card
+
+  ![Navigate to Content In Workflow](images/create_new_rfp_task4_step2.png "Navigate to Content In Workflow")
+
+3. You can see the list of the Section documents uploaded based on the Selected Section during the New RFP Document Upload Step. Click on the *information icon* ***i*** to view the details of the document.
+
+![Content In Workflow Details](images/create_new_rfp_task4_step3.png "Content In Workflow Details")
+
+ Here you can see the section document is in the Workflow and its uploaded for the **Avitek ECM Requirements** RFP Document. 
+
+ ## Summary
+
+ This concludes the flow of New RFP Document creation and verification of the Section documents in the WCC Workflow.
 
  You may now **proceed to the next lab**.
 
-## Learn More
-
-* [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
-
 ## Acknowledgements
 
-* **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024

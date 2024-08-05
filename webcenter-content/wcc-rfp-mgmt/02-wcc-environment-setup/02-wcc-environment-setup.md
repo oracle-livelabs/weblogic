@@ -199,6 +199,13 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
+
+- Note the WebCenter Content CS **Endpoint URL** displayed at the end and the **hostname/ipaddress** .
+
+
+You may now **proceed to the next lab**.
+
+
 ## Learn More
 
 * [Using Oracle WebCenter Content on Marketplace in Oracle Cloud Infrastructure](https://docs.oracle.com/en/cloud/paas/webcenter-content/webcenter-content-marketplace/index.html#provision-webcenter-content-stack)
