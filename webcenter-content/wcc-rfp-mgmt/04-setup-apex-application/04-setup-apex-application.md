@@ -9,7 +9,7 @@ This lab also covers updating the APEX Rest Datasource urls & credentials for co
 
 Estimated Time: 20 minutes
 
-### Objectives
+## Objectives
 In this lab, you will:
 - Navigate through Oracle APEX
 - Create New Workspace
@@ -162,18 +162,17 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file as file **wcc-rfp-mgmt-system-apex-app\_\<your\_wcc\_hostname\>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app\_**wccrfpmgmtdemo**.sql* )
+1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
 
 ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
-![Save File As ](images/apex_task3_step0_2.png "Save File ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
 
   ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
 
 
-3. Select the updated file **wcc-rfp-mgmt-system-apex-app\_\<your\_wcc\_hostname\>.sql** ( eg: *wcc-rfp-mgmt-system-apex-app\_wccrfpmgmtdemo.sql* ) , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
+3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
 
   ![Application sql file import](images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
 
@@ -219,18 +218,16 @@ This task covers installing and running a WCC RFP Management System APEX applica
 This task covers importing and configuring Rest Datasource Catalog.
 
 
-1. Edit the downloaded APEX Application sql file **WCC_RFP_Rest_Catalog.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance () eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file as  **WCC_RFP_Rest_Catalog_<your_wcc_hostname>.sql** ( eg: *WCC_RFP_Rest_Catalog_**wccrfpmgmtdemo**.sql* )
+1. Edit the downloaded APEX Application sql file **WCC_RFP_Rest_Catalog.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance () eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
 
 ![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
-
-![Save File As ](images/apex_task4_step0_2.png "Save File ")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
 
   ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
 
 
-3. Select the updated file **WCC_RFP_Rest_Catalog_<your_wcc_hostname>.sql** ( eg: *WCC_RFP_Rest_Catalog_wccrfpmgmtdemo.sql* ) , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
+3. Select the updated file **WCC_RFP_Rest_Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
 
   ![REST Datasource sql file import](images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
 
