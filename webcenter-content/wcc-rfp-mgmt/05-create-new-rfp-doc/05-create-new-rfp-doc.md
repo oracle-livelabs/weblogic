@@ -141,22 +141,22 @@ This lab assumes you have:
 1. Login to the New Redwood UI for the WebCenter Content using the below details:
     -	Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-  * **URL**:
-    ```
-    <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
-    ```
-      > Note : Replace the **localhost** with your **hostname**
+    * **URL**:
+        ```
+        <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
+        ```
+        > Note : Replace the **localhost** with your **hostname**
 
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+        - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
     * **Username**: Enter
-    ```
-    <copy>weblogic</copy>
-    ```
+        ```
+        <copy>weblogic</copy>
+        ```
     * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+        ```
+        <copy>Welcome1</copy>
+        ```
 
   ![Select RFP](images/create_new_rfp_task4_step1.png "Select the uploaded RFP")
 
@@ -170,7 +170,7 @@ This lab assumes you have:
 
  Here you can see the section document is in the Workflow and its uploaded for the **Avitek ECM Requirements** RFP Document. 
 
- ## Summary
+## Summary
 
  This concludes the flow of New RFP Document creation and verification of the Section documents in the WCC Workflow.
 
