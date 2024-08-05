@@ -2,9 +2,13 @@
 
 ## Introduction
 
-This lab will show you how to create a custom trigger for the disposition rule in the **Legal Documents** Category. Additionally, you will learn how to set up a time-based disposition rule on the **Non-disclosure Agreement** Record Folder. This lab also showcases how to set up a user for reviewing the records before getting disposed of.
+This lab will show you how to update the Section Documents for a particular RFP, based on the User logged in. Each Section has a Section owner defined during the Section creation. You will login as those individual Section Owner users, update the relevant Section document, and mark it as Completed, so that , the Section document is available for merge for the Response Document creation.
 
-   ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
+This showcases the interaction from the APEX Application and the WebCenter Content Documents and its Workflows.
+
+Here is the flow for this lab:
+
+  ![Update & Complete Sections - Lab Flow](./images/update_sections_flow.png "Update & Complete Sections - Lab Flow")
 
 *Estimated Time:* 10 minutes
 
@@ -121,33 +125,6 @@ This lab assumes you have:
   ![Technical Section Completed](images/update_sections_task2_step2.png "Technical Section Completed")
 
 
-## Task 2: Update and complete Technical Architecture Section
-
-1. To login to the WCC RFP Response Management System Application, perform the following steps:
-    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
-
-  * **URL**:
-    ```
-    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
-    ```
-      > Note : Replace the **localhost** with your **hostname**
-
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
-
-    * **Username**: Enter
-    ```
-    <copy>TECHNICAL_ARCHITECT</copy>
-    ```
-    * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
-  ![Application Login](images/update_sections_task1_step1.png "Login to APEX Application")
-
-2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
-
-   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
-
 ## Task 3: Update and complete Finance Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
@@ -169,16 +146,28 @@ This lab assumes you have:
     ```
     <copy>Welcome1</copy>
     ```
-  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
+  ![Application Login](images/update_sections_task3_step1.png "Login to APEX Application")
 
-2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
+2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Pricing And BOM** Section Document as well.
 
-   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+   > Note: In the **Review Details** window, browse and select the file **Finance_Part_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+
+  ![Technical Section Completed](images/update_sections_task3_step2.png "Technical Section Completed")
 
 
 ## Task 4: Verify the status of the Section Documents
 
+1. In the **RFP Details** page, you can see all the Section documents are now under **Sections - Approved** list. Also, the status of each of the document is now in **RELEASED** status
 
+   ![Section Status ](images/update_sections_task4_step1.png "Section Status")
+
+   Also, when Previewed, you can see now the documents is not part of the Workflow.
+
+      ![Preview Page ](images/update_sections_task4_step2.png "Preview Page")
+
+2.  You can check it from WCC **Contents In Workflow** Page. Now there will not be any Documents in the list.
+
+      ![WCC Contents In Workflow Page ](images/update_sections_task4_step3.png "WCC Contents In Workflow Page")
 
 You may now **proceed to the next lab**.
 
