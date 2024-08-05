@@ -16,6 +16,14 @@ In this lab, you will:
 - Login to Workspace and Install Packaged Application.
 - Update Rest Datasources URL and credentials
 
+### Prerequisites
+This lab assumes you have:
+- A  Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup ( *Paid Tenants* only)
+    - Lab: WCC Environment Setup
+    - Lab: Initialize Environment
+
 ## Task 1: Create New APEX Workspace for RFP Management Application
 
 To create new APEX workspace, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
@@ -23,25 +31,22 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
 1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
 
     - URL
-
     ```
     <copy>http://localhost:16200/ords/</copy>
     ```
+      > Note : Replace the **localhost** with your **hostname**
 
-- Workspace Name
-
+    - Workspace Name
     ```
     <copy>INTERNAL</copy>
     ```
 
     - Username
-
     ```
     <copy>ADMIN</copy>
     ```
 
     - Password
-
     ```
     <copy>WelCwcm123##</copy>
     ```
@@ -122,7 +127,13 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 1. To login to your Oracle APEX Workspace, perform the following steps:
     -	Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.  
+    - URL
+    ```
+    <copy>http://localhost:16200/ords/</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
 
     * **Workspace Name**: Enter
     ```
@@ -258,8 +269,170 @@ This task covers importing and configuring Rest Datasource Catalog.
   ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 
+## Task 5: Add Section Templates
+
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+
+    * **Username**: Enter
+    ```
+    <copy>ADMIN</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
+
+2. On the left navigation menu, click on **Sections** and click on **Create** button
+
+  ![Navigate to Sections](images/apex_setup_sections_task5_step2.png "Click on Sections")
+
+3. In the **Manage Section Form** window, enter the below values and click on **Create** Button
+
+    * **Name**: Specify
+    ```
+    <copy>Title and Summary</copy>
+    ```
+    * **Description**: Specify
+    ```
+    <copy>This is sample template for Title and Summary Section</copy>
+    ```
+    * **Template**: Browse and select the file **Title & summary.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+    * **Type**: Leave the default as **SECTION**
+    * **Display Order**: Specify
+    ```
+    <copy>10</copy>
+    ```
+    * **Active**: Leave the default as **Y**
+    * **Section Owner**: Specify
+    ```
+    <copy>Sales Rep</copy>
+    ```
+    * **Instructions**: Specify
+    ```
+    <copy>Update the Title and Summary section</copy>
+    ```
+    * **Expectation**: Specify
+    ```
+    <copy>Updated with relevant info</copy>
+    ```
+  ![Create Title and Summary Section](images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
+
+  ![Title and Summary Section Created](images/apex_setup_sections_task5_step3.png "Title and Summary Section Created")
+
+
+4. Similarly, create the below sections as well :
+
+  * **Technical Design** Section
+
+    * **Name**: Specify
+    ```
+    <copy>Technical Design</copy>
+    ```
+    * **Description**: Specify
+    ```
+    <copy>This is template for Technical Design Section</copy>
+    ```
+    * **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+    * **Type**: Leave the default as **SECTION**
+    * **Display Order**: Specify
+    ```
+    <copy>20</copy>
+    ```
+    * **Active**: Leave the default as **Y**
+    * **Section Owner**: Specify
+    ```
+    <copy>Technical Architect</copy>
+    ```
+    * **Instructions**: Specify
+    ```
+    <copy>Update the Technical Design section</copy>
+    ```
+    * **Expectation**: Specify
+    ```
+    <copy>Updated with relevant info</copy>
+    ```
+  ![Create Technical Design Section](images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
+
+  * **Pricing And BOM** Section
+    * **Name**: Specify
+    ```
+    <copy>Pricing And BOM</copy>
+    ```
+    * **Description**: Specify
+    ```
+    <copy>This is template for Pricing And BOM Section</copy>
+    ```
+    * **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+    * **Type**: Leave the default as **SECTION**
+    * **Display Order**: Specify
+    ```
+    <copy>30</copy>
+    ```
+    * **Active**: Leave the default as **Y**
+    * **Section Owner**: Specify
+    ```
+    <copy>Finance</copy>
+    ```
+    * **Instructions**: Specify
+    ```
+    <copy>Update the Pricing And BOM section</copy>
+    ```
+    * **Expectation**: Specify
+    ```
+    <copy>Updated with relevant info</copy>
+    ```
+  ![Create Pricing And BOM Section](images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
+
+  * **Legal** Section
+    * **Name**: Specify
+    ```
+    <copy>Legal</copy>
+    ```
+    * **Description**: Specify
+    ```
+    <copy>This is sample template for Legal Section</copy>
+    ```
+    * **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+    * **Type**: Leave the default as **SECTION**
+    * **Display Order**: Specify
+    ```
+    <copy>40</copy>
+    ```
+    * **Active**: Leave the default as **Y**
+    * **Section Owner**: Specify
+    ```
+    <copy>Legal</copy>
+    ```
+    * **Instructions**: Specify
+    ```
+    <copy>Update the Legal section</copy>
+    ```
+    * **Expectation**: Specify
+    ```
+    <copy>Updated with relevant info</copy>
+    ```
+  ![Create Legal Section](images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
+
+5. This shows the summary of all the sections created.
+
+  ![Section Summary](images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
+
+
 ## Summary
-You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
+
+You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
+
+You are now ready to **proceed to the next lab**.
 
 
 ## Acknowledgements
