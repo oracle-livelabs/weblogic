@@ -192,10 +192,10 @@ To provision Oracle WebCenter Content on a Marketplace instance:
   * Click **Next**
     ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_9.png "WebCenter Content WebLogic Domain configuration")
 
-4. Review all the configuration variables, then select the **Run apply** check box under **Run apply on the created stack** section and Click **Create**.
+3. Review all the configuration variables, then select the **Run apply** check box under **Run apply on the created stack** section and Click **Create**.
     ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_10.png "WebCenter Content WebLogic Domain configuration")
 
-5. After successful provision of the WebCenter Content Stack, note the WebCenter Content CS Endpoint URL displayed at the end and the hostname/ipaddress
+4. After successful provision of the WebCenter Content Stack, note the WebCenter Content CS Endpoint URL displayed at the end and the hostname/ipaddress
 
     ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
