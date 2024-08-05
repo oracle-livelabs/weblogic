@@ -4,9 +4,9 @@
 
 In this lab, you will learn about the steps needed to Upload New RFP Document in the RFP Management System and also, select the relevant sections for the RFP Response. The System will automatically select the relevant section document template, and assigns/uploads against this newly uploaded RFP Document. For each of these Section Document, gets into the workflow, for further processing.
 
-  ![Lab Flow](./images/create_new_rfp_doc_flow.png "Create New RFP Document - Lab Flow")
+  ![Lab Flow](./images/create_new_rfp_flow.png "Create New RFP Document - Lab Flow")
 
-*Estimated Time*: 5 minutes
+*Estimated Time*: 10 minutes
 
 ### Objectives
 
@@ -20,7 +20,6 @@ In this lab, you will:
 
 ### Prerequisites
 This lab assumes you have:
-- A  Paid or LiveLabs Oracle Cloud account
 - You have completed:
     - Lab: Prepare Setup ( *Paid Tenants* only)
     - Lab: WCC Environment Setup
@@ -43,7 +42,7 @@ This lab assumes you have:
 
     * **Username**: Enter
     ```
-    <copy>ADMIN</copy>
+    <copy>SALES_REP</copy>
     ```
     * **Password**: Enter
     ```
