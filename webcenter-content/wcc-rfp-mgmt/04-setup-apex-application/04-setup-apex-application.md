@@ -269,7 +269,7 @@ This task covers importing and configuring Rest Datasource Catalog.
   ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 
-## Task 5: Add Section Templates
+## Task 5: Add Section Templates in RFP Response Management Application
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
     -	Open your browser and enter the **URL** to sign in to the APEX development environment.

@@ -38,19 +38,14 @@
       "filename": "./../../05-create-new-rfp-doc/05-create-new-rfp-doc.md"
     },
     {
-      "title": "Lab 6: Update Documents for Section Types",
-      "description": "This lab shows you how to configure disposition rules for records that gets triggered by a custom trigger based on the time defined.",
+      "title": "Lab 6: Update and Complete Documents for Sections",
+      "description": "This lab shows you how to Preview, Download , Update the Section Document and Complete the Sections, so that it can be merged to create a RFP Response Document.",
       "filename": "./../../06-update-sections/06-update-sections.md"
     },
     {
-      "title": "Lab 7: Review and Approve Section Type Documents for RFP",
-      "description": "This lab shows you how to configure disposition rules for records that get triggered by the occurrence of the event and waits for certain retention period before acting on the records.",
-      "filename": "./../../07-approve-sections/07-approve-sections.md"
-    },
-    {
-      "title": "Lab 8: Merge Section Documents to create RFP Response",
-      "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
-      "filename": "./../../08-merge-sections-to-rfp-response/08-merge-sections-to-rfp-response.md"
+      "title": "Lab 7: Merge Section Documents to create RFP Response",
+      "description": "This lab shows you how to select all the completed Section documents for a particular RFP and create a RFP Response Document.",
+      "filename": "./../../07-merge-sections-to-rfp-response/07-merge-sections-to-rfp-response.md"
     },
     {
       "title": "Need Help?",

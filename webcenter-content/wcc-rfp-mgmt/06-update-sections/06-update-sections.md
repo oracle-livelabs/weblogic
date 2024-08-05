@@ -6,96 +6,185 @@ This lab will show you how to create a custom trigger for the disposition rule i
 
    ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
-*Estimated Time:* 30 minutes
+*Estimated Time:* 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a Custom Trigger
-* Add disposition Rule on Non-Disclosure Agreement Record Folder
-* Create User and add record reviewer roles
-* Add the User in WebLogic
+* Login as different Users/Personas
+* Preview and Download Section Template Document
+* Edit/Update the Section Document
+* Complete the Section Document , so that it's available for Merge for the RFP Response
 
 ### Prerequisites
 This lab assumes you have:
-- A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-    - Lab: Environment Setup
+    - Lab: Prepare Setup ( *Paid Tenants* only)
+    - Lab: WCC Environment Setup
     - Lab: Initialize Environment
-    - Lab: Event-based Disposition Rule on MOU Records (Task 1 is mandatory)
+    - Lab: Setup Apex Application
+    - Lab: Create New RFP Document
 
-## Task 1: Create Custom Trigger
+## Task 1: Update and complete Title and Summary Section
 
-A global trigger is a type of custom trigger which happens at a time defined by an administrator. Global triggers have an activation date. The activation date can be a past, present, or future date. A user can create a trigger and delay the activation of a trigger for an indefinite amount of time until the activation is required. In essence, this is a dormant trigger, which does not contain an activation date.
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-A user can create a trigger that activates immediately, activate a trigger on a certain date and time, or delay the activation of a trigger for an indefinite amount of time until the activation is required.
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
 
-1. Choose **Records** then **Configure** from the Top menu. Choose **Retention** then **Triggers** from the Page menu. The Configure Triggers Page opens.
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
-   ![Select the option shown in this image to create custom triggers](./images/create-trigger.png "Create Trigger")
+    * **Username**: Enter
+    ```
+    <copy>SALES_REP</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/update_sections_task1_step1.png "Login to APEX Application")
 
-2. Select the type of trigger to create (Global, Custom Direct, or Indirect).Select **Global Trigger**. Choose **Add**. The Create or Edit Trigger Type Page opens. Enter an Activation Date (If not entered it is considered a dormant trigger, which can be activated later).
+2. In the **RFP Details** page, click on **Select RFP** drop-down list, select the RFP Document uploaded in the previous lab ( eg: **Avitek ECM Requirements**) and click on **Preview and Download** link for the **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
 
-   ![This image shows the Global Trigger Create Page. Fill in the details as shown here.](./images/globaltrigger-creation-form.png "Global Trigger Create Page")
+![Section Documents list](images/update_sections_task1_step2.png "Section Documents list")
 
-3. As shown in the image above, enter the **Global Trigger Name** as *Year End* and the **Activation Date**. Once done click on **Create**. Click **Ok**.
+3. Here you can see the **Preview** of the Section Template document (in **.docx** format ) that was uploaded during the initial Setup of Sections. You can also download the file, by clicking on the *download icon*. This also shows that this Section Document is still part of the WCC Workflow.
+   > *Note:* If Login page shows-up for the WCC, Login as **weblogic** with password as **Welcome1**
 
-## Task 2: Add disposition Rule to Non-Disclosure Agreement Record Folder
+![Preview and Download Section Document](images/update_sections_task1_step3.png "Preview and Download section document")
 
-  1. Click on **Legal Documents** under **Browse Content**. In the Retention Category Page, Click on **Edit Disposition** for the Legal Documents Category.
+4. For this demo flow, the updated **Title and Summary** Document is already included in the WCC RFP Resources file. In the **RFP Details** Page, click on the  **Upload Revision** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
 
-     ![This image shows to select the Edit Disposition option to add the disposition rule.](./images/edit-disposition.png "Edit Disposition Rule")
+![Section Documents list](images/update_sections_task1_step4.png "Section Documents list")
 
-  2. Click on **Add** to add another disposition rule. From the **After** list, select the custom trigger *Year End* from the list and for the **Wait for** field select **Month** and give the integer value as *1*. In the **Do** list, select *Expire* and for the **Notification Reviewer** field, select the user *weblogic* for reviewing the record before disposition to act.
+5. In the **Review Details** window, browse and select the file **Title & summary_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
-     ![This image shows the disposition rule create page and fill in the details as shown in this image.](./images/disposition-rule-creation-form.png "Disposition Rule Create Page")
+![Upload updated Section Document](images/update_sections_task1_step5.png "Upload updated Section Document")
 
-  3. In the **Advanced** Section, select the records folder *Non-disclosure Agreement* and click on **Ok**.
+   Once successfully uploaded, you'll get message as **Revision File Uploaded!**
 
-  4. Click on **Submit Update** to apply changes to the Non-disclosure Agreement Record folder.Click **Ok**.
+   ![Upload updated Section Document - Success](images/update_sections_task1_step5_1.png "Upload updated Section Document - Success")
 
-## Task 3: Create User and add record reviewer roles
+   Now, if we preview the document using **Preview and Download** link, you can see the file has got updated from **Title & summary.docx** to **Title & summary_v1.0.pdf** and the document is still in WCC Workflow.
 
-  1. Users with an admin role can create Users and assign necessary Roles. Go to the **Administration** tab and select **Admin Applets**.
-     ![This page shows the Admin Applet page from which User Admin Applet has to be chosen.](./images/admin-applets.png "Admin Applet Page")
+   ![Upload updated Section Document - Preview](images/update_sections_task1_step5_2.png "Upload updated Section Document - Preview")
 
-  2. Click on the **User Admin** applet. Open the downloaded file. If there are any java update suggestions, click on *later*. If there are any security warning windows, click on *Run*.
-     ![Pop up Window.Please click on Later](./images/java-version-warning.png "Java Update Page")
+6. In the **RFP Details** Page, click on the  **Completed** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
 
-     ![Security warning page](./images/security-warning.png "Security Warning Page")
+   ![Complete updated Section Document](images/update_sections_task1_step6_1.png "Complete updated Section Document")
 
-  3. Click on **Add** to create the user on the User Admin page. Select **Local** as the authorization type.
-     ![User Admin Page](./images/user-admin-page.png "User Admin Page")
+   Once successfully, you can see the message **Success! The document for Section has been successfully approved**.
 
-     ![User Type Page](./images/authorization-type.png "Authorization Type")
+   ![Complete updated Section Document - Success ](images/update_sections_task1_step6_2.png "Complete updated Section Document - Success ")
 
-  4. Add the details as shown in the image below. Click on **Ok**.
-     ![This page shows the Edit User page where we can add roles for the particular user.](./images/edit-user-page.png "Edit User Page")
+   Now, this Section Document is moved from **Section Actions - Pending** list, to **Sections - Approved** list
 
-  5. Select the user from the list and click on **Edit**.
+   ![Section Approved List ](images/update_sections_task1_step6_3.png "Section Approved List ")
 
-  6. Go to the **Roles** tab and select **Add Role**.
-     ![This shows how to add the role to the user.](./images/add-role.png "Add Role")
+   This ensures that the Section Document is now completed from the WCC Workflow as well. You can check it from WCC **Contents In Workflow** Page
 
-  7. Select **rma**,**rmaadmin** role as shown image below. Press shift and select both at once. Click on **Ok**.
-     ![This shows the list of roles that can be selected to add to the user](./images/select-role.png "Select Role Page")
+      ![WCC Contents In Workflow Page ](images/update_sections_task1_step6_4.png "WCC Contents In Workflow Page")
 
-  8. In the main menu, Click on the **Aliases** tab and select **RmaReviewers** and click on **Edit**.
-     ![This shows the Aliases tab.](./images/aliases.png "Aliases Page")
 
-  9. Click on **Add**, and select the user *Mark*. Click on **Ok**.
-      ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
+## Task 2: Update and complete Technical Architecture Section
+
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+
+    * **Username**: Enter
+    ```
+    <copy>TECHNICAL_ARCHITECT</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/update_sections_task2_step1.png "Login to APEX Application")
+
+2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
+
+   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+
+  ![Technical Section Completed](images/update_sections_task2_step2.png "Technical Section Completed")
+
+
+## Task 2: Update and complete Technical Architecture Section
+
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+
+    * **Username**: Enter
+    ```
+    <copy>TECHNICAL_ARCHITECT</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/update_sections_task1_step1.png "Login to APEX Application")
+
+2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
+
+   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+
+## Task 3: Update and complete Finance Section
+
+1. To login to the WCC RFP Response Management System Application, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+
+  * **URL**:
+    ```
+    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+    ```
+      > Note : Replace the **localhost** with your **hostname**
+
+    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+
+    * **Username**: Enter
+    ```
+    <copy>FINANCE</copy>
+    ```
+    * **Password**: Enter
+    ```
+    <copy>Welcome1</copy>
+    ```
+  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
+
+2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
+
+   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+
+
+## Task 4: Verify the status of the Section Documents
+
+
 
 You may now **proceed to the next lab**.
 
-## Learn More
-
-* [Defining and Processing Dispositions](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
 
 ## Acknowledgements
 
-* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024
