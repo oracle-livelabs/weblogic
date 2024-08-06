@@ -1,9 +1,6 @@
 # Introduction
 
-## Introduction
-
 Learn how to build scalable solutions with cloud agility by architecting intelligent applications with Oracle WebCenter and Oracle Cloud Infrastructure using your preferred low-code platform of Oracle APEX
-
 
 ## About this Workshop
 
@@ -15,9 +12,7 @@ Organizations are made up of processes and processes revolve around documents. T
 
 The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated . This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by  creating structured workflows, automating different section documents merging, and automating the RFP Response creation.
 
-
 ![Workshop Architecture](./images/rfp_mgmt_workshop_architecture1.png "RFP Management Workshop Architecture")
-
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
@@ -27,22 +22,21 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
 
 * **Action**: Salesperson uploads the RFP document to the RFP Management App and initiates the process.
 
-    * *Metadata Input*: Salesperson inputs related metadata for the document.
+  * *Metadata Input*: Salesperson inputs related metadata for the document.
 
-    * *Process*: Salesperson selects the sections required for the RFP response from a predefined list. (eg Technical Architecture, Project costing, Compliance etc)
+  * *Process*: Salesperson selects the sections required for the RFP response from a predefined list. (eg Technical Architecture, Project costing, Compliance etc)
 
 * **Process**: Each selected section triggers the creation of a workflow
 
-    * **Workflow Details**:
+  * **Workflow Details**:
 
-        * Assign responsible team members for each section.
+    * Assign responsible team members for each section.
 
-        * Set deadlines for document creation.
+    * Set deadlines for document creation.
 
-        * Allow for collaboration and review within the system.
+    * Allow for collaboration and review within the system.
 
 * **Result**: Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
-
 
 ## Objectives
 
@@ -68,7 +62,7 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
-* [Learn More about Apex ](https://apex.oracle.com/en/)
+* [Learn More about Apex](https://apex.oracle.com/en/)
 
 ## Acknowledgements
 

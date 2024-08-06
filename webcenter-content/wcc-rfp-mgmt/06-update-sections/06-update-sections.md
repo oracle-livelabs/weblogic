@@ -22,53 +22,49 @@ In this lab, you will:
 * Complete the Section Document , so that it's available for Merge for the RFP Response
 
 ### Prerequisites
+
 This lab assumes you have:
-- You have completed:
-    - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: Setup WCC Marketplace Environment
-    - Lab: Initialize Environment
-    - Lab: Setup Apex Application
-    - Lab: Create New RFP Document
+
+* You have completed:
+  * Lab: Prepare Setup ( *Paid Tenants* only)
+  * Lab: Setup WCC Marketplace Environment
+  * Lab: Initialize Environment
+  * Lab: Setup Apex Application
+  * Lab: Create New RFP Document
 
 ## Task 1: Update and complete Title and Summary Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
-    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
-
-  * **URL**:
-    ```
-    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
-    ```
-      > Note : Replace **localhost** with your **hostname**
-
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
-
-    * **Username**: Enter
-    ```
-    <copy>SALES_REP</copy>
-    ```
-    * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+    * Open your browser and enter the **URL** to sign in to the APEX development environment.
+         * **URL**:
+                     ```
+                     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+                     ```
+               > Note : Replace **localhost** with your **hostname**
+         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+            * **Username**: Enter
+                     ```
+                     <copy>SALES_REP</copy>
+                     ```
+            * **Password**: Enter
+                     ```
+                     <copy>Welcome1</copy>
+                     ```
   ![Application Login](images/update_sections_task1_step1.png "Login to APEX Application")
 
 2. In the **RFP Details** page, click on **Select RFP** drop-down list, select the RFP Document uploaded in the previous lab ( eg: **Avitek ECM Requirements**) and click on **Preview and Download** link for the **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
-
 ![Section Documents list](images/update_sections_task1_step2.png "Section Documents list")
 
 3. Here you can see the **Preview** of the Section Template document (in **.docx** format ) that was uploaded during the initial Setup of Sections. You can also download the file, by clicking on the *download icon*. This also shows that this Section Document is still part of the WCC Workflow.
    > *Note:* If Login page shows-up for the WCC, Login as **weblogic** with password as **Welcome1**
-
 ![Preview and Download Section Document](images/update_sections_task1_step3.png "Preview and Download section document")
 
 4. For this demo flow, the updated **Title and Summary** Document is already included in the WCC RFP Resources file. In the **RFP Details** Page, click on the  **Upload Revision** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
-
 ![Section Documents list](images/update_sections_task1_step4.png "Section Documents list")
 
 5. In the **Review Details** window, browse and select the file **Title & summary_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
-![Upload updated Section Document](images/update_sections_task1_step5.png "Upload updated Section Document")
+   ![Upload updated Section Document](images/update_sections_task1_step5.png "Upload updated Section Document")
 
    Once successfully uploaded, you'll get message as **Revision File Uploaded!**
 
@@ -97,24 +93,21 @@ This lab assumes you have:
 ## Task 2: Update and complete Technical Architecture Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
-    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
-
-  * **URL**:
-    ```
-    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
-    ```
-      > Note : Replace **localhost** with your **hostname**
-
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
-
-    * **Username**: Enter
-    ```
-    <copy>TECHNICAL_ARCHITECT</copy>
-    ```
-    * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+    * Open your browser and enter the **URL** to sign in to the APEX development environment.
+      * **URL**:
+                  ```
+                  <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+                  ```
+            > Note : Replace **localhost** with your **hostname**
+      * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+         * **Username**: Enter
+                  ```
+                  <copy>TECHNICAL_ARCHITECT</copy>
+                  ```
+         * **Password**: Enter
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
   ![Application Login](images/update_sections_task2_step1.png "Login to APEX Application")
 
 2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
@@ -126,24 +119,22 @@ This lab assumes you have:
 ## Task 3: Update and complete Finance Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
-    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
+    * Open your browser and enter the **URL** to sign in to the APEX development environment.
+      * **URL**:
+               ```
+               <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+               ```
+            > Note : Replace **localhost** with your **hostname**
 
-  * **URL**:
-    ```
-    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
-    ```
-      > Note : Replace **localhost** with your **hostname**
-
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
-
-    * **Username**: Enter
-    ```
-    <copy>FINANCE</copy>
-    ```
-    * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+      * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+         * **Username**: Enter
+                  ```
+                  <copy>FINANCE</copy>
+                  ```
+         * **Password**: Enter
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
   ![Application Login](images/update_sections_task3_step1.png "Login to APEX Application")
 
 2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Pricing And BOM** Section Document as well.
@@ -162,7 +153,7 @@ This lab assumes you have:
 
       ![Preview Page ](images/update_sections_task4_step2.png "Preview Page")
 
-2.  You can check it from WCC **Contents In Workflow** Page. Now there will not be any Documents in the list.
+2. You can check it from WCC **Contents In Workflow** Page. Now there will not be any Documents in the list.
 
       ![WCC Contents In Workflow Page ](images/update_sections_task4_step3.png "WCC Contents In Workflow Page")
 

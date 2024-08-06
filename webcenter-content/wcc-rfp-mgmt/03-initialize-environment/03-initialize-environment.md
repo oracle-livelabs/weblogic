@@ -15,28 +15,30 @@ In this lab, you will
 - Configure WCC Environment for the Workshop
 
 ### Prerequisites
+
 This lab assumes you have:
+
 - A Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: Setup WCC Marketplace Environment
+  - Lab: Prepare Setup ( *Paid Tenants* only)
+  - Lab: Setup WCC Marketplace Environment
 
 ## Task 1: Validate That WebCenter Content CS URL
 
 1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - Setup WCC Marketplace Environment** ), click on the *Login* and Login using the below credentials
     - URL
-        ```
-        <copy>http://localhost:16200/cs/</copy>
-        ```
+            ```
+            <copy>http://localhost:16200/cs/</copy>
+            ```
         > Note : Replace **localhost** with your **hostname**
     - Username
-        ```
-        <copy>weblogic</copy>
-        ```
+            ```
+            <copy>weblogic</copy>
+            ```
     - Password
-        ```
-        <copy>Welcome1</copy>
-        ```
+            ```
+            <copy>Welcome1</copy>
+            ```
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Confirm successful login.
@@ -52,20 +54,21 @@ This lab assumes you have:
 ## Task 2: Validate WebCenter Content Search/Index Engine
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
-    - URL
-    ```
-    <copy>http://localhost:16200/cs/</copy>
-    ```
-       > Note : Replace **localhost** with your **hostname**
-    - Username
-    ```
-    <copy>weblogic</copy>
-    ```
-    - Password
-    ```
-    <copy>Welcome1</copy>
-    ```
- ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
+    - **URL**
+            ```
+            <copy>http://localhost:16200/cs/</copy>
+            ```
+       > **Note** : Replace **localhost** with your **hostname**
+    - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+    - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
+
+    ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for \<your\_instance\_name\>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
@@ -78,19 +81,19 @@ This lab assumes you have:
 ## Task 3: Import WebCenter Content Configuration bundle
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
-    - URL
-    ```
-    <copy>http://localhost:16200/cs/</copy>
-    ```
+    - **URL**
+            ```
+            <copy>http://localhost:16200/cs/</copy>
+            ```
        > Note : Replace **localhost** with your **hostname**
-    - Username
-    ```
-    <copy>weblogic</copy>
-    ```
-    - Password
-    ```
-    <copy>Welcome1</copy>
-    ```
+    - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+    - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, then expand **Config Migration Admin** and click on **Upload Bundle** link
@@ -107,9 +110,9 @@ This lab assumes you have:
 
 5. In the **Action Options**, check the checkboxes for the below Options:
 
-    * **Continue on Error** : _checked_
-    * **Add Dependencies** : _checked_
-    * **Overwrite Duplicates** : _checked_
+    - **Continue on Error** : *checked*
+    - **Add Dependencies** : *checked*
+    - **Overwrite Duplicates** : *checked*
 
     ![This image shows the WCC Instance Configuration Bundle - Action Options ](./images/webcenter_config_task3_step5.png "WCC Instance Upload configuration Bundle - Action Options")
 
@@ -134,19 +137,19 @@ This lab assumes you have:
 This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
-    - URL
-    ```
-    <copy>http://localhost:16200/cs/</copy>
-    ```
+    - **URL**
+            ```
+            <copy>http://localhost:16200/cs/</copy>
+            ```
        > Note : Replace **localhost** with your **hostname**
-    - Username
-    ```
-    <copy>weblogic</copy>
-    ```
-    - Password
-    ```
-    <copy>Welcome1</copy>
-    ```
+    - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+    - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
 
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
@@ -160,39 +163,39 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
 4. Add the below values, by clicking on **Add** Button , Enter the below values and click **OK** button
 
-  ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_1.png "WCC Configuration Manager Java Applet Window")
+    ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_1.png "WCC Configuration Manager Java Applet Window")
 
-    * For **RFP**,
+    - For **RFP**,
         - *dProfileTriggerValue* - Enter
-            ```
-            <copy>RFP</copy>
-            ```
+                    ```
+                    <copy>RFP</copy>
+                    ```
         - *dProfileTriggerOrder* - Enter
-            ```
-            <copy>2</copy>
-            ```
-  ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_2.png "WCC Configuration Manager Java Applet Window")
+                    ```
+                    <copy>2</copy>
+                    ```
+    ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_2.png "WCC Configuration Manager Java Applet Window")
 
-    * For **RFP_Section**,
+    - For **RFP_Section**,
         - *dProfileTriggerValue* - Enter
-            ```
-            <copy>RFP_Section</copy>
-            ```
+                    ```
+                    <copy>RFP_Section</copy>
+                    ```
         - *dProfileTriggerOrder* - Enter
-            ```
-            <copy>3</copy>
-            ```
+                    ```
+                    <copy>3</copy>
+                    ```
     ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_3.png "WCC Configuration Manager Java Applet Window")
 
-    * For **RFP_Response**,
+    - For **RFP_Response**,
         - *dProfileTriggerValue* - Enter
-            ```
-            <copy>RFP</copy>
-            ```
+                    ```
+                    <copy>RFP</copy>
+                    ```
         - *dProfileTriggerOrder* - Enter
-            ```
-            <copy>4</copy>
-            ```
+                    ```
+                    <copy>4</copy>
+                    ```
     ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_4.png "WCC Configuration Manager Java Applet Window")
 
 5. Ensure all the three values are added in the list and click **Close** Button in the Edit Values Applet window
@@ -203,22 +206,21 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
 This task helps in enabling WCC Workflows for Section Documents
 
-
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
 
-    - URL
-    ```
-    <copy>http://localhost:16200/cs/</copy>
-    ```
+    - **URL**
+            ```
+            <copy>http://localhost:16200/cs/</copy>
+            ```
        > Note : Replace **localhost** with your **hostname**
-    - Username
-    ```
-    <copy>weblogic</copy>
-    ```
-    - Password
-    ```
-    <copy>Welcome1</copy>
-    ```
+    - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+    - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
 
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
@@ -239,22 +241,22 @@ This task helps to validate if APEX has been installed properly and its up & acc
 1. On the new *web browser* window , Login to the APEX/ORDS URL . Details are provided below
 
     - **URL**
-    ```
-    <copy>http://localhost:16200/ords/</copy>
-    ```
+            ```
+            <copy>http://localhost:16200/ords/</copy>
+            ```
         > Note : Replace **localhost** with your **hostname**
     - **Workspace Name**
-    ```
-    <copy>INTERNAL</copy>
-    ```
+            ```
+            <copy>INTERNAL</copy>
+            ```
     - **Username**
-    ```
-    <copy>ADMIN</copy>
-    ```
+            ```
+            <copy>ADMIN</copy>
+            ```
     - **Password**
-    ```
-    <copy>WelCwcm123##</copy>
-    ```
+            ```
+            <copy>WelCwcm123##</copy>
+            ```
 
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
@@ -277,17 +279,15 @@ You may now **proceed to the next lab**.
 
 4. After the Server changes to **SHUTDOWN** state, select the checkbox for **UCM Server**(s), click on **Start** button
 
-
 ## Appendix 2: Configure Search and Index Engine to use OracleTextSearch
 
 To set up and use full-text searching and indexing with OracleTextSearch, follow the below steps;
 
-
 1. Open a terminal session and add the following entry to the *DomainHomeName/ucm/cs/config/config.cfg* file and save the file:
 
-    ```
-    <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
-    ```
+            ```
+            <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
+            ```
 
 2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
@@ -330,9 +330,9 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked_
 
 1. Find the latest version schema name:
-    ```
-    SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
-    ```
+            ```
+            SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
+            ```
 
 2. Set the current schema to the schema name retrieved in the above step
     eg:
@@ -344,58 +344,58 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
         SQL> alter session set current_schema=apex_240100;
         ```
 3. Find the user id:
-    ```
-    <copy>
-    set lines 1000
-    col USER_NAME for a20
-    col DEFAULT_SCHEMA for a30
 
-    SELECT to_char(user_id), user_name,
-        default_schema, to_char(SECURITY_GROUP_ID), ACCOUNT_LOCKED
-    FROM   wwv_flow_fnd_user
-    WHERE  user_name = 'ADMIN'
-    ORDER BY last_update_date DESC;
-    </copy>
-    ```
+            ```
+            <copy>
+                set lines 1000
+                col USER_NAME for a20
+                col DEFAULT_SCHEMA for a30
+
+                SELECT to_char(user_id), user_name,
+                    default_schema, to_char(SECURITY_GROUP_ID), ACCOUNT_LOCKED
+                FROM   wwv_flow_fnd_user
+                WHERE  user_name = 'ADMIN'
+                ORDER BY last_update_date DESC;
+            </copy>
+            ```
     > *Note the **required user id and security group id** from the above query ( fyi, **Security Group ID 10 is for "INTERNAL" workspace**)*
 
 4. Update the Password
 
     > *FYI, for ATP DB, please reset the ADMIN password to the ADMIN DB schema user password ONLY*
 
-    ```
-    <copy>
-        UPDATE wwv_flow_fnd_user
-        SET    web_password = 'WelCwcm123##'
-        WHERE  user_name = 'ADMIN'
-        AND    user_id = 1816480255305450;
+            ```
+            <copy>
+                UPDATE wwv_flow_fnd_user
+                SET    web_password = 'WelCwcm123##'
+                WHERE  user_name = 'ADMIN'
+                AND    user_id = 1816480255305450;
 
-      commit;
-    </copy>
-    ```
+            commit;
+            </copy>
+            ```
 
 5. Unlock the ADMIN User
 
-    ```
-    <copy>
-    BEGIN
-        WWV_FLOW_SECURITY.g_security_group_id := 10;
-        WWV_FLOW_FND_USER_API.unlock_account('ADMIN');
-        COMMIT;
-    END;
-    /
-    </copy>
-    ```
+            ```
+            <copy>
+            BEGIN
+                WWV_FLOW_SECURITY.g_security_group_id := 10;
+                WWV_FLOW_FND_USER_API.unlock_account('ADMIN');
+                COMMIT;
+            END;
+            /
+            </copy>
+            ```
 
 ## Learn More
 
-
-* [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
-* [Learn More about Apex ](https://apex.oracle.com/en/)
-* [WebCenter Content - Configuring the Search Index ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-admin/configuring-search-index.html#GUID-D8372225-70C9-4A3E-987A-279995879606)
+- [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
+- [Learn More about Apex](https://apex.oracle.com/en/)
+- [WebCenter Content - Configuring the Search Index](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-admin/configuring-search-index.html#GUID-D8372225-70C9-4A3E-987A-279995879606)
 
 ## Acknowledgements
 
-* **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-* **Last Updated By/Date-** Senthilkumar Chinnappa, July 2024
+- **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
+- **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+- **Last Updated By/Date-** Senthilkumar Chinnappa, July 2024
