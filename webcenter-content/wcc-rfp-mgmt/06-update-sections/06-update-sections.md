@@ -12,7 +12,7 @@ Here is the flow for this lab:
 
 **Estimated Lab Time**: *10 minutes*
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -21,7 +21,7 @@ In this lab, you will:
 * Edit/Update the Section Document
 * Complete the Section Document , so that it's available for Merge for the RFP Response
 
-## Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 

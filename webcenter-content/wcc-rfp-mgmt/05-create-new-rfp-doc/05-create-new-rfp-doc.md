@@ -8,7 +8,7 @@ In this lab, you will learn about the steps needed to Upload New RFP Document in
 
 **Estimated Lab Time**: *10 minutes*
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -18,7 +18,7 @@ In this lab, you will:
 * Select Sections
 * Verify the Section documents is present in the Workflow in WCC
 
-## Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 

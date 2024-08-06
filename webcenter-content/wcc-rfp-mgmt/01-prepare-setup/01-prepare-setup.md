@@ -6,12 +6,12 @@ This lab will show you how to download the Oracle Resource Manager (ORM) stack z
 
 **Estimated Lab Time**: *30 minutes*
 
-## Objectives
+### Objectives
 
 - Download WCC RFP Resources
 - Prepare tenancy for setting up WCC Marketplace instance, including VCN and Database
 
-## Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 

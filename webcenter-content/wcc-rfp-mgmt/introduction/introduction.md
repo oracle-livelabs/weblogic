@@ -38,7 +38,7 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
 
 * **Result**: Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -49,7 +49,7 @@ In this lab, you will:
 * Review and Approve the updated Section documents
 * Browse through and Merge several Section documents to create single RFP Response
 
-## Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 

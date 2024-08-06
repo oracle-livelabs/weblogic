@@ -6,11 +6,11 @@ This lab will show you how to WebCenter Content Marketplace Instance using the S
 
 **Estimated Lab Time**: *75 minutes*
 
-## Objectives
+### Objectives
 
 - Create WebCenter Content Marketplace Instance using the Stack in Oracle Resource Manager
 
-## Prerequisites
+### Prerequisites
 
   This lab assumes you have:
     - An Oracle Paid Cloud account

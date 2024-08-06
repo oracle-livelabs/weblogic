@@ -8,7 +8,7 @@ This lab also covers updating the APEX Rest Datasource urls & credentials for co
 
 **Estimated Lab Time**: *20 minutes*
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -17,7 +17,7 @@ In this lab, you will:
 - Login to Workspace and Install Packaged Application.
 - Update Rest Data sources URL and credentials
 
-## Prerequisites
+### Prerequisites
 
 This lab assumes you have:
 
