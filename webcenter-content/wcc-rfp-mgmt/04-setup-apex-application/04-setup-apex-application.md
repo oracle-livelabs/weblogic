@@ -520,7 +520,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Section Summary](images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
 
-## Summary
+### Summary
 
 You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
 

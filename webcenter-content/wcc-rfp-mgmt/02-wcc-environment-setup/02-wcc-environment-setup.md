@@ -191,7 +191,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
 You may now **proceed to the next lab**.
 
-## Learn More
+### Learn More
 
 - [Using Oracle WebCenter Content on Marketplace in Oracle Cloud Infrastructure](https://docs.oracle.com/en/cloud/paas/webcenter-content/webcenter-content-marketplace/index.html#provision-webcenter-content-stack)
 - [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)

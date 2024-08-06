@@ -92,7 +92,7 @@ This lab assumes you have:
 
    ![Response Document Preview](images/merge_sections_task1_step5_2.png "Response Document Preview")
 
-## Conclusion
+### Conclusion
 
 This concludes all the labs of the Workshop on RFP Response Management.
 

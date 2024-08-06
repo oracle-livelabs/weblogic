@@ -155,7 +155,7 @@ This lab assumes you have:
 
  Here you can see the section document is in the Workflow and its uploaded for the **Avitek ECM Requirements** RFP Document.
 
-## Summary
+### Summary
 
  This concludes the flow of New RFP Document creation and verification of the Section documents in the WCC Workflow.
 

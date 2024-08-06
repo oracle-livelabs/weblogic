@@ -388,7 +388,7 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
             </copy>
             ```
 
-## Learn More
+### Learn More
 
 - [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 - [Learn More about Apex](https://apex.oracle.com/en/)

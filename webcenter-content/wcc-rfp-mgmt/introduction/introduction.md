@@ -16,7 +16,26 @@ The objective of this lab is to develop RFP Response Management App using Oracle
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
-### **The Application and User flow**
+### **Objectives**
+
+In this lab, you will:
+
+* Setup WCC Marketplace Environment
+* Setup Request-For-Proposal (RFP) Management APEX Application
+* Upload RFP Document to initiate the Process by selecting required Sections for the Response
+* Update the Section documents for the RFP Response
+* Review and Approve the updated Section documents
+* Browse through and Merge several Section documents to create single RFP Response
+
+### **Prerequisites**
+
+This lab assumes you have:
+
+* Paid or LiveLabs Oracle Cloud account, to provision WCC Marketplace instance
+* Familiarity with Oracle Cloud Infrastructure (OCI) is desirable , but not mandatory
+* Familiarity with APEX is desirable, but not mandatory
+
+## Task: The Application and User flow
 
 * **Trigger**: Salesperson receives an RFP document.
 
@@ -37,25 +56,6 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
     * Allow for collaboration and review within the system.
 
 * **Result**: Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
-
-### **Objectives**
-
-In this lab, you will:
-
-* Setup WCC Marketplace Environment
-* Setup Request-For-Proposal (RFP) Management APEX Application
-* Upload RFP Document to initiate the Process by selecting required Sections for the Response
-* Update the Section documents for the RFP Response
-* Review and Approve the updated Section documents
-* Browse through and Merge several Section documents to create single RFP Response
-
-### **Prerequisites**
-
-This lab assumes you have:
-
-* Paid or LiveLabs Oracle Cloud account, to provision WCC Marketplace instance
-* Familiarity with Oracle Cloud Infrastructure (OCI) is desirable , but not mandatory
-* Familiarity with APEX is desirable, but not mandatory
 
 You may now **proceed to the next lab**.
 
