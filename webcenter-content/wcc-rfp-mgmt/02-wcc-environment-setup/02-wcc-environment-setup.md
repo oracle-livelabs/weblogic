@@ -13,7 +13,7 @@ This lab will show you how to WebCenter Content Marketplace Instance using the S
   This lab assumes you have:
     - An Oracle Paid Cloud account
     - SSH Keys (optional)
-    - Oracle DB System already present
+    - Oracle DB System already present/created in previous **Lab 1 - Prepare Setup**
 
 ## Task 1: Provision WebCenter Content Stack
 
@@ -56,22 +56,21 @@ To provision Oracle WebCenter Content on a Marketplace instance:
   * Stack information:
 
     * Enter name and description.
-      * **Name**: Specify as
-        ```
-        <copy>WCC RFP Management - WebCenter Content, Imaging & Enterprise Capture 12c (BYOL)</copy>
-        ```
-      * **Description**: Specify as
-        ```
-        <copy>Oracle WebCenter Content in Oracle Cloud Infrastructure for WCC RFP Management System Live Labs Workshop</copy>
-        ```
+        * **Name**: Specify as
+          ```
+          <copy>WCC RFP Management - WebCenter Content, Imaging & Enterprise Capture 12c (BYOL)</copy>
+          ```
+        * **Description**: Specify as
+          ```
+          <copy>Oracle WebCenter Content in Oracle Cloud Infrastructure for WCC RFP Management System Live Labs Workshop</copy>
+          ```
     * Create in Compartment: **wcc** compartment is already selected
 
     * Terraform version: Use the default ( eg: **1.2.x**)
 
     * Click **Next** button
 
-    ![Stack information](images/wcc_setup_task1_step3_1.png "Stack information")
-
+      ![Stack information](images/wcc_setup_task1_step3_1.png "Stack information")
 
   * Configure variables:
 
@@ -83,7 +82,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
         ```
       * **SSH Public key** : Provide the SSH public key (created in Generate SSH key pair or used during Database Creation in **Lab 1 - Prepare Setup**).
 
-      * **OCI Policies** : Selected
+      * **OCI Policies** : _Selected_
 
       * **Enable Authentication Using Identity Cloud Service** : _Un-Select_
 
@@ -91,11 +90,11 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
       * **Enable Private Service** : _Un-Select_
 
-      * **Enable Key Management with OCI Vault** : Un-Select
+      * **Enable Key Management with OCI Vault** : _Un-Select_
 
     ![Stack Configuration](images/wcc_setup_task1_step3_2.png "Stack Configuration")
 
-  * Virtual Cloud Network
+  * **Virtual Cloud Network**
 
     For using an existing VCN, complete the following:
 
@@ -103,7 +102,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     * **Existing WebCenter Content Virtual Cloud Network**: Select the VCN provisioned for WebCenter Content, as **wcc-rfpmgmt-demo**
 
-    ![Virtual Cloud Network](images/wcc_setup_task1_step3_3.png "Virtual Cloud Network")
+      ![Virtual Cloud Network](images/wcc_setup_task1_step3_3.png "Virtual Cloud Network")
 
   * **Database** Configuration:
 
@@ -129,9 +128,9 @@ To provision Oracle WebCenter Content on a Marketplace instance:
           ```
     * **DB System SSH Private key** : Upload the DB System SSH Private key which is created without passphrase.
 
-    * **Provision WebCenter Content with custom database schema prefix**: Un-Select
+    * **Provision WebCenter Content with custom database schema prefix**: _Un-Select_
 
-    ![Database Configuration](images/wcc_setup_task1_step3_4.png "Database Configuration")
+      ![Database Configuration](images/wcc_setup_task1_step3_4.png "Database Configuration")
 
   * **Bastion Instance** :
 
@@ -139,7 +138,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     * **Bastion Host Shape**: Select the appropriate Bastion host shape (keep the default value). eg:  **VM.Standard.E5.Flex**
 
-    ![Bastion Instance](images/wcc_setup_task1_step3_5.png "Bastion Instance")
+      ![Bastion Instance](images/wcc_setup_task1_step3_5.png "Bastion Instance")
 
 
   * **WebCenter Content Compute Instance** :
@@ -152,9 +151,9 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     * **Node Count**: Specify the node count as **1**.
 
-    ![WebCenter Content Compute Instance](images/wcc_setup_task1_step3_6.png "WebCenter Content Compute Instance")
+      ![WebCenter Content Compute Instance](images/wcc_setup_task1_step3_6.png "WebCenter Content Compute Instance")
 
-  * File System:
+  * **File System**:
 
     * **Use Existing File System**: Un-Select.
 
@@ -164,10 +163,10 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     * **Existing Subnet for Mount Target** : Select the Private Subnet . eg: **private subnet-wcc-rfpmgmt-demo (Regional)**
 
-    ![File System](images/wcc_setup_task1_step3_7.png "File System")
+      ![File System](images/wcc_setup_task1_step3_7.png "File System")
 
 
-  * Load Balancer:
+  * **Load Balancer**:
 
     * **Existing Subnet for Load Balancer** : Select an existing subnet to use for the load balancer. eg: **public subnet-wcc-rfpmgmt-demo (Regional)**
 
@@ -175,7 +174,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
     * **Maximum Bandwidth for Flexible Load Balancer** : Provide a value. eg: **400**
 
-    ![File System](images/wcc_setup_task1_step3_8.png "File System")
+      ![File System](images/wcc_setup_task1_step3_8.png "File System")
 
 
   * **WebCenter Content WebLogic Domain** Configuration:
@@ -193,15 +192,14 @@ To provision Oracle WebCenter Content on a Marketplace instance:
   * Click **Next**
     ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_9.png "WebCenter Content WebLogic Domain configuration")
 
-3. Review all the configuration variables, then select the **Run apply** check box under **Run apply on the created stack** section and Click **Create**.
-    ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_10.png "WebCenter Content WebLogic Domain configuration")
+4. Review all the configuration variables, then select the **Run apply** check box under **Run apply on the created stack** section and Click **Create**.
+  ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_10.png "WebCenter Content WebLogic Domain configuration")
 
-4. After successful provision of the WebCenter Content Stack, note the WebCenter Content CS Endpoint URL displayed at the end and the hostname/ipaddress
+5. After successful provision of the WebCenter Content Stack, note the WebCenter Content CS Endpoint URL displayed at the end and the hostname/ipaddress
+  ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
-    ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
-
-- Note the WebCenter Content CS **Endpoint URL** displayed at the end and the **hostname/ipaddress** .
+6. Note the WebCenter Content CS **Endpoint URL** displayed at the end and the **hostname/ipaddress** .
 
 
 You may now **proceed to the next lab**.

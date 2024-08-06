@@ -25,7 +25,7 @@ In this lab, you will:
 This lab assumes you have:
 - You have completed:
     - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: WCC Environment Setup
+    - Lab: Setup WCC Marketplace Environment
     - Lab: Initialize Environment
     - Lab: Setup Apex Application
     - Lab: Create New RFP Document
@@ -40,7 +40,7 @@ This lab assumes you have:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -82,13 +82,12 @@ This lab assumes you have:
 
    ![Response Document Preview](images/merge_sections_task1_step5_2.png "Response Document Preview")
 
-
 ## Conclusion
 
 This concludes all the labs of the Workshop on RFP Response Management.
 
 ## Acknowledgements
 
-* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024

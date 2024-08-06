@@ -21,7 +21,7 @@ This lab assumes you have:
 - A  Paid or LiveLabs Oracle Cloud account
 - You have completed:
     - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: WCC Environment Setup
+    - Lab: Setup WCC Marketplace Environment
     - Lab: Initialize Environment
 
 ## Task 1: Create New APEX Workspace for RFP Management Application
@@ -30,85 +30,77 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
 
 1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
 
-    - URL
+  - **URL**
     ```
     <copy>http://localhost:16200/ords/</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
-
-    - Workspace Name
+    > Note : Replace **localhost** with your **hostname**
+  - **Workspace Name**
     ```
     <copy>INTERNAL</copy>
     ```
-
-    - Username
+  - **Username**
     ```
     <copy>ADMIN</copy>
     ```
-
-    - Password
+  - **Password**
     ```
     <copy>WelCwcm123##</copy>
     ```
-
-    > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
-
+    > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
     > _If any issues with ADMIN credentials, Refer to **Appendix 3: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password_
 
-    ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
-
+  ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. In the *Administration Services* Landing page , Click on **Create Workspace** button on the top right corner
 
-    ![This image shows the APEX/ORDS Landing Page](./images/apex_create_workspace_homepage.png "APEX/ORDS Landing Page")
+  ![This image shows the APEX/ORDS Landing Page](./images/apex_create_workspace_homepage.png "APEX/ORDS Landing Page")
 
 3. Provide the value for **Workspace Name**  and click **Next** Button
 
     ```
     <copy>WCCRFPMGMT</copy>
     ```
-
- ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step1.png "APEX/ORDS Create Workspace Page")
+  ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step1.png "APEX/ORDS Create Workspace Page")
 
 4. Provide the values for DB Schema details as mentioned below and click **Next** Button
 
     * **Re-use existing schema?**: Select **No**
-
     * **Schema Name**: Enter
-    ```
-    <copy>WCCRFPMGMT_SCHEMA</copy>
-    ```
+      ```
+      <copy>WCCRFPMGMT_SCHEMA</copy>
+      ```
     * **Schema Password**: Enter
-    ```
-    <copy>WelCwcm123##</copy>
-    ```
+      ```
+      <copy>WelCwcm123##</copy>
+      ```
     * **Space Quota (MB)**: Select **500**
 
- ![This image shows the APEX/ORDS Create Workspace Page 2 - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page 2 - DB Schema Details")
+  ![This image shows the APEX/ORDS Create Workspace Page 2 - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page 2 - DB Schema Details")
 
 5. Provide the values for Workspace **ADMIN** User details as mentioned below and click **Next** Button
 
-    * **Administrator Username**: Enter
+  * **Administrator Username**: Enter
     ```
     <copy>ADMIN</copy>
     ```
-    * **Administrator Password**: Enter
+  * **Administrator Password**: Enter
     ```
     <copy>Welcome1</copy>
     ```
-    * **First Name**: Enter
+  * **First Name**: Enter
     ```
     <copy>Admin</copy>
     ```
-    * **Last Name**: Enter
+  * **Last Name**: Enter
     ```
     <copy>User</copy>
     ```
-    * **Email**: Enter your email id
+  * **Email**: Enter your email id
     ```
     <copy>admin_user@email.com</copy>
     ```
- ![This image shows the APEX/ORDS Create Workspace Page 2 - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page 2 - ADMIN User Details")
+  ![This image shows the APEX/ORDS Create Workspace Page 2 - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page 2 - ADMIN User Details")
 
 6. Review the details and click **Create Workspace** Button
 
@@ -118,49 +110,45 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
 
  ![This image shows the APEX/ORDS Workspace Created Page](./images/apex_create_workspace_step5.png "APEX/ORDS Workspace Created Page")
 
-
 ## Task 2: Login to Newly Created APEX Workspace
-
 
 To log in to Oracle APEX, you need a Workspace Name, username, and the password created for that Workspace. In this hands-on lab, you log in to your Oracle APEX Workspace.
 
 1. To login to your Oracle APEX Workspace, perform the following steps:
     -	Open your browser and enter the **URL** to sign in to the APEX development environment.
-
-    - URL
-    ```
-    <copy>http://localhost:16200/ords/</copy>
-    ```
-      > Note : Replace the **localhost** with your **hostname**
+      - URL
+      ```
+      <copy>http://localhost:16200/ords/</copy>
+      ```
+        > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
-
-    * **Workspace Name**: Enter
-    ```
-    <copy>WCCRFPMGMT</copy>
-    ```
-    * **Username**: Enter
-    ```
-    <copy>ADMIN</copy>
-    ```
-    * **Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+      * **Workspace Name**: Enter
+      ```
+      <copy>WCCRFPMGMT</copy>
+      ```
+      * **Username**: Enter
+      ```
+      <copy>ADMIN</copy>
+      ```
+      * **Password**: Enter
+      ```
+      <copy>Welcome1</copy>
+      ```
   ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 
 2. If its first time Login, Change password for the ADMIN user. You can provide the same Password value and click on **Change Password**.
     > Skip this step if it does not prompt for Change Password
 
-    * **New Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
-    * **Confirm Password**: Enter
-    ```
-    <copy>Welcome1</copy>
-    ```
+  * **New Password**: Enter
+  ```
+  <copy>Welcome1</copy>
+  ```
+  * **Confirm Password**: Enter
+  ```
+  <copy>Welcome1</copy>
+  ```
 
   ![Reset Password on First Login Page](images/apex_login_workspace_step2.png "Reset Password on First Login")
 
@@ -168,20 +156,17 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
   ![Workspace Home Page](images/apex_login_workspace_step3.png "Workspace Home Page")
 
-
 ## Task 3: Install RFP Management Application
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
 1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
 
-![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
-
+  ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
 
   ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
-
 
 3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
 
@@ -221,22 +206,17 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
   ![Supporting Objects Installed](images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
-
-
-
 ## Task 4: Import REST DataSource Catalog
 
 This task covers importing and configuring Rest Datasource Catalog.
 
+1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance hostname ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
 
-1. Edit the downloaded APEX Application sql file **WCC_RFP_Rest_Catalog.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance () eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
-
-![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
+  ![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
 
   ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
-
 
 3. Select the updated file **WCC_RFP_Rest_Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
 
@@ -255,7 +235,6 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
 
-
 5. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
 
   ![Rest Catalog Imported](images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
@@ -268,20 +247,17 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
-
 ## Task 5: Add Section Templates in RFP Response Management Application
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
-    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
-
+  -	Open your browser and enter the **URL** to sign in to the APEX development environment.
   * **URL**:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
-    - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
-
+  - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
     * **Username**: Enter
     ```
     <copy>ADMIN</copy>
@@ -426,7 +402,6 @@ This task covers importing and configuring Rest Datasource Catalog.
 5. This shows the summary of all the sections created.
 
   ![Section Summary](images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
-
 
 ## Summary
 

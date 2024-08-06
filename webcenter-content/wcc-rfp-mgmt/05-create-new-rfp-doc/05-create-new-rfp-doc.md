@@ -22,7 +22,7 @@ In this lab, you will:
 This lab assumes you have:
 - You have completed:
     - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: WCC Environment Setup
+    - Lab: Setup WCC Marketplace Environment
     - Lab: Initialize Environment
     - Lab: Setup Apex Application
 
@@ -36,7 +36,7 @@ This lab assumes you have:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -115,7 +115,6 @@ This lab assumes you have:
 
   ![New RFP Request document Successfully uploaded](images/create_new_rfp_task1_step6.png "New RFP Request document Successfully uploaded")
 
-
 ## Task 3: Verify the RFP documents and Section status in Application
 
 1. Login to the RFP Management Application and Navigate to the **RFP Details** Page from the left navigation menu
@@ -144,7 +143,7 @@ This lab assumes you have:
         ```
         <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
         ```
-        > Note : Replace the **localhost** with your **hostname**
+        > Note : Replace **localhost** with your **hostname**
 
         - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 

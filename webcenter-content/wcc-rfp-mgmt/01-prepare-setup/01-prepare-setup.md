@@ -116,21 +116,18 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
 ## Task 3: Create Database
 
-  *You’d need a new DB system only if you want to provision a new database.*
-
-    > Note: Otherwise, you can use an existing database too.
+  *You’d need a new DB system only if you want to provision a new database. Otherwise, you can use an existing database too.*
 
     > Note: Currently, only the Oracle Base Database Service is supported. Support for other versions will be provided in upcoming releases
 
   Complete the following to create a new DB system:
 
-   *  **Create VCN**
+  *  **Create VCN**
 
-   *  **Create a New DB System**
+  *  **Create a New DB System**
 
 
 ### **3.1 Create VCN**
-
 
   1. Log in to **OCI Console**, navigate to **Networking**, then to **Virtual Cloud Networks**.
     ![OCI Console](images/prepare_oci_task3_step1_1.png "OCI Console")
@@ -155,12 +152,12 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         ```
       * **Select** the **Use DNS hostnames in this VCN** check box.
 
-        ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
+      ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
 
   5. In the **Configure public subnet and Configure private subnet** sections, verify the values. If required, specify the correct/required CIDR blocks and click **Next**.
       - *If modifying CIDR block values, Make sure to create the necessary gateways such as Internet gateway, NAT gateway, and Service gateway.*
 
-        ![VCN Configuration - subnets ](images/prepare_oci_task3_step1_5.png "VCN Configuration - configure public subnet and  private subnet")
+      ![VCN Configuration - subnets ](images/prepare_oci_task3_step1_5.png "VCN Configuration - configure public subnet and  private subnet")
 
   6. In the **Review and Create** Page, verify the details and click **Create**
     ![VCN Configuration - Review and Create](images/prepare_oci_task3_step1_6.png "VCN Configuration - Review and Create")
@@ -169,16 +166,13 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
     ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
     ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
 
-
-
 ### **3.2 Create a New DB System**
-
 
   Create a new DB system in the VCN you created earlier.
 
   Make a note of the SSH keys used for the DB system creation.
 
-   > Note: Ensure to provide a DB System SSH private key without a passphrase as passphrase is not allowed.
+   > **Note** : *Ensure to provide a DB System SSH private key without a passphrase as passphrase is not allowed.*
 
   1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service**.
 
@@ -197,7 +191,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         <copy>wcc-rfpmgmt-DBSystem</copy>
         ```
 
-      * **Select an availability domain**: Choose **AD1**. You can choose any AD but make sure that WebCenter Content and DB are in the same AD.
+      * **Select an availability domain**: Choose **AD1**. (*You can choose any AD but make sure that WebCenter Content and DB are in the same AD.*)
 
       * **Configure shape**: Choose **AMD VM Standard E4 Flex** or **AMD VM Standard E5 Flex**
 

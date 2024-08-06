@@ -25,7 +25,7 @@ In this lab, you will:
 This lab assumes you have:
 - You have completed:
     - Lab: Prepare Setup ( *Paid Tenants* only)
-    - Lab: WCC Environment Setup
+    - Lab: Setup WCC Marketplace Environment
     - Lab: Initialize Environment
     - Lab: Setup Apex Application
     - Lab: Create New RFP Document
@@ -39,7 +39,7 @@ This lab assumes you have:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -94,7 +94,6 @@ This lab assumes you have:
 
       ![WCC Contents In Workflow Page ](images/update_sections_task1_step6_4.png "WCC Contents In Workflow Page")
 
-
 ## Task 2: Update and complete Technical Architecture Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
@@ -104,7 +103,7 @@ This lab assumes you have:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -124,7 +123,6 @@ This lab assumes you have:
 
   ![Technical Section Completed](images/update_sections_task2_step2.png "Technical Section Completed")
 
-
 ## Task 3: Update and complete Finance Section
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
@@ -134,7 +132,7 @@ This lab assumes you have:
     ```
     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
     ```
-      > Note : Replace the **localhost** with your **hostname**
+      > Note : Replace **localhost** with your **hostname**
 
     - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -154,7 +152,6 @@ This lab assumes you have:
 
   ![Technical Section Completed](images/update_sections_task3_step2.png "Technical Section Completed")
 
-
 ## Task 4: Verify the status of the Section Documents
 
 1. In the **RFP Details** page, you can see all the Section documents are now under **Sections - Approved** list. Also, the status of each of the document is now in **RELEASED** status
@@ -170,7 +167,6 @@ This lab assumes you have:
       ![WCC Contents In Workflow Page ](images/update_sections_task4_step3.png "WCC Contents In Workflow Page")
 
 You may now **proceed to the next lab**.
-
 
 ## Acknowledgements
 
