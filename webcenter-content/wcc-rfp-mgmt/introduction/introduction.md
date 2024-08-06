@@ -8,7 +8,7 @@ Organizations are made up of processes and processes revolve around documents. T
 
 *Estimated Time:* 3 hours
 
-## About Request For Proposal Management System using WebCenter Content & APEX
+### About Request For Proposal Management System using WebCenter Content & APEX
 
 The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated . This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by  creating structured workflows, automating different section documents merging, and automating the RFP Response creation.
 
@@ -16,7 +16,7 @@ The objective of this lab is to develop RFP Response Management App using Oracle
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
-## The Application and User flow
+### The Application and User flow
 
 * **Trigger**: Salesperson receives an RFP document.
 
