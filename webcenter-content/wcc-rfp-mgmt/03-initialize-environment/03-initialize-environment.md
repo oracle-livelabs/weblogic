@@ -100,7 +100,7 @@ This lab assumes you have:
 
     ![This image shows the WCC Instance Configuration Page - Config Migration Admin](./images/webcenter_config_task3_step2.png "WCC Instance Configuration Page - Config Migration Admin")
 
-3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup_bundle.zip** ) which was downloaded in the **Lab 1 - Prepare Setup** , check the **Force Overwrite** checkbox and click on **Upload** Button
+3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup_bundle.zip** )  from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) , check the **Force Overwrite** checkbox and click on **Upload** Button
 
     ![This image shows the WCC Instance Upload configuration Bundle Page ](./images/webcenter_config_task3_step3.png "WCC Instance Upload configuration Bundle Page")
 

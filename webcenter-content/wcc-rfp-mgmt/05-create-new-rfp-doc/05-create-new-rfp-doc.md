@@ -56,7 +56,7 @@ This lab assumes you have:
     * Click on the **New RFP Response** Button
   ![New RFP Response](images/create_new_rfp_task1_step2.png "New RFP Response")
 
-2. Sample file for New RFP Request document has been included in the WCC RFP Resources file. Browse and select the file **Avitek_Requirements.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Next** button
+2. Sample file for New RFP Request document has been included in the WCC RFP Resources file. Browse and select the file **Avitek_Requirements.pdf** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Next** button
   ![Select the Sample file for New RFP Request document](images/create_new_rfp_task1_step3.png "Select the Sample file for New RFP Request document")
 
 3. In the **Attributes** Page, provide the values as below and click **Next** button

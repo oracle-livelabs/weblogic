@@ -116,7 +116,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
       - **DB System Password** : Provide the value of DB System password.
               ```
-              <copy>WelCome#123#</copy>
+              <copy>OCI#db#456789123</copy>
               ```
       - **DB System SSH Private key** : Upload the DB System SSH Private key which is created without passphrase.
 
@@ -176,7 +176,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
               ```
       - **WebCenter Content Schema Password** : Provide the value for WebCenter Content Schema password.
               ```
-              <copy>WelCome#123#</copy>
+              <copy>OCI#db#456789123</copy>
               ```
     - Click **Next**
         ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_9.png "WebCenter Content WebLogic Domain configuration")

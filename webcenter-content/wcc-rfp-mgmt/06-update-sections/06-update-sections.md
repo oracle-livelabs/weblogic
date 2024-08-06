@@ -62,7 +62,7 @@ This lab assumes you have:
 4. For this demo flow, the updated **Title and Summary** Document is already included in the WCC RFP Resources file. In the **RFP Details** Page, click on the  **Upload Revision** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
 ![Section Documents list](images/update_sections_task1_step4.png "Section Documents list")
 
-5. In the **Review Details** window, browse and select the file **Title & summary_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+5. In the **Review Details** window, browse and select the file **Title & summary_v1.0.pdf** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
    ![Upload updated Section Document](images/update_sections_task1_step5.png "Upload updated Section Document")
 
@@ -112,7 +112,7 @@ This lab assumes you have:
 
 2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Technical Design** Section Document as well.
 
-   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+   > Note: In the **Review Details** window, browse and select the file **TechnicalDesign_v1.0.pdf** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
   ![Technical Section Completed](images/update_sections_task2_step2.png "Technical Section Completed")
 
@@ -139,7 +139,7 @@ This lab assumes you have:
 
 2. Follow the same steps as mentioned in the **Task 1**, for updating and completing the **Avitek ECM Requirements : Pricing And BOM** Section Document as well.
 
-   > Note: In the **Review Details** window, browse and select the file **Finance_Part_v1.0.pdf** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
+   > Note: In the **Review Details** window, browse and select the file **Finance_Part_v1.0.pdf** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
   ![Technical Section Completed](images/update_sections_task3_step2.png "Technical Section Completed")
 

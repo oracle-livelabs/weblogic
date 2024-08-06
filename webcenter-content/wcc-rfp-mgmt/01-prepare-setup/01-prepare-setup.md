@@ -233,7 +233,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
       - **Create administrator credentials** : Specify ‘sys’ and an appropriate password.
 
               ```
-              <copy>WelCome#123#</copy>
+              <copy>OCI#db#456789123</copy>
               ```
 
       - **Configure database backups** : Uncheck **Enable automatic backups** checkbox

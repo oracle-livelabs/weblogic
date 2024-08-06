@@ -403,7 +403,7 @@ This task covers importing and configuring Rest Datasource Catalog.
           ```
           <copy>This is sample template for Title and Summary Section</copy>
           ```
-    - **Template**: Browse and select the file **Title & summary.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+    - **Template**: Browse and select the file **Title & summary.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
     - **Type**: Leave the default as **SECTION**
     - **Display Order**: Specify
           ```
@@ -437,7 +437,7 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>This is template for Technical Design Section</copy>
               ```
-      - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+      - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
       - **Type**: Leave the default as **SECTION**
       - **Display Order**: Specify
               ```
@@ -466,7 +466,7 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>This is template for Pricing And BOM Section</copy>
               ```
-      - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+      - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
       - **Type**: Leave the default as **SECTION**
       - **Display Order**: Specify
               ```
@@ -495,7 +495,7 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>This is sample template for Legal Section</copy>
               ```
-      - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc_rfp_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+      - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
       - **Type**: Leave the default as **SECTION**
       - **Display Order**: Specify
               ```
