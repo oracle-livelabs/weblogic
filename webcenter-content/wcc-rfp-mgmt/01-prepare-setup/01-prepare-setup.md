@@ -4,14 +4,14 @@
 
 This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
-*Estimated Lab Time:* 30 minutes
+**Estimated Lab Time**: *30 minutes*
 
-### Objectives
+## Objectives
 
 - Download WCC RFP Resources
 - Prepare tenancy for setting up WCC Marketplace instance, including VCN and Database
 
-### Prerequisites
+## Prerequisites
 
 This lab assumes you have:
 

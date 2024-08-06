@@ -4,9 +4,9 @@
 
 In this lab, we will review and startup all components required to successfully run this workshop.
 
-*Estimated Time:* 30 Minutes.
+**Estimated Lab Time**: *30 minutes*
 
-### Objectives
+## Objectives
 
 In this lab, you will
 
@@ -14,7 +14,7 @@ In this lab, you will
 - Validate WCC and APEX Instances
 - Configure WCC Environment for the Workshop
 
-### Prerequisites
+## Prerequisites
 
 This lab assumes you have:
 

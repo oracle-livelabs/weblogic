@@ -6,7 +6,7 @@ In this lab, you learn to install and run Oracle APEX Application for RFP Manage
 
 This lab also covers updating the APEX Rest Datasource urls & credentials for connecting to WebCenter Content Instance
 
-Estimated Time: 20 minutes
+**Estimated Lab Time**: *20 minutes*
 
 ## Objectives
 
@@ -17,7 +17,7 @@ In this lab, you will:
 - Login to Workspace and Install Packaged Application.
 - Update Rest Data sources URL and credentials
 
-### Prerequisites
+## Prerequisites
 
 This lab assumes you have:
 

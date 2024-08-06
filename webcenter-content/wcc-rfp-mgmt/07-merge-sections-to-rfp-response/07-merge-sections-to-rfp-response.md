@@ -10,9 +10,9 @@ Here is the flow of this Lab:
 
   ![Merge Sections Sections - Lab Flow](./images/merge_sections_flow.png "Merge Sections - Lab Flow")
 
-*Estimated Time:* 15 minutes
+**Estimated Lab Time**: *15 minutes*
 
-### Objectives
+## Objectives
 
 In this lab, you will:
 
@@ -21,7 +21,7 @@ In this lab, you will:
 * Merge to create RFP Response
 * Download and view RFP Response
 
-### Prerequisites
+## Prerequisites
 
 This lab assumes you have:
 
