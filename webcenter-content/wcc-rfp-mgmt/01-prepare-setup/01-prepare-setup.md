@@ -22,7 +22,7 @@ This lab assumes you have:
 
   2.  Save in your downloads folder and Un-Compress/Unzip.
 
-  > Note: The files present under this will be referred and used in the workshop lab
+  > **Note** : *The files present under this will be referred and used in the workshop lab*
 
 
 ## Task 2: Prepare Your OCI Tenancy
