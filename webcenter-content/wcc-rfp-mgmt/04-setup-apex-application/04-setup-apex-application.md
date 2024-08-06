@@ -73,7 +73,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           <copy>WelCwcm123##</copy>
           ```
     - **Space Quota (MB)**: Select **500**
-  ![This image shows the APEX/ORDS Create Workspace Page 2 - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page 2 - DB Schema Details")
+  ![This image shows the APEX/ORDS Create Workspace Page - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page - DB Schema Details")
 
 5. Provide the values for Workspace **ADMIN** User details as mentioned below and click **Next** Button
 
@@ -97,7 +97,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           ```
           <copy>admin_user@email.com</copy>
           ```
-  ![This image shows the APEX/ORDS Create Workspace Page 2 - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page 2 - ADMIN User Details")
+  ![This image shows the APEX/ORDS Create Workspace Page - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page - ADMIN User Details")
 
 6. Review the details and click **Create Workspace** Button
  ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step4.png "APEX/ORDS Create Workspace Page")
