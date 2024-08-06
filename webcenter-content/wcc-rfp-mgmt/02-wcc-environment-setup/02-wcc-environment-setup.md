@@ -1,18 +1,19 @@
 # Setup WebCenter Content Marketplace Instance
 
 ## Introduction
-This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
+This lab will show you how to WebCenter Content Marketplace Instance using the Stack in Oracle Resource Manager. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
 *Estimated Lab Time:* 75 minutes
 
 ### Objectives
--   Download ORM stack
--   Configure an existing Virtual Cloud Network (VCN)
+  -   Create WebCenter Content Marketplace Instance using the Stack in Oracle Resource Manager
 
 ### Prerequisites
-This lab assumes you have:
-- An Oracle Paid Cloud account
-- SSH Keys (optional)
+
+  This lab assumes you have:
+    - An Oracle Paid Cloud account
+    - SSH Keys (optional)
+    - Oracle DB System already present
 
 ## Task 1: Provision WebCenter Content Stack
 
