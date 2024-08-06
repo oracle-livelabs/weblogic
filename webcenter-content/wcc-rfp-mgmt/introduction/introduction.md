@@ -35,7 +35,7 @@ This lab assumes you have:
 * Familiarity with Oracle Cloud Infrastructure (OCI) is desirable , but not mandatory
 * Familiarity with APEX is desirable, but not mandatory
 
-## Task: The Application and User flow
+## Task: Application and User flow
 
 * **Trigger**: Salesperson receives an RFP document.
 
