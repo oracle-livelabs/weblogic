@@ -64,7 +64,7 @@ You may now **proceed to the next lab**.
 * [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 * [Learn More about Apex](https://apex.oracle.com/en/)
 
-### **Acknowledgements**
+## Acknowledgements
 
 * **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
