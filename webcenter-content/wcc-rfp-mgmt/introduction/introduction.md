@@ -8,7 +8,7 @@ Organizations are made up of processes and processes revolve around documents. T
 
 *Estimated Time:* 3 hours
 
-### About Request For Proposal Management System using WebCenter Content & APEX
+### **About Request For Proposal Management System using WebCenter Content & APEX**
 
 The objective of this lab is to develop RFP Response Management App using Oracle WebCenter Content integrated . This system will streamline the process of managing and responding to RFPs (Request for Proposals) efficiently by  creating structured workflows, automating different section documents merging, and automating the RFP Response creation.
 
@@ -16,7 +16,7 @@ The objective of this lab is to develop RFP Response Management App using Oracle
 
 This is for Product Showcase Session in Cloud World so the demonstration would be around creating a APEX app to simplify RFP response management
 
-### The Application and User flow
+### **The Application and User flow**
 
 * **Trigger**: Salesperson receives an RFP document.
 
@@ -38,7 +38,7 @@ This is for Product Showcase Session in Cloud World so the demonstration would b
 
 * **Result**: Once all workflows are completed Salesperson using WCC capability combines all the document into single PDF and shares the public link to customer.
 
-### Objectives
+### **Objectives**
 
 In this lab, you will:
 
@@ -49,7 +49,7 @@ In this lab, you will:
 * Review and Approve the updated Section documents
 * Browse through and Merge several Section documents to create single RFP Response
 
-### Prerequisites
+### **Prerequisites**
 
 This lab assumes you have:
 
@@ -59,12 +59,12 @@ This lab assumes you have:
 
 You may now **proceed to the next lab**.
 
-### Learn More
+### **Learn More**
 
 * [Introduction To WebCenter Content](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/index.html)
 * [Learn More about Apex](https://apex.oracle.com/en/)
 
-### Acknowledgements
+### **Acknowledgements**
 
 * **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
