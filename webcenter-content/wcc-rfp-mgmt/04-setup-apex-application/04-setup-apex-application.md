@@ -232,7 +232,6 @@ This task covers importing and configuring Rest Datasource Catalog.
     ```
     <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
     ```
-
   ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
 
 5. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
@@ -247,7 +246,154 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
-## Task 5: Add Section Templates in RFP Response Management Application
+## Task 5 : Add Users in APEX
+
+1. Login to your Oracle APEX Workspace, using the following steps:
+-	Open your browser and enter the **URL** to sign in to the APEX development environment.
+  - URL
+  ```
+  <copy>http://localhost:16200/ords/</copy>
+  ```
+    > Note : Replace **localhost** with your **hostname**
+
+- The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
+  * **Workspace Name**: Enter
+  ```
+  <copy>WCCRFPMGMT</copy>
+  ```
+  * **Username**: Enter
+  ```
+  <copy>ADMIN</copy>
+  ```
+  * **Password**: Enter
+  ```
+  <copy>Welcome1</copy>
+  ```
+  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
+
+2. Click on the *User Setting* icon next to the User name and click on **Manage Users and Groups**
+
+  ![Manage Users and Groups](images/add_apex_users_step2.png "Manage Users and Groups")
+
+3. Check if the Users are already present. If not, create the users by clicking on **Create User** button
+
+  ![Create User](images/add_apex_users_step3.png "Create User")
+
+4. In the **Create User** Page, provide the below values for creating the user **SALES_REP** and click **Create User** button
+  * **Username**: Specify
+  ```
+  <copy>SALES_REP</copy>
+  ```
+  * **Email Address**: Specify your email address. eg:
+  ```
+  <copy>sales_rep@email.com</copy>
+  ```
+  * **First Name**: Specify
+  ```
+  <copy>Sales</copy>
+  ```
+  * **Last Name**: Specify
+  ```
+  <copy>Representative</copy>
+  ```
+  * **Password**: Specify
+  ```
+  <copy>Welcome1</copy>
+  ```
+  * **Confirm Password**: Specify
+  ```
+  <copy>Welcome1</copy>
+  ```
+  * **Require Change of Password on First Use** : *Disable/Un-Check*
+
+  ![Create User - SALES_REP](images/add_apex_users_step4.png "Create User - SALES_REP")
+
+5. Similarly, create the other users as below:
+
+  * **TECHNICAL_ARCHITECT** User
+    * **Username**: Specify
+    ```
+    <copy>TECHNICAL_ARCHITECT</copy>
+    ```
+    * **Email Address**: Specify your email address. eg:
+    ```
+    <copy>technical_architect@email.com</copy>
+    ```
+    * **First Name**: Specify
+    ```
+    <copy>Technical</copy>
+    ```
+    * **Last Name**: Specify
+    ```
+    <copy>Architect</copy>
+    ```
+    * **Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Confirm Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Require Change of Password on First Use** : *Disable/Un-Check*
+
+  * **FINANCE** User
+    * **Username**: Specify
+    ```
+    <copy>FINANCE</copy>
+    ```
+    * **Email Address**: Specify your email address. eg:
+    ```
+    <copy>finance@email.com</copy>
+    ```
+    * **First Name**: Specify
+    ```
+    <copy>Finance</copy>
+    ```
+    * **Last Name**: Specify
+    ```
+    <copy>Analyst</copy>
+    ```
+    * **Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Confirm Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Require Change of Password on First Use** : *Disable/Un-Check*
+
+  * **LEGAL** User
+    * **Username**: Specify
+    ```
+    <copy>LEGAL</copy>
+    ```
+    * **Email Address**: Specify your email address. eg:
+    ```
+    <copy>legal@email.com</copy>
+    ```
+    * **First Name**: Specify
+    ```
+    <copy>Legal</copy>
+    ```
+    * **Last Name**: Specify
+    ```
+    <copy>Advisor</copy>
+    ```
+    * **Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Confirm Password**: Specify
+    ```
+    <copy>Welcome1</copy>
+    ```
+    * **Require Change of Password on First Use** : *Disable/Un-Check*
+
+  ![Create Other Users](images/add_apex_users_step5.png "Create Other Users")
+
+## Task 6: Add Section Templates in RFP Response Management Application
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
   -	Open your browser and enter the **URL** to sign in to the APEX development environment.
@@ -304,7 +450,6 @@ This task covers importing and configuring Rest Datasource Catalog.
   ![Create Title and Summary Section](images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
 
   ![Title and Summary Section Created](images/apex_setup_sections_task5_step3.png "Title and Summary Section Created")
-
 
 4. Similarly, create the below sections as well :
 
