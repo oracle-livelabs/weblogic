@@ -147,7 +147,11 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
     ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
 
   5. In the **Configure public subnet and Configure private subnet** sections, verify the values. If required, specify the correct/required CIDR blocks and click **Next**.
-      - *If modifying CIDR block values, Make sure to create the necessary gateways such as Internet gateway, NAT gateway, and Service gateway.*
+        - **IPv4 CIDR block**: Specify IPv4 CIDR block
+              ```text
+                <copy>10.0.0.0/24</copy>
+              ```
+          - *If modifying this CIDR block values (other than 10.0.0.0/24), make sure to create the necessary gateways such as Internet gateway, NAT gateway, and Service gateway.*
       ![VCN Configuration - subnets ](images/prepare_oci_task3_step1_5.png "VCN Configuration - configure public subnet and  private subnet")
 
   6. In the **Review and Create** Page, verify the details and click **Create**
