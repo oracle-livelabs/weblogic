@@ -190,7 +190,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
     - For **RFP_Response**,
         - *dProfileTriggerValue* - Enter
                     ```
-                    <copy>RFP</copy>
+                    <copy>RFP_Response</copy>
                     ```
         - *dProfileTriggerOrder* - Enter
                     ```
