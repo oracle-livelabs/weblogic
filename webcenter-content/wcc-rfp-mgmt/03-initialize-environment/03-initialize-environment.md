@@ -190,7 +190,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
     - For **RFP_Response**,
         - *dProfileTriggerValue* - Enter
                     ```
-                    <copy>RFP</copy>
+                    <copy>RFP_Response</copy>
                     ```
         - *dProfileTriggerOrder* - Enter
                     ```
@@ -259,6 +259,7 @@ This task helps to validate if APEX has been installed properly and its up & acc
             ```
 
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS**
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. Confirm successful login.
@@ -283,11 +284,11 @@ You may now **proceed to the next lab**.
 
 To set up and use full-text searching and indexing with OracleTextSearch, follow the below steps;
 
-1. Open a terminal session and add the following entry to the *DomainHomeName/ucm/cs/config/config.cfg* file and save the file:
-
+1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
             ```
             <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
             ```
+    ![This image shows the WCC Instance General Configuration Page](./images/task2_webcenter_configuration_page_ots_1.png "WCC Instance General  Configuration Page")
 
 2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
@@ -325,7 +326,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
     ![This image shows Collection Rebuild Finished in Indexer tab of Repository Manager Java Applet](./images/appendix2_reindex_screenshot5_3.png "Collection Rebuild Completed in Indexer Tab of Repository Manager Applet")
 
-## Appendix 3: Reset ADMIN password for APEX/ORDS
+## Appendix 4: Reset ADMIN password for APEX/ORDS
 
 Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked_
 
@@ -343,48 +344,22 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
 
         SQL> alter session set current_schema=apex_240100;
         ```
-3. Find the user id:
+3. Update the password and unlock the ADMIN User
 
             ```
             <copy>
-                set lines 1000
-                col USER_NAME for a20
-                col DEFAULT_SCHEMA for a30
-
-                SELECT to_char(user_id), user_name,
-                    default_schema, to_char(SECURITY_GROUP_ID), ACCOUNT_LOCKED
-                FROM   wwv_flow_fnd_user
-                WHERE  user_name = 'ADMIN'
-                ORDER BY last_update_date DESC;
-            </copy>
-            ```
-    > *Note the **required user id and security group id** from the above query ( fyi, **Security Group ID 10 is for "INTERNAL" workspace**)*
-
-4. Update the Password
-
-    > *FYI, for ATP DB, please reset the ADMIN password to the ADMIN DB schema user password ONLY*
-
-            ```
-            <copy>
-                UPDATE wwv_flow_fnd_user
-                SET    web_password = 'WelCwcm123##'
-                WHERE  user_name = 'ADMIN'
-                AND    user_id = 1816480255305450;
-
-            commit;
-            </copy>
-            ```
-
-5. Unlock the ADMIN User
-
-            ```
-            <copy>
-            BEGIN
-                WWV_FLOW_SECURITY.g_security_group_id := 10;
-                WWV_FLOW_FND_USER_API.unlock_account('ADMIN');
-                COMMIT;
-            END;
-            /
+                BEGIN
+                    UPDATE wwv_flow_fnd_user
+                    SET    web_password = 'WelCwcm123##'
+                    WHERE  user_name = 'ADMIN'
+                    AND    user_id = (SELECT user_id
+                    FROM   wwv_flow_fnd_user
+                    WHERE  user_name = 'ADMIN' and SECURITY_GROUP_ID=10);
+                    WWV_FLOW_SECURITY.g_security_group_id := 10;
+                    WWV_FLOW_FND_USER_API.unlock_account('ADMIN');
+                    COMMIT;
+                END;
+                /
             </copy>
             ```
 

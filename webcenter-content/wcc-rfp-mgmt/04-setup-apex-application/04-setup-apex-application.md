@@ -50,7 +50,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           <copy>WelCwcm123##</copy>
           ```
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
-    > *If any issues with ADMIN credentials, Refer to **Appendix 3: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
+    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
   ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. In the *Administration Services* Landing page , Click on **Create Workspace** button on the top right corner
