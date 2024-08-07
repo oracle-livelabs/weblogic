@@ -259,6 +259,8 @@ This task helps to validate if APEX has been installed properly and its up & acc
             ```
 
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS**
+
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. Confirm successful login.
@@ -325,9 +327,9 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
     ![This image shows Collection Rebuild Finished in Indexer tab of Repository Manager Java Applet](./images/appendix2_reindex_screenshot5_3.png "Collection Rebuild Completed in Indexer Tab of Repository Manager Applet")
 
-## Appendix 3: Reset ADMIN password for APEX/ORDS
+## Appendix 4: Reset ADMIN password for APEX/ORDS
 
-Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked_
+Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked
 
 1. Find the latest version schema name:
             ```
