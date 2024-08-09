@@ -195,10 +195,11 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
       - **Add SSH keys**: Upload the public SSH key you created in the first step.
         - You can either reuse the keys generated in the first step or you can generate a new pair of keys too for database instances.
-
-      - **License**: Choose **Bring Your Own License**
+          > *Save and rename the keys* as **db-ssh.key** for the private key and **db-ssh.key.pub** for the public key
 
       ![Create DB System Page - SSH Keys and License Info](images/prepare_oci_task3_step2_3_3.png "- SSH Keys and License Info")
+
+      - **License**: Choose **Bring Your Own License**
 
       - **Specify the Network information** - Provide/Select the values as below and Click **Next**.
 
