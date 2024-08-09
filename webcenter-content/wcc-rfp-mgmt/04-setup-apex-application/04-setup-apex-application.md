@@ -537,9 +537,9 @@ You are now ready to **proceed to the next lab**.
    > **Note:** *If the DB System was created with multi-nodes, the Steps 1.2 and 1.3 needs to be performed on all the DB Nodes created in the DB System*
 
 - This consists of the below steps:
-      - **Download certificate**
-      - **Connect to DB System via SSH and create wallet**
-      - **Configure APEX to use wallet directory**
+  - **Download certificate**
+  - **Connect to DB System via SSH and create wallet**
+  - **Configure APEX to use wallet directory**
 
 ### **1.1 Download Certificate**
 
@@ -553,8 +553,8 @@ You are now ready to **proceed to the next lab**.
 
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
-
       ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
+    ![This image shows how to navigate to Admin Applets](./images/apex_https_setup_ap1_step1_1.png "Navigate to Admin Applets")
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
