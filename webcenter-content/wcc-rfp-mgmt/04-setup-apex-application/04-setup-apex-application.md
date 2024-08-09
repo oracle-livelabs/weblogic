@@ -290,86 +290,87 @@ This task covers importing and configuring Rest Datasource Catalog.
 
 5. Similarly, create the other users as below:
 
-    - **TECHNICAL_ARCHITECT** User
-      - **Username**: Specify
-            ```
-            <copy>TECHNICAL_ARCHITECT</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>technical_architect@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Technical</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Architect</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
+      - **TECHNICAL_ARCHITECT** User
+           - **Username**: Specify
+                  ```
+                  <copy>TECHNICAL_ARCHITECT</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>technical_architect@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Technical</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Architect</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-    - **FINANCE** User
-      - **Username**: Specify
-            ```
-            <copy>FINANCE</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>finance@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Finance</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Analyst</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
+      - **FINANCE** User
+           - **Username**: Specify
+                  ```
+                  <copy>FINANCE</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>finance@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Finance</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Analyst</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-    - **LEGAL** User
-      - **Username**: Specify
-            ```
-            <copy>LEGAL</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>legal@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Legal</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Advisor</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
+      - **LEGAL** User
+           - **Username**: Specify
+                  ```
+                  <copy>LEGAL</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>legal@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Advisor</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
+
   ![Create Other Users](images/add_apex_users_step5.png "Create Other Users")
 
 ## Task 6: Add Section Templates in RFP Response Management Application
@@ -383,6 +384,7 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
 
                > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
       - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
         - **Username**: Enter
               ```
@@ -544,7 +546,7 @@ These steps are to be performed only if the secured http protocol is used by the
 
 ### **1.1 Download Certificate**
 
-1. Open your browser and enter the **URL**
+   1. Open your browser and enter the **URL**
       - **URL**
             ```
             <copy>http://localhost:16200/ords/</copy>
@@ -552,82 +554,89 @@ These steps are to be performed only if the secured http protocol is used by the
 
           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
-2. In the browser header section, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
+   2. In the browser header section, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
+
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
+
       ![Open Certificate Info](images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
 
-3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
+   3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
+
       ![Export Certificate](images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
 
-4. Save the file as the below filename
+   4. Save the file as the below filename
       - **Filename**
             ```
             <copy>WCCRFPMGM.crt/</copy>
             ```
+
       ![Save Certificate](images/apex_https_setup_ap1_step1_3.png "Save the certificate as crt")
 
 ### **1.2 Connect to DB System via SSH and create wallet**
 
-  1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
+   1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
+
       ![Oracle DB System](images/apex_https_setup_ap1_step2_1.png "View Oracle DB System details")
 
-  2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
+   2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
+
         ![Oracle DB System Nodes and IP Info](images/apex_https_setup_ap1_step2_2.png "View Oracle DB System Node IP details")
 
-  3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
+   3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
       - **ssh command**
             ```
             <copy>ssh -i db-ssh.key opc@xxx.xxx.xxx.xxx
             sudo su - oracle </copy>
             ```
-            * Note:
+
+            * **Note** :
                   - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
                   - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
 
       ![SSH to Node](images/apex_https_setup_ap1_step2_3.png "SSH to Node")
 
-  4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
+   4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
 
       ![Copy Certificate contents](images/apex_https_setup_ap1_step2_4.png "Copy Certificate contents")
 
-  5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
+   5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
      - **ssh command**
 
             ```
-            <copy>vi /tmp/WCCRFPMGM.crt</copy>
+                  <copy>vi /tmp/WCCRFPMGM.crt</copy>
             ```
 
       ![create certificate file in DB Node](images/apex_https_setup_ap1_step2_5.png "create certificate file in DB Node temp directory")
 
-  6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
-     - **ssh commands**
+   6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
 
-           *  Create wallet directory and create a oracle wallet in that directory ( *Note: if this wallet directory and wallet files are already present, then skip this creation command)
+      - **ssh commands**
+
+           - *Create wallet directory and create a oracle wallet in that directory ( *Note: if this wallet directory and wallet files are already present, then skip this creation command)*
             ```
             <copy>
                   mkdir -pm 777 $ORACLE_HOME/db_wallet
                   $ORACLE_HOME/bin/orapki wallet create -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123## -auto_login
             </copy>
-
             ```
 
-           *  Invoke the below command to add the certificate to the trusted certificates list of the wallet
-            ```
-            <copy>
-                  $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##t
-            </copy>
+           - *Invoke the below command to add the certificate to the trusted certificates list of the wallet*
 
-            ```
+                        ```
+                        <copy>
+                              $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##t
+                        </copy>
+                        ```
 
-           *  Invoke these commands to list the certificates present in that wallet and also display the full path of the wallet directory (this directory is used for configuring **Wallet Path** in APEX)
-            ```
-            <copy>
-                  $ORACLE_HOME/bin/orapki wallet display -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123##
-                  echo
-                  echo $ORACLE_HOME/db_wallet
-            </copy>
+           - *Invoke these commands to list the certificates present in that wallet and also display the full path of the wallet directory (this directory is used for configuring **Wallet Path** in APEX)*
 
-            ```
+                  ```
+                  <copy>
+                        $ORACLE_HOME/bin/orapki wallet display -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123##
+                        echo
+                        echo $ORACLE_HOME/db_wallet
+                  </copy>
+                  ```
 
       ![wallet creation in DB Node](images/apex_https_setup_ap1_step2_6.png "wallet creation in DB Node and import certificate")
 
