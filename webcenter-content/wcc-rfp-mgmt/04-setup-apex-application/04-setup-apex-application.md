@@ -613,6 +613,7 @@ These steps are to be performed only if the secured http protocol is used by the
       - **ssh commands**
 
            - *Create wallet directory and create a oracle wallet in that directory ( *Note: if this wallet directory and wallet files are already present, then skip this creation command)*
+
             ```
             <copy>
                   mkdir -pm 777 $ORACLE_HOME/db_wallet
@@ -622,21 +623,21 @@ These steps are to be performed only if the secured http protocol is used by the
 
            - *Invoke the below command to add the certificate to the trusted certificates list of the wallet*
 
-                        ```
-                        <copy>
-                              $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##t
-                        </copy>
-                        ```
+            ```
+            <copy>
+                  $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##t
+            </copy>
+            ```
 
            - *Invoke these commands to list the certificates present in that wallet and also display the full path of the wallet directory (this directory is used for configuring **Wallet Path** in APEX)*
 
-                  ```
-                  <copy>
-                        $ORACLE_HOME/bin/orapki wallet display -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123##
-                        echo
-                        echo $ORACLE_HOME/db_wallet
-                  </copy>
-                  ```
+            ```
+            <copy>
+                  $ORACLE_HOME/bin/orapki wallet display -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123##
+                  echo
+                  echo $ORACLE_HOME/db_wallet
+            </copy>
+            ```
 
       ![wallet creation in DB Node](images/apex_https_setup_ap1_step2_6.png "wallet creation in DB Node and import certificate")
 
