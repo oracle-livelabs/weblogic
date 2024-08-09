@@ -554,7 +554,6 @@ You are now ready to **proceed to the next lab**.
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
       ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
-    ![This image shows how to navigate to Admin Applets](./images/apex_https_setup_ap1_step1_1.png "Navigate to Admin Applets")
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
@@ -601,7 +600,7 @@ You are now ready to **proceed to the next lab**.
 
    6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
       - **ssh commands**
-           - *Create wallet directory and create a oracle wallet in that directory ( *Note: if this wallet directory and wallet files are already present, then skip this creation command)*
+           - *Create wallet directory and create a oracle wallet in that directory ( Note: if this wallet directory and wallet files are already present, then skip this creation command)*
                   ```
                   <copy>
                         mkdir -pm 777 $ORACLE_HOME/db_wallet
