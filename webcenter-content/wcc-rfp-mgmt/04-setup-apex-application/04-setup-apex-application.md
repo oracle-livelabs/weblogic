@@ -434,92 +434,91 @@ This task covers importing and configuring Rest Datasource Catalog.
 4. Similarly, create the below sections as well :
 
     - **Technical Design** Section
-
-      - **Name**: Specify
-              ```
-              <copy>Technical Design</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is template for Technical Design Section</copy>
-              ```
-      - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>20</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Technical Architect</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Technical Design section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
+           - **Name**: Specify
+                  ```
+                  <copy>Technical Design</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is template for Technical Design Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>20</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Technical Architect</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Technical Design section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
       ![Create Technical Design Section](images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
     - **Pricing And BOM** Section
-      - **Name**: Specify
-              ```
-              <copy>Pricing And BOM</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is template for Pricing And BOM Section</copy>
-              ```
-      - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>30</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Finance</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Pricing And BOM section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
+           - **Name**: Specify
+                  ```
+                  <copy>Pricing And BOM</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is template for Pricing And BOM Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>30</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Finance</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Pricing And BOM section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
       ![Create Pricing And BOM Section](images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
     - **Legal** Section
-      - **Name**: Specify
-              ```
-              <copy>Legal</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is sample template for Legal Section</copy>
-              ```
-      - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>40</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Legal</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Legal section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
+           - **Name**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is sample template for Legal Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>40</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Legal section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
       ![Create Legal Section](images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
 
 5. This shows the summary of all the sections created.
@@ -552,7 +551,7 @@ You are now ready to **proceed to the next lab**.
 
            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
-   2. In the browser header section, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
+   2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
       ![Open Certificate Info](images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
 
