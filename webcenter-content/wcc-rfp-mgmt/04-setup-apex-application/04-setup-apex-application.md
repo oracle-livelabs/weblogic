@@ -533,6 +533,9 @@ You are now ready to **proceed to the next lab**.
 
 ## Appendix 1: Configure Wallet for https connectivity
 
+  ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
+  ![Section Summary](./images/apex_https_setup_ap1_step1_1.png "Summary of all the sections created")
+
 ### **1.1 Download Certificate**
 
 1. Open your browser and enter the **URL** to sign in to the APEX development environment.
