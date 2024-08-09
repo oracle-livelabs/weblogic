@@ -36,7 +36,9 @@ This lab assumes you have:
                     ```
                     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                     ```
+
               > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
             * **Username**: Enter
                         ```
@@ -133,6 +135,7 @@ This lab assumes you have:
                 ```
                 <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
                 ```
+
         > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.

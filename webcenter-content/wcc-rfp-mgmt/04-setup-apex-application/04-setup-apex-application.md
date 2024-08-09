@@ -36,6 +36,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           ```
           <copy>http://localhost:16200/ords/</copy>
           ```
+
          > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
     - **Workspace Name**
           ```
@@ -116,6 +117,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
+
             > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
@@ -154,7 +156,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , > Note : > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`) and save the file.
+1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`) and save the file.
   ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
@@ -196,7 +198,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
 This task covers importing and configuring Rest Datasource Catalog.
 
-1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) , > Note : > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)  and save the file.
+1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) , replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)  and save the file.
   ![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
@@ -233,6 +235,7 @@ This task covers importing and configuring Rest Datasource Catalog.
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
+
            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
@@ -378,6 +381,7 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
               ```
+
                > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
       - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
         - **Username**: Enter
@@ -545,6 +549,7 @@ These steps are to be performed only if the secured http protocol is used by the
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
+
           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
 2. In the browser header section, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
@@ -635,6 +640,7 @@ To Configure APEX to use wallet directory, you need log in to Oracle APEX's defa
           ```
           <copy>http://localhost:16200/ords/</copy>
           ```
+
         > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
     - **Workspace Name**
           ```
