@@ -133,7 +133,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             ```
             <copy>Welcome1</copy>
             ```
-  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 2. If its first time Login, Change password for the ADMIN user. You can provide the same Password value and click on **Change Password**.
     > Skip this step if it does not prompt for Change Password
@@ -146,24 +146,24 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
           ```
           <copy>Welcome1</copy>
           ```
-  ![Reset Password on First Login Page](images/apex_login_workspace_step2.png "Reset Password on First Login")
+  ![Reset Password on First Login Page](./images/apex_login_workspace_step2.png "Reset Password on First Login")
 
 3. The Workspace home page appears.
 
-  ![Workspace Home Page](images/apex_login_workspace_step3.png "Workspace Home Page")
+  ![Workspace Home Page](./images/apex_login_workspace_step3.png "Workspace Home Page")
 
 ## Task 3: Install RFP Management Application
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
 1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`) and save the file.
-  ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
+  ![Edit in Notepad](./images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
-  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
+  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
 
 3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
-  ![Application sql file import](images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
+  ![Application sql file import](./images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
 
 4. In the **Install Application** Page, Verify the below values and click **Install Application** Button
 
@@ -171,7 +171,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
     - *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
     - *Build Status* : **Run and Build Application**
     - *Install as Application* : **Auto Assign New Application ID**
-  ![Install Application Page](images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
+  ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
 5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
     - **Client ID or Username** : Enter
@@ -186,45 +186,45 @@ This task covers installing and running a WCC RFP Management System APEX applica
           ```
           <copy>Welcome1</copy>
           ```
-  ![Install Application - Credentials Page](images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
+  ![Install Application - Credentials Page](./images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
 
 6. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
-  ![Application Installed - Install Supporting Objects](images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
+  ![Application Installed - Install Supporting Objects](./images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
 
 7. After the Supporting Objects installed, click on **Install Summary** button , to view the status of the Supporting objects installation
-  ![Supporting Objects Installed](images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
+  ![Supporting Objects Installed](./images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
 ## Task 4: Import REST DataSource Catalog
 
 This task covers importing and configuring Rest Datasource Catalog.
 
 1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) , replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)  and save the file.
-  ![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
+  ![Edit in Notepad](./images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
-  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
+  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
 
 3. Select the updated file **WCC_RFP_Rest_Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
-  ![REST Datasource sql file import](images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
+  ![REST Datasource sql file import](./images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
 
 4. Click **Next** in the **Import** Page
-  ![REST Datasource Import](images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
+  ![REST Datasource Import](./images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
 
 5. In the **Rest Catalog Import** Page, Enter the value for **Catalog Group** and click on **Import REST Catalog** Button
     - **Catalog Group** : Enter
             ```
             <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
             ```
-  ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
+  ![Rest Catalog Import](./images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
 
 6. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
-  ![Rest Catalog Imported](images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
+  ![Rest Catalog Imported](./images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
 
 7. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
-  ![Catalog Services](images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
+  ![Catalog Services](./images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
 
 8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
-  ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
+  ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 ## Task 5 : Add Users in APEX
 
@@ -251,13 +251,13 @@ This task covers importing and configuring Rest Datasource Catalog.
             ```
             <copy>Welcome1</copy>
             ```
-  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 2. Click on the *User Setting* icon next to the User name and click on **Manage Users and Groups**
-  ![Manage Users and Groups](images/add_apex_users_step2.png "Manage Users and Groups")
+  ![Manage Users and Groups](./images/add_apex_users_step2.png "Manage Users and Groups")
 
 3. Check if the Users are already present. If not, create the users by clicking on **Create User** button
-  ![Create User](images/add_apex_users_step3.png "Create User")
+  ![Create User](./images/add_apex_users_step3.png "Create User")
 
 4. In the **Create User** Page, provide the below values for creating the user **SALES_REP** and click **Create User** button
 
@@ -286,7 +286,7 @@ This task covers importing and configuring Rest Datasource Catalog.
           <copy>Welcome1</copy>
           ```
     - **Require Change of Password on First Use** : *Disable/Un-Check*
-  ![Create User - SALES_REP](images/add_apex_users_step4.png "Create User - SALES_REP")
+  ![Create User - SALES_REP](./images/add_apex_users_step4.png "Create User - SALES_REP")
 
 5. Similarly, create the other users as below:
 
@@ -371,7 +371,7 @@ This task covers importing and configuring Rest Datasource Catalog.
                   ```
            - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-  ![Create Other Users](images/add_apex_users_step5.png "Create Other Users")
+  ![Create Other Users](./images/add_apex_users_step5.png "Create Other Users")
 
 ## Task 6: Add Section Templates in RFP Response Management Application
 
@@ -394,10 +394,10 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>Welcome1</copy>
               ```
-  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
+  ![Application Login](./images/apex_setup_task5_step1.png "Login to APEX Application")
 
 2. On the left navigation menu, click on **Sections** and click on **Create** button
-  ![Navigate to Sections](images/apex_setup_sections_task5_step2.png "Click on Sections")
+  ![Navigate to Sections](./images/apex_setup_sections_task5_step2.png "Click on Sections")
 
 3. In the **Manage Section Form** window, enter the below values and click on **Create** Button
 
@@ -428,8 +428,8 @@ This task covers importing and configuring Rest Datasource Catalog.
           ```
           <copy>Updated with relevant info</copy>
           ```
-  ![Create Title and Summary Section](images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
-  ![Title and Summary Section Created](images/apex_setup_sections_task5_step3.png "Title and Summary Section Created")
+  ![Create Title and Summary Section](./images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
+  ![Title and Summary Section Created](./images/apex_setup_sections_task5_step3.png "Title and Summary Section Created")
 
 4. Similarly, create the below sections as well :
 
@@ -461,7 +461,7 @@ This task covers importing and configuring Rest Datasource Catalog.
                   ```
                   <copy>Updated with relevant info</copy>
                   ```
-      ![Create Technical Design Section](images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
+      ![Create Technical Design Section](./images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
     - **Pricing And BOM** Section
            - **Name**: Specify
                   ```
@@ -490,7 +490,7 @@ This task covers importing and configuring Rest Datasource Catalog.
                   ```
                   <copy>Updated with relevant info</copy>
                   ```
-      ![Create Pricing And BOM Section](images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
+      ![Create Pricing And BOM Section](./images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
     - **Legal** Section
            - **Name**: Specify
                   ```
@@ -519,11 +519,11 @@ This task covers importing and configuring Rest Datasource Catalog.
                   ```
                   <copy>Updated with relevant info</copy>
                   ```
-      ![Create Legal Section](images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
+      ![Create Legal Section](./images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
 
 5. This shows the summary of all the sections created.
 
-  ![Section Summary](images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
+  ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
 
 ### Summary
 
@@ -553,10 +553,11 @@ You are now ready to **proceed to the next lab**.
 
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
-      ![Open Certificate Info](images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
+      ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
+    ![This image shows how to navigate to Admin Applets](./images/apex_https_setup_ap1_step1_1.png "Navigate to Admin Applets")
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
-      ![Export Certificate](images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
+      ![Export Certificate](./images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
 
    4. Save the file as the below filename
       - **Filename**
@@ -564,15 +565,15 @@ You are now ready to **proceed to the next lab**.
             <copy>WCCRFPMGM.crt/</copy>
             ```
 
-      ![Save Certificate](images/apex_https_setup_ap1_step1_3.png "Save the certificate as crt")
+      ![Save Certificate](./images/apex_https_setup_ap1_step1_3.png "Save the certificate as crt")
 
 ### **1.2 Connect to DB System via SSH and create wallet**
 
    1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
-      ![Oracle DB System](images/apex_https_setup_ap1_step2_1.png "View Oracle DB System details")
+      ![Oracle DB System](./images/apex_https_setup_ap1_step2_1.png "View Oracle DB System details")
 
    2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
-      ![Oracle DB System Nodes and IP Info](images/apex_https_setup_ap1_step2_2.png "View Oracle DB System Node IP details")
+      ![Oracle DB System Nodes and IP Info](./images/apex_https_setup_ap1_step2_2.png "View Oracle DB System Node IP details")
 
    3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
       - **ssh command**
@@ -585,10 +586,10 @@ You are now ready to **proceed to the next lab**.
         - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
         - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
 
-      ![SSH to Node](images/apex_https_setup_ap1_step2_3.png "SSH to Node")
+      ![SSH to Node](./images/apex_https_setup_ap1_step2_3.png "SSH to Node")
 
    4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
-      ![Copy Certificate contents](images/apex_https_setup_ap1_step2_4.png "Copy Certificate contents")
+      ![Copy Certificate contents](./images/apex_https_setup_ap1_step2_4.png "Copy Certificate contents")
 
    5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
       - **ssh command**
@@ -596,7 +597,7 @@ You are now ready to **proceed to the next lab**.
             <copy>WCCRFPMGM.crt/</copy>
             ```
 
-      ![create certificate file in DB Node](images/apex_https_setup_ap1_step2_5.png "create certificate file in DB Node temp directory")
+      ![create certificate file in DB Node](./images/apex_https_setup_ap1_step2_5.png "create certificate file in DB Node temp directory")
 
    6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
       - **ssh commands**
@@ -622,7 +623,7 @@ You are now ready to **proceed to the next lab**.
                   </copy>
                   ```
 
-      ![wallet creation in DB Node](images/apex_https_setup_ap1_step2_6.png "wallet creation in DB Node and import certificate")
+      ![wallet creation in DB Node](./images/apex_https_setup_ap1_step2_6.png "wallet creation in DB Node and import certificate")
 
 ### **1.3 Configure APEX to use wallet directory**
 
@@ -661,7 +662,7 @@ To Configure APEX to use wallet directory, you need log in to Oracle APEX's defa
           ```
           <copy>WelCwcm123##</copy>
           ```
-      ![wallet update in APEX](images/apex_https_setup_ap1_step3_2.png "wallet update in APEX")
+      ![wallet update in APEX](./images/apex_https_setup_ap1_step3_2.png "wallet update in APEX")
 
 ## Acknowledgements
 
