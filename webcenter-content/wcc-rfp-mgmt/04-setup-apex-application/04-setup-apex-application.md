@@ -533,17 +533,9 @@ You are now ready to **proceed to the next lab**.
 
 ## Appendix 1: Configure Wallet for https connectivity
 
-   These steps are to be performed only if the secured http protocol is used by the WebCenter Content ( *ie URL has **https*** )
-   > **Note:** *If the DB System was created with multi-nodes, the Steps 1.2 and 1.3 needs to be performed on all the DB Nodes created in the DB System*
-
-- This consists of the below steps:
-      - **Download certificate**
-      - **Connect to DB System via SSH and create wallet**
-      - **Configure APEX to use wallet directory**
-
 ### **1.1 Download Certificate**
 
-   1. Open your browser and enter the **URL** to sign in to the APEX development environment.
+1. Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
             ```
             <copy>http://localhost:16200/ords/</copy>
@@ -551,15 +543,16 @@ You are now ready to **proceed to the next lab**.
 
            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
-   2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
+2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
-      ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
-    ![This image shows how to navigate to Admin Applets](./images/apex_https_setup_ap1_step1_1.png "Navigate to Admin Applets")
 
-   3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
+      ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1.png "View the Certificate details")
+![This image shows how to navigate to Admin Applets](./images/apex_https_setup_ap1_step1_1.png "Navigate to Admin Applets")
+
+3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_https_setup_ap1_step1_2.png "View the Certificate details and export")
 
-   4. Save the file as the below filename
+4. Save the file as the below filename
       - **Filename**
             ```
             <copy>WCCRFPMGM.crt/</copy>
@@ -569,13 +562,13 @@ You are now ready to **proceed to the next lab**.
 
 ### **1.2 Connect to DB System via SSH and create wallet**
 
-   1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
+1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
       ![Oracle DB System](./images/apex_https_setup_ap1_step2_1.png "View Oracle DB System details")
 
-   2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
+2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
       ![Oracle DB System Nodes and IP Info](./images/apex_https_setup_ap1_step2_2.png "View Oracle DB System Node IP details")
 
-   3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
+3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
       - **ssh command**
             ```
             <copy>ssh -i db-ssh.key opc@xxx.xxx.xxx.xxx
@@ -588,10 +581,10 @@ You are now ready to **proceed to the next lab**.
 
       ![SSH to Node](./images/apex_https_setup_ap1_step2_3.png "SSH to Node")
 
-   4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
+4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
       ![Copy Certificate contents](./images/apex_https_setup_ap1_step2_4.png "Copy Certificate contents")
 
-   5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
+5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
       - **ssh command**
             ```
             <copy>WCCRFPMGM.crt/</copy>
@@ -599,7 +592,7 @@ You are now ready to **proceed to the next lab**.
 
       ![create certificate file in DB Node](./images/apex_https_setup_ap1_step2_5.png "create certificate file in DB Node temp directory")
 
-   6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
+6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
       - **ssh commands**
            - *Create wallet directory and create a oracle wallet in that directory ( *Note: if this wallet directory and wallet files are already present, then skip this creation command)*
                   ```
@@ -662,7 +655,7 @@ To Configure APEX to use wallet directory, you need log in to Oracle APEX's defa
           ```
           <copy>WelCwcm123##</copy>
           ```
-      ![wallet update in APEX](./images/apex_https_setup_ap1_step3_2.png "wallet update in APEX")
+![wallet update in APEX](./images/apex_https_setup_ap1_step3_2.png "wallet update in APEX")
 
 ## Acknowledgements
 
