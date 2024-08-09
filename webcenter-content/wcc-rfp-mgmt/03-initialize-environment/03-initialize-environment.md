@@ -30,7 +30,7 @@ This lab assumes you have:
             ```
             <copy>http://localhost:16200/cs/</copy>
             ```
-        > Note : Replace **localhost** with your **hostname**
+        > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - Username
             ```
             <copy>weblogic</copy>
@@ -58,7 +58,7 @@ This lab assumes you have:
             ```
             <copy>http://localhost:16200/cs/</copy>
             ```
-       > **Note** : Replace **localhost** with your **hostname**
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -85,7 +85,7 @@ This lab assumes you have:
             ```
             <copy>http://localhost:16200/cs/</copy>
             ```
-       > Note : Replace **localhost** with your **hostname**
+          > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -141,7 +141,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             ```
             <copy>http://localhost:16200/cs/</copy>
             ```
-       > Note : Replace **localhost** with your **hostname**
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -212,7 +212,7 @@ This task helps in enabling WCC Workflows for Section Documents
             ```
             <copy>http://localhost:16200/cs/</copy>
             ```
-       > Note : Replace **localhost** with your **hostname**
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -244,7 +244,7 @@ This task helps to validate if APEX has been installed properly and its up & acc
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
-        > Note : Replace **localhost** with your **hostname**
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Workspace Name**
             ```
             <copy>INTERNAL</copy>
