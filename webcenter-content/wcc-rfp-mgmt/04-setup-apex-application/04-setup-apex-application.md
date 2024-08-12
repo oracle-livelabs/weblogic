@@ -569,7 +569,7 @@ You are now ready to **proceed to the next lab**.
   - **Connect to DB System via SSH and create wallet**
   - **Configure APEX to use wallet directory**
 
-### **1.1 Download Certificate**
+  **1.1 Download Certificate**
 
    1. Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
@@ -594,7 +594,7 @@ You are now ready to **proceed to the next lab**.
 
       ![Save Certificate](./images/apex_https_setup_ap1_step1_3_upt.png "Save the certificate as crt")
 
-### **1.2 Connect to DB System via SSH and create wallet**
+  **1.2 Connect to DB System via SSH and create wallet**
 
    1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
       ![Oracle DB System](./images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
@@ -652,43 +652,43 @@ You are now ready to **proceed to the next lab**.
 
       ![wallet creation in DB Node](./images/apex_https_setup_ap1_step2_6_upt.png "wallet creation in DB Node and import certificate")
 
-### **1.3 Configure APEX to use wallet directory**
+  **1.3 Configure APEX to use wallet directory**
 
-To Configure APEX to use wallet directory, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
+      To Configure APEX to use wallet directory, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
 
-1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
-    - **URL**
-          ```
-          <copy>http://localhost:16200/ords/</copy>
-          ```
+   1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
+      - **URL**
+            ```
+            <copy>http://localhost:16200/ords/</copy>
+            ```
 
         > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
-    - **Workspace Name**
-          ```
-          <copy>INTERNAL</copy>
-          ```
-    - **Username**
-          ```
-          <copy>ADMIN</copy>
-          ```
-    - **Password**
-          ```
-          <copy>WelCwcm123##</copy>
-          ```
-2. Navigate to **Manage Instance**, **Instance Settings**, click on **Wallet** tab , provide the below details and click on **Apply Changes** button
-    - **Wallet Path**
-          ```
-          <copy>/u01/app/oracle/product/19.0.0.0/dbhome_1/db_wallet</copy>
-          ```
-    - **Auto-login Wallet** - *Un-Checked*
-    - **Password**
-          ```
-          <copy>WelCwcm123##</copy>
-          ```
-    - **Confirm Password**
-          ```
-          <copy>WelCwcm123##</copy>
-          ```
+      - **Workspace Name**
+            ```
+            <copy>INTERNAL</copy>
+            ```
+      - **Username**
+            ```
+            <copy>ADMIN</copy>
+            ```
+      - **Password**
+            ```
+            <copy>WelCwcm123##</copy>
+            ```
+   2. Navigate to **Manage Instance**, **Instance Settings**, click on **Wallet** tab , provide the below details and click on **Apply Changes** button
+      - **Wallet Path**
+            ```
+            <copy>/u01/app/oracle/product/19.0.0.0/dbhome_1/db_wallet</copy>
+            ```
+      - **Auto-login Wallet** - *Un-Checked*
+      - **Password**
+            ```
+            <copy>WelCwcm123##</copy>
+            ```
+      - **Confirm Password**
+            ```
+            <copy>WelCwcm123##</copy>
+            ```
       ![wallet update in APEX](./images/apex_https_setup_ap1_step3_2_upt.png "wallet update in APEX")
 
   ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
