@@ -678,7 +678,7 @@ You are now ready to **proceed to the next lab**.
    2. Navigate to **Manage Instance**, **Instance Settings**, click on **Wallet** tab , provide the below details and click on **Apply Changes** button
       - **Wallet Path**
             ```
-            <copy>/u01/app/oracle/product/19.0.0.0/dbhome_1/db_wallet</copy>
+            <copy>file:/u01/app/oracle/product/19.0.0.0/dbhome_1/db_wallet</copy>
             ```
       - **Auto-login Wallet** - *Un-Checked*
       - **Password**
