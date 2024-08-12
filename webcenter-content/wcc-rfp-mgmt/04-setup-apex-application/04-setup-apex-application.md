@@ -565,9 +565,9 @@ You are now ready to **proceed to the next lab**.
    > **Note:** *If the DB System was created with multi-nodes, the Steps 1.2 and 1.3 needs to be performed on all the DB Nodes created in the DB System*
 
 - This consists of the below steps:
-            - **Download certificate**
-            - **Connect to DB System via SSH and create wallet**
-            - **Configure APEX to use wallet directory**
+      - **Download certificate**
+      - **Connect to DB System via SSH and create wallet**
+      - **Configure APEX to use wallet directory**
 
 ### **1.1 Download Certificate**
 
