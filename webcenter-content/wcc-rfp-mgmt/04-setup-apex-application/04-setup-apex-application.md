@@ -691,6 +691,8 @@ To Configure APEX to use wallet directory, you need log in to Oracle APEX's defa
           ```
       ![wallet update in APEX](./images/apex_https_setup_ap1_step3_2_upt.png "wallet update in APEX")
 
+  ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
+
 ## Acknowledgements
 
 - **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
