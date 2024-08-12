@@ -226,7 +226,35 @@ This task covers importing and configuring Rest Datasource Catalog.
 8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
   ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
-## Task 5 : Add Users in APEX
+## Task 5 : Grant connect for ACL
+
+Login to the Database as **sys** or user with **sysdba** privileges and perform the below steps
+
+1. Find the latest version schema name
+            ```
+            SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
+            ```
+
+2. Update the password and unlock the ADMIN User
+
+            ```
+            <copy>
+            BEGIN
+            DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+                  host => '*',
+                  ace => xs$ace_type(privilege_list => xs$name_list('connect', 'resolve'),
+                        principal_name => 'APEX_230200',
+                        principal_type => xs_acl.ptype_db
+                  )
+            );
+            END;
+            /
+            </copy>
+            ```
+
+      > Note : Replace `"APEX_230200"` with your **schema** retrieved from the above query
+
+## Task 6 : Add Users in APEX
 
 1. Login to your Oracle APEX Workspace, using the following steps:
 
@@ -373,7 +401,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Create Other Users](./images/add_apex_users_step5.png "Create Other Users")
 
-## Task 6: Add Section Templates in RFP Response Management Application
+## Task 7: Add Section Templates in RFP Response Management Application
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
 
@@ -561,7 +589,7 @@ You are now ready to **proceed to the next lab**.
    4. Save the file as the below filename
       - **Filename**
             ```
-            <copy>WCCRFPMGM.crt/</copy>
+            <copy>WCCRFPMGM.crt</copy>
             ```
 
       ![Save Certificate](./images/apex_https_setup_ap1_step1_3.png "Save the certificate as crt")
