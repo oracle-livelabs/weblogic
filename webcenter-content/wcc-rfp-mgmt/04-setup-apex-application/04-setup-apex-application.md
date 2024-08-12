@@ -555,9 +555,9 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
 
   ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
 
-### Summary
+    **Summary**
 
-You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
+    You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
 
 You are now ready to **proceed to the next lab**.
 
