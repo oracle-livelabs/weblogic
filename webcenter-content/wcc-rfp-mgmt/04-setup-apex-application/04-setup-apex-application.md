@@ -553,6 +553,8 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
 
   ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
 
+  ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
+
 ### Summary
 
 You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
