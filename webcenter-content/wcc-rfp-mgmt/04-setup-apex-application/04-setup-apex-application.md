@@ -577,7 +577,7 @@ You are now ready to **proceed to the next lab**.
             <copy>http://localhost:16200/ords/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+      > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
