@@ -569,7 +569,7 @@ You are now ready to **proceed to the next lab**.
   - **Connect to DB System via SSH and create wallet**
   - **Configure APEX to use wallet directory**
 
-  **1.1 Download Certificate**
+### **1.1 Download Certificate**
 
    1. Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
@@ -594,7 +594,7 @@ You are now ready to **proceed to the next lab**.
 
       ![Save Certificate](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step1_3_upt.png "Save the certificate as crt")
 
-  **1.2 Connect to DB System via SSH and create wallet**
+### **1.2 Connect to DB System via SSH and create wallet**
 
    1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
       ![Oracle DB System](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
@@ -638,7 +638,7 @@ You are now ready to **proceed to the next lab**.
            - *Invoke the below command to add the certificate to the trusted certificates list of the wallet*
                   ```
                   <copy>
-                        $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##t
+                        $ORACLE_HOME/bin/orapki wallet add -wallet $ORACLE_HOME/db_wallet -trusted_cert -cert "/tmp/WCCRFPMGM.crt" -pwd WelCwcm123##
                   </copy>
                   ```
            - *Invoke these commands to list the certificates present in that wallet and also display the full path of the wallet directory (this directory is used for configuring **Wallet Path** in APEX)*
@@ -647,12 +647,13 @@ You are now ready to **proceed to the next lab**.
                         $ORACLE_HOME/bin/orapki wallet display -wallet $ORACLE_HOME/db_wallet  -pwd WelCwcm123##
                         echo
                         echo $ORACLE_HOME/db_wallet
+                        ls -ltrh $ORACLE_HOME/db_wallet
                   </copy>
                   ```
 
       ![wallet creation in DB Node](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step2_6_upt.png "wallet creation in DB Node and import certificate")
 
-  **1.3 Configure APEX to use wallet directory**
+### **1.3 Configure APEX to use wallet directory**
 
       To Configure APEX to use wallet directory, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
 
@@ -689,6 +690,8 @@ You are now ready to **proceed to the next lab**.
             ```
             <copy>WelCwcm123##</copy>
             ```
+      - **Note** : *If you see any issue with the APEX URL, click on the link on error list and select the default url*
+
       ![wallet update in APEX](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step3_2_upt.png "wallet update in APEX")
 
 ## Acknowledgements
