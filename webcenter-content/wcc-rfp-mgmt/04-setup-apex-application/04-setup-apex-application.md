@@ -562,7 +562,7 @@ You are now ready to **proceed to the next lab**.
 ## Appendix 1: Configure Wallet for https connectivity
 
    These steps are to be performed only if the secured http protocol is used by the WebCenter Content ( *ie URL has **https*** )
-   > **Note:** *If the DB System was created with multi-nodes, the Steps 1.2 and 1.3 needs to be performed on all the DB Nodes created in the DB System*
+   > **Note:** ***If the DB System was created with multi-nodes, the Steps 1.2 and 1.3 needs to be performed on all the DB Nodes created in the DB System***
 
 - This consists of the below steps:
       - **Download certificate**
