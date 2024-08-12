@@ -555,7 +555,7 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
 
   ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
 
-  ![Open Certificate Info New](/04-setup-apex-application/images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
+  ![Open Certificate Info New2](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
 
   ![Open Certificate Info New1](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
 
