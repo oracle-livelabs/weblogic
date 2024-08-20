@@ -21,7 +21,7 @@ This lab assumes you have:
 ## Task 1: Download WCC RFP Resources zip file
 
   1. Click on the link below to download the WCC RFP Resources zip file , which you will need to successfully complete this Workshop:
-    * File : [wcc\_rfp\_resources.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/wHKALsCO-tCCxBk1hp4NY2UWlIrW9w33V0iWHzIF7cWZQT6ywjcahubybnuMHgLO/n/idk8vszypyjt/b/wcc_rfpmgmt_livelab/o/wcc_rfp_resources.zip)
+    * File : [wcc\_rfp\_resources.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/tDaXuQLPIJGc9rSXpr6pMUsU50h-9Q06KVU0PgWjmRK9VY_WM8EGZkTBMZZ7q3Cb/n/idwp5bw4dtna/b/Scaling/o/wcc_rfp_resources.zip)
 
   2. Save in your downloads folder and Un-Compress/Unzip.
 
