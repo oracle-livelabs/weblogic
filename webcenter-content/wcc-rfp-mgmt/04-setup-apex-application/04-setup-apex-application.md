@@ -157,7 +157,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 This task covers installing and running a WCC RFP Management System APEX application.
 
 1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
-       - The **WLS\_NODE1\_IPADDR** is note at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
+       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
   ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
@@ -200,7 +200,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 This task covers importing and configuring Rest Datasource Catalog.
 
 1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) ,  replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
-       - The **WLS\_NODE1\_IPADDR** is note at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
+       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
   ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task4_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
