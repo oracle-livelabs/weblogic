@@ -381,10 +381,10 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 ## Appendix 4: Connect to DB System via SSH and login to database as sys**
 
    1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
-      ![Oracle DB System](./images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
+      ![Oracle DB System](/weblogic/webcenter-content/wcc-rfp-mgmt/03-initialize-environment/images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
 
    2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
-      ![Oracle DB System Nodes and IP Info](./images/apex_https_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
+      ![Oracle DB System Nodes and IP Info](/weblogic/webcenter-content/wcc-rfp-mgmt/03-initialize-environment/images/apex_https_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
             > *Note: You can use the Private IP Address also, in which case, connect to the private IP Address from/through Bastion Server*
 
    3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
@@ -398,7 +398,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
         - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
         - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
 
-      ![SSH to Node](./images/apex_https_setup_ap1_step2_3_upt.png "SSH to Node")
+      ![SSH to Node](/weblogic/webcenter-content/wcc-rfp-mgmt/03-initialize-environment/images/apex_https_setup_ap1_step2_3_upt.png "SSH to Node")
 
    4. In the terminal window, invoke the below commands command and connect to the required PDB
       - invoke **sqlplus** command
