@@ -90,7 +90,7 @@ To enable Content Folios Component & Add additional instance configurations, fol
 2. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
             ```
             <copy>AllowModifyProfileDocMetaField=true
-                  DisableAuthorizationTokenCheck=1</copy>
+DisableAuthorizationTokenCheck=1</copy>
             ```
     ![This image shows the WCC Instance General Configuration Page](./images/task3_webcenter_configuration_page_jsec_2.png "WCC Instance General  Configuration Page")
 
