@@ -91,14 +91,6 @@ This lab assumes you have:
                 ```
                 <copy>CompetitorX</copy>
                 ```
-        * **Username**: Specify
-                ```
-                <copy>ADMIN</copy>
-                ```
-        * **Username**: Specify
-                ```
-                <copy>ADMIN</copy>
-                ```
   ![Provide attribute values for New RFP Request document](images/create_new_rfp_task1_step4.png "Provide attribute values for New RFP Request document")
 
 4. From the list of cards, select the sections required for creating the RFP Response for this New RFP Request Document and click **Submit RFP** button.

@@ -80,7 +80,23 @@ This lab assumes you have:
 
  ![This image shows the WCC Instance Configuration Page - Database Metadata](./images/task2_webcenter_configuration_page_db_metadata.png "WCC Instance Configuration Page - Database Metadata")
 
-## Task 3: Import WebCenter Content Configuration bundle
+## Task 3: Enable Content Folios Component & Add Additional Instance Configurations
+
+To enable Content Folios Component & Add additional instance configurations, follow the below steps;
+
+1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **Component Manager**. In the **Components** section list , click on **Document Management**, Select/Check **ContentFolios** Component and click **Update** button
+    ![This image shows the WCC Instance Component Manger Page](./images/task3_webcenter_configuration_page_jsec_1.png "WCC Component Manger Page")
+
+2. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
+            ```
+            <copy>AllowModifyProfileDocMetaField=true
+                  DisableAuthorizationTokenCheck=1</copy>
+            ```
+    ![This image shows the WCC Instance General Configuration Page](./images/task3_webcenter_configuration_page_jsec_2.png "WCC Instance General  Configuration Page")
+
+3. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
+
+## Task 4: Import WebCenter Content Configuration bundle
 
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
     - **URL**
@@ -135,7 +151,7 @@ This lab assumes you have:
 
     ![This image shows the WCC Instance homepage with Alert Message for Index collection rebuild](./images/appendix3_webcenter_rebuild_index_message.png "WCC Instance  Homepage with Alert Message for Index collection rebuild")
 
-## Task 4: Add RFP Profile Values in WCC
+## Task 5: Add RFP Profile Values in WCC
 
 This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
@@ -206,7 +222,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 
     ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step5.png "WCC Configuration Manager Java Applet Window")
 
-## Task 5: Enable WCC Workflows
+## Task 6: Enable WCC Workflows
 
 This task helps in enabling WCC Workflows for Section Documents
 
@@ -239,7 +255,7 @@ This task helps in enabling WCC Workflows for Section Documents
 
     ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3.png "WCC Workflow Admin Java Applet Window")
 
-## Task 6: Validate APEX is Up and Running
+## Task 7: Validate APEX is Up and Running
 
 This task helps to validate if APEX has been installed properly and its up & accessible.
 
@@ -334,7 +350,8 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
 ## Appendix 4: Reset ADMIN password for APEX/ORDS
 
-Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked_
+Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked
+      - Use the steps mentioned under **Lab 4 - Appendix 1: Connect to DB System via SSH and login to database as sys** to connect to DB
 
 1. Find the latest version schema name:
             ```
