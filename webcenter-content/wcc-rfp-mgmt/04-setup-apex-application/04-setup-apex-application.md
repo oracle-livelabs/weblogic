@@ -171,7 +171,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
     - *Current Workspace* : **WCCRFPMGMT**
     - *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
     - *Build Status* : **Run and Build Application**
-    - *Install as Application* : **Auto Assign New Application ID**
+    - *Install as Application* : **Reuse Application ID 999 From Imported Application**
   ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
 5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
