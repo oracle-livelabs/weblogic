@@ -228,34 +228,46 @@ This task covers importing and configuring Rest Datasource Catalog.
 8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
   ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
-## Task 5 : Grant connect for ACL
+## Task 5 : Refresh REST Datasource Catalog
 
-Login to the Database as **sys** or user with **sysdba** privileges and perform the below steps:
-      - Use the steps mentioned under **Appendix 1: Connect to DB System via SSH and login to database as sys** to connect to DB
-
-1. Find the latest version schema name
+1. To login to your Oracle APEX Workspace, perform the following steps:
+    - Open your browser and enter the **URL** to sign in to the APEX development environment.
+      - **URL**
             ```
-            SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
-            ```
-
-2. Add the ACL entry for granting connect & resolve privilege for the required WCC CS urls
-
-            ```
-            <copy>
-            BEGIN
-            DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
-                  host => '*',
-                  ace => xs$ace_type(privilege_list => xs$name_list('connect', 'resolve'),
-                        principal_name => 'APEX_230200',
-                        principal_type => xs_acl.ptype_db
-                  )
-            );
-            END;
-            /
-            </copy>
+            <copy>http://localhost:16200/ords/</copy>
             ```
 
-      > Note : Replace `"APEX_230200"` with your **schema** retrieved from the above select query
+            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
+      - **Workspace Name**: Enter
+            ```
+            <copy>WCCRFPMGMT</copy>
+            ```
+      - **Username**: Enter
+            ```
+            <copy>ADMIN</copy>
+            ```
+      - **Password**: Enter
+            ```
+            <copy>Welcome1</copy>
+            ```
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
+
+2. Click on **App Builder** , then click on **RFP Response Management System** Application
+  ![RFP Response Management System App Details](./images/apex_refresh_catalog_step1_01.png "RFP Response Management System App Details")
+
+3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
+  ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
+
+4. Click on **quick_search_library** under the **REST Source Name** list
+  ![quick_search_library Details](./images/apex_refresh_catalog_step1_04.png "quick_search_library Details")
+
+5. Click on the **REST Source Catalog** tab and then click on **Refresh from Catalog** button
+  ![Refresh from Catalog](./images/apex_refresh_catalog_step1_05.png "Refresh from Catalog")
+
+6. Click on the **Refresh from Service Catalog** button
+  ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
 
 ## Task 6 : Add Users in APEX
 
@@ -560,39 +572,6 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
     You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
 
 You are now ready to **proceed to the next lab**.
-
-## Appendix 1: Connect to DB System via SSH and login to database as sys**
-
-   1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
-      ![Oracle DB System](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
-
-   2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
-      ![Oracle DB System Nodes and IP Info](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
-            > *Note: You can use the Private IP Address also, in which case, connect to the private IP Address from/through Bastion Server*
-
-   3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
-      - **ssh command**
-            ```
-            <copy>ssh -i db-ssh.key opc@xxx.xxx.xxx.xxx
-            sudo su - oracle </copy>
-            ```
-
-      - **Note** :
-        - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
-        - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
-
-      ![SSH to Node](/weblogic/webcenter-content/wcc-rfp-mgmt/04-setup-apex-application/images/apex_https_setup_ap1_step2_3_upt.png "SSH to Node")
-
-   4. In the terminal window, invoke the below commands command and connect to the required PDB
-      - invoke **sqlplus** command
-            ```
-            <copy>sqlplus '/as sysdba'</copy>
-            ```
-      - execute **sql** statement to connect to required PDB
-            ```
-            <copy>alter session set container=PDB1;</copy>
-            ```
-   5. Now execute any required sql statements in this sqlplus session.
 
 ## Acknowledgements
 

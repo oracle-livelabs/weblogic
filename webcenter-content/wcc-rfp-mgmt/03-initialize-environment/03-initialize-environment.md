@@ -290,6 +290,36 @@ This task helps to validate if APEX has been installed properly and its up & acc
 
     If successful, the page above is displayed and as a result, your WCC instance is now ready.
 
+## Task 8 : Grant connect for ACL
+
+Login to the Database as **sys** or user with **sysdba** privileges and perform the below steps:
+      - Use the steps mentioned under **Appendix 4: Connect to DB System via SSH and login to database as sys** to connect to DB
+
+1. Find the latest version schema name
+            ```
+            SQL> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY;
+            ```
+
+2. Add the ACL entry for granting connect & resolve privilege for the required WCC CS urls
+
+            ```
+            <copy>
+            BEGIN
+            DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
+                  host => '*',
+                  ace => xs$ace_type(privilege_list => xs$name_list('connect', 'resolve'),
+                        principal_name => 'APEX_230200',
+                        principal_type => xs_acl.ptype_db
+                  )
+            );
+            END;
+            /
+            </copy>
+            ```
+
+      > Note : Replace `"APEX_230200"` with your **schema** retrieved from the above select query
+
+
 You may now **proceed to the next lab**.
 
 ## Appendix 1: Restart UCM Server Instance
@@ -348,10 +378,43 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
     ![This image shows Collection Rebuild Finished in Indexer tab of Repository Manager Java Applet](./images/appendix2_reindex_screenshot5_3.png "Collection Rebuild Completed in Indexer Tab of Repository Manager Applet")
 
-## Appendix 4: Reset ADMIN password for APEX/ORDS
+## Appendix 4: Connect to DB System via SSH and login to database as sys**
+
+   1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
+      ![Oracle DB System](./images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
+
+   2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
+      ![Oracle DB System Nodes and IP Info](./images/apex_https_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
+            > *Note: You can use the Private IP Address also, in which case, connect to the private IP Address from/through Bastion Server*
+
+   3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
+      - **ssh command**
+            ```
+            <copy>ssh -i db-ssh.key opc@xxx.xxx.xxx.xxx
+            sudo su - oracle </copy>
+            ```
+
+      - **Note** :
+        - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
+        - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
+
+      ![SSH to Node](./images/apex_https_setup_ap1_step2_3_upt.png "SSH to Node")
+
+   4. In the terminal window, invoke the below commands command and connect to the required PDB
+      - invoke **sqlplus** command
+            ```
+            <copy>sqlplus '/as sysdba'</copy>
+            ```
+      - execute **sql** statement to connect to required PDB
+            ```
+            <copy>alter session set container=PDB1;</copy>
+            ```
+   5. Now execute any required sql statements in this sqlplus session.
+
+## Appendix 5: Reset ADMIN password for APEX/ORDS
 
 Use the below steps to reset the ADMIN User Password , if facing any issue like Forgot ADMIN password (or) ADMIN account is locked
-      - Use the steps mentioned under **Lab 4 - Appendix 1: Connect to DB System via SSH and login to database as sys** to connect to DB
+      - Use the steps mentioned under **Appendix 4: Connect to DB System via SSH and login to database as sys** above, to connect to DB
 
 1. Find the latest version schema name:
             ```
