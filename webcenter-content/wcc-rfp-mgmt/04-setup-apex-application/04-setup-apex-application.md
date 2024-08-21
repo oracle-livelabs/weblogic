@@ -36,7 +36,8 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           ```
           <copy>http://localhost:16200/ords/</copy>
           ```
-        > Note : Replace **localhost** with your **hostname**
+
+         > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
     - **Workspace Name**
           ```
           <copy>INTERNAL</copy>
@@ -116,7 +117,8 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
-        > Note : Replace **localhost** with your **hostname**
+
+            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -131,7 +133,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             ```
             <copy>Welcome1</copy>
             ```
-  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 2. If its first time Login, Change password for the ADMIN user. You can provide the same Password value and click on **Change Password**.
     > Skip this step if it does not prompt for Change Password
@@ -144,32 +146,33 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
           ```
           <copy>Welcome1</copy>
           ```
-  ![Reset Password on First Login Page](images/apex_login_workspace_step2.png "Reset Password on First Login")
+  ![Reset Password on First Login Page](./images/apex_login_workspace_step2.png "Reset Password on First Login")
 
 3. The Workspace home page appears.
 
-  ![Workspace Home Page](images/apex_login_workspace_step3.png "Workspace Home Page")
+  ![Workspace Home Page](./images/apex_login_workspace_step3.png "Workspace Home Page")
 
 ## Task 3: Install RFP Management Application
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
-  ![Edit in Notepad](images/apex_task3_step0_1.png "replace localhost with <your_wcc_hostname> ")
+1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
+       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
+  ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
 
 2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
-  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
+  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
 
 3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
-  ![Application sql file import](images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
+  ![Application sql file import](./images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
 
 4. In the **Install Application** Page, Verify the below values and click **Install Application** Button
 
     - *Current Workspace* : **WCCRFPMGMT**
     - *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
     - *Build Status* : **Run and Build Application**
-    - *Install as Application* : **Auto Assign New Application ID**
-  ![Install Application Page](images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
+    - *Install as Application* : **Reuse Application ID 999 From Imported Application**
+  ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
 5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
     - **Client ID or Username** : Enter
@@ -184,56 +187,57 @@ This task covers installing and running a WCC RFP Management System APEX applica
           ```
           <copy>Welcome1</copy>
           ```
-  ![Install Application - Credentials Page](images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
+  ![Install Application - Credentials Page](./images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
 
 6. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
-  ![Application Installed - Install Supporting Objects](images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
+  ![Application Installed - Install Supporting Objects](./images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
 
 7. After the Supporting Objects installed, click on **Install Summary** button , to view the status of the Supporting objects installation
-  ![Supporting Objects Installed](images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
+  ![Supporting Objects Installed](./images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
 ## Task 4: Import REST DataSource Catalog
 
 This task covers importing and configuring Rest Datasource Catalog.
 
-1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) , replace **localhost** with the hostname of the wcc instance hostname ( eg: **wccrfpmgmtdemo.oraclevcn.com** ) and save the file.
-  ![Edit in Notepad](images/apex_task4_step0_1.png "replace localhost with <your_wcc_hostname> ")
+1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) ,  replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
+       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
+  ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task4_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR")
 
 2. In the Home Page, Under  **Apex Builder** , click on **Import**
-  ![App Builder](images/apex_task3_step1.png "App Builder > Import ")
+  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
 
 3. Select the updated file **WCC_RFP_Rest_Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
-  ![REST Datasource sql file import](images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
+  ![REST Datasource sql file import](./images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
 
 4. Click **Next** in the **Import** Page
-  ![REST Datasource Import](images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
+  ![REST Datasource Import](./images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
 
 5. In the **Rest Catalog Import** Page, Enter the value for **Catalog Group** and click on **Import REST Catalog** Button
     - **Catalog Group** : Enter
             ```
             <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
             ```
-  ![Rest Catalog Import](images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
+  ![Rest Catalog Import](./images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
 
 6. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
-  ![Rest Catalog Imported](images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
+  ![Rest Catalog Imported](./images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
 
 7. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
-  ![Catalog Services](images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
+  ![Catalog Services](./images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
 
 8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
-  ![Service Details - Base URL Update](images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
+  ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
-## Task 5 : Add Users in APEX
+## Task 5 : Refresh REST Datasource Catalog
 
-1. Login to your Oracle APEX Workspace, using the following steps:
-
+1. To login to your Oracle APEX Workspace, perform the following steps:
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
-      - URL
+      - **URL**
             ```
             <copy>http://localhost:16200/ords/</copy>
             ```
-        > Note : Replace **localhost** with your **hostname**
+
+            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -248,13 +252,55 @@ This task covers importing and configuring Rest Datasource Catalog.
             ```
             <copy>Welcome1</copy>
             ```
-  ![Workspace Login](images/apex_login_workspace_step1.png "Login to APEX Workspace")
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
+
+2. Click on **App Builder** , then click on **RFP Response Management System** Application
+  ![RFP Response Management System App Details](./images/apex_refresh_catalog_step1_01.png "RFP Response Management System App Details")
+
+3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
+  ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
+
+4. Click on **quick_search_library** under the **REST Source Name** list
+  ![quick_search_library Details](./images/apex_refresh_catalog_step1_04.png "quick_search_library Details")
+
+5. Click on the **REST Source Catalog** tab and then click on **Refresh from Catalog** button
+  ![Refresh from Catalog](./images/apex_refresh_catalog_step1_05.png "Refresh from Catalog")
+
+6. Click on the **Refresh from Service Catalog** button
+  ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
+
+## Task 6 : Add Users in APEX
+
+1. Login to your Oracle APEX Workspace, using the following steps:
+
+    - Open your browser and enter the **URL** to sign in to the APEX development environment.
+      - URL
+            ```
+            <copy>http://localhost:16200/ords/</copy>
+            ```
+
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
+      - **Workspace Name**: Enter
+            ```
+            <copy>WCCRFPMGMT</copy>
+            ```
+      - **Username**: Enter
+            ```
+            <copy>ADMIN</copy>
+            ```
+      - **Password**: Enter
+            ```
+            <copy>Welcome1</copy>
+            ```
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 2. Click on the *User Setting* icon next to the User name and click on **Manage Users and Groups**
-  ![Manage Users and Groups](images/add_apex_users_step2.png "Manage Users and Groups")
+  ![Manage Users and Groups](./images/add_apex_users_step2.png "Manage Users and Groups")
 
 3. Check if the Users are already present. If not, create the users by clicking on **Create User** button
-  ![Create User](images/add_apex_users_step3.png "Create User")
+  ![Create User](./images/add_apex_users_step3.png "Create User")
 
 4. In the **Create User** Page, provide the below values for creating the user **SALES_REP** and click **Create User** button
 
@@ -283,102 +329,105 @@ This task covers importing and configuring Rest Datasource Catalog.
           <copy>Welcome1</copy>
           ```
     - **Require Change of Password on First Use** : *Disable/Un-Check*
-  ![Create User - SALES_REP](images/add_apex_users_step4.png "Create User - SALES_REP")
+  ![Create User - SALES_REP](./images/add_apex_users_step4.png "Create User - SALES_REP")
 
 5. Similarly, create the other users as below:
 
-    - **TECHNICAL_ARCHITECT** User
-      - **Username**: Specify
-            ```
-            <copy>TECHNICAL_ARCHITECT</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>technical_architect@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Technical</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Architect</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
+      - **TECHNICAL_ARCHITECT** User
+           - **Username**: Specify
+                  ```
+                  <copy>TECHNICAL_ARCHITECT</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>technical_architect@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Technical</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Architect</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-    - **FINANCE** User
-      - **Username**: Specify
-            ```
-            <copy>FINANCE</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>finance@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Finance</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Analyst</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
+      - **FINANCE** User
+           - **Username**: Specify
+                  ```
+                  <copy>FINANCE</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>finance@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Finance</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Analyst</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-    - **LEGAL** User
-      - **Username**: Specify
-            ```
-            <copy>LEGAL</copy>
-            ```
-      - **Email Address**: Specify your email address. eg:
-            ```
-            <copy>legal@email.com</copy>
-            ```
-      - **First Name**: Specify
-            ```
-            <copy>Legal</copy>
-            ```
-      - **Last Name**: Specify
-            ```
-            <copy>Advisor</copy>
-            ```
-      - **Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Confirm Password**: Specify
-            ```
-            <copy>Welcome1</copy>
-            ```
-      - **Require Change of Password on First Use** : *Disable/Un-Check*
-  ![Create Other Users](images/add_apex_users_step5.png "Create Other Users")
+      - **LEGAL** User
+           - **Username**: Specify
+                  ```
+                  <copy>LEGAL</copy>
+                  ```
+           - **Email Address**: Specify your email address. eg:
+                  ```
+                  <copy>legal@email.com</copy>
+                  ```
+           - **First Name**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Last Name**: Specify
+                  ```
+                  <copy>Advisor</copy>
+                  ```
+           - **Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Confirm Password**: Specify
+                  ```
+                  <copy>Welcome1</copy>
+                  ```
+           - **Require Change of Password on First Use** : *Disable/Un-Check*
 
-## Task 6: Add Section Templates in RFP Response Management Application
+  ![Create Other Users](./images/add_apex_users_step5.png "Create Other Users")
+
+## Task 7: Add Section Templates in RFP Response Management Application
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
 
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
-      - **URL**:
-              ```
-              <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
-              ```
-            > Note : Replace **localhost** with your **hostname**
+      - URL
+            ```
+            <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system/</copy>
+            ```
+
+           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+
       - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
         - **Username**: Enter
               ```
@@ -388,10 +437,10 @@ This task covers importing and configuring Rest Datasource Catalog.
               ```
               <copy>Welcome1</copy>
               ```
-  ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
+  ![Application Login](./images/apex_setup_task5_step1.png "Login to APEX Application")
 
 2. On the left navigation menu, click on **Sections** and click on **Create** button
-  ![Navigate to Sections](images/apex_setup_sections_task5_step2.png "Click on Sections")
+  ![Navigate to Sections](./images/apex_setup_sections_task5_step2.png "Click on Sections")
 
 3. In the **Manage Section Form** window, enter the below values and click on **Create** Button
 
@@ -422,107 +471,105 @@ This task covers importing and configuring Rest Datasource Catalog.
           ```
           <copy>Updated with relevant info</copy>
           ```
-  ![Create Title and Summary Section](images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
-  ![Title and Summary Section Created](images/apex_setup_sections_task5_step3.png "Title and Summary Section Created")
+  ![Create Title and Summary Section](./images/apex_setup_sections_task5_step3.png "Create Title and Summary Section")
 
 4. Similarly, create the below sections as well :
 
     - **Technical Design** Section
-
-      - **Name**: Specify
-              ```
-              <copy>Technical Design</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is template for Technical Design Section</copy>
-              ```
-      - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>20</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Technical Architect</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Technical Design section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
-      ![Create Technical Design Section](images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
+           - **Name**: Specify
+                  ```
+                  <copy>Technical Design</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is template for Technical Design Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Technical Design.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>20</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Technical Architect</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Technical Design section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
+      ![Create Technical Design Section](./images/apex_setup_sections_task5_step4.png "Create Technical Design Section")
     - **Pricing And BOM** Section
-      - **Name**: Specify
-              ```
-              <copy>Pricing And BOM</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is template for Pricing And BOM Section</copy>
-              ```
-      - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>30</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Finance</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Pricing And BOM section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
-      ![Create Pricing And BOM Section](images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
+           - **Name**: Specify
+                  ```
+                  <copy>Pricing And BOM</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is template for Pricing And BOM Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>30</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Finance</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Pricing And BOM section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
+      ![Create Pricing And BOM Section](./images/apex_setup_sections_task5_step4_2.png "Create Pricing And BOM Section")
     - **Legal** Section
-      - **Name**: Specify
-              ```
-              <copy>Legal</copy>
-              ```
-      - **Description**: Specify
-              ```
-              <copy>This is sample template for Legal Section</copy>
-              ```
-      - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
-      - **Type**: Leave the default as **SECTION**
-      - **Display Order**: Specify
-              ```
-              <copy>40</copy>
-              ```
-      - **Active**: Leave the default as **Y**
-      - **Section Owner**: Specify
-              ```
-              <copy>Legal</copy>
-              ```
-      - **Instructions**: Specify
-              ```
-              <copy>Update the Legal section</copy>
-              ```
-      - **Expectation**: Specify
-              ```
-              <copy>Updated with relevant info</copy>
-              ```
-      ![Create Legal Section](images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
+           - **Name**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Description**: Specify
+                  ```
+                  <copy>This is sample template for Legal Section</copy>
+                  ```
+           - **Template**: Browse and select the file **Legal_Template.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
+           - **Type**: Leave the default as **SECTION**
+           - **Display Order**: Specify
+                  ```
+                  <copy>40</copy>
+                  ```
+           - **Active**: Leave the default as **Y**
+           - **Section Owner**: Specify
+                  ```
+                  <copy>Legal</copy>
+                  ```
+           - **Instructions**: Specify
+                  ```
+                  <copy>Update the Legal section</copy>
+                  ```
+           - **Expectation**: Specify
+                  ```
+                  <copy>Updated with relevant info</copy>
+                  ```
+      ![Create Legal Section](./images/apex_setup_sections_task5_step4_3.png "Create Legal Section")
 
 5. This shows the summary of all the sections created.
 
-  ![Section Summary](images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
+  ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
 
-### Summary
+    **Summary**
 
-You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
+    You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
 
 You are now ready to **proceed to the next lab**.
 

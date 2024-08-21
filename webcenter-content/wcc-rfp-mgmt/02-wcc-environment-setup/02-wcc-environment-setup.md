@@ -92,7 +92,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
       - **Network Compartment**: Select the compartment you created earlier, as **wcc*
 
-      - **Existing WebCenter Content Virtual Cloud Network**: Select the VCN provisioned for WebCenter Content, as **wcc-rfpmgmt-demo**
+      - **Existing WebCenter Content Virtual Cloud Network**: Select the VCN provisioned for WebCenter Content, as **wcc\_rfpmgmt\_demo**
 
           ![Virtual Cloud Network](images/wcc_setup_task1_step3_3.png "Virtual Cloud Network")
 
@@ -188,6 +188,11 @@ To provision Oracle WebCenter Content on a Marketplace instance:
   ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
 6. Note the WebCenter Content CS **Endpoint URL** displayed at the end and the **hostname/ipaddress** .
+
+7. Note the Private IP for the WLS Node 1 ( *This will be used for setting up the APEX Application* ) - This will be referred later as **WLS\_NODE1\_IPADDR** eg: **10.15.xx.xxx**
+
+    - Navigate to **Compute** > **Instances** > Select the compartment **wcc** , in the instances list, note the Private IP Address for the instance name **WCCRFPMGMT-wls-1**
+  ![Private IP for the WLS Node 1](images/wcc_setup_task1_step3_12.png "Note the WLS_NODE1_IPADDR ")
 
 You may now **proceed to the next lab**.
 

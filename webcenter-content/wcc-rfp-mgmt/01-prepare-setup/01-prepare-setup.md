@@ -21,7 +21,7 @@ This lab assumes you have:
 ## Task 1: Download WCC RFP Resources zip file
 
   1. Click on the link below to download the WCC RFP Resources zip file , which you will need to successfully complete this Workshop:
-    * File : [wcc\_rfp\_resources.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/ct9yWEiW6nlXgdK_X6gLuE3X9XIivtq7oCcK8zlMM7g1FVQQub4y1japmWF23ry5/n/id9tgejtzan5/b/bucket-20240807-1001/o/wcc_rfp_resources.zip)
+    * File : [wcc\_rfp\_resources.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/wHKALsCO-tCCxBk1hp4NY2UWlIrW9w33V0iWHzIF7cWZQT6ywjcahubybnuMHgLO/n/idk8vszypyjt/b/wcc_rfpmgmt_livelab/o/wcc_rfp_resources.zip)
 
   2. Save in your downloads folder and Un-Compress/Unzip.
 
@@ -195,10 +195,11 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
       - **Add SSH keys**: Upload the public SSH key you created in the first step.
         - You can either reuse the keys generated in the first step or you can generate a new pair of keys too for database instances.
-
-      - **License**: Choose **Bring Your Own License**
+          > *Save and rename the keys* as **db-ssh.key** for the private key and **db-ssh.key.pub** for the public key
 
       ![Create DB System Page - SSH Keys and License Info](images/prepare_oci_task3_step2_3_3.png "- SSH Keys and License Info")
+
+      - **License**: Choose **Bring Your Own License**
 
       - **Specify the Network information** - Provide/Select the values as below and Click **Next**.
 
