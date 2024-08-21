@@ -225,7 +225,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 7. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
   ![Catalog Services](./images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
 
-8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
+8. In the **Service Details** Section, Verify the **Base URL** with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`)  and click **Apply Changes** Button
   ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 ## Task 5 : Refresh REST Datasource Catalog
