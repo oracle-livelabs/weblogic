@@ -28,10 +28,10 @@ This lab assumes you have:
 1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - Setup WCC Marketplace Environment** ), click on the *Login* and Login using the below credentials
     - URL
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-        > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - Username
             ```
             <copy>weblogic</copy>
@@ -57,10 +57,10 @@ This lab assumes you have:
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -101,10 +101,10 @@ DisableAuthorizationTokenCheck=1</copy>
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-          > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+          > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -158,10 +158,10 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -230,10 +230,10 @@ This task helps in enabling WCC Workflows for Section Documents
 
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -263,10 +263,10 @@ This task helps to validate if APEX has been installed properly and its up & acc
 
     - **URL**
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Workspace Name**
             ```
             <copy>INTERNAL</copy>
@@ -281,7 +281,7 @@ This task helps to validate if APEX has been installed properly and its up & acc
             ```
 
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
-    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS**
+    > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS**
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. Confirm successful login.
@@ -318,7 +318,6 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
             ```
 
       > Note : Replace `"APEX_230200"` with your **schema** retrieved from the above select query
-
 
 You may now **proceed to the next lab**.
 

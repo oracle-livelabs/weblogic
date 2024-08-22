@@ -34,10 +34,10 @@ This lab assumes you have:
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
         * **URL**:
                     ```
-                    <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+                    <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                     ```
 
-              > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+              > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
             * **Username**: Enter
@@ -104,9 +104,6 @@ This lab assumes you have:
 ## Task 3: Verify the RFP documents and Section status in Application
 
 1. Login to the RFP Management Application and Navigate to the **RFP Details** Page from the left navigation menu
-    * On the left navigation menu, click on **New Response Request**
-        (OR)
-    * Click on the **New RFP Response** Button
   ![RFP Details Page](images/create_new_rfp_task3_step1.png "RFP Details Page")
 
 2. In the **RFP Details** section, click on the **Select RFP** drop-down list and select **Avitek ECM Requirements**
@@ -125,10 +122,10 @@ This lab assumes you have:
 
     * **URL**:
                 ```
-                <copy>http://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
+                <copy>https://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
                 ```
 
-        > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -142,7 +139,7 @@ This lab assumes you have:
                 ```
   ![Select RFP](images/create_new_rfp_task4_step1.png "Select the uploaded RFP")
 
-2. In the **Libraries** Page, click on the **Content In Workflow** card
+2. In the **Libraries** Page, click on the **Content In Workflow** card and click **Open** button
   ![Navigate to Content In Workflow](images/create_new_rfp_task4_step2.png "Navigate to Content In Workflow")
 
 3. You can see the list of the Section documents uploaded based on the Selected Section during the New RFP Document Upload Step. Click on the *information icon* ***i*** to view the details of the document.

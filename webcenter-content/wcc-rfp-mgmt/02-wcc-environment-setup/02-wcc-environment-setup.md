@@ -184,12 +184,16 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 4. Review all the configuration variables, then select the **Run apply** check box under **Run apply on the created stack** section and Click **Create**.
   ![WebCenter Content WebLogic Domain configuration](images/wcc_setup_task1_step3_10.png "WebCenter Content WebLogic Domain configuration")
 
-5. After successful provision of the WebCenter Content Stack, note the WebCenter Content CS Endpoint URL displayed at the end and the hostname/ipaddress
+5. After successful provision of the WebCenter Content Stack, the overall information about the WebCenter Content Instance stack is displayed
   ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
-6. Note the WebCenter Content CS **Endpoint URL** displayed at the end and the **hostname/ipaddress** .
+6. Note the below values displayed at the end, as these will be used/needed later in this lab *(keep note of the **hostname/ipaddress**)*
+    - Bastion Instance Public IP : `"bastion_instance_public_ip`
+    - WebCenter Content CS Endpoint URL : `"webcenter_content_cs_endpoint"`
+    - WLS Node1 Private IP Address (**WLS\_NODE1\_IPADDR**) : `"webcenter_content_instances"` - `"Instance name:WCCRFPMGMT-wls-1"` - `"Private IP"`
+    - Weblogic Console Endpoint : `"webcenter_content_weblogic_console_endpoint"`
 
-7. Note the Private IP for the WLS Node 1 ( *This will be used for setting up the APEX Application* ) - This will be referred later as **WLS\_NODE1\_IPADDR** eg: **10.15.xx.xxx**
+7. Alternative steps to note the Private IP for the WLS Node 1 ( *This will be used for setting up the APEX Application* ) - This will be referred later as **WLS\_NODE1\_IPADDR** eg: **10.15.xx.xxx**
 
     - Navigate to **Compute** > **Instances** > Select the compartment **wcc** , in the instances list, note the Private IP Address for the instance name **WCCRFPMGMT-wls-1**
   ![Private IP for the WLS Node 1](images/wcc_setup_task1_step3_12.png "Note the WLS_NODE1_IPADDR ")
