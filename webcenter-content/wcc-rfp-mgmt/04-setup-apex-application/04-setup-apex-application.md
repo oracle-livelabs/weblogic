@@ -160,8 +160,8 @@ This task covers installing and running a WCC RFP Management System APEX applica
        - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
 
        > Note: In the scenario, where WebCenter Content is configured with IDCS or any other username ( other than **weblogic** ), also replace these two values:
-        - replace `"weblogic"` with WebCenter Content Username which has Administrator Privileges on WebCenter Content eg: `"mhoope"`
-        - replace `"Welcome1"` with WebCenter Content User Password for the above user
+            > Replace `"weblogic"` with WebCenter Content Username which has Administrator Privileges on WebCenter Content eg: `"mhoope"` **&**
+            > Replace `"Welcome1"` with the Password for the above user
 
       ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
 
