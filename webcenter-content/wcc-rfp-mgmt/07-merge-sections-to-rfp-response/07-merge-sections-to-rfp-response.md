@@ -41,10 +41,10 @@ This lab assumes you have:
       * **URL**:
 
       ```text
-      <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+      <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
       ```
 
-      > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+      > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
    * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
 
@@ -75,6 +75,7 @@ This lab assumes you have:
    ![Merge Page](images/merge_sections_task1_step3.png "Merge Page")
 
 4. In the **RFP Response Details** Page, provide the value as below and click **Submit** button
+   > *Note: if the Submit button is not Active, after entering the value in the text box, press tab button*
 
    * **RFP Response Title**: Specify
 

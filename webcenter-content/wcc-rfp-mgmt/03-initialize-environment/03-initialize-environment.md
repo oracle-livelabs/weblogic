@@ -28,10 +28,10 @@ This lab assumes you have:
 1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - Setup WCC Marketplace Environment** ), click on the *Login* and Login using the below credentials
     - URL
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-        > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - Username
             ```
             <copy>weblogic</copy>
@@ -40,6 +40,7 @@ This lab assumes you have:
             ```
             <copy>Welcome1</copy>
             ```
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Confirm successful login.
@@ -57,10 +58,10 @@ This lab assumes you have:
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -69,7 +70,7 @@ This lab assumes you have:
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for \<your\_instance\_name\>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
@@ -84,7 +85,7 @@ This lab assumes you have:
 
 To enable Content Folios Component & Add additional instance configurations, follow the below steps;
 
-1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **Component Manager**. In the **Components** section list , click on **Document Management**, Select/Check **ContentFolios** Component and click **Update** button
+1. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, navigate to **Admin Server** > **Component Manager**. In the **Components** section list , click on **Document Management**, Select/Check **ContentFolios** Component and click **Update** button
     ![This image shows the WCC Instance Component Manger Page](./images/task3_webcenter_configuration_page_jsec_1.png "WCC Component Manger Page")
 
 2. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
@@ -101,10 +102,10 @@ DisableAuthorizationTokenCheck=1</copy>
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-          > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+          > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -113,6 +114,7 @@ DisableAuthorizationTokenCheck=1</copy>
             ```
             <copy>Welcome1</copy>
             ```
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, then expand **Config Migration Admin** and click on **Upload Bundle** link
@@ -158,10 +160,10 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
 1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -170,7 +172,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Configuration Manager**
@@ -230,10 +232,10 @@ This task helps in enabling WCC Workflows for Section Documents
 
     - **URL**
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Username**
             ```
             <copy>weblogic</copy>
@@ -242,7 +244,7 @@ This task helps in enabling WCC Workflows for Section Documents
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
@@ -263,10 +265,10 @@ This task helps to validate if APEX has been installed properly and its up & acc
 
     - **URL**
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
     - **Workspace Name**
             ```
             <copy>INTERNAL</copy>
@@ -281,7 +283,7 @@ This task helps to validate if APEX has been installed properly and its up & acc
             ```
 
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
-    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS**
+    > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS**
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. Confirm successful login.
@@ -319,7 +321,6 @@ Login to the Database as **sys** or user with **sysdba** privileges and perform 
 
       > Note : Replace `"APEX_230200"` with your **schema** retrieved from the above select query
 
-
 You may now **proceed to the next lab**.
 
 ## Appendix 1: Restart UCM Server Instance
@@ -336,7 +337,7 @@ You may now **proceed to the next lab**.
 
 To set up and use full-text searching and indexing with OracleTextSearch, follow the below steps;
 
-1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
+1. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
             ```
             <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
             ```
@@ -344,7 +345,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
 2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
-3. Login to WebCenter Content server, Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
+3. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
     ![This image shows the WCC Instance Configuration Page](./images/task2_webcenter_configuration_page_ots.png "WCC Instance Configuration Page")
 

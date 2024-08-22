@@ -34,10 +34,10 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
 1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
     - **URL**
           ```
-          <copy>http://localhost:16200/ords/</copy>
+          <copy>https://localhost:16200/ords/</copy>
           ```
 
-         > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+         > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
     - **Workspace Name**
           ```
           <copy>INTERNAL</copy>
@@ -51,7 +51,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           <copy>WelCwcm123##</copy>
           ```
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
-    > *If any issues with ADMIN credentials, Refer to **Appendix 4: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
+    > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
   ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. In the *Administration Services* Landing page , Click on **Create Workspace** button on the top right corner
@@ -115,10 +115,10 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
       - **URL**
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -157,10 +157,15 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 This task covers installing and running a WCC RFP Management System APEX application.
 
 1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
-       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
-  ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
+      - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
 
-2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **Apex Builder** , click on **Import**
+      > Note: *In the scenario, where WebCenter Content is configured with IDCS or any other username ( other than **weblogic** )*, replace these two values as well:
+      - Replace **"weblogic"** with *WebCenter Content Username* which has *Administrator Privileges* on WebCenter Content **&**
+      - Replace **"Welcome1"** with the *Password for the above user*
+
+      ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
+
+2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **App Builder** , click on **Import**
   ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
 
 3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
@@ -174,7 +179,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
     - *Install as Application* : **Reuse Application ID 999 From Imported Application**
   ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
-5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below and click **Next** Button
+5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below *( Update it with the WebCenter Content User Credentials which has Administrator Privileges on WebCenter Content )* and click **Next** Button
     - **Client ID or Username** : Enter
           ```
           <copy>weblogic</copy>
@@ -187,6 +192,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
           ```
           <copy>Welcome1</copy>
           ```
+      > Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), update these values accordingly
   ![Install Application - Credentials Page](./images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
 
 6. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
@@ -225,7 +231,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 7. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
   ![Catalog Services](./images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
 
-8. In the **Service Details** Section, Verify the **Base URL** with the URL for the WCC Instance Provisioned in the **Lab 3 - Initialize Environment** and click **Apply Changes** Button
+8. In the **Service Details** Section, Verify the **Base URL** with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`)  and click **Apply Changes** Button
   ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
 
 ## Task 5 : Refresh REST Datasource Catalog
@@ -234,10 +240,10 @@ This task covers importing and configuring Rest Datasource Catalog.
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
       - **URL**
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-            > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -276,10 +282,10 @@ This task covers importing and configuring Rest Datasource Catalog.
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -423,10 +429,10 @@ This task covers importing and configuring Rest Datasource Catalog.
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
             ```
-            <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system/</copy>
+            <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system/</copy>
             ```
 
-           > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
 
       - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
         - **Username**: Enter

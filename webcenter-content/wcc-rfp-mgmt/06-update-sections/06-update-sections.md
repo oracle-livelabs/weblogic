@@ -38,10 +38,10 @@ This lab assumes you have:
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
          * **URL**:
                      ```
-                     <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+                     <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                      ```
 
-               > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+               > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
          * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
             * **Username**: Enter
@@ -76,7 +76,7 @@ This lab assumes you have:
 
    ![Upload updated Section Document - Preview](images/update_sections_task1_step5_2.png "Upload updated Section Document - Preview")
 
-6. In the **RFP Details** Page, click on the  **Completed** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
+6. In the **RFP Details** Page, click on the  **Mark as Complete** link for the  **Title and Summary** Section Document (here , for the **Avitek ECM Requirements : Title and Summary** Document )
 
    ![Complete updated Section Document](images/update_sections_task1_step6_1.png "Complete updated Section Document")
 
@@ -84,9 +84,9 @@ This lab assumes you have:
 
    ![Complete updated Section Document - Success ](images/update_sections_task1_step6_2.png "Complete updated Section Document - Success ")
 
-   Now, this Section Document is moved from **Section Actions - Pending** list, to **Sections - Approved** list
+   Now, this Section Document is moved from **Section Actions - Pending** list, to **Sections - Completed** list
 
-   ![Section Approved List ](images/update_sections_task1_step6_3.png "Section Approved List ")
+   ![Sections - Completed List ](images/update_sections_task1_step6_3.png "Sections - Completed List ")
 
    This ensures that the Section Document is now completed from the WCC Workflow as well. You can check it from WCC **Contents In Workflow** Page
 
@@ -98,10 +98,10 @@ This lab assumes you have:
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
       * **URL**:
                   ```
-                  <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+                  <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                   ```
 
-               > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+               > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
       * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
          * **Username**: Enter
@@ -126,10 +126,10 @@ This lab assumes you have:
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
       * **URL**:
                ```
-               <copy>http://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
+               <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                ```
 
-              > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+              > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
       * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
          * **Username**: Enter
@@ -146,7 +146,7 @@ This lab assumes you have:
 
    > Note: In the **Review Details** window, browse and select the file **Finance_Part_v1.0.pdf** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) and click **Submit Details** button.
 
-  ![Technical Section Completed](images/update_sections_task3_step2.png "Technical Section Completed")
+  ![Finance Section Completed](images/update_sections_task3_step2.png "Finance Section Completed")
 
 ## Task 4: Verify the status of the Section Documents
 
