@@ -188,7 +188,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
   ![Provision Completed](images/wcc_setup_task1_step3_11.png "Note the CS Endpoint URL")
 
 6. Note the below values displayed at the end, as these will be used/needed later in this lab *(keep note of the **hostname/ipaddress**)*
-    - Bastion Instance Public IP : `"bastion_instance_public_ip`
+    - Bastion Instance Public IP : `"bastion_instance_public_ip"`
     - WebCenter Content CS Endpoint URL : `"webcenter_content_cs_endpoint"`
     - WLS Node1 Private IP Address (**WLS\_NODE1\_IPADDR**) : `"webcenter_content_instances"` - `"Instance name:WCCRFPMGMT-wls-1"` - `"Private IP"`
     - Weblogic Console Endpoint : `"webcenter_content_weblogic_console_endpoint"`

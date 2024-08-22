@@ -40,6 +40,7 @@ This lab assumes you have:
             ```
             <copy>Welcome1</copy>
             ```
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Confirm successful login.
@@ -69,7 +70,7 @@ This lab assumes you have:
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for \<your\_instance\_name\>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
@@ -84,7 +85,7 @@ This lab assumes you have:
 
 To enable Content Folios Component & Add additional instance configurations, follow the below steps;
 
-1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **Component Manager**. In the **Components** section list , click on **Document Management**, Select/Check **ContentFolios** Component and click **Update** button
+1. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, navigate to **Admin Server** > **Component Manager**. In the **Components** section list , click on **Document Management**, Select/Check **ContentFolios** Component and click **Update** button
     ![This image shows the WCC Instance Component Manger Page](./images/task3_webcenter_configuration_page_jsec_1.png "WCC Component Manger Page")
 
 2. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
@@ -113,6 +114,7 @@ DisableAuthorizationTokenCheck=1</copy>
             ```
             <copy>Welcome1</copy>
             ```
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, then expand **Config Migration Admin** and click on **Upload Bundle** link
@@ -170,7 +172,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Configuration Manager**
@@ -242,7 +244,7 @@ This task helps in enabling WCC Workflows for Section Documents
             ```
             <copy>Welcome1</copy>
             ```
-
+    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
@@ -335,7 +337,7 @@ You may now **proceed to the next lab**.
 
 To set up and use full-text searching and indexing with OracleTextSearch, follow the below steps;
 
-1. Login to WebCenter Content server, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
+1. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, navigate to **Admin Server** > **General Configuration**. In the **Additional Configuration Variables** section list of variables, add the below line and click **Save** button
             ```
             <copy>SearchIndexerEngineName=ORACLETEXTSEARCH</copy>
             ```
@@ -343,7 +345,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
 2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
-3. Login to WebCenter Content server, Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
+3. Login to WebCenter Content server as user with Administrator Privilege, Under **Administration** tab, click on **Configuration for <your_instance_name>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
 
     ![This image shows the WCC Instance Configuration Page](./images/task2_webcenter_configuration_page_ots.png "WCC Instance Configuration Page")
 
