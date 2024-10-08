@@ -98,26 +98,38 @@ This task helps to validate if APEX has been installed properly and its up & acc
 1. On the new *web browser* window , Login to the APEX/ORDS URL . Details are provided below
 
     - **URL**
+
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>
+            http://localhost:16200/ords/
+            </copy>
             ```
 
            > Note : If you want to access the WCC CS Endpoint URL from your desktop, replace `"http://localhost"` with your **hosturl** ( eg: `"http://129.0.0.0"` )
         - The hosturl ipaddress can be obtained from the **Remote Desktop URL**
     - **Workspace Name**
+
             ```
-            <copy>INTERNAL</copy>
-            ```
-    - **Username**
-            ```
-            <copy>ADMIN</copy>
-            ```
-    - **Password**
-            ```
-            <copy>Welcome1</copy>
+            <copy>
+            INTERNAL
+            </copy>
             ```
 
-    > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*
+    - **Username**
+
+            ```
+            <copy>
+            ADMIN
+            </copy>
+            ```
+    - **Password**
+
+            ```
+            <copy>
+            Welcome1
+            </copy>
+            ```
+
     > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS**
     ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 

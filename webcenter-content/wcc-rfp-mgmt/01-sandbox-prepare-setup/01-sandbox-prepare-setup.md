@@ -9,7 +9,6 @@ This lab will show you how to download the Oracle Resource Manager (ORM) stack z
 ### Objectives
 
 - Download WCC RFP Resources
-- Prepare tenancy for setting up WCC Marketplace instance, including VCN and Database
 
 ### Prerequisites
 
@@ -33,4 +32,4 @@ You may now **proceed to the next lab**.
 
 - **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 - **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-- **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024
+- **Last Updated By/Date-** Senthilkumar Chinnappa, October 2024
