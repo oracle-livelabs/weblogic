@@ -24,7 +24,7 @@ This lab assumes you have:
 
 * You have completed:
   * Lab: Prepare Setup ( *Paid Tenants* only)
-  * Lab: Setup WCC Marketplace Environment
+  * Lab: Environment Setup
   * Lab: Initialize Environment
   * Lab: Setup Apex Application
 
@@ -117,35 +117,57 @@ This lab assumes you have:
 
 ## Task 4: Verify the Section documents in WCC Workflow
 
-1. Login to the New Redwood UI for the WebCenter Content using the below details:
+1. Login to the WebCenter Content Server using the below details:
+
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
-
-    * **URL**:
-                ```
-                <copy>https://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
-                ```
-
-        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+        * **URL**:
+                    ```
+                    <copy>https://localhost:16200/cs</copy>
+                    ```
+            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+          * **Username**: Enter
+                      ```
+                      <copy>weblogic</copy>
+                      ```
+          * **Password**: Enter
+                      ```
+                      <copy>Welcome1</copy>
+                      ```
+        ![CS Login Page](images/create_new_rfp_task4_step1.png "CS Login Page")
 
-    * **Username**: Enter
-                ```
-                <copy>weblogic</copy>
-                ```
-    * **Password**: Enter
-                ```
-                <copy>Welcome1</copy>
-                ```
-  ![Select RFP](images/create_new_rfp_task4_step1.png "Select the uploaded RFP")
+    * Under **Content Management** tab, navigate to **Active Workflows** > **All Active Workflows**. In the **All Active Workflows**  list , click on **FinanceSectionWorkflow**
+      ![This image shows the WCC Instance Active Workflows Documents](./images/create_new_rfp_task4_step1_1.png " Active Workflows Documents")
 
-2. In the **Libraries** Page, click on the **Content In Workflow** card and click **Open** button
-  ![Navigate to Content In Workflow](images/create_new_rfp_task4_step2.png "Navigate to Content In Workflow")
+2. If, REDWOODUI is enabled, Login to the New Redwood UI for the WebCenter Content using the below details:
 
-3. You can see the list of the Section documents uploaded based on the Selected Section during the New RFP Document Upload Step. Click on the *information icon* ***i*** to view the details of the document.
-![Content In Workflow Details](images/create_new_rfp_task4_step3.png "Content In Workflow Details")
+    * Open your browser and enter the **URL** to sign in to the APEX development environment.
+        * **URL**:
+                  ```
+                  <copy>https://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
+                  ```
 
- Here you can see the section document is in the Workflow and its uploaded for the **Avitek ECM Requirements** RFP Document.
+          > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+        * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
+          * **Username**: Enter
+                      ```
+                      <copy>weblogic</copy>
+                      ```
+          * **Password**: Enter
+                      ```
+                      <copy>Welcome1</copy>
+                      ```
+        ![CS Login Page](images/create_new_rfp_task4_step1.png "CS Login Page")
+
+    * In the **Libraries** Page, click on the **Content In Workflow** card and click **Open** button
+      ![Navigate to Content In Workflow](images/create_new_rfp_task4_step2.png "Navigate to Content In Workflow")
+
+    * You can see the list of the Section documents uploaded based on the Selected Section during the New RFP Document Upload Step. Click on the *information icon* ***i*** to view the details of the document.
+      ![Content In Workflow Details](images/create_new_rfp_task4_step3.png "Content In Workflow Details")
+
+    Here you can see the section document is in the Workflow and its uploaded for the **Avitek ECM Requirements** RFP Document.
 
 ### Summary
 
@@ -157,4 +179,4 @@ This lab assumes you have:
 
 * **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 * **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-* **Last Updated By/Date-** Senthilkumar Chinnappa, August 2024
+* **Last Updated By/Date-** Senthilkumar Chinnappa, October 2024
