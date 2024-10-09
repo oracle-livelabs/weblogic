@@ -47,7 +47,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
                   ```
                   <copy>
-                  INTERNAL
+                  WCCRFPMGMT
                   </copy>
                   ```
 
@@ -92,7 +92,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
   ![Workspace Home Page](./images/apex_login_workspace_step3.png "Workspace Home Page")
 
-## Task 3: Install RFP Management Application
+## Task 2: Install RFP Management Application
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
@@ -107,22 +107,10 @@ This task covers installing and running a WCC RFP Management System APEX applica
     - *Current Workspace* : **WCCRFPMGMT**
     - *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
     - *Build Status* : **Run and Build Application**
-    - *Install as Application* : **Reuse Application ID 999 From Imported Application**
+    - *Install as Application* : **Auto Assign New Application ID**
   ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
 
-4. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below *( if the username value is empty )* and click **Next** Button
-    - **Client ID or Username** : Enter
-          ```
-          <copy>weblogic</copy>
-          ```
-    - **Client Secret or Password** : Enter
-          ```
-          <copy>Welcome1</copy>
-          ```
-    - **Verify Client Secret / Password** : Enter
-          ```
-          <copy>Welcome1</copy>
-          ```
+4. In the **Install Application** - **Credentials** Page, click **Next** Button
   ![Install Application - Credentials Page](./images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
 
 5. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
@@ -131,7 +119,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 6. After the Supporting Objects installed, click on **Install Summary** button , to view the status of the Supporting objects installation
   ![Supporting Objects Installed](./images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
 
-## Task 4 : Refresh REST Datasource Catalog
+## Task 3 : Update Web Credentials
 
 1. To login to your Oracle APEX Workspace, perform the following steps:
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
@@ -150,7 +138,78 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
                   ```
                   <copy>
-                  INTERNAL
+                  WCCRFPMGMT
+                  </copy>
+                  ```
+
+      - **Username**
+
+                  ```
+                  <copy>
+                  ADMIN
+                  </copy>
+                  ```
+      - **Password**
+
+                  ```
+                  <copy>
+                  Welcome1
+                  </copy>
+                  ```
+
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
+2. Click on **App Builder** , then click on **Workspace Utilities**
+  ![Workspace Utilities Details](./images/apex_webcredentials_step1_01.png "Workspace Utilities Details")
+3.Click on **Web Credentials**
+  ![REST Data Sources](./images/apex_webcredentials_step1_02.png "REST Data Sources")
+4. Click on **Credentials for WCC RFP Mgmt**,  specify/perform the below and click **Apply Changes** button
+     - **Client ID or Username**
+
+                  ```
+                  <copy>
+                  weblogic
+                  </copy>
+                  ```
+
+      - **Client Secret or Password**
+
+                  ```
+                  <copy>
+                  Welcome1
+                  </copy>
+                  ```
+      - **Verify Client Secret or Password**
+
+                  ```
+                  <copy>
+                  Welcome1
+                  </copy>
+                  ```
+      - **Valid for URLs** - Clear all the values *( ie. Select all the values in the text box and hit Delete/Backspace button )*
+
+  ![quick_search_library Details](./images/apex_webcredentials_step1_03.png "quick_search_library Details")
+
+## Task 4 : Refresh REST Datasource Catalog
+
+1. To login to your Oracle APEX Workspace, perform the following steps:
+    - Open your browser and enter the **URL** to sign in to the APEX development environment.
+      - **URL**
+
+            ```
+            <copy>
+            http://localhost:16200/ords/
+            </copy>
+            ```
+
+      > Note : If you want to access the WCC CS Endpoint URL from your desktop, replace `"http://localhost"` with your **hosturl** ( eg: `"http://129.0.0.0"` )
+      - The hosturl ipaddress can be obtained from the **Remote Desktop URL**
+
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
+      - **Workspace Name**
+
+                  ```
+                  <copy>
+                  WCCRFPMGMT
                   </copy>
                   ```
 
@@ -171,7 +230,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
   ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 2. Click on **App Builder** , then click on **RFP Response Management System** Application
-  ![RFP Response Management System App Details](./images/apex_refresh_catalog_step1_01.png "RFP Response Management System App Details")
+        ![RFP Response Management System App Details](./images/apex_refresh_catalog_step1_01.png "RFP Response Management System App Details")
 3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
   ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
 4. Click on **quick_search_library** under the **REST Source Name** list
@@ -194,6 +253,7 @@ These below steps is sample to add another Section **Pricing And BOM**, which wi
 
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
+
             ```
             <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system/</copy>
             ```
@@ -203,32 +263,30 @@ These below steps is sample to add another Section **Pricing And BOM**, which wi
 
       - The login page appears. Enter the **Username, and Password**. Click **Sign In**.
         - **Username**: Enter
+
               ```
               <copy>ADMIN</copy>
               ```
         - **Password**: Enter
+
               ```
               <copy>Welcome1</copy>
               ```
-  ![Application Login](./images/apex_setup_task5_step1.png "Login to APEX Application")
 
+  ![Application Login](./images/apex_setup_task5_step1.png "Login to APEX Application")
 2. On the left navigation menu, click on **Sections** and click on **Create** button
   ![Navigate to Sections](./images/apex_setup_sections_task5_step2.png "Click on Sections")
-
 3. In the **Manage Section Form** window, enter the below values and click on **Create** Button
-
     - **Name**: Specify
 
           ```
           <copy>Pricing And BOM</copy>
           ```
-
     - **Description**: Specify
 
           ```
           <copy>This is sample template for Pricing And BOM Section</copy>
           ```
-
     - **Template**: Browse and select the file **Finance.docx** from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**)
     - **Type**: Leave the default as **SECTION**
     - **Display Order**: Specify
@@ -238,20 +296,24 @@ These below steps is sample to add another Section **Pricing And BOM**, which wi
           ```
     - **Active**: Leave the default as **Y**
     - **Section Owner**: Specify
+
           ```
           <copy>Finance</copy>
           ```
     - **Instructions**: Specify
+
           ```
           <copy>Update the Pricing And BOM section</copy>
           ```
     - **Expectation**: Specify
+
           ```
           <copy>Updated with relevant info</copy>
           ```
-      ![Create Pricing And BOM Section](./images/apex_setup_sections_task5_step4_3.png "Create Pricing And BOM Section")
 
-4. This shows the summary of all the sections created.
+  ![Create Pricing And BOM Section](./images/apex_setup_sections_task5_step4_3.png "Create Pricing And BOM Section")
+
+  This shows the summary of all the sections created.
 
   ![Section Summary](./images/apex_setup_sections_task5_step5.png "Summary of all the sections created")
 
@@ -265,4 +327,4 @@ You are now ready to **proceed to the next lab**.
 
 - **Authors-** Senthilkumar Chinnappa, Senior Principal Solution Engineer, Oracle WebCenter Content
 - **Contributors-** Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-- **Last Updated By/Date-** Senthilkumar Chinnappa, Oct 2024
+- **Last Updated By/Date-** Senthilkumar Chinnappa, October 2024
