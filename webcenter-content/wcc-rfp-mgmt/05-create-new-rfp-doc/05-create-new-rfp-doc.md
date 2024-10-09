@@ -33,6 +33,7 @@ This lab assumes you have:
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
         * **URL**:
+
                     ```
                     <copy>https://localhost:16200/ords/r/wccrfpmgmt/rfp-response-management-system</copy>
                     ```
@@ -41,13 +42,16 @@ This lab assumes you have:
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
             * **Username**: Enter
+
                         ```
                         <copy>SALES_REP</copy>
                         ```
             * **Password**: Enter
+
                         ```
                         <copy>Welcome1</copy>
                         ```
+
   ![Application Login](images/apex_setup_task5_step1.png "Login to APEX Application")
 
 ## Task 2: Upload New RFP Document with properties and sections
@@ -64,10 +68,12 @@ This lab assumes you have:
 3. In the **Attributes** Page, provide the values as below and click **Next** button
     * **Attributes**
         * **RFP Title**: Specify
+
                 ```
                 <copy>Avitek ECM Requirements</copy>
                 ```
         * **Client Name**: Specify
+
                 ```
                 <copy>Avitek</copy>
                 ```
@@ -76,27 +82,30 @@ This lab assumes you have:
     * **Additional Attributes**
         * **Industry**: Select any of the value from the drop-down list (eg: **Industrial Manufacturing**)
         * **RFP Issuer Contact Information**: Specify
+
                 ```
                 <copy>Avitek, NA</copy>
                 ```
         * **Internal Owner (Salesperson)**: Specify
+
                 ```
                 <copy>Sales Rep</copy>
                 ```
         * **Estimated Value**: Specify
+
                 ```
                 <copy>100000</copy>
                 ```
         * **Competitors Involved**: Specify
+
                 ```
                 <copy>CompetitorX</copy>
                 ```
-  ![Provide attribute values for New RFP Request document](images/create_new_rfp_task1_step4.png "Provide attribute values for New RFP Request document")
 
+  ![Provide attribute values for New RFP Request document](images/create_new_rfp_task1_step4.png "Provide attribute values for New RFP Request document")
 4. From the list of cards, select the sections required for creating the RFP Response for this New RFP Request Document and click **Submit RFP** button.
     Example: select **Title and Summary**, **Technical Design** and **Pricing and BOM**
   ![Select sections for New RFP Request document](images/create_new_rfp_task1_step5.png "Select sections for New RFP Request document")
-
 5. Once successfully uploaded, you'll get the message **RFP & Section Documents Successfully Uploaded**. This in-turn uploads the sample template for all the sections selected, and that goes into the WCC Workflow, so that the Section Owner can do the necessary actions on it.
 
   ![New RFP Request document Successfully uploaded](images/create_new_rfp_task1_step6.png "New RFP Request document Successfully uploaded")
@@ -121,6 +130,7 @@ This lab assumes you have:
 
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
         * **URL**:
+
                     ```
                     <copy>https://localhost:16200/cs</copy>
                     ```
@@ -128,10 +138,12 @@ This lab assumes you have:
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
           * **Username**: Enter
+
                       ```
                       <copy>weblogic</copy>
                       ```
           * **Password**: Enter
+
                       ```
                       <copy>Welcome1</copy>
                       ```
@@ -144,6 +156,7 @@ This lab assumes you have:
 
     * Open your browser and enter the **URL** to sign in to the APEX development environment.
         * **URL**:
+
                   ```
                   <copy>https://localhost:16200/cs/idcplg?IdcService=REDWOODUI</copy>
                   ```
@@ -152,10 +165,12 @@ This lab assumes you have:
 
         * The login page appears. Enter the **Username, and Password**. Click **Sign In**.
           * **Username**: Enter
+
                       ```
                       <copy>weblogic</copy>
                       ```
           * **Password**: Enter
+
                       ```
                       <copy>Welcome1</copy>
                       ```
