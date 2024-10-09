@@ -150,6 +150,7 @@ This lab assumes you have:
         ![CS Login Page](images/create_new_rfp_task4_step1.png "CS Login Page")
 
     * Under **Content Management** tab, navigate to **Active Workflows** > **All Active Workflows**. In the **All Active Workflows**  list , click on **FinanceSectionWorkflow**
+
       ![This image shows the WCC Instance Active Workflows Documents](./images/create_new_rfp_task4_step1_1.png " Active Workflows Documents")
 
 2. If, REDWOODUI is enabled, Login to the New Redwood UI for the WebCenter Content using the below details:
