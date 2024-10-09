@@ -209,7 +209,7 @@ This task covers installing and running a WCC RFP Management System APEX applica
 
                   ```
                   <copy>
-                  INTERNAL
+                  WCCRFPMGMT
                   </copy>
                   ```
 
