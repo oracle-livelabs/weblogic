@@ -27,20 +27,16 @@ This lab assumes you have:
 
 1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** ), click on the *Login* and Login using the below credentials
     - URL
-
             ```
-            <copy>http://localhost:16200/cs/</copy>
+            <copy>https://localhost:16200/cs/</copy>
             ```
-
         > Note : If you want to access the WCC CS Endpoint URL from your desktop, replace `"http://localhost"` with your **hosturl** ( eg: `"http://129.0.0.0"` )
         - The hosturl ipaddress can be obtained from the **Remote Desktop URL**
     - Username
-
             ```
             <copy>weblogic</copy>
             ```
     - Password
-
             ```
             <copy>Welcome1</copy>
             ```
@@ -75,33 +71,27 @@ This task helps to validate if APEX has been installed properly and its up & acc
 1. On the new *web browser* window , Login to the APEX/ORDS URL . Details are provided below
 
     - **URL**
-
             ```
             <copy>
             http://localhost:16200/ords/
             </copy>
             ```
-
            > Note : If you want to access the WCC CS Endpoint URL from your desktop, replace `"http://localhost"` with your **hosturl** ( eg: `"http://129.0.0.0"` )
         - The hosturl ipaddress can be obtained from the **Remote Desktop URL**
 
     - **Workspace Name**
-
             ```
             <copy>
             WCCRFPMGMT
             </copy>
             ```
-
     - **Username**
-
             ```
             <copy>
             ADMIN
             </copy>
             ```
     - **Password**
-
             ```
             <copy>
             Welcome1
@@ -125,7 +115,6 @@ You may now **proceed to the next lab**.
 1. Access the Graphical Remote Desktop using the steps mentioned in **Lab 2: Environment Setup** , **Task 1: Access the Graphical Remote Desktop**
 
 2. Open a terminal session in the Remote Desktop and proceed as indicated below to restart the UCM service.
-
         ```
             <copy>
             sudo systemctl restart ucm
@@ -134,7 +123,6 @@ You may now **proceed to the next lab**.
     ![This image shows the UCM Restart Terminal](./images/appendix1_ucm_restart_terminal.png "Restart UCM in Remote Desktop Terminal")
 
 3. Wait for 3 minutes & check for status, so that UCM server starts completely and then log in to the WebCenter Content server
-
         ```
             <copy>
             sudo systemctl status ucm
@@ -149,7 +137,6 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
 
 1. In the terminal window, invoke the below commands command and connect to the database
     - invoke **sqlplus** command
-
             ```
             <copy>sqlplus '/as sysdba'</copy>
             ```
@@ -157,19 +144,16 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
 2. Now execute any required sql statements in this sqlplus session.
 
 3. Find the latest version schema name:
-
             ```
             <copy> SELECT  schema  FROM dba_registry WHERE comp_id = 'APEX' ORDER BY schema DESC FETCH FIRST 1 ROW ONLY; </copy>
             ```
 
 4. Set the current schema to the schema name retrieved in the above step
     eg:
-
         ```
         <copy> alter session set current_schema=apex_230200; </copy>
         ```
 5. Update the password and unlock the ADMIN User
-
             ```
             <copy>
                 BEGIN
@@ -194,7 +178,6 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
         1. Access the Graphical Remote Desktop using the steps mentioned in **Lab 2: Environment Setup** , **Task 1: Access the Graphical Remote Desktop**
 
         2. Invoke the below command to launch the **Oracle WebCenter Content - Administration** application
-
                 ```
                 <copy>
                 cd /home/oracle/Downloads/wccadmin-installer/wccadmin
@@ -205,14 +188,12 @@ Use the below steps to reset the ADMIN User Password , if facing any issue like 
             ![This image shows the Oracle WebCenter Content - Administration application Launch](./images/appendix3_ucm_applet_wccadmin_launch.png "Oracle WebCenter Content - Administration application Launch")
         3. Provide below credentials to login (*Please leave the Server value as-is*) and click **OK**
             - **User Name**
-
                     ```
                     <copy>
                     weblogic
                     </copy>
                     ```
             - **Password**
-
                     ```
                     <copy>
                     Welcome1

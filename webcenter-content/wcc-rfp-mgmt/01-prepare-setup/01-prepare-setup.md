@@ -99,13 +99,16 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
   4. Enter the following:
     - **Name**: Specify a name. For example,
-          ```text
-              <copy>wcc</copy>
+
           ```
+          <copy>wcc</copy>
+          ```
+
     *Restrictions for compartment names are: Maximum 100 characters, including letters, numbers, periods, hyphens, and underscores. The name must be unique across all the compartments in your tenancy.*
     - **Description**: A friendly description.
-          ```text
-            <copy>Compartment used for WCC Marketplace stack</copy>
+
+          ```
+          <copy>Compartment used for WCC Marketplace stack</copy>
           ```
   5. Click **Create Compartment**.
 
@@ -134,15 +137,17 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
   4. In the **Configuration** page, Provide the below values and click **Next** Button
       - **VCN name**: Provide a name.
-              ```
-              <copy>wcc-rfpmgmt-demo</copy>
-              ```
+
+                ```
+                <copy>wcc-rfpmgmt-demo</copy>
+                ```
       - **Compartment**: Specify the compartment in which the VCN needs to be created.
         - Select the **wcc** compartment you have created in the earlier steps
       - **VCN IPv4 CIDR block**: Specify IPv4 CIDR block
-              ```
-              <copy>10.0.0.0/16</copy>
-              ```
+
+                ```
+                <copy>10.0.0.0/16</copy>
+                ```
       - **Select** the **Use DNS hostnames in this VCN** check box.
     ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
 
@@ -154,8 +159,10 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
     ![VCN Configuration - Review and Create](images/prepare_oci_task3_step1_6.png "VCN Configuration - Review and Create")
 
   7. VCN Gets created . Click on **View VCN** to view VCN Info
-    ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
-    ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
+
+      ![VCN Created](images/prepare_oci_task3_step1_7_1.png "VCN Created")
+
+      ![VCN Info](images/prepare_oci_task3_step1_7_2.png "VCN Info")
 
 ### **3.2 Create a New DB System**
 
@@ -178,9 +185,10 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
       - **Select a Compartment Name** : Choose the appropriate compartment name, here **wcc**
 
       - **Name your DB system** : Specify
-              ```
-              <copy>wcc-rfpmgmt-DBSystem</copy>
-              ```
+
+                ```
+                <copy>wcc-rfpmgmt-DBSystem</copy>
+                ```
       - **Select an availability domain**: Choose **AD1**. (*You can choose any AD but make sure that WebCenter Content and DB are in the same AD.*)
 
       - **Configure shape**: Choose **AMD VM Standard E4 Flex** or **AMD VM Standard E5 Flex**
@@ -208,6 +216,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         - **Client subnet** : Select (either private or public subnet as needed) from the drop- down list.
 
         - **Hostname prefix** : Choose an appropriate name.
+
               ```
               <copy>wcc-rfpmgmt-demo</copy>
               ```
