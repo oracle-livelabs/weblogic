@@ -103,6 +103,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
           ```
           <copy>wcc</copy>
           ```
+
     *Restrictions for compartment names are: Maximum 100 characters, including letters, numbers, periods, hyphens, and underscores. The name must be unique across all the compartments in your tenancy.*
     - **Description**: A friendly description.
 
