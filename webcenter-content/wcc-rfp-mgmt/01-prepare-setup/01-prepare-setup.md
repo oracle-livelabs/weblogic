@@ -137,16 +137,16 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
   4. In the **Configuration** page, Provide the below values and click **Next** Button
       - **VCN name**: Provide a name.
 
-            ```
-            <copy>wcc-rfpmgmt-demo</copy>
-            ```
+                ```
+                <copy>wcc-rfpmgmt-demo</copy>
+                ```
       - **Compartment**: Specify the compartment in which the VCN needs to be created.
         - Select the **wcc** compartment you have created in the earlier steps
       - **VCN IPv4 CIDR block**: Specify IPv4 CIDR block
 
-            ```
-            <copy>10.0.0.0/16</copy>
-            ```
+                ```
+                <copy>10.0.0.0/16</copy>
+                ```
       - **Select** the **Use DNS hostnames in this VCN** check box.
     ![VCN Configuration](images/prepare_oci_task3_step1_4.png "VCN Configuration")
 
@@ -185,9 +185,9 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
       - **Name your DB system** : Specify
 
-            ```
-            <copy>wcc-rfpmgmt-DBSystem</copy>
-            ```
+                ```
+                <copy>wcc-rfpmgmt-DBSystem</copy>
+                ```
       - **Select an availability domain**: Choose **AD1**. (*You can choose any AD but make sure that WebCenter Content and DB are in the same AD.*)
 
       - **Configure shape**: Choose **AMD VM Standard E4 Flex** or **AMD VM Standard E5 Flex**
@@ -241,9 +241,9 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
 
       - **Create administrator credentials** : Specify ‘sys’ and an appropriate password.
 
-            ```
-            <copy>OCI#db#456789123</copy>
-            ```
+              ```
+              <copy>OCI#db#456789123</copy>
+              ```
 
       - **Configure database backups** : Uncheck **Enable automatic backups** checkbox
 
