@@ -78,7 +78,7 @@ To enable accounts, follow the below steps;
 
 2. Restart the Content Server instance , using the steps mentioned in **Appendix 1: Restart UCM Server Instance**
 
-## Task 3: Configure Accounts
+## Task 4: Configure Accounts
 
 To Configure accounts and mapping wcc accounts to group in weblogic/idcs, follow the below steps;
 

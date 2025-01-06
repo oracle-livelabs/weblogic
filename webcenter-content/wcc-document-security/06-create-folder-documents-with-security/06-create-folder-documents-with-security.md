@@ -4,7 +4,7 @@
 
 This lab will show you how to create folder and upload documents in RedwoodUI. This will also show you to set different security access for folders and document.
 
-**Estimated Lab Time**: *75 minutes*
+**Estimated Lab Time**: *30 minutes*
 
 ### Objectives
 

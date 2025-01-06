@@ -6,7 +6,7 @@ Learn how to setup different security levels for folders and documents with Orac
 
 Organizations have requirements on folder and document access. This lab would help participants to setup different access privileges for folders and documents.
 
-*Estimated Time:* 3 hours
+*Estimated Time:* 2 hours 35 minutes
 
 ### **About Security levels in Oracle WebCenter Content**
 

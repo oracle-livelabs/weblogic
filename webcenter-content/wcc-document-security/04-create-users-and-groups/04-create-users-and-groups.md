@@ -146,14 +146,14 @@ To create Groups (HRAdministrator, HRRepresentatives, @Training\_R, @Training\_R
 
 <if type="IDCS">
 
-6. Sign in to the Oracle Cloud Infrastructure Console [ **Using the steps mentioned in Appendix 1** ]
-7. Open the navigation menu and click **Identity & Security**. Under **Identity**, click **Domains**. A list of the existing Domains in your tenancy is displayed.
+1. Sign in to the Oracle Cloud Infrastructure Console [ **Using the steps mentioned in Appendix 1** ]
+2. Open the navigation menu and click **Identity & Security**. Under **Identity**, click **Domains**. A list of the existing Domains in your tenancy is displayed.
 ![This image shows the IDCS Identity & Security Page ](./images/identity-and-security.png "IDCS Identity & Security Page")
-8. Select the **Compartment** and then the **domain** which is integrated with your wcc instance
+3. Select the **Compartment** and then the **domain** which is integrated with your wcc instance
 ![This image shows the IDCS domains Page ](./images/idcs-domains.png "IDCS Domains Page")
-9. Click the **Groups** and then **Create Group** 
+4. Click the **Groups** and then **Create Group** 
 ![This image shows the IDCS Groups Page ](./images/idcs-groups.png "IDCS Groups Page")
-10. Enter the **Name** and **Description**. Click **Create**.
+5. Enter the **Name** and **Description**. Click **Create**.
 * **Name**: Enter
 ```
 <copy>HRAdministrator</copy>

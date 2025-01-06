@@ -4,7 +4,7 @@
 
 This lab will show you how to validate different Security Privileges set on folders and documents.
 
-**Estimated Lab Time**: *75 minutes*
+**Estimated Lab Time**: *30 minutes*
 
 ### Objectives
 
@@ -133,8 +133,6 @@ This lab assumes you have completed:
 10. Click **Delete** menu and delete the file
 ![This image shows the WCC TrainingRep1 File Menu](./images/trainingrep1-training-doc-delete.png "WCC Instance TrainingRep1 File Menu")
 
-
-You may now **proceed to the next lab**.
 
 ### Learn More
 
