@@ -177,7 +177,6 @@ To Assign Group membership to users in WCC follow these steps:
 ![This image shows the Weblogic Console Login Page](./images/task1-weblogic-console-login.png "Weblogic Console Login Page")
 2. Select on **Security Realms** and click on **myrealm**
 ![This image shows the Weblogic Console Security Realms page](./images/task1-weblogic-console-realm.png "Weblogic Console Login Page")
-![This image shows the IDCS domains Page ](./images/idcs-domains.png "IDCS Domains Page")
 3. Navigate to **Users and Groups** > **Users** tab and Click on User **HRAdmin**
 ![This image shows the Weblogic Console Users Page](./images/task1-weblogic-console-users.png "Weblogic Console Users Page")
 4. Navigate to **Groups** tab. Select **HRAdministrator**, **HRRepresentatives** and **@Training\_RWDA** group from **Available:** list and click on **Move selected items from Available to Chosen list** icon. 
