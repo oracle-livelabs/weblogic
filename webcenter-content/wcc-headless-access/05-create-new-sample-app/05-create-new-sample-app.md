@@ -215,7 +215,7 @@ This app will step by step guide you to create a dummy app that will show how to
 
 12. Copy the below code snippet and paste to the PL/SQL Code block on the right side as shown.
 
-      > Note : Make sure to use correct variable names while pasting the code snippets as you have defined in your page. Code Explanation is done as inline comments in Code Snippet. If there is any error, please resolve it first before saving the changes.
+      > Note : Make sure to use correct variable names while pasting the code snippets as you have defined in your page. Code Explanation is done as inline comments in Code Snippet. If there is any error, please resolve it first before saving the changes. For APIs information, refer to **Appendix 1 : Commonly Used WCC REST Endpoints**.
 
       ![Fetch Token Process code](images/child-process1-code.png "Fetch Token Process code")
 
@@ -262,7 +262,7 @@ This app will step by step guide you to create a dummy app that will show how to
     ![Create Content Process to upload File](images/child-process1.png "Create Content Process to upload File")
 
 14. Copy the below code snippet and paste to the PL/SQL Code block on the right side below the code snippet
-    > Note : Make sure to use correct variable names while pasting the code snippets as you have defined in your page. Code Explanation is done as inline comments in Code Snippet. If there is any error, please resolve it first before saving the changes.
+    > Note : Make sure to use correct variable names while pasting the code snippets as you have defined in your page. Code Explanation is done as inline comments in Code Snippet. If there is any error, please resolve it first before saving the changes. For APIs information, refer to **Appendix 1 : Commonly Used WCC REST Endpoints**.
 
        ![Create Content Process Code](images/child-process2-code.png "Create Content Process Code")
 
@@ -353,7 +353,41 @@ Log in to the **WebCenter Content (WCC)** Portal to confirm that the document ha
 
  By creating and successfully testing the above application, we are now able to understand how we can extend APEX applications integration to Oracle WebCenter Content using Basic Auth or Bearer Token.
 
- You may now **proceed to the next lab**.
+ You may now **proceed to the next lab** or refer to **Appendix 1 : Commonly Used WCC REST Endpoints**.
+
+## Appendix 1 : Commonly Used WCC REST Endpoints
+
+  Below is step by step guide to import **WCC Basic APIs** to Postman and understand WCC Basic APIs request/response.
+
+1. Download **WCC BASIC API LIST.postman_collection.json** Collection File from **Lab 1: Prepare Setup**.
+
+2. Open **Postman** App in your system, navigate to Collections and click on Import.
+          ![Import WCC APIs Collection](images/import-wcc-api-collection.png "Import WCC APIs Collection")
+
+3. Click on select files.
+          ![Select WCC APIs Collection Json](images/choose-wcc-api-collection-json.png "Select WCC APIs Collection Json")
+
+4. Choose the downloaded **WCC BASIC API LIST.postman_collection.json** file and click open.
+          ![Open WCC APIs Collection Json](images/selected-value-wcc-json.png "Open WCC APIs Collection Json")
+
+5. Once the import is complete, click on **variables** to setup the collection variables.
+
+6. Update the variable **Initial Values** and **Current Values** as per your environment details.
+          ![Setup Variables of WCC APIs Collection](images/collection-variables-setup.png "Setup Variables of WCC APIs Collection")
+
+7. Click on any API in the collection list eg. **Quick-Search**.
+
+8. Update the **Authorization** settings. It should be selected as **Inherit auth from parent**.
+          ![Setup Authorization of WCC APIs Collection](images/authorization-setup.png "Setup Authorization of WCC APIs Collection")
+
+9. Update the **params** as per your search need or just try sending request with the default values to verify the API.
+     > Note : Params description is given inline, Params can be updated as per user requirement.
+
+      ![Setup API Params](images/wcc-api-params-setup.png "Setup API Params")
+
+10. Once the API is successful, it will give you **200** status and response as shown in step 9 image.
+
+* Your setup is now complete. You can modify params and try these APIs to understand the request/response structure.
 
 ## Acknowledgements
 
