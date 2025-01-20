@@ -372,7 +372,7 @@ Log in to the **WebCenter Content (WCC)** Portal to confirm that the document ha
 
 5. Once the import is complete, click on **variables** to setup the collection variables.
 
-6. Update the variable **Initial Values** and **Current Values** as per your environment details.
+6. Update the variable **Initial Values** and **Current Values** as per your environment details eg. **Environment** as "https://testinstance.oracle.com/" , **userName** as "TEST" and **password** as "ABCD".
           ![Setup Variables of WCC APIs Collection](images/collection-variables-setup.png "Setup Variables of WCC APIs Collection")
 
 7. Click on any API in the collection list eg. **Quick-Search**.
