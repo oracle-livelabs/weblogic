@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will show you how to create Users and Groups in Weblogic server. If your WebCenter Content is configured with IDCS perform steps mentioned under **Oracle Cloud Infrastructure Console** Tab else perform steps mentioned under **Weblogic Server** tab.
+This lab will guide you through the process of creating Users and Groups for WebCenter Content Server. If your WebCenter Content is configured with IDCS, follow the steps outlined under the **Oracle Cloud Infrastructure Console** tab. Otherwise, proceed with the steps under the **WebLogic Server** tab.
 
 **Estimated Lab Time**: *20 minutes*
 
