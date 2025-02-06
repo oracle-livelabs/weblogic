@@ -162,9 +162,7 @@ To create Alias in WCC follow these steps:
 * **Description**: Enter
 ```
 <copy>Training Representatives</copy>
-```	
-> Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-document-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-
+```
 ![This image shows the WCC Administration Add New Alias](./images/webcenter-admin-add-new-alias.png "WCC Administration Add New Alias")
 5. In **Select Users** dialog, click **Define Filter...** 
 ![This image shows the WCC Administration Select Users](./images/webcenter-admin-select-user.png "WCC Administration Select Users")

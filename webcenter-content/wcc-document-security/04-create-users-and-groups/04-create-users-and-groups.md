@@ -189,8 +189,9 @@ To Assign Group membership to users in WCC follow these steps:
 ![This image shows the IDCS Assign Groups Page ](./images/idcs-user-groups.png "IDCS Assign Groups Page")
 6. Select **HRAdministrator**, **HRRepresentatives** and **@Training\_RWDA**  and click **Assign user**
 ![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-groups.png "IDCS Assign User to Groups Page")
-7. Similarly select guest group and assign it to user
-![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-groups.png "IDCS Assign User to Groups Page")
+7. Since there are multiple groups in IDCS, the guest group may not appear on the same page. To assign the guest group to the user, follow step 5, then search for "guest", select the guest group, and assign it to the user.
+![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-guest-groups.png "IDCS Assign User to Groups Page")
+
 8. Similarly assign groups to other users
 </if>
 
