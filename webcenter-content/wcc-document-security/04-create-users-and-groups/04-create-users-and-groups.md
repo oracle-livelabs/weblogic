@@ -2,17 +2,7 @@
 
 ## Introduction
 
-<if type="Weblogic">
-
-This lab will show you how to create Users and Groups in Weblogic server. 
-
-</if>
-
-<if type="IDCS">
-
-This lab will show you how to create Users and Groups in IDCS for IDCS integrated instance.
-
-</if>
+This lab will show you how to create Users and Groups in Weblogic server. If your WebCenter Content is configured with IDCS perform steps mentioned under **Oracle Cloud Infrastructure Console** Tab else perform steps mentioned under **Weblogic Server** tab.
 
 **Estimated Lab Time**: *20 minutes*
 
