@@ -13,9 +13,10 @@ This lab will show you how to WebCenter Content Marketplace Instance using the S
 ### Prerequisites
 
   This lab assumes you have:
-  - An Oracle Paid Cloud account
-  - SSH Keys (optional)
-  - Oracle DB System already present/created in previous **Lab 1 - Prepare Setup**
+
+- An Oracle Paid Cloud account
+- SSH Keys (optional)
+- Oracle DB System already present/created in previous **Lab 1 - Prepare Setup**
 
 ## Task 1: Provision WebCenter Content Stack
 

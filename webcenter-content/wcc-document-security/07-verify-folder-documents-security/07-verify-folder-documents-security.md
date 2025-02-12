@@ -13,15 +13,18 @@ This lab will show you how to validate different Security Privileges set on fold
 ### Prerequisites
 
 This lab assumes you have:
-  * Access to WCC Marketplace Environment
-  
-This lab assumes you have completed:
-  * Lab: Initialize WCC Environment
-  * Lab: Create Users and Groups
-  * Lab: Create Security Groups, Roles, Aliases and Accounts
-  * Lab: Create Folders and Files and set Different Security Permissions
 
-## Task 1: Verify folder access set by Security Group with RWDA permission.
+- Access to WCC Marketplace Environment
+
+This lab assumes you have completed:
+
+- Lab: Initialize WCC Environment
+- Lab: Create Users and Groups
+- Lab: Create Security Groups, Roles, Aliases and Accounts
+- Lab: Create Folders and Files and set Different Security Permissions
+
+## Task 1: Verify folder access set by Security Group with RWDA permission
+
 1. Login to WCC RedwoodUI as HRAdmin/Welcome1 and navigate to **root** > **HRDocs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC HRDocs Folder](./images/hradmin-folder.png "WCC Instance HRDocs Folder")
@@ -30,7 +33,8 @@ This lab assumes you have completed:
 5. Click **Delete** menu and delete the folder
 ![This image shows the WCC HRDocs Delete Folder](./images/hradmin-delete.png "WCC Instance HRDocs Delete Folder")
 
-## Task 2: Verify folder access set by Security Group with only R and RWD permission.
+## Task 2: Verify folder access set by Security Group with only R and RWD permission
+
 1. Login to WCC RedwoodUI as HRRep1/Welcome1 and navigate to **root** > **HRDocs** folder
 2. Verify you don't see icons to create folder and upload document
 ![This image shows the WCC HRRep Folder](./images/hrrep-root-folder.png "WCC Instance HRRep Folder")
@@ -46,12 +50,14 @@ This lab assumes you have completed:
 9. Click **Delete** menu and delete the folder
 ![This image shows the WCC HRRep Delete Folder Deleted](./images/hrrep-folder-deleted.png "WCC Instance HRRep delete Folder Deleted")
 
-## Task 3: Verify folder access for the users not in security group.
+## Task 3: Verify folder access for the users not in security group
+
 1. Login to WCC RedwoodUI as FinRep1/Welcome1 and navigate to **root** folder
 2. Verify you don't see **HRDocs** folder
 ![This image shows the WCC FinRep Delete Folder](./images/finrep-root.png "WCC Instance FinRep Folder")
 
-## Task 4: Verify folder access set by Account (User added to @Training\_R group in weblogic/IDCS).
+## Task 4: Verify folder access set by Account (User added to @Training\_R group in weblogic/IDCS)
+
 1. Login to WCC RedwoodUI as TrainingRep1/Welcome1 and navigate to **root** > **HRDocs** > **Training Docs** folder
 2. Verify you don't see icons to create folder and upload document
 ![This image shows the WCC TrainingRep1 Folder](./images/trainingrep1-training-docs-folder.png "WCC Instance TrainingRep1 Folder")
@@ -59,8 +65,8 @@ This lab assumes you have completed:
 4. Verify you don't see **Delete** menu
 ![This image shows the WCC TrainingRep1 Menu](./images/trainingrep1-training-doc-delete.png "WCC Instance TrainingRep1 Menu")
 
+## Task 5: Verify folder access set by Account (User added to @Training\_RW group in weblogic/IDCS)
 
-## Task 5: Verify folder access set by Account (User added to @Training\_RW group in weblogic/IDCS).
 1. Login to WCC RedwoodUI as TrainingRep2/Welcome1 and navigate to **root** > **HRDocs** > **Training Docs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC TrainingRep2 Folder](./images/trainingrep2-folder.png "WCC Instance TrainingRep2 Folder")
@@ -69,7 +75,8 @@ This lab assumes you have completed:
 5. Verify you don't see **Delete** menu
 ![This image shows the WCC TrainingRep2 Menu](./images/trainingrep2-delete.png "WCC Instance TrainingRep2 Menu")
 
-## Task 6: Verify folder access set by Account (User added to @Training\_RWD group in weblogic/IDCS).
+## Task 6: Verify folder access set by Account (User added to @Training\_RWD group in weblogic/IDCS)
+
 1. Login to WCC RedwoodUI as TrainingRep3/Welcome1 and navigate to **root** > **HRDocs** > **Training Docs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC TrainingRep2 Folder](./images/trainingrep2-folder.png "WCC Instance TrainingRep2 Folder")
@@ -78,7 +85,8 @@ This lab assumes you have completed:
 5. Click **Delete** menu and delete the folder
 ![This image shows the WCC TrainingRep3 Menu](./images/trainingrep3-delete-folder.png "WCC Instance TrainingRep3 Menu")
 
-## Task 7: Verify folder access set by Account (User added to @Training\_RWDA group in weblogic/IDCS).
+## Task 7: Verify folder access set by Account (User added to @Training\_RWDA group in weblogic/IDCS)
+
 1. Login to WCC RedwoodUI as TrainingAdmin/Welcome1 and navigate to **root** > **HRDocs** > **Training Docs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC TrainingRep2 Folder](./images/trainingrep2-folder.png "WCC Instance TrainingRep2 Folder")
@@ -87,12 +95,14 @@ This lab assumes you have completed:
 5. Click **Delete** menu and delete the folder
 ![This image shows the WCC TrainingAdmin Folder](./images/trainingadmin-delete.png "WCC Instance TrainingAdmin Folder")
 
-## Task 8: Verify folder access set by Account (User not added to any of Training\_ groups in weblogic/IDCS).
+## Task 8: Verify folder access set by Account (User not added to any of Training\_ groups in weblogic/IDCS)
+
 1. Login to WCC RedwoodUI as TrainingRep4/Welcome1 and navigate to **root** > **HRDocs** folder
 2. Verify you cant see **Training Docs** folder
 ![This image shows the WCC TrainingRep4 Folder](./images/trainingrep4-user.png "WCC Instance TrainingRep4 Folder")
 
-## Task 9: Verify folder access set by User Access List.
+## Task 9: Verify folder access set by User Access List
+
 1. Login to WCC RedwoodUI as TrainingRep1/Welcome1 and navigate to **root** > **HRDocs** > **Training Representative1 Docs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC TrainingRep1 Folder](./images/trainingrep1-folder.png "WCC Instance TrainingRep1 Folder")
@@ -101,7 +111,8 @@ This lab assumes you have completed:
 5. Click **Delete** menu and delete the folder
 ![This image shows the WCC TrainingRep1 Delete Folder](./images/trainingrep1-delete.png "WCC Instance TrainingRep1 Delete Folder")
 
-## Task 10: Verify folder access set by Group Access List.
+## Task 10: Verify folder access set by Group Access List
+
 1. Login to WCC RedwoodUI as TrainingRep1/Welcome1 and navigate to **root** > **HRDocs** > **Training Representatives Docs** folder
 2. Verify you can see icon to create folder and upload document
 ![This image shows the WCC TrainingRep1 Group ACL Folder View](./images/trainingrep1-folder-groupacl.png "WCC Instance TrainingRep1 Group ACL Folder View")
@@ -110,7 +121,8 @@ This lab assumes you have completed:
 5. Verify you don't see **Delete** menu
 ![This image shows the WCC TrainingRep1 Group ACL Folder Delete](./images/trainingrep1-folder-delete-groupacl.png "WCC Instance TrainingRep1 Group ACL Folder Delete")
 
-## Task 11: Verify folder access set by Role Access List.
+## Task 11: Verify folder access set by Role Access List
+
 1. Login to WCC RedwoodUI as TrainingAdmin/Welcome1 and navigate to **root** > **HRDocs** > **HR Representatives1 Docs** folder
 2. Verify you can't see icon to create folder and upload document
 ![This image shows the WCC TrainingAdmin Folder](./images/tainingadmin-folder.png "WCC Instance TrainingAdmin Folder")
@@ -118,7 +130,8 @@ This lab assumes you have completed:
 4. Verify you don't see **Delete** menu
 ![This image shows the WCC TrainingAdmin Menu](./images/trainingadmin-delete.png "WCC Instance TrainingAdmin Menu")
 
-## Task 12: Verify Document access set by different ACLs.
+## Task 12: Verify Document access set by different ACLs
+
 1. Login to WCC RedwoodUI as HRRep1/Welcome1 and navigate to **root** > **HRDocs** folder
 2. Select checkbox against the file uploaded in **Lab 4: Create Folders and Files and set Different Security Permissions** > **Task 10: Upload document and Set Access List**
 3. Verify you don't see **Move**, **Copy**, **Check In**, **Check out**, **Rename** and **Delete** menu
@@ -133,6 +146,7 @@ This lab assumes you have completed:
 10. Click **Delete** menu and delete the file
 ![This image shows the WCC TrainingRep1 File Menu](./images/trainingrep1-training-doc-delete.png "WCC Instance TrainingRep1 File Menu")
 
+This Completes this Live Lab.
 
 ### Learn More
 
@@ -141,6 +155,6 @@ This lab assumes you have completed:
 
 ## Acknowledgements
 
-* **Authors-** Sujata Nayak, Consulting Member Technical Staff, Oracle WebCenter Content
-* **Contributors-** Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-* **Last Updated By/Date-** Sujata Nayak, December 2024
+- **Authors-** Sujata Nayak, Consulting Member Technical Staff, Oracle WebCenter Content
+- **Contributors-** Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+- **Last Updated By/Date-** Sujata Nayak, December 2024
