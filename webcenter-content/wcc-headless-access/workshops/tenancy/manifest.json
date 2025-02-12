@@ -18,7 +18,7 @@
       "filename": "../../01-prepare-setup/01-prepare-setup.md"
     },
     {
-      "title": "Lab 2: Setup WCC Marketplace Environment",
+      "title": "Lab 2: Setup WebCenter Content Marketplace Instance",
       "description": "How to provision the workshop environment and connect to it",
       "filename": "https://oracle-livelabs.github.io/weblogic/webcenter-content/wcc-rfp-mgmt/02-wcc-environment-setup/02-wcc-environment-setup.md"
     },

@@ -1,4 +1,4 @@
-# Headless WebCenter Content Upload by using Upload API secured by OAuth
+# Create New Apex Application
 
 ## Introduction
 
@@ -8,8 +8,8 @@ In this lab, you will learn about the steps to build headless WebCenter Content(
 
 ### Description
 
-Organisations are in need of building applications that also need document or unstructured content. This lab would assist developer to know how WebCenter Content can be used along with APEX and the integration secured using OAuth based API access.
-This app will step by step guide you to create a dummy app that will show how to use **static credentials** to make a WCC rest API call to get **authentcation token**. Later on the app guides you to use **authentcation token** in Rest API call to upload a content to WCC with some basic information or metadata.
+Organizations are in need of building applications that also need document or unstructured content. This lab would assist developer to know how WebCenter Content can be used along with APEX and the integration secured using OAuth based API access.
+This app will step by step guide you to create a dummy app that will show how to use **static credentials** to make a WCC rest API call to get **authentication token**. Later on the app guides you to use **authentication token** in Rest API call to upload a content to WCC with some basic information or metadata.
 
 ### Workshop Outline
 
@@ -46,7 +46,7 @@ This app will step by step guide you to create a dummy app that will show how to
 2. Click on **Create Page** and choose blank page as the component
    ![Choose Page Type](images/blank-page-screen.png "Choose Page Type")
 
-3. Give a desired name to the page eg. **Create Content** and also enable Use Breadcrum option which will show the page in the breadcrum menu.
+3. Give a desired name to the page eg. **Create Content** and also enable Use Breadcrumb option which will show the page in the breadcrumb menu.
 
           <copy>Create Content</copy>
 
@@ -244,7 +244,7 @@ This app will step by step guide you to create a dummy app that will show how to
             APEX_DEBUG_MESSAGE.LOG_MESSAGE(p_message => 'l_user_token : ' || l_user_token, p_level => 1);
             APEX_COLLECTION.CREATE_OR_TRUNCATE_COLLECTION(p_collection_name => 'API_KEY_COLLECTION');    -- Creating APEX Collection named API_KEY_COLLECTION
             APEX_COLLECTION.ADD_MEMBER( p_collection_name => 'API_KEY_COLLECTION', p_c002 => l_user_token ); -- Storing Token to API_KEY_COLLECTION collection
-            APEX_DEBUG_MESSAGE.LOG_MESSAGE(p_message => 'beaer token stored in apex collection',p_level => 1 );
+            APEX_DEBUG_MESSAGE.LOG_MESSAGE(p_message => 'bearer token stored in apex collection',p_level => 1 );
             END IF;
           ELSE
             apex_error.add_error ( p_message => 'Error in fetching user token', p_display_location => apex_error.c_inline_in_notification );
@@ -293,7 +293,7 @@ This app will step by step guide you to create a dummy app that will show how to
         apex_web_service.g_request_headers.delete();    -- Clearing any existing headers
         SELECT c002 into lv_api_key from APEX_COLLECTIONS WHERE COLLECTION_NAME = 'API_KEY_COLLECTION' ; -- Getting token from Apex Collection
         apex_web_service.g_request_headers(1).name := 'Authorization';  -- Passing Authorization header in the API call
-        apex_web_service.g_request_headers(1).value := 'Bearer ' || lv_api_key;  -- Passing Breare token in the API call
+        apex_web_service.g_request_headers(1).value := 'Bearer ' || lv_api_key;  -- Passing Bearer token in the API call
         IF lc_json is not null 
         THEN 
         apex_web_service.APPEND_TO_MULTIPART ( p_multipart => lm_multipart,    -- Appending above created Json to the API
@@ -311,7 +311,7 @@ This app will step by step guide you to create a dummy app that will show how to
               FOR i IN 1.. apex_web_service.g_headers.count LOOP 
                 IF apex_web_service.g_headers(i).name = 'Location' 
                 THEN 
-                BEGIN SELECT regexp_substr(apex_web_service.g_headers(i).value, '[^/]+$', 1, 1) INTO l_doc_id_WCC FROM dual ; apex_application.g_print_success_message := 'Content uploaded successfuly with DODCNAME : ' || l_doc_id_WCC;
+                BEGIN SELECT regexp_substr(apex_web_service.g_headers(i).value, '[^/]+$', 1, 1) INTO l_doc_id_WCC FROM dual ; apex_application.g_print_success_message := 'Content uploaded successfully with DODCNAME : ' || l_doc_id_WCC;
                 EXCEPTION 
                     WHEN no_data_found THEN 
                     l_doc_id_WCC := apex_web_service.g_headers(i).value; 
@@ -341,7 +341,7 @@ This app will step by step guide you to create a dummy app that will show how to
         ![Create Content UI page](images/final-ui-screen1.png "Create Content UI page")
 
 * This action will trigger the child processes we implemented. **Fetch-User-Token** will get the token and store it in Apex Collection, Create_Content will use that token to upload the document to the WebCenter Content (WCC) Portal.
-        ![Succesful Upload from UI](images/final-ui-screen2.png "Succesful Upload from UI")
+        ![Successful Upload from UI](images/final-ui-screen2.png "Successful Upload from UI")
 After successful upload, you will get the **DDOCNAME** of the uploaded file in the Notification as shown above. Copy the **DDOCNAME** and search it on WCC.
 
 ### Verify Document Check-In
@@ -372,7 +372,7 @@ Log in to the **WebCenter Content (WCC)** Portal to confirm that the document ha
 
 5. Once the import is complete, click on **variables** to setup the collection variables.
 
-6. Update the variable **Initial Values** and **Current Values** as per your environment details eg. **Environment** as "https://testinstance.oracle.com/" , **userName** as "TEST" and **password** as "ABCD".
+6. Update the variable **Initial Values** and **Current Values** as per your environment details eg. **Environment** as `"https://testinstance.oracle.com/"` , **userName** as "TEST" and **password** as "ABCD".
           ![Setup Variables of WCC APIs Collection](images/collection-variables-setup.png "Setup Variables of WCC APIs Collection")
 
 7. Click on any API in the collection list eg. **Quick-Search**.

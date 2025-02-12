@@ -10,7 +10,7 @@ In this lab, you will learn about the steps to build headless WebCenter Content(
 
 Organizations are in need of building applications that also need document or unstructured content. This lab would assist developer to know how WebCenter Content can be used along with APEX and the integration secured using OAuth based API access.
 
-This app will step by step guide you to create a dummy app that will show how to use **static credentials** to make a WCC rest API call to get **authentication token**. 
+This app will step by step guide you to create a dummy app that will show how to use **static credentials** to make a WCC rest API call to get **authentication token**.
 
 Later on the app guides you to use **authentication token** in Rest API call to upload a content to WCC with some basic information or metadata.
 
