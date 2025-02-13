@@ -189,7 +189,7 @@ To set up and use full-text searching and indexing with OracleTextSearch, follow
 
     ![Click OK to run the Java Applet](./images/appendix2_reindex_screenshot3_0.png "Run Java Applet")
 
-    ![This image shows the Repository Manager Java Applet](./images/aappendix2_reindex_screenshot3_1.png "Repository Manager Applet")
+    ![This image shows the Repository Manager Java Applet](./images/appendix2_reindex_screenshot3_1.png "Repository Manager Applet")
 
 4. On the **Repository Manager** Applet , Click on **Indexer** tab
 
