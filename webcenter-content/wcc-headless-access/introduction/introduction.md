@@ -4,7 +4,7 @@
 
 In this lab, you will learn about the steps to build headless WebCenter Content(WCC) App using WebCenter Content REST APIs secured by OAuth. This lab covers the most commonly used APIs required for any App.
 
-**Estimated Lab Time**: *30 minutes*
+**Estimated Lab Time**: *1.5 hrs*
 
 ### **Description**
 
