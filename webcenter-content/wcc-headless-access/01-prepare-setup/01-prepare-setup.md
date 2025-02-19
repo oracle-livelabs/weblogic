@@ -2,6 +2,8 @@
 
 ## Introduction
 
+> *Note : You can skip this lab, if you have Webcenter Marketplace Environment already setup.*
+
 This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
 **Estimated Lab Time**: *30 minutes*
