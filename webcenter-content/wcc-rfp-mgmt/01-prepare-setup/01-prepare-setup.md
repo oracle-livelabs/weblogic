@@ -29,6 +29,8 @@ This lab assumes you have:
 
 ## Task 2: Prepare Your OCI Tenancy
 
+> *Note : You can skip this task, if you already have Webcenter Marketplace Environment already setup.*
+
   This task helps you to prepare your OCI tenancy for provisioning WebCenter Content Marketplace Stack
 
   Before you begin, you would need to complete the following tasks and prerequisites.
