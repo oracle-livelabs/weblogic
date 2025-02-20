@@ -13,12 +13,12 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare Setup",
+      "title": "Lab 1: Prepare Setup (Optional)",
       "description": "How to download your ORM stack and update security rules for an existing VCN",
       "filename": "../../01-prepare-setup/01-prepare-setup.md"
     },
     {
-      "title": "Lab 2: Setup WebCenter Content Marketplace Instance",
+      "title": "Lab 2: Setup WebCenter Content Marketplace Instance (Optional)",
       "description": "How to provision the workshop environment and connect to it",
       "filename": "https://oracle-livelabs.github.io/weblogic/webcenter-content/wcc-rfp-mgmt/02-wcc-environment-setup/02-wcc-environment-setup.md"
     },
