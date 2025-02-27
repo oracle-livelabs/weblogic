@@ -12,17 +12,20 @@ Estimated Lab Time: 15 minutes
 
 1. First, clone the operator git repository to OCI Cloud Shell.
     ```bash
-    <copy>git clone --branch v4.0.1 https://github.com/oracle/weblogic-kubernetes-operator.git</copy>
+    <copy>git clone --branch v4.2.15 https://github.com/oracle/weblogic-kubernetes-operator.git</copy>
     ```
+    You should have output similar to the following:
 
-    The output will be similar to the following:
     ```bash
+    $ git clone --branch v4.2.15 https://github.com/oracle/weblogic-kubernetes-operator.git
     Cloning into 'weblogic-kubernetes-operator'...
-    remote: Enumerating objects: 704803, done.
-    remote: Total 704803 (delta 0), reused 0 (delta 0), pack-reused 704803
-    Receiving objects: 100% (704803/704803), 707.37 MiB | 22.73 MiB/s, done.
-    Resolving deltas: 100% (373275/373275), done.
-    Note: switching to '4b5964ab16dfc4cf061241b1d537e54efa760ecf'.
+    remote: Enumerating objects: 1572146, done.
+    remote: Counting objects: 100% (2423/2423), done.
+    remote: Compressing objects: 100% (495/495), done.
+    remote: Total 1572146 (delta 1307), reused 2234 (delta 1159), pack-reused 1569723 (from 4)
+    Receiving objects: 100% (1572146/1572146), 1.01 GiB | 46.34 MiB/s, done.
+    Resolving deltas: 100% (800284/800284), done.
+    Note: switching to '78ba3c86b964fa9ce753c85731f54e94e3b2be20'.
 
     You are in 'detached HEAD' state. You can look around, make experimental
     changes and commit them, and you can discard any commits you make in this
@@ -38,8 +41,6 @@ Estimated Lab Time: 15 minutes
     git switch -
 
     Turn off this advice by setting config variable advice.detachedHead to false
-
-    Updating files: 100% (4190/4190), done.
     ```
 
 
@@ -97,7 +98,7 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     The output will be similar to the following:
     ```bash
     NAME: sample-weblogic-operator
-    LAST DEPLOYED: Thu Apr  6 10:41:57 2023
+    LAST DEPLOYED: Thu Feb 27 06:20:25 2025
     NAMESPACE: sample-weblogic-operator-ns
     STATUS: deployed
     REVISION: 1
@@ -124,12 +125,12 @@ Kubernetes distinguishes between the concept of a user account and a service acc
     The output will be similar to the following:
     ```bash
     NAME                            NAMESPACE                       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
-    sample-weblogic-operator        sample-weblogic-operator-ns     1               2023-04-06 10:41:57.793349849 +0000 UTC        weblogic-operator-4.0.5 4.0.5 
+    sample-weblogic-operator        sample-weblogic-operator-ns     1               2025-02-27 06:20:25.451624895 +0000 UTC        weblogic-operator-4.2.15    4.2.15 
     ```
 
     The WebLogic Server Kubernetes Operator has been installed. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, April 2023
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, March 2025

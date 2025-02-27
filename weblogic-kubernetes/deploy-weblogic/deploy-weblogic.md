@@ -49,14 +49,13 @@ After you have your domain namespace (the WebLogic domain is not deployed yet), 
     ```bash
     Release "traefik-operator" has been upgraded. Happy Helming!
     NAME: traefik-operator
-    LAST DEPLOYED: Thu Apr  6 10:49:56 2023
+    LAST DEPLOYED: Thu Feb 27 06:27:08 2025
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 2
     TEST SUITE: None
     NOTES:
-    Traefik Proxy v2.9.9 has been deployed successfully
-    on traefik namespace !
+    traefik-operator with docker.io/traefik:v3.3.3 has been deployed successfully on traefik namespace !
     ```
     
     > Note that the only updated parameter is to add the domain namespace.
@@ -68,10 +67,10 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
 
 1. We provided for you a domain.yaml file that contains a YAML representation of the custom resource object. Please copy it locally:
     ```bash
-    <copy>curl -LSs https://raw.githubusercontent.com/pandey-ankit/weblogic/main/weblogic-kubernetes/domain.v9.yaml  >~/domain.yaml</copy>
+    <copy>curl -LSs https://raw.githubusercontent.com/pandey-ankit/weblogic/refs/heads/main/weblogic-kubernetes/domain.v9.yaml  >~/domain.yaml</copy>
     ```
 
-    > Review it in your favorite editor or a [browser](https://raw.githubusercontent.com/pandey-ankit/weblogic/main/weblogic-kubernetes/domain.v9.yaml).
+    > Review it in your favorite editor or a [browser](https://raw.githubusercontent.com/pandey-ankit/weblogic/refs/heads/main/weblogic-kubernetes/domain.v9.yaml).
 
 2. Create the domain custom resource object with the following command:
     ```bash
@@ -99,9 +98,9 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     The output should be similar to the following:
     ```bash
     NAME                             READY   STATUS    RESTARTS   AGE    IP             NODE          NOMINATED NODE   READINESS GATES
-    sample-domain1-admin-server      1/1     Running   0          2m7s   10.244.0.134 10.0.10.81    <none>           <none>
-    sample-domain1-managed-server1   1/1     Running   0          55s    10.244.0.4   10.0.10.155   <none>           <none>
-    sample-domain1-managed-server2   0/1     Running   0          55s    10.244.1.4   10.0.10.24    <none>           <none>
+    sample-domain1-admin-server      1/1     Running   0          2m7s   10.0.10.111 10.0.10.227    <none>           <none>
+    sample-domain1-managed-server1   1/1     Running   0          55s    10.0.10.132   10.0.10.47   <none>           <none>
+    sample-domain1-managed-server2   1/1     Running   0          55s    10.0.10.125   10.0.10.159    <none>           <none>
     ```
     > You should see three running pods similar to the results shown above. If you don't see all the running pods, wait and then check periodically. The entire domain deployment may take up to 2-3 minutes depending on the compute shapes.
 
@@ -112,7 +111,7 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
     ```bash
     <copy>
     cat <<EOF | kubectl apply -f -
-    apiVersion: traefik.containo.us/v1alpha1
+    apiVersion: traefik.io/v1alpha1
     kind: IngressRoute
     metadata:
       name: console
@@ -126,7 +125,7 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
               name: sample-domain1-admin-server
               port: 7001
     ---
-    apiVersion: traefik.containo.us/v1alpha1
+    apiVersion: traefik.io/v1alpha1
     kind: IngressRoute
     metadata:
       name: opdemo
@@ -140,7 +139,7 @@ To deploy WebLogic domain, you need to create a Domain resource definition which
               name: sample-domain1-cluster-cluster-1
               port: 8001
     ---
-    apiVersion: traefik.containo.us/v1alpha1
+    apiVersion: traefik.io/v1alpha1
     kind: IngressRoute
     metadata:
       name: remote-console
@@ -184,5 +183,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, April 2023
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, March 2025
