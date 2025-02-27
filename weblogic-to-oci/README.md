@@ -6,7 +6,7 @@ This workshop lets you practice migrating a WebLogic domain from on-premises to 
 
 ## Access the Labs on the Repo
 Alternatively, you can follow the labs on this repo:
-- [Login to Oracle Cloud Infrastructure](https://github.com/oracle/learning-library/blob/master/common/labs/cloud-login/cloud-login.md)
+- [Login to Oracle Cloud Infrastructure](https://github.com/oracle-livelabs/common/blob/main/labs/cloud-login/cloud-login.md)
 - [Introduction](./intro/intro.md)
 - [Prepare the OCI environment to deploy WebLogic Server](./prepare/prepare.md)
 - [Set up an on-premises environment (using Docker)](./on-prems-env-docker/on-prems-env-docker.md)
