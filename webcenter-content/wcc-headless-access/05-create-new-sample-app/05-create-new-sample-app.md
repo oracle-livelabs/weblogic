@@ -359,7 +359,7 @@ Log in to the **WebCenter Content (WCC)** Portal to confirm that the document ha
 
   Below is step by step guide to import **WCC Basic APIs** to Postman and understand WCC Basic APIs request/response.
 
-1. Download **WCC BASIC API LIST.postman_collection.json** Collection File from **Lab 1: Prepare Setup**.
+1. Download [**WCC BASIC API LIST.postman_collection.json**](https://objectstorage.ap-melbourne-1.oraclecloud.com/p/CXz1PqdFPMOZkpnuSFeTZ3qvfU2q1n4GNGXA0lJDnDFs2GHzYVo_xybvE6ayh-lO/n/axovrm9ueswa/b/wms_11801_livelab_4116/o/WCC%20BASIC%20API%20LIST.postman_collection.json) Postman Collection File *( right-click on the file name link and click on **Save link as** option )*
 
 2. Open **Postman** App in your system, navigate to Collections and click on Import.
           ![Import WCC APIs Collection](images/import-wcc-api-collection.png "Import WCC APIs Collection")
