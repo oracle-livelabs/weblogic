@@ -93,6 +93,7 @@ To update index in WCC follow these steps:
 </if>
 
 <if type="IDCS">
+
 If your WebCenter Content is configured with IDCS, follow the steps outlined under this tab and ignore steps under **Weblogic Server** tab.
 
 ### Create Users
@@ -207,11 +208,11 @@ This section applies only if the instance is integrated with the Oracle Cloud In
 ```
 
  > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
 </if>
 
 You may now **proceed to the next lab**.
 
-<if type="IDCS">
 ## Appendix 1: Sign in to Oracle Cloud Infrastructure Console
 
 Complete the following steps to sign in to the Oracle Cloud Infrastructure console.
@@ -229,7 +230,7 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         * Under Single Sign-On (SSO) options, note the identity provider selected in the Identity Provider field and click Continue.
 
   4. Enter the user name and password provided in the welcome email, and click Sign In. The Oracle Cloud Infrastructure console is shown.
-</if>
+
 
 ## Learn More
 
