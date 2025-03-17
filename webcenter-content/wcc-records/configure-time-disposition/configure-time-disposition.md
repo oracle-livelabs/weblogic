@@ -62,7 +62,7 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 ## Task 3: Create User and add record reviewer roles
 
 <if type="Weblogic">
-If your WebCenter Content is configured with IDCS, follow the steps outlined under this tab and ignore steps under **Oracle Cloud Infrastructure Console** tab.
+If your WebCenter Content is configured with weblogic credential store, follow the steps outlined under this tab and ignore steps under **Oracle Cloud Infrastructure Console** tab.
 
 To update index in WCC follow these steps:
 
@@ -215,7 +215,7 @@ You may now **proceed to the next lab**.
 
 ## Appendix 1: Sign in to Oracle Cloud Infrastructure Console
 
-Complete the following steps to sign in to the Oracle Cloud Infrastructure console.
+If your WebCenter Content is configured with IDCS, follow the steps below to sign in to the Oracle Cloud Infrastructure console. Ignore if instance is configured with Weblogic Credential Store.
 
   1. Go to <http://cloud.oracle.com>.
 
@@ -230,7 +230,6 @@ Complete the following steps to sign in to the Oracle Cloud Infrastructure conso
         * Under Single Sign-On (SSO) options, note the identity provider selected in the Identity Provider field and click Continue.
 
   4. Enter the user name and password provided in the welcome email, and click Sign In. The Oracle Cloud Infrastructure console is shown.
-
 
 ## Learn More
 

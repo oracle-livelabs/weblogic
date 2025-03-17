@@ -121,18 +121,19 @@ To Install WebCenter Content Administration Desktop Client, follow the below ste
 To Configure WebCenter Content Administration Desktop Client, follow the below steps;
 
 1. Launch WebCenter Content Administration Desktop Client.
-<if type="Windows">
 
+<if type="Windows">
 - In Windows Start menu search **Oracle WebCenter Content Administration**
 - Click on **Oracle WebCenter Content Administration** app
  ![This image shows the WCC Administration Desktop Client](./images/wcc-admin-installed.png "WCC Administration Desktop Client")
 </if>
 
 <if type="MAC">
- * In Mac **Spotlight search** search **Oracle WebCenter Content Administration**
- * Click on **Oracle WebCenter Content Administration** app
+- In Mac **Spotlight search** search **Oracle WebCenter Content Administration**
+- Click on **Oracle WebCenter Content Administration** app
  ![This image shows the WCC Administration Desktop Client](./images/webcenter-admin-launch-mac.png "WCC Administration Desktop Client")
 </if>
+
 2. Enter the **User Name, Password, Server**. Click **OK**.
 
 - **User Name**: Enter
@@ -158,6 +159,7 @@ To Configure WebCenter Content Administration Desktop Client, follow the below s
 
 3. If **Warning** dialog is opened due to insecure certificate, press **Yes** to continue.
 ![This image shows the WCC Administration Desktop Client Warning](./images/webcenter-admin-warning.png "WCC Administration Desktop Client Warning")
+
 4. Wait for WebCenter Content Administration Dialog to open
 ![This image shows the WCC Administration Applets](./images/webcenter-admin-applet.png "WCC Administration Applets")
 

@@ -2,7 +2,12 @@
 
 ## Introduction
 
-This lab walks you through the content customization functionality of WebCenter Records Management that restricts users from performing certain actions on the content.
+This lab guides you through the content customization features of WebCenter Records Management, which limit user's ability to perform certain actions on content. When creating a retention category, the following security restrictions can be applied:
+
+* Restrict Revisions: Users without the RMA Right of Record.Revise cannot revise any content in this category, even if they have WCC write access.
+* Restrict Deletes: Users without the RMA Right of Record.Delete cannot delete any content in this category, even if they have WCC delete access and are listed as authors.
+* Restrict Edits: Users without the RMA Right of Record.Edit cannot update the metadata of any content in this category, even if they have WCC write access.
+* Transfer or Accession to NARA (Permanent): No revisions, deletions, or edits are allowed, even for users with these RMA rights
 
 *Estimated Time:* 20 minutes
 
