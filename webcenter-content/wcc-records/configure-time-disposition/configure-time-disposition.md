@@ -145,7 +145,6 @@ If your WebCenter Content is configured with IDCS, follow the steps outlined und
 ```
 
 ![This image shows the IDCS Reset Password Page ](./images/reset-password.png "IDCS Reset Password Page")
-8. Similarly create User **HRRep1**, **HRRep2**, **TrainingRep1**, **TrainingRep2**, **TrainingRep3**, **TrainingRep4**, **TrainingAdmin** and **FinRep1**
 
 ### Create Groups
 
@@ -189,25 +188,11 @@ To Assign Group membership to users in WCC follow these steps:
 6. search for "rma" and select **rma**, **rmaadmin**  and click **Assign user** or **OK**
 ![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-groups.png "IDCS Assign User to Groups Page")
 7. Since there are multiple groups in IDCS, the guest group may not appear on the same page. To assign the guest group to the user, follow step 5, then search for "guest", select the guest group, and assign it to the user.
-![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-guest-groups.png "IDCS Assign User to Groups Page")
 
 >Note there might be slight variation in the IDCS UI based on IDCS version used
->
-### Sync Users with WCC
 
-This section applies only if the instance is integrated with the Oracle Cloud Infrastructure Console. Users will not appear in WCC unless they have logged into WCC at least once. To address this, we need to synchronize users and roles with WCC.
-
-1. Login to WebCenter Content server as user with Administrator Privilege.  
- ![This image shows the WCC Instance Component Manager Page](./images/webcenter-post-login.png "WCC Component Manager Page")
-2. In the same browser tab or new tab run following API from browser URL:
-
-* **IDCS User Sync: Open below URL in your browser tab and wait for message "Users sync has been run"
-
-```Text
-<copy>https://localhost:16200/cs/idcplg?IdcService=SYNC_USERS</copy>
-```
-
- > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+![This image shows the IDCS Assign User to Groups Page ](./images/idcs-assign-user-to-guest-groups.png "IDCS Assign User to Groups Page")
+8. IDCS users will not appear in WCC unless they have logged into WCC at least once. To address this, login to WCC as Mark
 
 </if>
 

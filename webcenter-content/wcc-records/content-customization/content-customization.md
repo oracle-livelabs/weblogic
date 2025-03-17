@@ -45,7 +45,6 @@ Disposition Authority : No Revision
 Restrict Revisions: Checked
 ```
 
-//TODO : Change the Image
 ![Fill in the details on the Retention Category Create a page as shown in this image.](./images/category-create-form.png "Create Retention Category Page")
 
 ## Task 2: Login to WCC RedwoodUI and traverse to folders root folder
@@ -84,7 +83,7 @@ To Login to WCC RedwoodUI follow these steps:
 
 ![This image shows the WCC Instance Redwood UI Root Navigation](./images/wcc-redwoodui-folders.png "WCC Instance Redwood UI Root Navigation")
 
-## Task 2: Create Folder
+## Task 3: Create Folder
 
 To create folder re RedwoodUI follow these steps:
 
@@ -106,7 +105,7 @@ To create folder re RedwoodUI follow these steps:
 
 ![This image shows the WCC Redwood UI Create Folder](./images/wcc-redwoodui-create-folder.png "WCC Instance Redwood UI Create Folder")
 
-## Task 3: Upload document and Set Category ID
+## Task 4: Upload document and Set Category ID
 
 1. In WCC RedwoodUI navigate to **root** > **No Revision Folder** folder and click on Upload Icon
 ![This image shows the WCC Instance Folder Page](./images/wcc-redwoodui-upload.png "WCC Instance Folder Page")
@@ -116,7 +115,7 @@ To create folder re RedwoodUI follow these steps:
 4. Click Upload
 ![This image shows to set Category ID for document and upload ](./images/wcc-redwoodui-document-upload-set-categoryid.png "WCC Instance set Category ID")
 
-## Task 4: Verify Revision restriction on content
+## Task 5: Verify Revision restriction on content
 
 1. In WCC RedwoodUI navigate to **root** > **No Revision Folder** folder and select the document uploaded in Task 3
 2. Click on **Check Out** from Menu
