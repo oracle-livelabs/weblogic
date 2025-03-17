@@ -191,6 +191,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Authors-** Sujata Nayak, Consulting Member Technical Staff, Oracle WebCenter Content
-- **Contributors-** Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
-- **Last Updated By/Date-** Sujata Nayak, December 2024
+- **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+- **Contributors-** Shriraksha S Nataraj, Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+- **Last Updated By/Date-** Sujata Nayak, March 2025

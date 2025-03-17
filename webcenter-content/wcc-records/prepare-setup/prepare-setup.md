@@ -63,6 +63,6 @@ Using the details from the two steps above, proceed to the lab *Environment Setu
 
 ## Acknowledgements
 
-- **Author** - Rene Fontcha, Oracle LiveLabs Platform Lead, NA Technology
-- **Contributors** - Kay Malcolm, Senior Director, Database Product Management
-- **Last Updated By/Date** - Rene Fontcha, Oracle LiveLabs Platform Lead, NA Technology, July 2022
+- **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+- **Contributors-** Shriraksha S Nataraj, Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+- **Last Updated By/Date-** Sujata Nayak, March 2025

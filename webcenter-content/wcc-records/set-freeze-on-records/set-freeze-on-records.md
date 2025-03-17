@@ -54,6 +54,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj, Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Sujata Nayak, March 2025

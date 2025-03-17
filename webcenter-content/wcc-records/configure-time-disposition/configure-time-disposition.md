@@ -222,6 +222,6 @@ If your WebCenter Content is configured with IDCS, follow the steps below to sig
 
 ## Acknowledgements
 
-* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
+* **Contributors-** Shriraksha S Nataraj, Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Sujata Nayak, March 2025

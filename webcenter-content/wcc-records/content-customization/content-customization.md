@@ -132,6 +132,6 @@ To create folder re RedwoodUI follow these steps:
 
 ## Acknowledgements
 
-* **Author-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Authors-** Sujata Nayak, Consulting Member Technical Staff, Oracle WebCenter Content
+* **Contributors-** Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Sujata Nayak, March 2025
