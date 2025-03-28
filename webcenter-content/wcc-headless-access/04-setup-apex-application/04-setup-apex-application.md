@@ -167,9 +167,9 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     ![Web Credentials Screen](images/web-credentials-screen.png "Web Credentials Screen")
 
-5. Fill the necessary details to configure Web Credentials, ensuring all required information is accurately provided. Give a unique Static ID eg. 'credentials-for-wcc-api'.
+5. Fill the necessary details to configure Web Credentials, ensuring all required information is accurately provided. Give a unique Static ID eg. 'credentials\_for\_wcc\_api'.
           ```
-          <copy>credentials-for-wcc-api</copy>
+          <copy>credentials_for_wcc_api</copy>
           ```
 
       > Note : Static ID will serve as the basic authentication credentials when making REST API calls
