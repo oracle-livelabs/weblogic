@@ -22,6 +22,8 @@ This lab assumes you have:
 - You have completed:
   - Lab: Prepare Setup ( *Paid Tenants* only)
   - Lab: Setup WCC Marketplace Environment
+- Instance should be setup with valid certificate
+- If using ATP DB, we must configure the instance with port 443
 
 ## Task 1: Validate That WebCenter Content CS URL
 
