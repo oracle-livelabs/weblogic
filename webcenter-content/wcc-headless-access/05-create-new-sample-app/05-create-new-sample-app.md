@@ -46,12 +46,12 @@ This app will step by step guide you to create a dummy app that will show how to
 2. Click on **Create Page**, choose blank page as the component and click on next.
    ![Choose Page Type](images/blank-page-screen.png "Choose Page Type")
 
-3. Give a desired name to the page eg. **Create Content** and also enable Use Breadcrumb option. This will show the page in the breadcrumb menu.
+3. Give a desired name to the page eg. **Create Content** and enable Use Breadcrumb option. This will show the page in the breadcrumb menu. Also check "Home(Page1)" is selected in Breadcrum Parent Entry.
 
           <copy>Create Content</copy>
 
    ![Fill New Page Details](images/create-page-screen.png "Fill New Page Details")
-4. After creating the page, drop **Static Content** in the region body under breadcrum. Drop it either from the **Regions section** below the layout window or add it by right click on region body and set the title to desired name eg. **Create Content**.
+4. After creating the page, drop **Static Content** in the region body under breadcrumb. Drop it either from the **Regions section** below the layout window or add it by right click on region body and select **Create Region**.  Set the title to desired name eg. **Create Content**.
 
         <copy>Create Content</copy>
 
