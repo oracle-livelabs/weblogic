@@ -43,15 +43,15 @@ This app will step by step guide you to create a dummy app that will show how to
 1. Navigate to the **App Builder** Screen by clicking from top menu and click on the newly created app. It will Show the default pages.
    ![Default Page](images/default-page-screen.png "Default Pages of Apex App")
 
-2. Click on **Create Page** and choose blank page as the component
+2. Click on **Create Page**, choose blank page as the component and click on next.
    ![Choose Page Type](images/blank-page-screen.png "Choose Page Type")
 
-3. Give a desired name to the page eg. **Create Content** and also enable Use Breadcrumb option which will show the page in the breadcrumb menu.
+3. Give a desired name to the page eg. **Create Content** and enable Use Breadcrumb option. This will show the page in the breadcrumb menu. Also check "Home(Page1)" is selected in Breadcrum Parent Entry.
 
           <copy>Create Content</copy>
 
    ![Fill New Page Details](images/create-page-screen.png "Fill New Page Details")
-4. After creating the page, drop **Static Content** in the body from the **Regions section** below the layout window or add by right click on body and give it desired name eg. **Create Content**.
+4. After creating the page, drop **Static Content** in the region body under breadcrumb. Drop it either from the **Regions section** below the layout window or add it by right click on region body and select **Create Region**.  Set the title to desired name eg. **Create Content**.
 
         <copy>Create Content</copy>
 
@@ -116,11 +116,14 @@ This app will step by step guide you to create a dummy app that will show how to
    ![Author Field Property](images/author-default-value.png "Author Field Property")
 20. In the same manner add one more Display Only item next to **P2&#95AUTHOR** and give it desired name eg. **P2&#95DOC&#95TYPE**. Also set the default value on right side properties to static with value as **Document** as shown below.
 
-      **P2&#95DOC&#95TYPE** : Enter
+      Title : P2\_DOC\_TYPE
 
             <copy>P2_DOC_TYPE</copy>
 
-       **Document** : Enter
+      Default
+      Type : Static      
+
+       Static Value : Document
 
             <copy>Document</copy>
 
@@ -146,7 +149,7 @@ This app will step by step guide you to create a dummy app that will show how to
 
       ![New global variable](./images/global-page-item.png " New global variable")
 
-    * Disable the **value protected** property on the right side menu to enable updating of the variable value using code.
+    * Set type as **hidden** and disable the **value protected** property on the right side menu to enable updating of the variable value using code.
 
        ![New global variable property](images/hostname-protected.png "New global variable property")
 
@@ -160,7 +163,7 @@ This app will step by step guide you to create a dummy app that will show how to
 
       ![New global variable property](images/initial-hostname.png "New global variable property")
 
-4. Change the **Action** property on right side to **Execute Javascript Code**.
+4. Select **Show** and change the **Action** property on right side to **Execute Javascript Code**.
 
       ![Hostname variable value](images/initial-hostname-type.png "Hostname variable value")
 
@@ -181,7 +184,7 @@ This app will step by step guide you to create a dummy app that will show how to
 
       ![Initialize Page Variables](images/initialise-pg2-null.png "Initialize Page Variables to Null")
 
-7. Change the Action to **Execute Server-side** Code instead of **Show** and paste the code snippet in PL/SQL Code as shown below.
+7. Select **Show** and change the Action to **Execute Server-side** Code instead of **Show** and paste the code snippet in PL/SQL Code as shown below.
 
       > Note : Make sure to use correct variable names while pasting the code snippets as you have defined in your page. If there is any error, please resolve it first before saving the changes.
 
@@ -232,7 +235,7 @@ This app will step by step guide you to create a dummy app that will show how to
           APEX_DEBUG_MESSAGE.LOG_MESSAGE(p_message => 'lv_base_url : ' || lv_base_url, p_level => 1);
           lc_response := apex_web_service.make_rest_request      -- Making Rest call to the above created url with static credentials
           ( p_url => lv_base_url, p_http_method => 'POST',
-          p_credential_static_id => 'credentials-for-wcc-api'); -- Static Basic Auth Credentials defined while creating APP
+          p_credential_static_id => 'credentials_for_wcc_api'); -- Static Basic Auth Credentials defined while creating APP
           l_status_code := apex_web_service.g_status_code;
           APEX_DEBUG_MESSAGE.LOG_MESSAGE(p_message => 'l_status_code : ' || l_status_code, p_level => 1);
           IF l_status_code = 200

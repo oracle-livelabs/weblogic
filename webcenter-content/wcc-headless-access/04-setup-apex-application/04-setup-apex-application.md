@@ -50,7 +50,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           <copy>WelCwcm123##</copy>
           ```
     > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
-    > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
+    > *If any issues with ADMIN credentials, Refer to **Lab 3: Initialize WCC Environment** => **Appendix 5: Reset ADMIN password for APEX/ORDS** to reset ADMIN Password*
   ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
 
 2. In the *Administration Services* Landing page , Click on **Create Workspace** button on the top right corner
@@ -60,7 +60,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
         ```
         <copy>WCCHEADLESSACCESS</copy>
         ```
-            > Note: If the workspace name already exists, please add wcc schema prefix to the workspace name eg: **[schema\_prefix]_WCCHEADLESSACCESS**
+            > Note: If the workspace name already exists, please add wcc schema prefix to the workspace name eg: **[schema\_prefix]_WCCHEADLESSACCESS**. For newer APEX versions, refer to **Appendix 1: Create Workspace in newer APEX versions**.
   ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step1.png "APEX/ORDS Create Workspace Page")
 
 4. Provide the values for DB Schema details as mentioned below and click **Next** Button
@@ -133,6 +133,8 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             ```
             <copy>Welcome1</copy>
             ```
+      > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
+    > *If any issues with ADMIN credentials, Refer to **Lab 3: Initialize WCC Environment** => **Appendix 5: Reset ADMIN password for APEX/ORDS** to reset ADMIN Password*
   ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
 
 2. If its first time Login, Change password for the ADMIN user. You can provide the same Password value and click on **Change Password**.
@@ -167,12 +169,12 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     ![Web Credentials Screen](images/web-credentials-screen.png "Web Credentials Screen")
 
-5. Fill the necessary details to configure Web Credentials, ensuring all required information is accurately provided. Give a unique Static ID eg. 'credentials-for-wcc-api'.
+5. Fill the necessary details to configure Web Credentials, ensuring all required information is accurately provided. Give a unique Static ID eg. 'credentials\_for\_wcc\_api'.
           ```
-          <copy>credentials-for-wcc-api</copy>
+          <copy>credentials_for_wcc_api</copy>
           ```
 
-      > Note : Static ID will serve as the basic authentication credentials when making REST API calls
+      > Note : Static ID will serve as the basic authentication credentials when making REST API calls. Also provide correct WCC credentials while configuring this.
 
     ![Web Credentials Screen](images/static-credentials-screen.png "Web Credentials Screen")
 
@@ -181,6 +183,28 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
     You have now successfully setup the APEX Workspace for creating new application.
 
 You are now ready to **proceed to the next lab**.
+
+## Appendix 1: Create Workspace in newer APEX versions
+
+1. Follow steps as in **Task 1: Create New APEX Workspace** till point no 2.
+2. Choose **New Schema** from the popup window.
+![This image shows the APEX/ORDS Create Workspace Page](./images/create_workspace_new_apex_part1.png "APEX/ORDS Create Workspace Page")
+3. Provide the value for **Workspace Name**.
+        ```
+        <copy>WCCHEADLESSACCESS</copy>
+        ```
+            > Note: If the workspace name already exists, please add wcc schema prefix to the workspace name eg: **[schema\_prefix]_WCCHEADLESSACCESS**.
+4. Provide the values for **Workspace Username** and **Workspace Password** as your **ADMIN** username and password and click Create Workspace.
+    - **Username**
+          ```
+          <copy>ADMIN</copy>
+          ```
+    - **Password**
+          ```
+          <copy>WelCwcm123##</copy>
+          ```
+![This image shows the APEX/ORDS Create Workspace Page](./images/add_workspace_user_pass_new_apex.png "APEX/ORDS Create Workspace Page")
+5. Your workspace is created, follow **Task 2: Login to Newly Created APEX Workspace** after this.
 
 ## Acknowledgements
 
