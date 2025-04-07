@@ -49,7 +49,7 @@ mvn -U org.openrewrite.maven:rewrite-maven-plugin:run \
 > ***NOTE*** </br>
 > This command updates the application to use Java 21. If you want to upgrade to Java 17 instead, replace `UpgradeToJava21` with `UpgradeToJava17`.
 
-![OpenRewrite command](images/rewrite-weblogic.gif)
+![OpenRewrite command](images/rewrite-weblogic.gif " ")
 
 This command applies the following recipes:
 
@@ -85,13 +85,15 @@ OpenRewrite updates the `spring-framework-petclinic` code in the following ways:
 
 You can review the changes made by OpenRewrite in the terminal output and check the differences using `git diff`.
 
-![Git Diff](images/git-diff.svg)
+![Git Diff](images/git-diff.svg " ")
 
 Or you can use your favorite IDE to review the changes.
 
 In this example, we will use Visual Studio Code (VS Code) to review the changes. Open the `spring-framework-petclinic` project in VS Code and check the changes made by OpenRewrite.
 
-![review changes in VS Code](images/review-petclinic-changes-vscode.gif)
+![review changes in VS Code](images/review-petclinic-changes-vscode.gif " ")
+
+Please [proceed to the next lab](#next).
 
 ## Learn More
 

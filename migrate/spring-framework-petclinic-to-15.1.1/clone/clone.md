@@ -1,4 +1,4 @@
-# Cloning the PetClinic Repository
+# Clone the PetClinic Repository
 
 ## Introduction
 
@@ -52,7 +52,7 @@ The application is built using the Spring Framework, which provides a robust and
     </copy>
     ```
 
-![Git Clone](images/git-clone.gif)
+![Git Clone](images/git-clone.gif " ")
 
 ## Task 2: Resolve Maven Dependencies
 
@@ -68,7 +68,9 @@ It's best practice to get Maven dependencies must be resolved and downloaded to 
 
 1. If you see any errors, check your internet connection and/or VPN and try again.
 
-![Resolve Maven Dependencies](images/mvn-resolve.gif)
+![Resolve Maven Dependencies](images/mvn-resolve.gif " ")
+
+Please [proceed to the next lab](#next).
 
 ## Learn More
 

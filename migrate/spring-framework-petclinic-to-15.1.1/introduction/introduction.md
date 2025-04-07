@@ -22,7 +22,7 @@ Estimated Workshop Time: ***15 minutes***
 
 * Basic knowledge of Java, Maven and Git
 * You have Maven 3.6.x or higher, Java 21 or higher and Git installed
-* You have a terminal (local or OCI Cloud Shell) with access to the internet
+* You have a terminal (***local*** or ***OCI Cloud Shell***) with access to the internet
 * You have a WebLogic 15.1.1 domain running to test the migrated application
 
 ## Learn More

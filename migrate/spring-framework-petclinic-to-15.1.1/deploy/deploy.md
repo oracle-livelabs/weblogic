@@ -1,4 +1,4 @@
-# Building and Deploying the Application
+# Build and Deploy the Application
 
 ## Introduction
 
@@ -38,7 +38,7 @@ mvn clean package -DskipTests
 > </br></br>
 > The `-DskipTests` option is used to skip the tests during the build process. This use lab does not cover the migration of the tests.
 
-![Package the application](images/mvn-package.svg)
+![Package the application](images/mvn-package.svg " ")
 
 ## Task 2: Deploy the Application
 
@@ -74,7 +74,7 @@ There are several ways to deploy the application to WebLogic Server 15.1.1, like
 
 At this point, the application should be deployed and started on WebLogic Server 15.1.1.
 
-![Deploy the application using WebLogic Remote Console](images/deploy-with-wrc.gif)
+![Deploy the application using WebLogic Remote Console](images/deploy-with-wrc.gif " ")
 
 ## Task 3: Test the Application
 
@@ -83,7 +83,7 @@ At this point, the application should be deployed and started on WebLogic Server
 > ***NOTE*** </br>
 > The host and port will depend on your WebLogic Server configuration. You may have a loadbalancer or a reverse proxy in front of your WebLogic Server if deployed on Kubernetes or in a Cloud Provider.
 
-![Running the Migrated Pet Clinic on a local WebLogic](images/petclinic-weblogic.gif)
+![Running the Migrated Pet Clinic on a local WebLogic](images/petclinic-weblogic.gif " ")
 
 ## Learn More
 
