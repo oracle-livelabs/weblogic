@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Migrate Spring Framework 5.3.x PetClinic to WLS 15.1.1 (BETA)",
+    "help": "livelabs-help-weblogic_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "The Introduction.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Optional: Get Started with noVNC Remote Desktop",
+        "description": "Using noVNC Remote Desktop",
+        "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      },
+      {
+        "title": "Lab 1: Clone the Repository",
+        "description": "Clone the Pet Clininc Repository",
+        "filename": "../../clone/clone.md"
+      },
+      {
+        "title": "Lab 2: Migrate the App",
+        "description": "Migrate and review the App to run on WebLogic Server 15.1.1",
+        "filename": "../../migrate/migrate.md"
+      },
+      {
+        "title": "Lab 3: Deploy the new PetClinic",
+        "description": "Build and Deploy the migrated PetClinic to WebLogic Server 15.1.1",
+        "filename": "../../deploy/deploy.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+  }
