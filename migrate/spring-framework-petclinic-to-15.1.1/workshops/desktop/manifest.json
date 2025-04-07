@@ -19,22 +19,12 @@
       },
       {
         "title": "Lab 2: Migrating the App",
-        "description": "Migrating the App to run on WebLogic Server 15.1.1",
+        "description": "Migrating and reviewing the App to run on WebLogic Server 15.1.1",
         "filename": "../../migrate/migrate.md"
       },
       {
-        "title": "Lab 3: Review the migrated App",
-        "description": "Review the migrated PetClinic",
-        "filename": "../../review/review.md"
-      },
-      {
-        "title": "Lab 4: Build the new PetClinic",
-        "description": "Build the migrated PetClinic",
-        "filename": "../../build/build.md"
-      },
-      {
-        "title": "Lab 5: Deploy the new PetClinic",
-        "description": "Deploy the migrated PetClinic to WebLogic Server 15.1.1",
+        "title": "Lab 3: Deploying the new PetClinic",
+        "description": "Building and Deploying the migrated PetClinic to WebLogic Server 15.1.1",
         "filename": "../../deploy/deploy.md"
       },
       {

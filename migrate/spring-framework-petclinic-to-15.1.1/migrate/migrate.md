@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This lab will step through the steps to migrate a Java 1.8, Spring Framework 5.3.x app to Java 21, Jakarta EE 9.1, Spring Framework 6.2.x and WebLogic Server 15.1.1. The application used in this lab is the Spring Framework 5.3.x Pet Clinic sample application that you cloned on the previous lab.
+This lab will step through the steps to migrate a Java 1.8, Spring Framework 5.3.x app to ***Java 21***, ***Jakarta EE 9.1***, ***Spring Framework 6.2.x*** and ***WebLogic Server 15.1.1***. The application used in this lab is the Spring Framework 5.3.x Pet Clinic sample application that you cloned on the previous lab.
 
-Estimated Lab Time: 5 minutes
+Estimated Lab Time: ***5 minutes***
 
 ### About the migration tool OpenRewrite
 
@@ -19,19 +19,19 @@ Oracle also provides recipes for most common used libraries like Hibernate, ehca
 
 ### Objectives
 
-In this lab, you will:
+*In this lab, you will:*
 
 * Migrate the Spring Framework 5.3.x Pet Clinic sample application
 
 ### Prerequisites
 
-This lab assumes you have:
+*This lab assumes you have:*
 
 * Basic knowledge of Java, Maven and Git
 * Java 21 or newer (full JDK not a JRE) installed.
 * [Maven 3.6+](https://maven.apache.org/install.html) installed.
 
-## Task: Run the Maven command to run OpenRewrite
+## Task 1: Run the Maven command to run OpenRewrite
 
 For this example, we will upgrade the Spring Framework PetClinic application to run on WebLogic Server 15.1.1 with JDK 21, including Jakarta EE 9.1, Spring Framework 6.2.x and Hibernate. Will also automatically convert the cache from the deprecated and removed `ehcache 2.0` to Spring Native Cache.
 
@@ -46,8 +46,10 @@ mvn -U org.openrewrite.maven:rewrite-maven-plugin:run \
 </copy>
 ```
 
-> [!NOTE]
+> ***NOTE*** </br>
 > This command updates the application to use Java 21. If you want to upgrade to Java 17 instead, replace `UpgradeToJava21` with `UpgradeToJava17`.
+
+![OpenRewrite command](images/rewrite-weblogic.gif)
 
 This command applies the following recipes:
 
@@ -72,10 +74,24 @@ OpenRewrite updates the `spring-framework-petclinic` code in the following ways:
   * Updates the DefaultCacheManager to use the SimpleCacheManager.
   * Updates the Default Handler to work with Application Servers
 
-> [!NOTE]
+> ***NOTE*** </br>
 > The recipe `com.oracle.weblogic.rewrite.examples.spring.MigratedPetClinicExtrasFor1511` adds some extra changes to the Spring Framework PetClinic example to make it work with WebLogic Server 15.1.1, which includes the removal of the deprecated/removed `ehcache 2.0` configuration and the addition of the `SimpleCacheManager` configuration.
+> </br></br>
 > Spring Framework 6.x deprecated and removed the `ehcache 2.0` together with the `org.springframework.cache.ehcache.EhCacheCacheManager` class. When upgrading to Spring Framework 6.x, you need to chose your cache provider and update the configuration accordingly. For this tutorial the Simple Cache Manager was used for simplicity. If you want to use another cache provider, do not run the `com.oracle.weblogic.rewrite.examples.spring.MigratedPetClinicExtrasFor1511` and make the changes for the chosen cache provider.
+> </br></br>
 > Here the list of Spring Framework 6.x supported cache providers: [Supported Cache Providers](https://docs.spring.io/spring-boot/docs/3.0.8/reference/html/io.html#io.caching.provider)
+
+## Task 2: Review the changes
+
+You can review the changes made by OpenRewrite in the terminal output and check the differences using `git diff`.
+
+![Git Diff](images/git-diff.svg)
+
+Or you can use your favorite IDE to review the changes.
+
+In this example, we will use Visual Studio Code (VS Code) to review the changes. Open the `spring-framework-petclinic` project in VS Code and check the changes made by OpenRewrite.
+
+![review changes in VS Code](images/review-petclinic-changes-vscode.gif)
 
 ## Learn More
 

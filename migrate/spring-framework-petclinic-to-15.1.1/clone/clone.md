@@ -4,7 +4,7 @@
 
 This lab will step through clone and make ready the Spring Framework 5.3.x Pet Clinic example that is available [here](https://github.com/spring-petclinic/spring-framework-petclinic/tree/5.3.x) from the Spring Team, a PetClinic version with a plain old Spring Framework 5.3.x configuration and with a 3-layer architecture (i.e. presentation --> service --> repository).
 
-Estimated Lab Time: 5 minutes
+Estimated Lab Time: ***5 minutes***
 
 ### About Spring Framework 5.3.x Pet Clinic sample
 
@@ -23,14 +23,14 @@ The application is built using the Spring Framework, which provides a robust and
 
 ### Objectives
 
-In this lab, you will:
+*In this lab, you will:*
 
 * Clone the Spring Framework 5.3.x Pet Clinic sample application
 * Resolve any dependencies
 
 ### Prerequisites
 
-This lab assumes you have:
+*This lab assumes you have:*
 
 * [`git`](https://help.github.com/articles/set-up-git) command line tool installed.
 
@@ -52,7 +52,9 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 2: Sync Maven Dependencies
+![Git Clone](images/git-clone.gif)
+
+## Task 2: Resolve Maven Dependencies
 
 It's best practice to get Maven dependencies must be resolved and downloaded to your local cache prior use of tools like OpenRewrite. If needed, run `mvn dependency:resolve` for missing dependencies:
 
@@ -64,7 +66,9 @@ It's best practice to get Maven dependencies must be resolved and downloaded to 
     </copy>
     ```
 
-1. If you see any errors, check your internet connection, VPN and try again.
+1. If you see any errors, check your internet connection and/or VPN and try again.
+
+![Resolve Maven Dependencies](images/mvn-resolve.gif)
 
 ## Learn More
 
