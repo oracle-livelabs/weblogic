@@ -25,6 +25,9 @@ Estimated Workshop Time: ***15 minutes***
 * You have a terminal (***local*** or ***OCI Cloud Shell***) with access to the internet
 * You have a WebLogic 15.1.1 domain running to test the migrated application
 
+> ***NOTE*** </br>
+> The lab ***Get Started*** is optional and only applies if you are not using your local terminal. If using a OCI tenancy, you can use the OCI Cloud Shell to run the commands, just need to make sure you have internet access.
+
 ## Learn More
 
 * [How to install Maven](https://maven.apache.org/install.html)
