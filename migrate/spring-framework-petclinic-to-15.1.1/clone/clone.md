@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This lab will step through clone and make ready the Spring Framework 5.3.x Pet Clinic example that is available [here](https://github.com/spring-petclinic/spring-framework-petclinic/tree/5.3.x) from the Spring Team, a PetClinic version with a plain old Spring Framework 5.3.x configuration and with a 3-layer architecture (i.e. presentation --> service --> repository).
+This lab will step through cloning and preparing the Spring Framework 5.3.x Pet Clinic example that is available [here](https://github.com/spring-petclinic/spring-framework-petclinic/tree/5.3.x) from the Spring Team, a PetClinic version with a Spring Framework 5.3.x configuration and with a 3-layer architecture (i.e. presentation --> service --> repository).
 
 Estimated Lab Time: ***5 minutes***
 
-### About Spring Framework 5.3.x Pet Clinic sample
+### About Spring Framework 5.3.x Pet Clinic Sample
 
 The Spring Pet Clinic sample application is a classic example of a web application that demonstrates the capabilities of the Spring Framework. It is designed to showcase the use of Spring's core features, including dependency injection, aspect-oriented programming, and data access. The application is structured in a way that separates concerns into different layers, making it easy to understand and maintain.
 
@@ -17,9 +17,9 @@ The Pet Clinic application allows users to manage a pet clinic, including featur
 * Updating pet information
 * Deleting pets
 * Managing pet owners
-* Simulate an error to catch and handle exceptions
+* Simulating an error to catch and handle exceptions
 
-The application is built using the Spring Framework, which provides a robust and flexible foundation for building Java applications. It also utilizes various Spring projects, such as Spring MVC for web development and Spring Data for data access.
+The application is built using the Spring Framework, which provides a robust and flexible foundation for building Java applications. It also uses various Spring projects, such as Spring MVC for web development and Spring Data for data access.
 
 ### Objectives
 
@@ -54,9 +54,9 @@ The application is built using the Spring Framework, which provides a robust and
 
 ![Git Clone](images/git-clone.gif " ")
 
-## Task 2: Resolve Maven Dependencies
+## Task 2: Resolve Maven dependencies
 
-It's best practice to get Maven dependencies must be resolved and downloaded to your local cache prior use of tools like OpenRewrite. If needed, run `mvn dependency:resolve` for missing dependencies:
+As a best practice, Maven dependencies must be resolved and downloaded to your local cache, prior to using of tools like OpenRewrite. If needed, run `mvn dependency:resolve` for missing dependencies.
 
 1. Run the following command to resolve and download the dependencies from Maven Central:
 
@@ -66,11 +66,10 @@ It's best practice to get Maven dependencies must be resolved and downloaded to 
     </copy>
     ```
 
-1. If you see any errors, check your internet connection and/or VPN and try again.
+1. If you see any errors, check your internet connection and/or VPN, and try again.
 
 ![Resolve Maven Dependencies](images/mvn-resolve.gif " ")
 
-Please [proceed to the next lab](#next).
 
 ## Learn More
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-On this lab, you will build and deploy the migrated Spring Framework Pet Clinic (Now on Spring Framework 6.2.x) application to WebLogic Server 15.1.1.
+In this lab, you will build and deploy the migrated Spring Framework Pet Clinic application (now on Spring Framework 6.2.x) to WebLogic Server 15.1.1.
 
 Estimated Workshop Time: ***5 minutes***
 
@@ -19,7 +19,7 @@ Estimated Workshop Time: ***5 minutes***
 *This lab assumes you have:*
 
 * Basic knowledge of Java and Maven
-* You have Maven 3.6.x or higher, Java 21 or higher installed
+* You have Maven 3.6.x or later, and Java 21 or later installed
 * You have a terminal (local or OCI Cloud Shell) with access to the internet
 * You have a ***WebLogic 15.1.1 domain running*** to test the migrated application
 
@@ -36,29 +36,29 @@ mvn clean package -DskipTests
 > ***NOTE*** </br>
 > The `mvn clean package` command will build the application and create a WAR file in the `target` directory. The WAR file will be named `petclinic.war`.
 > </br></br>
-> The `-DskipTests` option is used to skip the tests during the build process. This use lab does not cover the migration of the tests.
+> The `-DskipTests` option is used to skip the tests during the build process. This lab does not cover the migration of the tests.
 
 ![Package the application](images/mvn-package.svg " ")
 
 ## Task 2: Deploy the Application
 
-There are several ways to deploy the application to WebLogic Server 15.1.1, like using the [WebLogic Deployment Tool](https://oracle.github.io/weblogic-deploy-tooling/), [WebLogic Remote Console](https://oracle.github.io/weblogic-remote-console/) and WLST (WebLogic Scripting Tool). In this lab, we will use the WebLogic Remote Console to deploy the application.
+There are several ways to deploy the application to WebLogic Server 15.1.1, such as using [WebLogic Deploy Tooling](https://oracle.github.io/weblogic-deploy-tooling/), [WebLogic Remote Console](https://oracle.github.io/weblogic-remote-console/), and WLST (WebLogic Scripting Tool). In this lab, we will use the WebLogic Remote Console to deploy the application.
 
-### Download the WebLogic Remote Console if you do not have yet
+### Download the WebLogic Remote Console, if you have not already
 
-1. Go to [github.com/oracle/weblogic-remote-console/releases](https://github.com/oracle/weblogic-remote-console/releases)
+1. Go to [github.com/oracle/weblogic-remote-console/releases](https://github.com/oracle/weblogic-remote-console/releases).
 
 1. Download the latest release of the WebLogic Remote Console. The file will be named `WebLogic-Remote-Console-<version>-<platform>.<dmg|zip>`. Select the correct file for your platform (Windows, arm64-Mac, x86-Mac, Linux).
 
 1. Install the WebLogic Remote Console.
 
-### Open the WebLogic Remote Console and configure the connection to your WebLogic Server
+### Open the WebLogic Remote Console and configure the connection to WebLogic 
 
 > ***NOTE*** </br>
 > This step is just to configure the connection to your WebLogic Server. If you already have the connection configured, you can skip this step.
 
 1. Open the WebLogic Remote Console.
-1. Click on the `providers` icon to add a new connection.
+1. Click on the `providers` icon to add a new connection. For more information, see [Connect to a Provider](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-remote-console/administer/set-console.html#GUID-98F273C5-CC1E[…]2-B560-604CA23A739A).
 
 ### Deploy the application
 
@@ -81,7 +81,7 @@ At this point, the application should be deployed and started on WebLogic Server
 1. Open a web browser and go to the following URL: `https://<your-weblogic-server-host-and-port>/petclinic/`
 
 > ***NOTE*** </br>
-> The host and port will depend on your WebLogic Server configuration. You may have a loadbalancer or a reverse proxy in front of your WebLogic Server if deployed on Kubernetes or in a Cloud Provider.
+> The host and port will depend on your WebLogic Server configuration. You may have a load balancer or a reverse proxy in front of your WebLogic Server, if deployed on Kubernetes or in a Cloud Provider.
 
 ![Running the Migrated Pet Clinic on a local WebLogic](images/petclinic-weblogic.gif " ")
 
@@ -90,7 +90,7 @@ At this point, the application should be deployed and started on WebLogic Server
 * [How to install Maven](https://maven.apache.org/install.html)
 * [How to install Java 21](https://www.oracle.com/java/technologies/downloads/#java21)
 * [WebLogic Remote Console](https://oracle.github.io/weblogic-remote-console/)
-* [WebLogic Deployment Tool](https://oracle.github.io/weblogic-deploy-tooling/)
+* [WebLogic Deploy Tooling](https://oracle.github.io/weblogic-deploy-tooling/)
 * [Deploy WebLogic in a Kubernetes Cluster](https://docs.oracle.com/en/solutions/deploy-wls-on-oke/index.html#GUID-79EC097D-DC13-4B92-92A7-CB09D594EF78)
 * [WebLogic on Oracle Cloud Infrastructure](https://docs.oracle.com/en/cloud/paas/weblogic-cloud/user/oracle-weblogic-server-oracle-cloud-infrastructure.html)
 * [Running WebLogic on the Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/weblogic-aks)
