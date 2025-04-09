@@ -33,7 +33,7 @@ Oracle also provides recipes for the most commonly used libraries, like Hibernat
 
 ## Task 1: Run the Maven command to run OpenRewrite
 
-For this example, we will upgrade the Spring Framework PetClinic application to run on WebLogic Server 15.1.1 with JDK 21, including Jakarta EE 9.1, Spring Framework 6.2.x, and Hibernate. We'll also automatically convert the cache from the deprecated and removed `ehcache 2.0` to Spring Native Cache.
+For this example, we will upgrade the Spring Framework PetClinic application to run on WebLogic Server 15.1.1 with JDK 21, including Jakarta EE 9.1, Spring Framework 6.2.x, and Hibernate. It'll also automatically convert the cache from the deprecated and removed `ehcache 2.0` to Spring Native Cache.
 
 Run the following command to run OpenRewrite on the **`spring-framework-petclinic`** application:
 
