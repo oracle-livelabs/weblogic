@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will step through the steps to migrate a Java 1.8, Spring Framework 5.3.x app to ***Java 21***, ***Jakarta EE 9.1***, ***Spring Framework 6.2.x*** and ***WebLogic Server 15.1.1***. The application used in this lab is the Spring Framework 5.3.x Pet Clinic sample application that you cloned on the previous lab.
+This lab will step through migrating a Java 1.8, Spring Framework 5.3.x app to ***Java 21***, ***Jakarta EE 9.1***, ***Spring Framework 6.2.x***, and ***WebLogic Server 15.1.1***. The application used in this lab is the Spring Framework 5.3.x Pet Clinic sample application that you cloned in the previous lab.
 
 Estimated Lab Time: ***5 minutes***
 
@@ -13,9 +13,9 @@ OpenRewrite is a powerful tool that automates the process of migrating Java appl
 OpenRewrite is particularly useful for migrating applications from older versions of Java to newer ones, as it can help you identify and fix compatibility issues, update deprecated APIs, and ensure that your code adheres to best practices.
 It can also be used to migrate applications from one framework version to another, such as from Spring Framework 5.x to Spring Framework 6.x.
 
-Oracle provides OpenRewrite recipes to help you upgrade your applications to new WebLogic and Java versions, and to Jakarta EE. This tutorial demonstrates how to use the recipes to upgrade a sample application to run on WebLogic Server 15.1.1 with JDK 21, Jakarta EE 9.1 and Spring Framework 6.2.x.
+Oracle provides OpenRewrite recipes to help you upgrade your applications to new WebLogic and Java versions, and to Jakarta EE. This tutorial demonstrates how to use the recipes to upgrade a sample application to run on WebLogic Server 15.1.1 with JDK 21, Jakarta EE 9.1, and Spring Framework 6.2.x.
 
-Oracle also provides recipes for most common used libraries like Hibernate, ehcache, etc. to help you migrate your application to the matching versions of these libraries.
+Oracle also provides recipes for the most commonly used libraries, like Hibernate, ehcache, and such, to help you migrate your application to the matching versions of these libraries.
 
 ### Objectives
 
@@ -27,13 +27,13 @@ Oracle also provides recipes for most common used libraries like Hibernate, ehca
 
 *This lab assumes you have:*
 
-* Basic knowledge of Java, Maven and Git
-* Java 21 or newer (full JDK not a JRE) installed.
+* Basic knowledge of Java, Maven, and Git
+* Java 21 or later (full JDK, not a JRE) installed.
 * [Maven 3.6+](https://maven.apache.org/install.html) installed.
 
 ## Task 1: Run the Maven command to run OpenRewrite
 
-For this example, we will upgrade the Spring Framework PetClinic application to run on WebLogic Server 15.1.1 with JDK 21, including Jakarta EE 9.1, Spring Framework 6.2.x and Hibernate. Will also automatically convert the cache from the deprecated and removed `ehcache 2.0` to Spring Native Cache.
+For this example, we will upgrade the Spring Framework PetClinic application to run on WebLogic Server 15.1.1 with JDK 21, including Jakarta EE 9.1, Spring Framework 6.2.x, and Hibernate. It'll also automatically convert the cache from the deprecated and removed `ehcache 2.0` to Spring Native Cache.
 
 Run the following command to run OpenRewrite on the **`spring-framework-petclinic`** application:
 
@@ -72,14 +72,14 @@ OpenRewrite updates the `spring-framework-petclinic` code in the following ways:
   * Updates Jakarta API usage to Jakarta EE 9.1 version.
   * Updates Spring Framework APIs to version 6.2.
   * Updates the DefaultCacheManager to use the SimpleCacheManager.
-  * Updates the Default Handler to work with Application Servers
+  * Updates the Default Handler to work with Application Servers.
 
 > ***NOTE*** </br>
 > The recipe `com.oracle.weblogic.rewrite.examples.spring.MigratedPetClinicExtrasFor1511` adds some extra changes to the Spring Framework PetClinic example to make it work with WebLogic Server 15.1.1, which includes the removal of the deprecated/removed `ehcache 2.0` configuration and the addition of the `SimpleCacheManager` configuration.
 > </br></br>
-> Spring Framework 6.x deprecated and removed the `ehcache 2.0` together with the `org.springframework.cache.ehcache.EhCacheCacheManager` class. When upgrading to Spring Framework 6.x, you need to chose your cache provider and update the configuration accordingly. For this tutorial the Simple Cache Manager was used for simplicity. If you want to use another cache provider, do not run the `com.oracle.weblogic.rewrite.examples.spring.MigratedPetClinicExtrasFor1511` and make the changes for the chosen cache provider.
+> Spring Framework 6.x deprecated and removed the `ehcache 2.0` together with the `org.springframework.cache.ehcache.EhCacheCacheManager` class. When upgrading to Spring Framework 6.x, you need to chose your cache provider and update the configuration accordingly. For this tutorial, the Simple Cache Manager was used for simplicity. If you want to use another cache provider, do not run the `com.oracle.weblogic.rewrite.examples.spring.MigratedPetClinicExtrasFor1511` and make the changes for the chosen cache provider.
 > </br></br>
-> Here the list of Spring Framework 6.x supported cache providers: [Supported Cache Providers](https://docs.spring.io/spring-boot/docs/3.0.8/reference/html/io.html#io.caching.provider)
+> Here the list of Spring Framework 6.x supported cache providers: [Supported Cache Providers](https://docs.spring.io/spring-boot/docs/3.0.8/reference/html/io.html#io.caching.provider).
 
 ## Task 2: Review the changes
 
@@ -87,13 +87,12 @@ You can review the changes made by OpenRewrite in the terminal output and check 
 
 ![Git Diff](images/git-diff.svg " ")
 
-Or you can use your favorite IDE to review the changes.
+Or, you can use your favorite IDE to review the changes.
 
 In this example, we will use Visual Studio Code (VS Code) to review the changes. Open the `spring-framework-petclinic` project in VS Code and check the changes made by OpenRewrite.
 
 ![review changes in VS Code](images/review-petclinic-changes-vscode.gif " ")
 
-Please [proceed to the next lab](#next).
 
 ## Learn More
 
