@@ -52,25 +52,24 @@ There are several ways to deploy the application to WebLogic Server 15.1.1, such
 
 1. Install the WebLogic Remote Console.
 
-### Open the WebLogic Remote Console and configure the connection to WebLogic 
+### Open the WebLogic Remote Console and configure the connection to WebLogic
 
 > ***NOTE*** </br>
 > This step is just to configure the connection to your WebLogic Server. If you already have the connection configured, you can skip this step.
 
 1. Open the WebLogic Remote Console.
-1. Click on the `providers` icon to add a new connection. For more information, see [Connect to a Provider](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-remote-console/administer/set-console.html#GUID-98F273C5-CC1E[…]2-B560-604CA23A739A).
+1. Open the **Providers** drawer to add a new connection. For more information, see [Connect to a Provider](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-remote-console/administer/set-console.html#GUID-98F273C5-CC1E-4272-B560-604CA23A739A).
 
 ### Deploy the application
 
-1. Click on the `Edit Tree` tab.
-1. Click on the `Deployments` folder, and then to the `App Deployments`.
-1. Click on the `⨁ New` icon to add a new application deployment.
-1. Add a name for the application on the `Name*`. For this lab, we will use `petclinic`.
-1. Select a target for the application on the `Targets*`. For this lab, we will use `AdminServer`.
-1. On the `Source*` section, click on the `Chose file` button and select the `petclinic.war` file from the `target` directory of the `spring-framework-petclinic` application.
-1. Select `Start Application` on the `On Deployment` section.
-1. Click on the `⨁ Create` button.
-1. Click on the `Shopping Cart` icon and then `Commit Changes` to commit the changes.
+1. In the **Edit Tree**, go to **Deployments**, then **App Deployments**.
+1. Select **New** to add a new application deployment.
+1. Enter a name for the application in the **Name** field. For this lab, we will use `petclinic`.
+1. Select a target for the application under **Targets**. For this lab, we will use `AdminServer`.
+1. In the **Source** field, select the **Chose file** icon and select the `petclinic.war` file from the `target` directory of the `spring-framework-petclinic` application.
+1. In the **On Deployment** field, select `Start Application`.
+1. Click **Create**.
+1. In the top banner, select the **Shopping Cart** and then **Commit Changes**.
 
 At this point, the application should be deployed and started on WebLogic Server 15.1.1.
 
