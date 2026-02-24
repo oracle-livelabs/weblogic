@@ -26,7 +26,7 @@ Estimated time: 10 minutes
 
   ![Oracle Cloud console, Create APM Domain](images/2-2-domain.png " ")
 
-3. Name your APM domain and select the compartment you created during the with **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop.
+3. Name your APM domain and select the compartment you created during the with **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop.
 
 4. Add a check to the **Create as Always Free Domain**, then click **Create**.
 

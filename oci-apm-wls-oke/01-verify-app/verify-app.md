@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This workshop uses the **WebLogic Operator** Demo app-  a simple JSP-based WebLogic application you created in the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Verify the WebLogic Operator application is running and ready to configure the APM Java Agent.
+This workshop uses the **WebLogic Operator** Demo app-  a simple JSP-based WebLogic application you created in the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Verify the WebLogic Operator application is running and ready to configure the APM Java Agent.
 
 Estimated time: 5 minutes
 
@@ -12,7 +12,7 @@ Estimated time: 5 minutes
 
 ### Prerequisites
 
-* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop, Tasks 1, 2, 3 and 4.
+* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop, Tasks 1, 2, 3 and 4.
 
 ## Task 1: Verify the application in a browser
 
@@ -20,7 +20,7 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
 
-2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the cluster.
+2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the cluster.
 
    ![Oracle Cloud console, Compartment](images/1-2-compartment.png " ")
 
@@ -73,7 +73,7 @@ Estimated time: 5 minutes
 
      ![WLS Operator Demo application](images/1-10-demoapp.png " ")
 
-     If you have not set up the application yet, or you cannot start the application, please visit the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop, and complete the tutorials from the Task 1 to Task 4.
+     If you have not set up the application yet, or you cannot start the application, please visit the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop, and complete the tutorials from the Task 1 to Task 4.
 
 ## Acknowledgements
 
