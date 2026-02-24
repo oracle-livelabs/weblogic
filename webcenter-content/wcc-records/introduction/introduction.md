@@ -4,7 +4,7 @@
 
  This workshop will help organizations kickstart their records management journey and help them to focus on the preservation of content for historical, legal, or archival purposes. It will also guide organizations to define, manage, and execute records and retention policies for all enterprise content from a single application. This workshop demonstrates how to dispose of obsolete content items, content items that are no longer needed by applying different types of disposition rules on the content using Oracle WebCenter Content Records Management.
 
-*Estimated Time:* 3 hours
+*Estimated Time:* 2 hours 30 minutes
 
 ### About WebCenter Content Records Management
 
@@ -38,5 +38,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Authors-** Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
-* **Contributors-** Shriraksha S Nataraj
-* **Last Updated By/Date-** Shriraksha S Nataraj, August 2022
+* **Contributors-** Shriraksha S Nataraj, Sujata Nayak, Senthilkumar Chinnappa, Mandar Tengse , Parikshit Khisty
+* **Last Updated By/Date-** Sujata Nayak, March 2025

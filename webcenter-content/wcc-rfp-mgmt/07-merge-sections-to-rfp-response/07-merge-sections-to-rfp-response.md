@@ -72,6 +72,8 @@ This lab assumes you have:
 
 3. Select the Section Documents, in the order in which it has to be present in the RFP Response and click on **Merge Document**
 
+   > Note :       * If the Section documents does not show-up when selecting the RFP Document Name from the list, perform re-indexing in WCC using the steps mentioned in **Appendix 3: Re-index collections and documents** of **Lab 3: Initialize WCC Environment** and select RFP Document from the list again
+
    ![Merge Page](images/merge_sections_task1_step3.png "Merge Page")
 
 4. In the **RFP Response Details** Page, provide the value as below and click **Submit** button

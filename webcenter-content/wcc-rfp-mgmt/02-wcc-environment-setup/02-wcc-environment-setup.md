@@ -2,6 +2,8 @@
 
 ## Introduction
 
+> *Note : You can skip this lab, if you already have Webcenter Marketplace Environment already setup.*
+
 This lab will show you how to WebCenter Content Marketplace Instance using the Stack in Oracle Resource Manager. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
 **Estimated Lab Time**: *75 minutes*

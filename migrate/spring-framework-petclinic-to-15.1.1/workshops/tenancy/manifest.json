@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Migrate Spring Framework 5.3.x PetClinic to WLS 15.1.1 (BETA)",
+    "help": "livelabs-help-weblogic_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "description": "The Introduction.",
+        "filename": "../../introduction/introduction.md"
+      },
+      {
+        "title": "Get Started to access the Tenancy to use Cloud Shell",
+        "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+        "title": "Lab 1: Clone the Repository",
+        "description": "Clone the Pet Clininc Repository",
+        "filename": "../../clone/clone.md"
+      },
+      {
+        "title": "Lab 2: Migrate the App",
+        "description": "Migrate and review the App to run on WebLogic Server 15.1.1",
+        "filename": "../../migrate/migrate.md"
+      },
+      {
+        "title": "Lab 3: Deploy the new PetClinic",
+        "description": "Build and Deploy the migrated PetClinic to WebLogic Server 15.1.1",
+        "filename": "../../deploy/deploy.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+  }

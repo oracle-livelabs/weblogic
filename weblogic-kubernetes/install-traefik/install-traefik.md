@@ -39,14 +39,13 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME: traefik-operator
-    LAST DEPLOYED: Thu Apr  6 10:46:02 2023
+    LAST DEPLOYED: Thu Feb 27 06:23:32 2025
     NAMESPACE: traefik
     STATUS: deployed
     REVISION: 1
     TEST SUITE: None
     NOTES:
-    Traefik Proxy v2.9.9 has been deployed successfully
-    on traefik namespace !
+    traefik-operator with docker.io/traefik:v3.3.3 has been deployed successfully on traefik namespace !
     ```
 
 3. The Traefik installation is basically done. Verify the Traefik (load balancer) services:
@@ -56,7 +55,7 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME               TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
-    traefik-operator   LoadBalancer   10.96.137.252   141.147.71.220   80:30305/TCP,443:30443/TCP   44s
+    traefik-operator   LoadBalancer   10.96.22.119.252   141.148.64.40   80:30305/TCP,443:30443/TCP   44s
     ```
 
     > Please note the EXTERNAL-IP of the traefik-operator service. This is the public IP address of the load balancer that you will use to access the WebLogic Server Administration Console and the sample application.
@@ -67,7 +66,7 @@ Estimated Lab Time: 10 minutes
     ```
     The output should be similar to the following:
     ```bash
-    141.147.71.220
+    141.148.64.40
     ```
 
 5. Verify the `helm` charts:
@@ -77,12 +76,12 @@ Estimated Lab Time: 10 minutes
     The output should be similar to the following:
     ```bash
     NAME                    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
-    traefik-operator        traefik         1               2023-04-06 10:46:02.631127866 +0000 UTC deployed        traefik-22.0.0  v2.9.9      
+    traefik-operator        traefik         1               2025-02-27 06:23:32.884561115 +0000 UTC  deployed        traefik-34.4.0  v3.3.3      
     ```
 
     You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, April 2023
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, March 2025

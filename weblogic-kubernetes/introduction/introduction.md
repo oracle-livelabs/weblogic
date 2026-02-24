@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This lab shows you how to deploy and run a WebLogic domain container-packaged web application on a Kubernetes cluster using [Oracle WebLogic Server Kubernetes Operator 4.0.1](https://github.com/oracle/weblogic-kubernetes-operator) (the "operator").
+This lab shows you how to deploy and run a WebLogic domain container-packaged web application on a Kubernetes cluster using [Oracle WebLogic Server Kubernetes Operator 4.2.15](https://github.com/oracle/weblogic-kubernetes-operator) (the "operator").
 
 The sample web application is a simple JSP page which shows WebLogic Server domain MBean attributes to demonstrate operator features.
 
@@ -41,5 +41,5 @@ An Oracle Paid or LiveLabs Cloud account.
 
 ## Acknowledgements
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey, April 2023
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, March 2025

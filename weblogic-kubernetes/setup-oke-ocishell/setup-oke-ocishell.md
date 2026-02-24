@@ -27,52 +27,52 @@ To create the Container Engine for Kubernetes (OKE), complete the following step
 * Create a cluster.
 * Create a `NodePool`.
 
-This lab shows you how the *Quick Start* feature creates and configures all the necessary resources for a 3-node Kubernetes cluster. All the nodes will be deployed in different availability domains to ensure high availability.
+This lab shows you how the **Quick Start** feature creates and configures all the necessary resources for a 3-node Kubernetes cluster. All the nodes will be deployed in different availability domains to ensure high availability.
 
 For more information about OKE and custom cluster deployment, see the [Oracle Container Engine](https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengoverview.htm) documentation.
 
 ## Task 1: Create an OKE cluster
 
-The *Quick Create* feature uses the default settings to create a *quick cluster* with new network resources as required. This approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks. New network resources for the cluster are created automatically, along with a node pool and three worker nodes.
+The **Quick Create** feature uses the default settings to create a **quick cluster** with new network resources as required. This approach is the fastest way to create a new cluster. If you accept all the default values, you can create a new cluster in just a few clicks. New network resources for the cluster are created automatically, along with a node pool and three worker nodes.
 
-1. In the Console, select the *Hamburger Menu -> Developer Services -> Kubernetes Clusters (OKE)* as shown.
+1. In the Console, select the **Hamburger Menu -> Developer Services -> Kubernetes Clusters (OKE)** as shown.
 
     ![Hamburger Menu](images/hamburger-menu.png " ")
 
-2. In the Cluster List page, select the Compartment of your choice, where you are allowed to create a cluster, and then click *Create Cluster*.
+2. In the Cluster List page, select the Compartment of your choice, where you are allowed to create a cluster, and then click **Create Cluster**.
 
     > You need to select a compartment in which you are allowed to create a cluster and also, a repository inside the Oracle Container Registry.
 
     ![Select Compartment](images/select-compartment.png " ")
 
-3. In the Create Cluster Solution dialog, select *Quick Create* and click *Submit*.
+3. In the Create Cluster Solution dialog, select **Quick Create** and click **Submit**.
 
     ![Launch Workflow](images/launch-workflow.png " ")
 
-    *Quick Create* will create a new cluster with the default settings, along with new network resources for the new cluster.
+    **Quick Create** will create a new cluster with the default settings, along with new network resources for the new cluster.
 
-    Specify the following configuration details on the Cluster Creation page (please pay attention to the value you place in the *Shape* field):
+    Specify the following configuration details on the Cluster Creation page (please pay attention to the value you place in the **Shape** field):
 
     * **Name**: The name of the cluster. Leave the default value.
     * **Compartment**: The name of the compartment. Select the compartment in which you are allowed to create resources.
-    * **Kubernetes version**: The version of Kubernetes. Select *1.24.1* as Kubernetes version.
-    * **Kubernetes API Endpoint**: Are the cluster master nodes going to be routable or not. Select the *Public Endpoint* value.
-    * **Kubernetes Worker Nodes**: Are the cluster worker nodes going to be routable or not. Leave the default *Private Workers* value.
-    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select *VM.Standard.E4.Flex* (which is typically available in Oracle Free Tier Account). Select the 2 OCPUs and 32 GB as Amount of Memory.
-    * **Image**: Select the default image with Kubernetes version *1.24.1*.
-    * **Number of nodes**: The number of worker nodes to create. Leave the default value, *3*.
+    * **Kubernetes version**: The version of Kubernetes. Select **1.31.1** as Kubernetes version.
+    * **Kubernetes API Endpoint**: Are the cluster master nodes going to be routable or not. Select the **Public Endpoint** value.
+    * **Node type**: Select **Managed** as node type.
+    * **Kubernetes Worker Nodes**: Are the cluster worker nodes going to be routable or not. Leave the default **Private Workers** value.
+    * **Shape**: The shape to use for each node in the node pool. The shape determines the number of CPUs and the amount of memory allocated to each node. The list shows only those shapes available in your tenancy that are supported by OKE. Select **VM.Standard.E4.Flex** (which is typically available in Oracle Free Tier Account). Select the 2 OCPUs and 32 GB as Amount of Memory.
+    * **Image**: Select the default image with Kubernetes version **1.31.1**.
+    * **Number of nodes**: The number of worker nodes to create. Leave the default value, **3**.
 
     ![Quick Cluster](images/quick-cluster.png " ")
-
-4. Click *Next* to review the details you entered for the new cluster.
-
     ![Enter Data](images/enter-data.png " ")
 
-5. On the *Review* page, select the check box for *Create a Basic cluster* and then click *Create Cluster* to create the new network resources and the new cluster.
+4. Click **Next** to review the details you entered for the new cluster.
+
+5. On the **Review** page, click **Create Cluster** to create the new network resources and the new cluster.
 
     ![Review Cluster](images/review-cluster.png " ")
 
-    > You see the network resources being created for you. Wait until the request to create the node pool is initiated and then click *Close*.
+    > You see the network resources being created for you. Wait until the request to create the node pool is initiated and then click **Close**.
 
     ![Network Resource](images/network-resource.png " ")
 
@@ -84,25 +84,25 @@ The *Quick Create* feature uses the default settings to create a *quick cluster*
 
 ## Task 2: Configure `kubectl` (Kubernetes Cluster CLI)
 
-Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal, accessible from the Oracle Cloud Console. The Cloud Shell provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI and other useful tools (*Git, kubectl, helm, OCI CLI*) to complete the Verrazzano tutorials. The Cloud Shell is accessible from the Console. Your Cloud Shell will appear in the Oracle Cloud Console as a persistent frame of the Console, and will stay active as you navigate to different pages of the Console.
+Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal, accessible from the Oracle Cloud Console. The Cloud Shell provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI and other useful tools (**Git, kubectl, helm, OCI CLI**) to complete the Verrazzano tutorials. The Cloud Shell is accessible from the Console. Your Cloud Shell will appear in the Oracle Cloud Console as a persistent frame of the Console, and will stay active as you navigate to different pages of the Console.
 
-You will use the *Cloud Shell* to complete this workshop.
+You will use the **Cloud Shell** to complete this workshop.
 
-We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It needs a `kubeconfig` file. This will be generated using the OCI CLI which is pre-authenticated, so there’s no setup to do before you can start using it.
+We will use **`kubectl`** to manage the cluster remotely using the Cloud Shell. It needs a **`kubeconfig`** file. This will be generated using the OCI CLI which is pre-authenticated, so there’s no setup to do before you can start using it.
 
-1. Click *Access Cluster* on your cluster detail page.
+1. Click **Access Cluster** on your cluster detail page.
 
-    > If you moved away from that page, then open the navigation menu and under *Developer Services*, select *Kubernetes Clusters (OKE)*. Select your cluster and go the detail page.
+    > If you moved away from that page, then open the navigation menu and under **Developer Services**, select **Kubernetes Clusters (OKE)**. Select your cluster and go the detail page.
 
     ![Access Cluster](images/access-cluster.png " ")
 
     > A dialog is displayed from which you can open the Cloud Shell and contains the customized OCI command that you need to run, to create a Kubernetes configuration file.
 
-2. Leave the default *Cloud Shell Access* and first select the *Copy* link to copy the `oci ce...` command to the Cloud Shell.
+2. Leave the default **Cloud Shell Access** and first select the **Copy** link to copy the `oci ce...` command to the Cloud Shell.
 
     ![Copy kubectl Config](images/copy-config.png " ")
 
-3. Now, click *Launch Cloud Shell* to open the built in console. Then close the configuration dialog before you paste the command into the *Cloud Shell*.
+3. Now, click **Launch Cloud Shell** to open the built in console. Then close the configuration dialog before you paste the command into the **Cloud Shell**.
 
     ![Launch Cloud Shell](images/launch-cloudshell.png " ")
 
@@ -125,9 +125,9 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
     ```bash
     $ kubectl get node
     NAME          STATUS   ROLES   AGE   VERSION
-    10.0.10.155   Ready    node    11m   v1.24.1
-    10.0.10.24    Ready    node    11m   v1.24.1
-    10.0.10.81    Ready    node    11m   v1.24.1
+    10.0.10.159   Ready    node    11m   v1.31.1
+    10.0.10.247   Ready    node    11m   v1.31.1
+    10.0.10.47    Ready    node    11m   v1.31.1
     ```
 
     > If you see the node's information, then the configuration was successful.
@@ -136,10 +136,9 @@ We will use `kubectl` to manage the cluster remotely using the Cloud Shell. It n
 
     ![cloud shell](images/cloudshell.png " ")
 
-Leave this *Cloud Shell* open; we will use it for further labs.
+Leave this **Cloud Shell** open; we will use it for further labs.
 
 ## Acknowledgements
-
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Sid Joshi
-* **Last Updated By/Date** - Ankit Pandey,  April 2023
+* **Contributors** - Sid Joshi, Maciej Gruszka 
+* **Last Updated By/Date** - Ankit Pandey, March 2025
